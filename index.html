@@ -4,89 +4,91 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>محسن نصری | مهندسی مکانیک و تعمیرات صنعتی</title>
+<title>Mohsen Nasri | Mechanical Engineering</title>
 
-<style>nav {
-    background:white;
-    text-align:center;
-    padding:15px;
-}
+<style>
 
-nav a {
-    color:#0b3d91;
-    text-decoration:none;
-    margin:10px;
-    font-weight:bold;
-}
-body {<nav>
-<a href="#about">درباره من</a>
-<a href="#experience">تجربیات</a>
-<a href="#projects">پروژه‌ها</a>
-<a href="#contact">تماس</a>
-</nav
-    margin: 0;
-    font-family: Tahoma, Arial;
-    background: #f2f5f8;
-    color: #222;
+body{
+margin:0;
+font-family:tahoma,Arial;
+background:#f1f4f8;
+color:#222;
 }
 
-header {
-    background: linear-gradient(135deg,#0b3d91,#1464c8);
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
+header{
+background:linear-gradient(135deg,#062b55,#1473c9);
+color:white;
+text-align:center;
+padding:50px 20px;
 }
 
-header h1 {
-    font-size: 38px;
-    margin-bottom: 10px;
+header h1{
+font-size:42px;
+margin:10px;
 }
 
-header p {
-    font-size: 20px;
+header p{
+font-size:20px;
 }
 
-.container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
+nav{
+background:white;
+padding:15px;
+text-align:center;
+position:sticky;
+top:0;
 }
 
-.box {
-    background: white;
-    margin: 20px 0;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px #ddd;
+nav a{
+text-decoration:none;
+color:#063b75;
+font-weight:bold;
+margin:10px;
 }
 
-h2 {
-    color: #0b3d91;
-    border-right: 5px solid #0b3d91;
-    padding-right: 10px;
+.container{
+max-width:1100px;
+margin:auto;
+padding:20px;
 }
 
-.company {
-    background: #eef4ff;
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 10px;
+.box{
+background:white;
+margin:25px 0;
+padding:30px;
+border-radius:18px;
+box-shadow:0 5px 20px #ddd;
 }
 
-footer {
-    background:#0b3d91;
-    color:white;
-    text-align:center;
-    padding:20px;
+h2{
+color:#063b75;
+border-right:5px solid #e21b23;
+padding-right:10px;
 }
 
-button {
-    background:#0b3d91;
-    color:white;
-    padding:12px 25px;
-    border:0;
-    border-radius:8px;
+.company,.project{
+background:#edf4ff;
+padding:15px;
+margin:10px 0;
+border-radius:10px;
 }
+
+footer{
+background:#062b55;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+.btn{
+display:inline-block;
+background:#e21b23;
+color:white;
+padding:12px 25px;
+border-radius:10px;
+text-decoration:none;
+}
+
 </style>
 
 </head>
@@ -94,25 +96,54 @@ button {
 <body>
 
 <header>
+
 <h1>محسن نصری</h1>
-<p>مهندس مکانیک | تعمیرات صنعتی | مشاوره فنی</p>
-<p>بیش از دو دهه تجربه در صنعت مهندسی مکانیک</p>
+
+<p>
+مهندس مکانیک | تعمیرات صنعتی | مشاوره فنی
+</p>
+
+<p>
+بیش از دو دهه تجربه در صنعت مهندسی مکانیک
+</p>
+
 </header>
+
+
+<nav>
+
+<a href="#about">درباره من</a>
+
+<a href="#experience">تجربیات</a>
+
+<a href="#projects">پروژه‌ها</a>
+
+<a href="#contact">تماس</a>
+
+</nav>
 
 
 <div class="container">
 
-<div class="box">
+
+<div class="box" id="about">
+
 <h2>درباره من</h2>
+
 <p>
-فعال در حوزه مهندسی مکانیک، تعمیرات و نگهداری تجهیزات صنعتی،
-سیم‌پیچی، استاتور و عیب‌یابی ماشین‌آلات.
-هدف من ارائه تجربه‌های صنعتی و همکاری در پروژه‌های فنی است.
+فعال در زمینه مهندسی مکانیک، تعمیرات و نگهداری تجهیزات صنعتی،
+عیب‌یابی ماشین‌آلات، سیم‌پیچی و استاتور.
 </p>
+
+<p>
+هدف من انتقال تجربه‌های صنعتی و همکاری در پروژه‌های فنی و مهندسی است.
+</p>
+
 </div>
 
 
-<div class="box">
+<div class="box" id="experience">
+
 <h2>سوابق صنعتی</h2>
 
 <div class="company">
@@ -124,34 +155,65 @@ button {
 </div>
 
 <div class="company">
-شرکت افق البرز تولید کابل
+شرکت افق البرز - تولید کابل
 </div>
 
 <div class="company">
 شرکت شیشه رازی - تولید شیشه و بطری
 </div>
 
+</div><div class="box" id="projects">
+
+<h2>پروژه‌ها و خدمات</h2>
+
+<div class="project">
+تعمیرات و نگهداری تجهیزات صنعتی
+</div>
+
+<div class="project">
+عیب‌یابی و رفع مشکلات ماشین‌آلات
+</div>
+
+<div class="project">
+سیم‌پیچی موتور و بازسازی استاتور
+</div>
+
+<div class="project">
+مشاوره فنی در صنایع شیشه و تولید
+</div>
+
 </div>
 
 
 <div class="box">
-<h2>خدمات</h2>
+
+<h2>تجربه و تخصص</h2>
 
 <p>
-✔ مشاوره فنی و صنعتی</p>
-<p>
-✔ بررسی مشکلات تجهیزات و ماشین‌آلات</p>
-<p>
-✔ همکاری در پروژه‌های تعمیرات و بهینه‌سازی</p>
-
-</div>
-
-
-<div class="box">
-<h2>ارتباط با من</h2>
-<p>
-برای همکاری، مشاوره و اجرای پروژه‌های صنعتی آماده همکاری هستم.
+تجربه در محیط‌های صنعتی، خطوط تولید،
+تجهیزات مکانیکی و فرآیندهای تعمیراتی.
 </p>
+
+<p>
+آماده همکاری در پروژه‌های صنعتی،
+مشاوره فنی و انتقال تجربه می‌باشم.
+</p>
+
+</div>
+
+
+<div class="box" id="contact">
+
+<h2>ارتباط با من</h2>
+
+<p>
+برای همکاری، مشاوره و اجرای پروژه‌های صنعتی با من در ارتباط باشید.
+</p>
+
+<a class="btn" href="#">
+تماس
+</a>
+
 </div>
 
 
@@ -159,8 +221,17 @@ button {
 
 
 <footer>
-<p>Mohsen Nasri Engineering</p>
+
+<p>
+Mohsen Nasri Engineering
+</p>
+
+<p>
+Mechanical Maintenance | Glass Industry | Motor Rewind
+</p>
+
 </footer>
+
 
 </body>
 </html>
