@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -29,15 +30,19 @@ header{
     right:0;
     left:0;
     z-index:1000;
+
     background:rgba(2,10,18,.88);
     backdrop-filter:blur(15px);
+
     border-bottom:1px solid rgba(255,255,255,.12);
 }
 
 .nav{
     max-width:1200px;
     margin:auto;
+
     min-height:75px;
+
     padding:0 20px;
 
     display:flex;
@@ -48,9 +53,11 @@ header{
 .logo{
     color:#fff;
     text-decoration:none;
+
     font-family:Arial;
     font-size:22px;
     font-weight:bold;
+
     direction:ltr;
 }
 
@@ -66,7 +73,9 @@ header{
 .menu a{
     color:#ddd;
     text-decoration:none;
+
     font-size:14px;
+
     transition:.3s;
 }
 
@@ -74,278 +83,420 @@ header{
     color:#e7aa24;
 }
 
+
 /* ================= HERO ================= */
 
 .hero{
+
     min-height:850px;
+
     padding-top:75px;
 
     display:flex;
     align-items:center;
 
     background:
+
     linear-gradient(
         90deg,
-        rgba(1,8,15,.97),
-        rgba(1,8,15,.78),
-        rgba(1,8,15,.25)
+        rgba(1,8,15,.82),
+        rgba(1,8,15,.55),
+        rgba(1,8,15,.15)
     ),
-    url("industrial-hero.png") center/cover no-repeat;
+
+    url("industrial-hero.png")
+
+    center/cover no-repeat;
+
+    background-position:center;
 }
 
 .hero-content{
+
     max-width:1200px;
+
     width:92%;
+
     margin:auto;
+
 }
 
 .small-title{
+
     color:#e7aa24;
+
     font-size:14px;
+
     font-weight:bold;
+
     letter-spacing:1px;
 }
 
 .hero h1{
+
     font-size:clamp(50px,8vw,90px);
+
     line-height:1.1;
+
     margin:15px 0;
 }
 
 .hero h1 span{
+
     color:#e7aa24;
 }
 
 .hero h2{
+
     font-size:clamp(24px,4vw,40px);
+
     margin:10px 0 20px;
 }
 
 .hero p{
+
     max-width:700px;
+
     color:#d0dbe5;
+
     font-size:18px;
 }
 
 .buttons{
+
     margin-top:30px;
+
     display:flex;
+
     gap:15px;
+
     flex-wrap:wrap;
 }
 
 .btn{
+
     display:inline-block;
+
     padding:12px 25px;
+
     border-radius:8px;
+
     text-decoration:none;
+
     font-weight:bold;
+
     transition:.3s;
 }
 
 .btn-primary{
+
     background:#e7aa24;
+
     color:#111;
 }
 
 .btn-outline{
+
     border:1px solid #aaa;
+
     color:#fff;
 }
 
 .btn:hover{
+
     transform:translateY(-4px);
 }
+
 
 /* ================= GENERAL ================= */
 
 section{
+
     padding:85px 0;
 }
 
 .container{
+
     width:92%;
+
     max-width:1200px;
+
     margin:auto;
 }
 
 .section-title{
+
     text-align:center;
+
     margin-bottom:45px;
 }
 
 .section-title h2{
+
     font-size:36px;
+
     margin:0 0 10px;
 }
 
 .section-title p{
+
     color:#aebdca;
 }
+
 
 /* ================= INDUSTRIES ================= */
 
 .industries{
+
     display:grid;
-    grid-template-columns:repeat(5,1fr);
+
+    grid-template-columns:
+    repeat(5,1fr);
+
     gap:16px;
 }
 
 .industry{
+
     position:relative;
+
     min-height:370px;
 
     overflow:hidden;
+
     border-radius:18px;
 
-    border:1px solid rgba(255,255,255,.12);
+    border:
+    1px solid
+    rgba(255,255,255,.12);
 
     display:flex;
+
     align-items:flex-end;
 
     text-decoration:none;
+
     color:white;
 
     transition:.4s;
 }
 
 .industry-image{
+
     position:absolute;
+
     inset:0;
 
     background-position:center;
+
     background-size:cover;
 
     transition:.6s;
 }
 
 .industry-overlay{
+
     position:absolute;
+
     inset:0;
 
     background:
+
     linear-gradient(
-        transparent 25%,
+        transparent 20%,
         rgba(0,0,0,.92)
     );
 }
 
 .industry-content{
+
     position:relative;
+
     z-index:2;
 
     width:100%;
+
     padding:24px;
 }
 
 .industry-number{
+
     color:#e7aa24;
+
     font-family:Arial;
+
     font-size:13px;
+
     font-weight:bold;
 }
 
 .industry h3{
+
     margin:5px 0;
+
     font-size:19px;
 }
 
 .industry p{
+
     color:#c3ced8;
+
     font-size:12px;
+
     margin:0;
 }
 
 .arrow{
+
     display:block;
+
     margin-top:12px;
+
     font-size:22px;
 }
 
 .industry:hover{
+
     transform:translateY(-12px);
+
     border-color:#e7aa24;
-    box-shadow:0 25px 50px rgba(0,0,0,.5);
+
+    box-shadow:
+    0 25px 50px
+    rgba(0,0,0,.5);
 }
 
-.industry:hover .industry-image{
+.industry:hover
+.industry-image{
+
     transform:scale(1.12);
 }
+
 
 /* ================= PROJECTS ================= */
 
 .projects{
+
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+    repeat(3,1fr);
+
     gap:20px;
 }
 
 .card{
-    background:linear-gradient(145deg,#09243a,#06131f);
-    border:1px solid rgba(255,255,255,.1);
+
+    background:
+    linear-gradient(
+        145deg,
+        #09243a,
+        #06131f
+    );
+
+    border:
+    1px solid
+    rgba(255,255,255,.1);
+
     border-radius:17px;
+
     padding:28px;
 
     transition:.35s;
 }
 
 .card:hover{
+
     transform:translateY(-8px);
+
     border-color:#159bea;
 }
 
 .card h3{
+
     margin-top:5px;
 }
 
 .card p{
+
     color:#aebdca;
 }
 
 .tag{
+
     color:#159bea;
+
     font-size:12px;
+
     font-weight:bold;
 }
+
 
 /* ================= SERVICES ================= */
 
 .services{
+
     display:grid;
-    grid-template-columns:1fr 1fr;
+
+    grid-template-columns:
+    1fr 1fr;
+
     gap:22px;
 }
 
 .panel{
-    background:linear-gradient(145deg,#09243a,#06131f);
-    border:1px solid rgba(255,255,255,.1);
+
+    background:
+    linear-gradient(
+        145deg,
+        #09243a,
+        #06131f
+    );
+
+    border:
+    1px solid
+    rgba(255,255,255,.1);
+
     border-radius:18px;
+
     padding:30px;
 }
 
 .panel h2{
+
     margin-top:0;
 }
 
 .panel p{
+
     color:#b8c6d2;
 }
 
 .list{
+
     padding:0;
+
     margin:0;
+
     list-style:none;
 }
 
 .list li{
+
     padding:9px 0;
-    border-bottom:1px solid rgba(255,255,255,.08);
+
+    border-bottom:
+    1px solid
+    rgba(255,255,255,.08);
 }
+
 
 /* ================= QUESTIONS ================= */
 
 .questions{
+
     background:
+
     linear-gradient(
         135deg,
         #08243b,
@@ -354,14 +505,20 @@ section{
 }
 
 .question-box{
+
     max-width:850px;
+
     margin:auto;
 
     padding:35px;
 
-    background:rgba(2,10,18,.7);
+    background:
+    rgba(2,10,18,.7);
 
-    border:1px solid rgba(255,255,255,.12);
+    border:
+    1px solid
+    rgba(255,255,255,.12);
+
     border-radius:20px;
 }
 
@@ -376,7 +533,9 @@ section{
 
     border-radius:8px;
 
-    border:1px solid rgba(255,255,255,.12);
+    border:
+    1px solid
+    rgba(255,255,255,.12);
 
     background:#071522;
 
@@ -386,7 +545,9 @@ section{
 }
 
 .question-box textarea{
+
     min-height:140px;
+
     resize:vertical;
 }
 
@@ -407,6 +568,7 @@ section{
     cursor:pointer;
 }
 
+
 /* ================= FOOTER ================= */
 
 footer{
@@ -419,43 +581,57 @@ footer{
 
     color:#8fa2b3;
 
-    border-top:1px solid rgba(255,255,255,.1);
+    border-top:
+    1px solid
+    rgba(255,255,255,.1);
 }
 
-/* ================= MOBILE ================= */
+
+/* ================= TABLET ================= */
 
 @media(max-width:1050px){
 
     .industries{
-        grid-template-columns:repeat(2,1fr);
+
+        grid-template-columns:
+        repeat(2,1fr);
     }
 
 }
 
+
+/* ================= MOBILE ================= */
+
 @media(max-width:800px){
 
     .menu{
+
         display:none;
     }
 
     .projects,
     .services{
+
         grid-template-columns:1fr;
     }
 
     .hero{
+
         min-height:720px;
     }
 
 }
 
+
 @media(max-width:550px){
 
     .industries{
+
         grid-template-columns:1fr;
     }
 
     .hero h1{
+
         font-size:52px;
     }
 
@@ -464,6 +640,7 @@ footer{
 </style>
 
 </head>
+
 
 <body>
 
@@ -475,20 +652,33 @@ footer{
 <div class="nav">
 
 <a href="#home" class="logo">
+
 MOHSEN <span>NASRI</span>
+
 </a>
+
 
 <nav class="menu">
 
-<a href="#home">صفحه اصلی</a>
+<a href="#home">
+صفحه اصلی
+</a>
 
-<a href="#industries">صنایع</a>
+<a href="#industries">
+صنایع
+</a>
 
-<a href="#projects">پروژه‌ها</a>
+<a href="#projects">
+پروژه‌ها
+</a>
 
-<a href="#services">خدمات</a>
+<a href="#services">
+خدمات
+</a>
 
-<a href="#questions">پرسش و پاسخ</a>
+<a href="#questions">
+پرسش و پاسخ
+</a>
 
 </nav>
 
@@ -505,31 +695,52 @@ MOHSEN <span>NASRI</span>
 <div class="hero-content">
 
 <div class="small-title">
+
 MECHANICAL ENGINEERING • INDUSTRIAL PROJECTS
+
 </div>
 
+
 <h1>
+
 محسن <span>نصری</span>
+
 </h1>
 
+
 <h2>
+
 مهندس مکانیک و متخصص پروژه‌های صنعتی
+
 </h2>
 
+
 <p>
+
 تجربه در تعمیرات و نگهداری تجهیزات صنعتی،
 ماشین‌آلات، سیم‌پیچی، عیب‌یابی،
 بازسازی و مستندسازی فنی.
+
 </p>
+
 
 <div class="buttons">
 
-<a href="#industries" class="btn btn-primary">
+<a
+href="#industries"
+class="btn btn-primary">
+
 مشاهده صنایع
+
 </a>
 
-<a href="#questions" class="btn btn-outline">
+
+<a
+href="#questions"
+class="btn btn-outline">
+
 طرح سؤال فنی
+
 </a>
 
 </div>
@@ -546,49 +757,69 @@ MECHANICAL ENGINEERING • INDUSTRIAL PROJECTS
 
 <div class="container">
 
+
 <div class="section-title">
 
 <h2>
+
 صنایع و حوزه‌های تخصصی
+
 </h2>
 
 <p>
+
 روی هر صنعت کلیک کنید و وارد بخش تخصصی آن شوید.
+
 </p>
 
 </div>
+
 
 
 <div class="industries">
 
 
-<!-- سیم پیچی -->
+<!-- 01 سیم پیچی -->
 
-<a href="rewinding.html" class="industry">
+<a
+href="rewinding.html"
+class="industry">
 
 <div
 class="industry-image"
-style="background-image:url('rewinding.jpg')">
+style="
+background-image:
+url('rewinding.jpg');
+">
 </div>
 
 <div class="industry-overlay"></div>
 
+
 <div class="industry-content">
 
 <div class="industry-number">
+
 01
+
 </div>
 
 <h3>
+
 سیم‌پیچی و برق صنعتی
+
 </h3>
 
 <p>
+
 Electrical & Rewinding
+
 </p>
 
 <span class="arrow">
+
 ←
+
 </span>
 
 </div>
@@ -597,33 +828,47 @@ Electrical & Rewinding
 
 
 
-<!-- فلوت -->
+<!-- 02 شیشه فلوت -->
 
-<a href="float-glass.html" class="industry">
+<a
+href="float-glass.html"
+class="industry">
 
 <div
 class="industry-image"
-style="background-image:url('float-glass.jpg')">
+style="
+background-image:
+url('float-glass.jpg');
+">
 </div>
 
 <div class="industry-overlay"></div>
 
+
 <div class="industry-content">
 
 <div class="industry-number">
+
 02
+
 </div>
 
 <h3>
+
 شیشه فلوت و تخت
+
 </h3>
 
 <p>
+
 Float & Flat Glass
+
 </p>
 
 <span class="arrow">
+
 ←
+
 </span>
 
 </div>
@@ -632,33 +877,47 @@ Float & Flat Glass
 
 
 
-<!-- کابل -->
+<!-- 03 کابل -->
 
-<a href="cable.html" class="industry">
+<a
+href="cable.html"
+class="industry">
 
 <div
 class="industry-image"
-style="background-image:url('cable.jpg')">
+style="
+background-image:
+url('cable.jpg');
+">
 </div>
 
 <div class="industry-overlay"></div>
 
+
 <div class="industry-content">
 
 <div class="industry-number">
+
 03
+
 </div>
 
 <h3>
+
 صنعت کابل‌سازی
+
 </h3>
 
 <p>
+
 Cable Manufacturing
+
 </p>
 
 <span class="arrow">
+
 ←
+
 </span>
 
 </div>
@@ -667,33 +926,47 @@ Cable Manufacturing
 
 
 
-<!-- فولاد -->
+<!-- 04 فولاد -->
 
-<a href="steel.html" class="industry">
+<a
+href="steel.html"
+class="industry">
 
 <div
 class="industry-image"
-style="background-image:url('steel.jpg')">
+style="
+background-image:
+url('steel.jpg');
+">
 </div>
 
 <div class="industry-overlay"></div>
 
+
 <div class="industry-content">
 
 <div class="industry-number">
+
 04
+
 </div>
 
 <h3>
+
 صنعت فولاد
+
 </h3>
 
 <p>
+
 Steel Industry
+
 </p>
 
 <span class="arrow">
+
 ←
+
 </span>
 
 </div>
@@ -702,33 +975,47 @@ Steel Industry
 
 
 
-<!-- شیشه بطری -->
+<!-- 05 شیشه بطری -->
 
-<a href="container-glass.html" class="industry">
+<a
+href="container-glass.html"
+class="industry">
 
 <div
 class="industry-image"
-style="background-image:url('container-glass.jpg')">
+style="
+background-image:
+url('container-glass.jpg');
+">
 </div>
 
 <div class="industry-overlay"></div>
 
+
 <div class="industry-content">
 
 <div class="industry-number">
+
 05
+
 </div>
 
 <h3>
+
 شیشه بطری
+
 </h3>
 
 <p>
+
 Container Glass
+
 </p>
 
 <span class="arrow">
+
 ←
+
 </span>
 
 </div>
@@ -750,14 +1037,19 @@ Container Glass
 
 <div class="container">
 
+
 <div class="section-title">
 
 <h2>
+
 پروژه‌ها و تجربیات
+
 </h2>
 
 <p>
+
 نمونه‌کارها و تجربیات صنعتی من
+
 </p>
 
 </div>
@@ -769,16 +1061,22 @@ Container Glass
 <div class="card">
 
 <div class="tag">
+
 ELECTRICAL
+
 </div>
 
 <h3>
+
 سیم‌پیچی و بازسازی استاتور
+
 </h3>
 
 <p>
+
 پروژه‌ها، تصاویر، نقشه‌ها و تجربیات اجرایی
 در زمینه سیم‌پیچی و تعمیر موتورهای الکتریکی.
+
 </p>
 
 </div>
@@ -788,16 +1086,22 @@ ELECTRICAL
 <div class="card">
 
 <div class="tag">
+
 GLASS INDUSTRY
+
 </div>
 
 <h3>
+
 صنایع شیشه
+
 </h3>
 
 <p>
+
 تجربیات خطوط تولید شیشه فلوت،
 شیشه تخت و شیشه بطری.
+
 </p>
 
 </div>
@@ -807,16 +1111,22 @@ GLASS INDUSTRY
 <div class="card">
 
 <div class="tag">
+
 INDUSTRIAL
+
 </div>
 
 <h3>
+
 تعمیرات و بازسازی تجهیزات
+
 </h3>
 
 <p>
+
 تجربیات تعمیرات، عیب‌یابی،
 بازسازی و Overhaul تجهیزات صنعتی.
+
 </p>
 
 </div>
@@ -836,14 +1146,18 @@ INDUSTRIAL
 
 <div class="container">
 
+
 <div class="services">
 
 
 <div class="panel">
 
 <h2>
+
 خدمات مهندسی
+
 </h2>
+
 
 <ul class="list">
 
@@ -880,8 +1194,11 @@ INDUSTRIAL
 <div class="panel">
 
 <h2>
+
 تجربه و تخصص
+
 </h2>
+
 
 <p>
 
@@ -891,6 +1208,7 @@ INDUSTRIAL
 در صنایع مختلف خواهد بود.
 
 </p>
+
 
 <p>
 
@@ -913,42 +1231,61 @@ INDUSTRIAL
 
 <!-- ================= QUESTIONS ================= -->
 
-<section class="questions" id="questions">
+<section
+class="questions"
+id="questions">
 
 <div class="container">
+
 
 <div class="section-title">
 
 <h2>
+
 پرسش و پاسخ فنی
+
 </h2>
 
 <p>
+
 مشکل یا سؤال فنی خود را ارسال کنید.
+
 </p>
 
 </div>
 
 
+
 <div class="question-box">
+
 
 <input
 type="text"
 id="name"
-placeholder="نام شما">
+placeholder="نام شما"
+>
+
 
 <input
 type="email"
 id="email"
-placeholder="ایمیل شما">
+placeholder="ایمیل شما"
+>
+
 
 <textarea
 id="question"
-placeholder="سؤال یا شرح مشکل فنی..."></textarea>
+placeholder="سؤال یا شرح مشکل فنی..."
+></textarea>
 
-<button onclick="sendQuestion()">
+
+<button
+onclick="sendQuestion()">
+
 ارسال سؤال
+
 </button>
+
 
 </div>
 
@@ -977,18 +1314,29 @@ Mechanical Engineering • Industrial Maintenance • Engineering Projects
 function sendQuestion(){
 
 let name =
-document.getElementById("name").value.trim();
+document.getElementById("name")
+.value.trim();
+
 
 let email =
-document.getElementById("email").value.trim();
+document.getElementById("email")
+.value.trim();
+
 
 let question =
-document.getElementById("question").value.trim();
+document.getElementById("question")
+.value.trim();
 
 
-if(!name || !email || !question){
+if(
+!name ||
+!email ||
+!question
+){
 
-alert("لطفاً همه قسمت‌ها را کامل کنید.");
+alert(
+"لطفاً همه قسمت‌ها را کامل کنید."
+);
 
 return;
 
