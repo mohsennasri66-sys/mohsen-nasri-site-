@@ -3,235 +3,208 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Mohsen Nasri | Mechanical Engineering</title>
-
+<meta name="description" content="Mohsen Nasri | Industrial Engineering, Mechanical Maintenance, Electrical & Rewinding, Glass, Cable and Steel Industries">
+<title>Mohsen Nasri | Industrial Engineering</title>
 <style>
-
-body{
-margin:0;
-font-family:tahoma,Arial;
-background:#f1f4f8;
-color:#222;
+:root{
+  --bg:#04101d; --bg2:#071b2d; --panel:rgba(8,28,47,.82);
+  --text:#f5f7fa; --muted:#b9c7d5; --gold:#e8aa22; --blue:#18a9ff;
+  --cyan:#20d5d0; --red:#ef3340; --green:#35d36b; --border:rgba(255,255,255,.12);
 }
-
-header{
-background:linear-gradient(135deg,#062b55,#1473c9);
-color:white;
-text-align:center;
-padding:50px 20px;
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.9}
+a{color:inherit;text-decoration:none}
+.container{width:min(1180px,92%);margin:auto}
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(3,14,25,.78);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-family:Arial,sans-serif;direction:ltr;text-align:left;font-size:22px;font-weight:800;letter-spacing:1px}
+.brand span{color:var(--gold)}
+.brand small{display:block;font-size:9px;letter-spacing:3px;color:#9eb1c4}
+.menu{display:flex;align-items:center;gap:22px;font-size:14px}
+.menu a{color:#dbe7f2;transition:.25s}
+.menu a:hover{color:var(--gold)}
+.cta{border:1px solid var(--gold);padding:9px 18px;border-radius:7px;color:#fff!important}
+.hero{min-height:760px;padding-top:76px;display:flex;align-items:center;position:relative;overflow:hidden;background:
+linear-gradient(90deg,rgba(2,13,24,.97) 0%,rgba(2,13,24,.84) 42%,rgba(2,13,24,.38) 100%),
+url("assets/industrial-hero.png") center/cover no-repeat;}
+.hero:after{content:"";position:absolute;inset:auto 0 0;height:160px;background:linear-gradient(transparent,var(--bg));pointer-events:none}
+.hero-content{position:relative;z-index:2;max-width:650px;padding:70px 0}
+.kicker{color:var(--gold);font-weight:700;letter-spacing:1px}
+h1{font-size:clamp(42px,6vw,78px);line-height:1.12;margin:10px 0;font-weight:900}
+h1 span{color:var(--gold)}
+.hero h2{font-size:clamp(24px,3vw,38px);margin:0 0 18px}
+.hero p{font-size:18px;color:#d0dbe5;max-width:600px}
+.buttons{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-block;padding:13px 25px;border-radius:8px;font-weight:700;transition:.25s}
+.btn-primary{background:var(--gold);color:#101010}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(232,170,34,.25)}
+.btn-outline{border:1px solid rgba(255,255,255,.45)}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+section{padding:78px 0}
+.section-title{text-align:center;margin-bottom:38px}
+.section-title h2{font-size:32px;margin:0 0 8px}
+.section-title p{color:var(--muted);margin:0}
+.industries{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.card{position:relative;min-height:310px;border:1px solid var(--border);border-radius:16px;overflow:hidden;background:var(--panel);transition:.35s;display:flex;align-items:flex-end}
+.card:before{content:"";position:absolute;inset:0;background:linear-gradient(transparent 25%,rgba(1,9,16,.94))}
+.card:hover{transform:translateY(-10px);border-color:var(--accent);box-shadow:0 20px 45px rgba(0,0,0,.3)}
+.card-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:.5s;filter:saturate(.9)}
+.card:hover .card-bg{transform:scale(1.1);filter:saturate(1.15)}
+.card-content{position:relative;z-index:2;padding:22px;width:100%}
+.card h3{margin:0 0 5px;font-size:20px}
+.card p{margin:0;color:#c4d0db;font-size:13px}
+.card .arrow{display:block;margin-top:15px;color:var(--accent);font-size:22px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--border);border-radius:16px;background:rgba(5,21,36,.7);overflow:hidden}
+.stat{text-align:center;padding:28px 15px;border-left:1px solid var(--border)}
+.stat:last-child{border-left:0}
+.stat strong{display:block;font-size:38px;color:var(--gold);line-height:1.1}
+.stat span{color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.panel{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:28px}
+.panel h3{margin-top:0;font-size:24px}
+.list{margin:0;padding:0;list-style:none}
+.list li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.08);color:#d2dce5}
+.list li:last-child{border:0}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.project{padding:24px;background:linear-gradient(145deg,#09243a,#061421);border:1px solid var(--border);border-radius:15px;transition:.3s}
+.project:hover{transform:translateY(-6px);border-color:var(--blue)}
+.project .tag{color:var(--blue);font-size:12px;font-weight:bold}
+.project h3{margin:8px 0}
+.project p{color:var(--muted);font-size:14px}
+.contact{background:linear-gradient(120deg,#071d30,#06121e);border:1px solid var(--border);border-radius:18px;padding:40px}
+footer{padding:30px 0;color:#94a8ba;border-top:1px solid var(--border);text-align:center}
+@media(max-width:950px){
+  .menu{display:none}.industries{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr)}.stat{border-bottom:1px solid var(--border)}
+  .grid2,.projects{grid-template-columns:1fr}
 }
-
-header h1{
-font-size:42px;
-margin:10px;
+@media(max-width:600px){
+  .hero{min-height:680px}.hero-content{padding:45px 0}.hero p{font-size:15px}
+  .industries{grid-template-columns:1fr}.stats{grid-template-columns:1fr}
+  .stat{border-left:0}.hero h2{font-size:25px}
 }
-
-header p{
-font-size:20px;
-}
-
-nav{
-background:white;
-padding:15px;
-text-align:center;
-position:sticky;
-top:0;
-}
-
-nav a{
-text-decoration:none;
-color:#063b75;
-font-weight:bold;
-margin:10px;
-}
-
-.container{
-max-width:1100px;
-margin:auto;
-padding:20px;
-}
-
-.box{
-background:white;
-margin:25px 0;
-padding:30px;
-border-radius:18px;
-box-shadow:0 5px 20px #ddd;
-}
-
-h2{
-color:#063b75;
-border-right:5px solid #e21b23;
-padding-right:10px;
-}
-
-.company,.project{
-background:#edf4ff;
-padding:15px;
-margin:10px 0;
-border-radius:10px;
-}
-
-footer{
-background:#062b55;
-color:white;
-text-align:center;
-padding:25px;
-}
-
-.btn{
-display:inline-block;
-background:#e21b23;
-color:white;
-padding:12px 25px;
-border-radius:10px;
-text-decoration:none;
-}
-
 </style>
-
 </head>
-
 <body>
 
 <header>
-
-<h1>محسن نصری</h1>
-
-<p>
-مهندس مکانیک | تعمیرات صنعتی | مشاوره فنی
-</p>
-
-<p>
-بیش از دو دهه تجربه در صنعت مهندسی مکانیک
-</p>
-
+  <div class="container nav">
+    <a class="brand" href="#home">MOHSEN <span>NASRI</span><small>INDUSTRIAL ENGINEERING</small></a>
+    <nav class="menu">
+      <a href="#home">صفحه اصلی</a>
+      <a href="#industries">صنایع</a>
+      <a href="#projects">پروژه‌ها</a>
+      <a href="#services">خدمات مهندسی</a>
+      <a href="#knowledge">دانش فنی</a>
+      <a href="#gallery">گالری</a>
+      <a href="#about">درباره من</a>
+      <a class="cta" href="#contact">شروع یک پروژه</a>
+    </nav>
+  </div>
 </header>
 
+<main>
+<section class="hero" id="home">
+  <div class="container hero-content">
+    <div class="kicker">ENGINEERING • EXPERIENCE • INDUSTRIAL PROJECTS</div>
+    <h1>محسن <span>نصری</span></h1>
+    <h2>مهندس مکانیک و متخصص پروژه‌های صنعتی</h2>
+    <p>تجربه واقعی در محیط‌های صنعتی، تعمیرات و نگهداری، ماشین‌آلات، سیم‌پیچی و مستندسازی فنی؛ با تمرکز بر حل مسئله و اجرای پروژه.</p>
+    <div class="buttons">
+      <a class="btn btn-primary" href="#projects">مشاهده پروژه‌ها</a>
+      <a class="btn btn-outline" href="#contact">شروع یک پروژه ←</a>
+    </div>
+  </div>
+</section>
 
-<nav>
+<section id="industries">
+  <div class="container">
+    <div class="section-title">
+      <h2>صنایع و حوزه‌های تخصصی</h2>
+      <p>تجربه و فعالیت در چند حوزه صنعتی</p>
+    </div>
+    <div class="industries">
+      <a class="card" style="--accent:#18a9ff" href="#projects"><div class="card-bg" style="background-image:url('assets/industrial-hero.png')"></div><div class="card-content"><h3>سیم‌پیچی و برق صنعتی</h3><p>Electrical & Rewinding</p><span class="arrow">→</span></div></a>
+      <a class="card" style="--accent:#20d5d0" href="#projects"><div class="card-bg" style="background-image:url('assets/industrial-hero.png')"></div><div class="card-content"><h3>شیشه فلوت و تخت</h3><p>Float & Flat Glass</p><span class="arrow">→</span></div></a>
+      <a class="card" style="--accent:#ef3340" href="#projects"><div class="card-bg" style="background-image:url('assets/industrial-hero.png')"></div><div class="card-content"><h3>صنعت کابل‌سازی</h3><p>Cable Manufacturing</p><span class="arrow">→</span></div></a>
+      <a class="card" style="--accent:#e8aa22" href="#projects"><div class="card-bg" style="background-image:url('assets/industrial-hero.png')"></div><div class="card-content"><h3>صنعت فولاد</h3><p>Steel Industry</p><span class="arrow">→</span></div></a>
+      <a class="card" style="--accent:#35d36b" href="#projects"><div class="card-bg" style="background-image:url('assets/industrial-hero.png')"></div><div class="card-content"><h3>شیشه بطری</h3><p>Container Glass</p><span class="arrow">→</span></div></a>
+    </div>
+  </div>
+</section>
 
-<a href="#about">درباره من</a>
+<section>
+  <div class="container stats">
+    <div class="stat"><strong>+</strong><span>تجربه صنعتی</span></div>
+    <div class="stat"><strong>+</strong><span>پروژه‌های انجام‌شده</span></div>
+    <div class="stat"><strong>5</strong><span>حوزه صنعتی</span></div>
+    <div class="stat"><strong>01</strong><span>مرجع تخصصی آنلاین</span></div>
+  </div>
+</section>
 
-<a href="#experience">تجربیات</a>
+<section id="projects">
+  <div class="container">
+    <div class="section-title"><h2>پروژه‌های شاخص</h2><p>نمونه‌کارها را به‌صورت Case Study کامل توسعه خواهیم داد.</p></div>
+    <div class="projects">
+      <article class="project"><span class="tag">CONTAINER GLASS</span><h3>پروژه ماشین ISS</h3><p>معرفی ماشین، سیستم‌ها، مستندات و دانش فنی مرتبط با Servo IS و پروژه SKL-ISS-MAN.</p></article>
+      <article class="project"><span class="tag">ELECTRICAL</span><h3>سیم‌پیچی و بازسازی استاتور</h3><p>آرشیو پروژه‌های واقعی، تصاویر، نقشه‌ها و اطلاعات فنی در این بخش قرار خواهد گرفت.</p></article>
+      <article class="project"><span class="tag">INDUSTRIAL</span><h3>پروژه‌های تعمیرات صنعتی</h3><p>پروژه‌های تعمیر، بازسازی، عیب‌یابی و بهینه‌سازی تجهیزات صنعتی.</p></article>
+    </div>
+  </div>
+</section>
 
-<a href="#projects">پروژه‌ها</a>
+<section id="services">
+  <div class="container grid2">
+    <div class="panel">
+      <h3>خدمات مهندسی</h3>
+      <ul class="list">
+        <li>تعمیرات و نگهداری تجهیزات صنعتی</li>
+        <li>عیب‌یابی ماشین‌آلات و تجهیزات</li>
+        <li>سیم‌پیچی موتور و بازسازی استاتور</li>
+        <li>بازسازی و Overhaul تجهیزات</li>
+        <li>مستندسازی و تهیه Manual فنی</li>
+        <li>مشاوره فنی و مهندسی پروژه</li>
+      </ul>
+    </div>
+    <div class="panel" id="knowledge">
+      <h3>دانش و تجربیات فنی</h3>
+      <p>این بخش بعداً به یک آرشیو قابل جست‌وجو برای مقالات، تجربیات، نقشه‌ها، محاسبات و مطالب تخصصی تبدیل می‌شود.</p>
+      <p>اضافه کردن مطلب جدید را طوری طراحی می‌کنیم که بدون نیاز به برنامه‌نویسی سنگین انجام شود.</p>
+    </div>
+  </div>
+</section>
 
-<a href="#contact">تماس</a>
+<section id="gallery">
+  <div class="container">
+    <div class="section-title"><h2>گالری پروژه‌ها</h2><p>عکس‌ها و نقشه‌های واقعی پروژه‌ها در مرحله بعد اضافه می‌شوند.</p></div>
+    <div class="panel"><p>گالری را به تفکیک صنعت و پروژه طراحی خواهیم کرد؛ با نمایش بزرگ تصویر، عنوان، توضیح و اطلاعات پروژه.</p></div>
+  </div>
+</section>
 
-</nav>
+<section id="about">
+  <div class="container">
+    <div class="panel">
+      <h3>درباره من</h3>
+      <p>مهندس مکانیک فعال در حوزه تعمیرات صنعتی، نگهداری تجهیزات، عیب‌یابی ماشین‌آلات، سیم‌پیچی و مستندسازی فنی. این وب‌سایت برای ارائه تجربه‌های واقعی، پروژه‌ها، دانش فنی و ایجاد ارتباط حرفه‌ای با کارفرمایان و مجموعه‌های صنعتی ساخته می‌شود.</p>
+    </div>
+  </div>
+</section>
 
-
-<div class="container">
-
-
-<div class="box" id="about">
-
-<h2>درباره من</h2>
-
-<p>
-فعال در زمینه مهندسی مکانیک، تعمیرات و نگهداری تجهیزات صنعتی،
-عیب‌یابی ماشین‌آلات، سیم‌پیچی و استاتور.
-</p>
-
-<p>
-هدف من انتقال تجربه‌های صنعتی و همکاری در پروژه‌های فنی و مهندسی است.
-</p>
-
-</div>
-
-
-<div class="box" id="experience">
-
-<h2>سوابق صنعتی</h2>
-
-<div class="company">
-شرکت شیشه قزوین
-</div>
-
-<div class="company">
-شرکت شیشه سینا
-</div>
-
-<div class="company">
-شرکت افق البرز - تولید کابل
-</div>
-
-<div class="company">
-شرکت شیشه رازی - تولید شیشه و بطری
-</div>
-
-</div><div class="box" id="projects">
-
-<h2>پروژه‌ها و خدمات</h2>
-
-<div class="project">
-تعمیرات و نگهداری تجهیزات صنعتی
-</div>
-
-<div class="project">
-عیب‌یابی و رفع مشکلات ماشین‌آلات
-</div>
-
-<div class="project">
-سیم‌پیچی موتور و بازسازی استاتور
-</div>
-
-<div class="project">
-مشاوره فنی در صنایع شیشه و تولید
-</div>
-
-</div>
-
-
-<div class="box">
-
-<h2>تجربه و تخصص</h2>
-
-<p>
-تجربه در محیط‌های صنعتی، خطوط تولید،
-تجهیزات مکانیکی و فرآیندهای تعمیراتی.
-</p>
-
-<p>
-آماده همکاری در پروژه‌های صنعتی،
-مشاوره فنی و انتقال تجربه می‌باشم.
-</p>
-
-</div>
-
-
-<div class="box" id="contact">
-
-<h2>ارتباط با من</h2>
-
-<p>
-برای همکاری، مشاوره و اجرای پروژه‌های صنعتی با من در ارتباط باشید.
-</p>
-
-<a class="btn" href="#">
-تماس
-</a>
-
-</div>
-
-
-</div>
-
+<section id="contact">
+  <div class="container">
+    <div class="contact">
+      <div class="section-title" style="text-align:right;margin-bottom:20px">
+        <h2>برای پروژه بعدی خود آماده‌اید؟</h2>
+        <p>جزئیات پروژه را ارسال کنید تا درباره مسیر همکاری و راهکار فنی صحبت کنیم.</p>
+      </div>
+      <a class="btn btn-primary" href="mailto:YOUR-EMAIL@example.com">شروع یک پروژه ←</a>
+    </div>
+  </div>
+</section>
+</main>
 
 <footer>
-
-<p>
-Mohsen Nasri Engineering
-</p>
-
-<p>
-Mechanical Maintenance | Glass Industry | Motor Rewind
-</p>
-
+  <div class="container">Mohsen Nasri Industrial Engineering • نسخه اولیه طراحی جدید</div>
 </footer>
-
-
 </body>
 </html>
