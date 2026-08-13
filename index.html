@@ -4,491 +4,493 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>سیم‌پیچی و برق صنعتی | Mohsen Nasri</title>
+<title>Mohsen Nasri | Industrial Engineering</title>
 
 <style>
 
-:root{
---bg:#030b14;
---panel:#081c2f;
---panel2:#0b263d;
---blue:#159bea;
---gold:#e7aa24;
---text:#f5f7fa;
---muted:#b9c7d5;
---border:rgba(255,255,255,.12);
-}
-
 *{
-box-sizing:border-box;
-scroll-behavior:smooth;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
 body{
-margin:0;
-font-family:Tahoma,Arial,sans-serif;
-background:
-radial-gradient(circle at 20% 20%,rgba(21,155,234,.08),transparent 30%),
-var(--bg);
-color:var(--text);
-line-height:1.9;
+    margin:0;
+    font-family:Tahoma,Arial,sans-serif;
+    background:#030b14;
+    color:#fff;
+    line-height:2;
 }
 
-a{
-text-decoration:none;
-color:inherit;
-}
-
-.container{
-width:min(1150px,92%);
-margin:auto;
-}
-
-
-/* HEADER */
+/* ================= HEADER ================= */
 
 header{
-position:sticky;
-top:0;
-z-index:100;
-background:rgba(3,11,20,.88);
-backdrop-filter:blur(15px);
-border-bottom:1px solid var(--border);
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    z-index:1000;
+    background:rgba(2,10,18,.88);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,.12);
 }
 
 .nav{
-min-height:72px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:20px;
+    max-width:1200px;
+    margin:auto;
+    min-height:75px;
+    padding:0 20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
 .logo{
-font-family:Arial;
-font-size:19px;
-font-weight:900;
-direction:ltr;
+    color:#fff;
+    text-decoration:none;
+    font-family:Arial;
+    font-size:22px;
+    font-weight:bold;
+    direction:ltr;
 }
 
 .logo span{
-color:var(--gold);
+    color:#e7aa24;
 }
 
-.back{
-border:1px solid var(--border);
-padding:8px 18px;
-border-radius:8px;
-color:#dbe7f1;
-transition:.3s;
+.menu{
+    display:flex;
+    gap:22px;
 }
 
-.back:hover{
-border-color:var(--gold);
-color:var(--gold);
+.menu a{
+    color:#ddd;
+    text-decoration:none;
+    font-size:14px;
+    transition:.3s;
 }
 
+.menu a:hover{
+    color:#e7aa24;
+}
 
-/* HERO */
+/* ================= HERO ================= */
 
 .hero{
+    min-height:850px;
+    padding-top:75px;
 
-min-height:560px;
+    display:flex;
+    align-items:center;
 
-display:flex;
-align-items:center;
-
-position:relative;
-
-background:
-
-linear-gradient(
-90deg,
-rgba(2,10,18,.96),
-rgba(2,10,18,.62),
-rgba(2,10,18,.35)
-),
-
-url("rewinding.jpg")
-center/cover no-repeat;
+    background:
+    linear-gradient(
+        90deg,
+        rgba(1,8,15,.97),
+        rgba(1,8,15,.78),
+        rgba(1,8,15,.25)
+    ),
+    url("industrial-hero.png") center/cover no-repeat;
 }
 
 .hero-content{
-max-width:750px;
-padding:80px 0;
+    max-width:1200px;
+    width:92%;
+    margin:auto;
 }
 
-.label{
-color:var(--blue);
-font-weight:bold;
-font-size:14px;
-letter-spacing:1px;
+.small-title{
+    color:#e7aa24;
+    font-size:14px;
+    font-weight:bold;
+    letter-spacing:1px;
 }
 
-h1{
-font-size:clamp(40px,6vw,70px);
-line-height:1.2;
-margin:10px 0;
+.hero h1{
+    font-size:clamp(50px,8vw,90px);
+    line-height:1.1;
+    margin:15px 0;
 }
 
 .hero h1 span{
-color:var(--gold);
+    color:#e7aa24;
+}
+
+.hero h2{
+    font-size:clamp(24px,4vw,40px);
+    margin:10px 0 20px;
 }
 
 .hero p{
-font-size:18px;
-color:#d1dce6;
+    max-width:700px;
+    color:#d0dbe5;
+    font-size:18px;
 }
 
-
-/* SECTION */
-
-section{
-padding:75px 0;
-}
-
-.title{
-text-align:center;
-margin-bottom:40px;
-}
-
-.title h2{
-font-size:32px;
-margin:0 0 8px;
-}
-
-.title p{
-color:var(--muted);
-}
-
-
-/* INTRO */
-
-.intro{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:25px;
-}
-
-.panel{
-background:
-linear-gradient(
-145deg,
-rgba(9,36,58,.92),
-rgba(5,18,30,.92)
-);
-
-border:1px solid var(--border);
-
-border-radius:18px;
-
-padding:30px;
-}
-
-.panel h3{
-font-size:25px;
-margin-top:0;
-color:white;
-}
-
-.panel p{
-color:#c3d0db;
-}
-
-
-/* ACCORDION */
-
-.technical-menu{
-max-width:900px;
-margin:auto;
-}
-
-.tech-item{
-margin-bottom:12px;
-
-border:1px solid var(--border);
-
-border-radius:12px;
-
-overflow:hidden;
-
-background:var(--panel);
-
-transition:.3s;
-}
-
-.tech-item:hover{
-border-color:var(--blue);
-
-transform:translateX(-5px);
-
-box-shadow:
-0 10px 30px
-rgba(0,0,0,.25);
-}
-
-.tech-header{
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
-padding:19px 22px;
-
-cursor:pointer;
-
-font-weight:bold;
-
-transition:.3s;
-}
-
-.tech-header:hover{
-
-background:
-linear-gradient(
-90deg,
-rgba(21,155,234,.18),
-rgba(21,155,234,.03)
-);
-
-color:var(--blue);
-}
-
-.arrow{
-font-size:22px;
-transition:.3s;
-}
-
-.tech-content{
-
-display:none;
-
-padding:0 25px 25px;
-
-color:var(--muted);
-
-border-top:1px solid var(--border);
-}
-
-.tech-item.active
-.tech-content{
-display:block;
-}
-
-.tech-item.active
-.arrow{
-transform:rotate(90deg);
-color:var(--gold);
-}
-
-
-/* PROJECTS */
-
-.projects{
-
-display:grid;
-
-grid-template-columns:
-repeat(3,1fr);
-
-gap:20px;
-}
-
-.project{
-
-background:var(--panel);
-
-border:1px solid var(--border);
-
-border-radius:16px;
-
-overflow:hidden;
-
-transition:.35s;
-}
-
-.project:hover{
-
-transform:translateY(-8px);
-
-border-color:var(--gold);
-}
-
-.project-image{
-
-height:190px;
-
-background:
-url("rewinding.jpg")
-center/cover no-repeat;
-}
-
-.project-body{
-
-padding:22px;
-}
-
-.project-body h3{
-margin-top:0;
-}
-
-.project-body p{
-color:var(--muted);
-font-size:14px;
-}
-
-
-/* GALLERY */
-
-.gallery{
-
-display:grid;
-
-grid-template-columns:
-repeat(3,1fr);
-
-gap:15px;
-}
-
-.gallery div{
-
-height:220px;
-
-border-radius:14px;
-
-border:1px solid var(--border);
-
-background:
-url("rewinding.jpg")
-center/cover no-repeat;
-
-transition:.4s;
-}
-
-.gallery div:hover{
-
-transform:scale(1.03);
-
-border-color:var(--gold);
-}
-
-
-/* CTA */
-
-.cta{
-
-text-align:center;
-
-background:
-linear-gradient(
-135deg,
-#09243a,
-#06121e
-);
-
-border:
-1px solid var(--border);
-
-border-radius:20px;
-
-padding:45px 25px;
+.buttons{
+    margin-top:30px;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
 }
 
 .btn{
+    display:inline-block;
+    padding:12px 25px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
 
-display:inline-block;
+.btn-primary{
+    background:#e7aa24;
+    color:#111;
+}
 
-margin-top:15px;
-
-padding:12px 25px;
-
-border-radius:8px;
-
-background:var(--gold);
-
-color:#111;
-
-font-weight:bold;
-
-transition:.3s;
+.btn-outline{
+    border:1px solid #aaa;
+    color:#fff;
 }
 
 .btn:hover{
-
-transform:translateY(-4px);
-
-box-shadow:
-0 10px 30px
-rgba(231,170,36,.3);
+    transform:translateY(-4px);
 }
 
+/* ================= GENERAL ================= */
 
-/* FOOTER */
+section{
+    padding:85px 0;
+}
+
+.container{
+    width:92%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    font-size:36px;
+    margin:0 0 10px;
+}
+
+.section-title p{
+    color:#aebdca;
+}
+
+/* ================= INDUSTRIES ================= */
+
+.industries{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:16px;
+}
+
+.industry{
+    position:relative;
+    min-height:370px;
+
+    overflow:hidden;
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    display:flex;
+    align-items:flex-end;
+
+    text-decoration:none;
+    color:white;
+
+    transition:.4s;
+}
+
+.industry-image{
+    position:absolute;
+    inset:0;
+
+    background-position:center;
+    background-size:cover;
+
+    transition:.6s;
+}
+
+.industry-overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        transparent 25%,
+        rgba(0,0,0,.92)
+    );
+}
+
+.industry-content{
+    position:relative;
+    z-index:2;
+
+    width:100%;
+    padding:24px;
+}
+
+.industry-number{
+    color:#e7aa24;
+    font-family:Arial;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.industry h3{
+    margin:5px 0;
+    font-size:19px;
+}
+
+.industry p{
+    color:#c3ced8;
+    font-size:12px;
+    margin:0;
+}
+
+.arrow{
+    display:block;
+    margin-top:12px;
+    font-size:22px;
+}
+
+.industry:hover{
+    transform:translateY(-12px);
+    border-color:#e7aa24;
+    box-shadow:0 25px 50px rgba(0,0,0,.5);
+}
+
+.industry:hover .industry-image{
+    transform:scale(1.12);
+}
+
+/* ================= PROJECTS ================= */
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:linear-gradient(145deg,#09243a,#06131f);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:17px;
+    padding:28px;
+
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#159bea;
+}
+
+.card h3{
+    margin-top:5px;
+}
+
+.card p{
+    color:#aebdca;
+}
+
+.tag{
+    color:#159bea;
+    font-size:12px;
+    font-weight:bold;
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+}
+
+.panel{
+    background:linear-gradient(145deg,#09243a,#06131f);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:18px;
+    padding:30px;
+}
+
+.panel h2{
+    margin-top:0;
+}
+
+.panel p{
+    color:#b8c6d2;
+}
+
+.list{
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+
+.list li{
+    padding:9px 0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+/* ================= QUESTIONS ================= */
+
+.questions{
+    background:
+    linear-gradient(
+        135deg,
+        #08243b,
+        #040e17
+    );
+}
+
+.question-box{
+    max-width:850px;
+    margin:auto;
+
+    padding:35px;
+
+    background:rgba(2,10,18,.7);
+
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:20px;
+}
+
+.question-box input,
+.question-box textarea{
+
+    width:100%;
+
+    margin:6px 0 12px;
+
+    padding:14px;
+
+    border-radius:8px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    background:#071522;
+
+    color:white;
+
+    font-family:Tahoma;
+}
+
+.question-box textarea{
+    min-height:140px;
+    resize:vertical;
+}
+
+.question-box button{
+
+    border:0;
+
+    padding:13px 28px;
+
+    border-radius:8px;
+
+    background:#e7aa24;
+
+    color:#111;
+
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+/* ================= FOOTER ================= */
 
 footer{
 
-padding:30px 0;
+    padding:35px;
 
-text-align:center;
+    text-align:center;
 
-border-top:1px solid var(--border);
+    background:#020810;
 
-color:#91a5b8;
+    color:#8fa2b3;
+
+    border-top:1px solid rgba(255,255,255,.1);
 }
 
+/* ================= MOBILE ================= */
 
-/* MOBILE */
+@media(max-width:1050px){
 
-@media(max-width:850px){
+    .industries{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-.intro{
-grid-template-columns:1fr;
 }
 
-.projects{
-grid-template-columns:1fr;
-}
+@media(max-width:800px){
 
-.gallery{
-grid-template-columns:1fr 1fr;
-}
+    .menu{
+        display:none;
+    }
+
+    .projects,
+    .services{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        min-height:720px;
+    }
 
 }
 
 @media(max-width:550px){
 
-.gallery{
-grid-template-columns:1fr;
-}
+    .industries{
+        grid-template-columns:1fr;
+    }
 
-.hero{
-min-height:620px;
-}
+    .hero h1{
+        font-size:52px;
+    }
 
 }
 
 </style>
-</head>
 
+</head>
 
 <body>
 
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 
 <header>
 
-<div class="container nav">
+<div class="nav">
 
-<a href="index.html" class="logo">
+<a href="#home" class="logo">
 MOHSEN <span>NASRI</span>
 </a>
 
-<a href="index.html" class="back">
-← بازگشت به صفحه اصلی
-</a>
+<nav class="menu">
+
+<a href="#home">صفحه اصلی</a>
+
+<a href="#industries">صنایع</a>
+
+<a href="#projects">پروژه‌ها</a>
+
+<a href="#services">خدمات</a>
+
+<a href="#questions">پرسش و پاسخ</a>
+
+</nav>
 
 </div>
 
@@ -496,138 +498,94 @@ MOHSEN <span>NASRI</span>
 
 
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 
-<section class="hero">
+<section class="hero" id="home">
 
-<div class="container hero-content">
+<div class="hero-content">
 
-<div class="label">
-ELECTRICAL & REWINDING
+<div class="small-title">
+MECHANICAL ENGINEERING • INDUSTRIAL PROJECTS
 </div>
 
 <h1>
-سیم‌پیچی و
-<span>برق صنعتی</span>
+محسن <span>نصری</span>
 </h1>
 
-<p>
-
-تجربیات، پروژه‌ها،
-تعمیرات، بازسازی،
-نقشه‌ها و مستندات فنی
-مرتبط با موتورهای الکتریکی،
-استاتور و تجهیزات الکتریکی صنعتی.
-
-</p>
-
-</div>
-
-</section>
-
-
-
-<!-- INTRO -->
-
-<section>
-
-<div class="container">
-
-<div class="intro">
-
-
-<div class="panel">
-
-<h3>
-معرفی این حوزه
-</h3>
-
-<p>
-
-در این بخش پروژه‌ها و تجربیات
-مرتبط با سیم‌پیچی،
-تعمیر و بازسازی موتورهای الکتریکی،
-استاتور و تجهیزات مرتبط
-قرار خواهد گرفت.
-
-</p>
-
-<p>
-
-تصاویر واقعی پروژه‌ها،
-نقشه‌ها،
-اطلاعات فنی و تجربیات اجرایی
-به مرور به این بخش اضافه می‌شوند.
-
-</p>
-
-</div>
-
-
-<div class="panel">
-
-<h3>
-چه مطالبی در این بخش قرار می‌گیرد؟
-</h3>
-
-<p>
-
-از محاسبات و طراحی سیم‌پیچی
-تا بازکردن موتور،
-بررسی استاتور،
-سیم‌گذاری،
-تست و راه‌اندازی.
-
-</p>
-
-<p>
-
-هدف، ایجاد یک آرشیو واقعی
-از تجربه‌های صنعتی است.
-
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- TECHNICAL MENU -->
-
-<section>
-
-<div class="container">
-
-<div class="title">
-
 <h2>
-آرشیو فنی سیم‌پیچی
+مهندس مکانیک و متخصص پروژه‌های صنعتی
 </h2>
 
 <p>
-روی هر موضوع کلیک کنید
+تجربه در تعمیرات و نگهداری تجهیزات صنعتی،
+ماشین‌آلات، سیم‌پیچی، عیب‌یابی،
+بازسازی و مستندسازی فنی.
+</p>
+
+<div class="buttons">
+
+<a href="#industries" class="btn btn-primary">
+مشاهده صنایع
+</a>
+
+<a href="#questions" class="btn btn-outline">
+طرح سؤال فنی
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= INDUSTRIES ================= -->
+
+<section id="industries">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+صنایع و حوزه‌های تخصصی
+</h2>
+
+<p>
+روی هر صنعت کلیک کنید و وارد بخش تخصصی آن شوید.
 </p>
 
 </div>
 
 
-<div class="technical-menu">
+<div class="industries">
 
 
-<div class="tech-item">
+<!-- سیم پیچی -->
 
-<div class="tech-header"
-onclick="toggleItem(this)">
+<a href="rewinding.html" class="industry">
 
-<span>
-01 — موتورهای الکتریکی
-</span>
+<div
+class="industry-image"
+style="background-image:url('rewinding.jpg')">
+</div>
+
+<div class="industry-overlay"></div>
+
+<div class="industry-content">
+
+<div class="industry-number">
+01
+</div>
+
+<h3>
+سیم‌پیچی و برق صنعتی
+</h3>
+
+<p>
+Electrical & Rewinding
+</p>
 
 <span class="arrow">
 ←
@@ -635,33 +593,34 @@ onclick="toggleItem(this)">
 
 </div>
 
-<div class="tech-content">
+</a>
+
+
+
+<!-- فلوت -->
+
+<a href="float-glass.html" class="industry">
+
+<div
+class="industry-image"
+style="background-image:url('float-glass.jpg')">
+</div>
+
+<div class="industry-overlay"></div>
+
+<div class="industry-content">
+
+<div class="industry-number">
+02
+</div>
+
+<h3>
+شیشه فلوت و تخت
+</h3>
 
 <p>
-
-معرفی موتورهای الکتریکی،
-ساختار،
-اجزا،
-استاتور،
-روتور،
-یاتاقان‌ها و سیستم‌های مرتبط.
-
+Float & Flat Glass
 </p>
-
-</div>
-
-</div>
-
-
-
-<div class="tech-item">
-
-<div class="tech-header"
-onclick="toggleItem(this)">
-
-<span>
-02 — سیم‌پیچی استاتور
-</span>
 
 <span class="arrow">
 ←
@@ -669,32 +628,34 @@ onclick="toggleItem(this)">
 
 </div>
 
-<div class="tech-content">
+</a>
+
+
+
+<!-- کابل -->
+
+<a href="cable.html" class="industry">
+
+<div
+class="industry-image"
+style="background-image:url('cable.jpg')">
+</div>
+
+<div class="industry-overlay"></div>
+
+<div class="industry-content">
+
+<div class="industry-number">
+03
+</div>
+
+<h3>
+صنعت کابل‌سازی
+</h3>
 
 <p>
-
-اطلاعات مربوط به سیم‌پیچی،
-شکل کلاف،
-تعداد شیار،
-اتصالات،
-عایق‌بندی و فرآیند اجرایی.
-
+Cable Manufacturing
 </p>
-
-</div>
-
-</div>
-
-
-
-<div class="tech-item">
-
-<div class="tech-header"
-onclick="toggleItem(this)">
-
-<span>
-03 — بازسازی و تعمیر موتور
-</span>
 
 <span class="arrow">
 ←
@@ -702,32 +663,34 @@ onclick="toggleItem(this)">
 
 </div>
 
-<div class="tech-content">
+</a>
+
+
+
+<!-- فولاد -->
+
+<a href="steel.html" class="industry">
+
+<div
+class="industry-image"
+style="background-image:url('steel.jpg')">
+</div>
+
+<div class="industry-overlay"></div>
+
+<div class="industry-content">
+
+<div class="industry-number">
+04
+</div>
+
+<h3>
+صنعت فولاد
+</h3>
 
 <p>
-
-مراحل بازکردن،
-بررسی،
-تعمیر،
-بازسازی،
-مونتاژ و تست موتور.
-
+Steel Industry
 </p>
-
-</div>
-
-</div>
-
-
-
-<div class="tech-item">
-
-<div class="tech-header"
-onclick="toggleItem(this)">
-
-<span>
-04 — نقشه‌ها و محاسبات
-</span>
 
 <span class="arrow">
 ←
@@ -735,32 +698,34 @@ onclick="toggleItem(this)">
 
 </div>
 
-<div class="tech-content">
+</a>
+
+
+
+<!-- شیشه بطری -->
+
+<a href="container-glass.html" class="industry">
+
+<div
+class="industry-image"
+style="background-image:url('container-glass.jpg')">
+</div>
+
+<div class="industry-overlay"></div>
+
+<div class="industry-content">
+
+<div class="industry-number">
+05
+</div>
+
+<h3>
+شیشه بطری
+</h3>
 
 <p>
-
-در این قسمت می‌توان
-نقشه‌های سیم‌پیچی،
-محاسبات،
-جداول و مدارک فنی
-را اضافه کرد.
-
+Container Glass
 </p>
-
-</div>
-
-</div>
-
-
-
-<div class="tech-item">
-
-<div class="tech-header"
-onclick="toggleItem(this)">
-
-<span>
-05 — تست و عیب‌یابی
-</span>
 
 <span class="arrow">
 ←
@@ -768,52 +733,7 @@ onclick="toggleItem(this)">
 
 </div>
 
-<div class="tech-content">
-
-<p>
-
-تجربیات مربوط به تست،
-عیب‌یابی،
-بررسی خطاها و
-رفع مشکلات موتورهای الکتریکی.
-
-</p>
-
-</div>
-
-</div>
-
-
-
-<div class="tech-item">
-
-<div class="tech-header"
-onclick="toggleItem(this)">
-
-<span>
-06 — پروژه‌های واقعی
-</span>
-
-<span class="arrow">
-←
-</span>
-
-</div>
-
-<div class="tech-content">
-
-<p>
-
-پروژه‌های انجام‌شده،
-تصاویر قبل و بعد،
-نقشه‌ها و توضیحات
-هر پروژه در این قسمت قرار می‌گیرد.
-
-</p>
-
-</div>
-
-</div>
+</a>
 
 
 </div>
@@ -824,20 +744,20 @@ onclick="toggleItem(this)">
 
 
 
-<!-- PROJECTS -->
+<!-- ================= PROJECTS ================= -->
 
-<section>
+<section id="projects">
 
 <div class="container">
 
-<div class="title">
+<div class="section-title">
 
 <h2>
-پروژه‌های سیم‌پیچی
+پروژه‌ها و تجربیات
 </h2>
 
 <p>
-نمونه پروژه‌ها و تجربیات اجرایی
+نمونه‌کارها و تجربیات صنعتی من
 </p>
 
 </div>
@@ -846,66 +766,58 @@ onclick="toggleItem(this)">
 <div class="projects">
 
 
-<div class="project">
+<div class="card">
 
-<div class="project-image"></div>
-
-<div class="project-body">
+<div class="tag">
+ELECTRICAL
+</div>
 
 <h3>
-بازسازی استاتور
+سیم‌پیچی و بازسازی استاتور
 </h3>
 
 <p>
-تصاویر و توضیحات پروژه
-در این قسمت قرار خواهد گرفت.
+پروژه‌ها، تصاویر، نقشه‌ها و تجربیات اجرایی
+در زمینه سیم‌پیچی و تعمیر موتورهای الکتریکی.
 </p>
 
 </div>
 
+
+
+<div class="card">
+
+<div class="tag">
+GLASS INDUSTRY
 </div>
 
-
-
-<div class="project">
-
-<div class="project-image"></div>
-
-<div class="project-body">
-
 <h3>
-سیم‌پیچی موتور صنعتی
+صنایع شیشه
 </h3>
 
 <p>
-مشخصات موتور،
-فرآیند اجرا و
-نتایج تست قابل اضافه شدن است.
+تجربیات خطوط تولید شیشه فلوت،
+شیشه تخت و شیشه بطری.
 </p>
 
 </div>
 
+
+
+<div class="card">
+
+<div class="tag">
+INDUSTRIAL
 </div>
 
-
-
-<div class="project">
-
-<div class="project-image"></div>
-
-<div class="project-body">
-
 <h3>
-عیب‌یابی موتور
+تعمیرات و بازسازی تجهیزات
 </h3>
 
 <p>
-شرح مشکل،
-روش تشخیص،
-اقدام اصلاحی و نتیجه پروژه.
+تجربیات تعمیرات، عیب‌یابی،
+بازسازی و Overhaul تجهیزات صنعتی.
 </p>
-
-</div>
 
 </div>
 
@@ -918,33 +830,78 @@ onclick="toggleItem(this)">
 
 
 
-<!-- GALLERY -->
+<!-- ================= SERVICES ================= -->
 
-<section>
+<section id="services">
 
 <div class="container">
 
-<div class="title">
+<div class="services">
+
+
+<div class="panel">
 
 <h2>
-گالری تصاویر
+خدمات مهندسی
 </h2>
 
-<p>
-تصاویر واقعی پروژه‌ها
-</p>
+<ul class="list">
+
+<li>
+تعمیرات و نگهداری تجهیزات صنعتی
+</li>
+
+<li>
+عیب‌یابی ماشین‌آلات
+</li>
+
+<li>
+سیم‌پیچی موتور و بازسازی استاتور
+</li>
+
+<li>
+بازسازی و Overhaul تجهیزات
+</li>
+
+<li>
+تهیه مستندات و Manual فنی
+</li>
+
+<li>
+مشاوره فنی و مهندسی
+</li>
+
+</ul>
 
 </div>
 
 
-<div class="gallery">
 
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
+<div class="panel">
+
+<h2>
+تجربه و تخصص
+</h2>
+
+<p>
+
+این وب‌سایت آرشیوی از پروژه‌ها،
+تجربیات کاری، تصاویر، نقشه‌ها،
+مدارک فنی و دانش حاصل از فعالیت
+در صنایع مختلف خواهد بود.
+
+</p>
+
+<p>
+
+هدف اصلی، ایجاد ارتباط مستقیم
+برای همکاری در پروژه‌های صنعتی
+و مهندسی است.
+
+</p>
+
+</div>
+
 
 </div>
 
@@ -954,33 +911,44 @@ onclick="toggleItem(this)">
 
 
 
-<!-- CTA -->
+<!-- ================= QUESTIONS ================= -->
 
-<section>
+<section class="questions" id="questions">
 
 <div class="container">
 
-<div class="cta">
+<div class="section-title">
 
 <h2>
-پروژه سیم‌پیچی یا تعمیر موتور دارید؟
+پرسش و پاسخ فنی
 </h2>
 
 <p>
-
-برای بررسی پروژه،
-مشاوره یا همکاری فنی
-با ما در ارتباط باشید.
-
+مشکل یا سؤال فنی خود را ارسال کنید.
 </p>
 
-<a
-href="index.html#contact"
-class="btn">
+</div>
 
-شروع یک پروژه ←
 
-</a>
+<div class="question-box">
+
+<input
+type="text"
+id="name"
+placeholder="نام شما">
+
+<input
+type="email"
+id="email"
+placeholder="ایمیل شما">
+
+<textarea
+id="question"
+placeholder="سؤال یا شرح مشکل فنی..."></textarea>
+
+<button onclick="sendQuestion()">
+ارسال سؤال
+</button>
 
 </div>
 
@@ -990,15 +958,15 @@ class="btn">
 
 
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
-<div class="container">
-
 Mohsen Nasri Industrial Engineering
 
-</div>
+<br>
+
+Mechanical Engineering • Industrial Maintenance • Engineering Projects
 
 </footer>
 
@@ -1006,25 +974,30 @@ Mohsen Nasri Industrial Engineering
 
 <script>
 
-function toggleItem(element){
+function sendQuestion(){
 
-const item =
-element.parentElement;
+let name =
+document.getElementById("name").value.trim();
 
-const all =
-document.querySelectorAll(".tech-item");
+let email =
+document.getElementById("email").value.trim();
 
-all.forEach(function(x){
+let question =
+document.getElementById("question").value.trim();
 
-if(x !== item){
 
-x.classList.remove("active");
+if(!name || !email || !question){
+
+alert("لطفاً همه قسمت‌ها را کامل کنید.");
+
+return;
 
 }
 
-});
 
-item.classList.toggle("active");
+alert(
+"فرم سؤال آماده است. در مرحله بعد سیستم ارسال واقعی پیام را به سایت وصل می‌کنیم."
+);
 
 }
 
@@ -1032,4 +1005,5 @@ item.classList.toggle("active");
 
 
 </body>
+
 </html>
