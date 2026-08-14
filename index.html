@@ -13,8 +13,15 @@
     scroll-behavior:smooth;
 }
 
+html,
 body{
     margin:0;
+    padding:0;
+    width:100%;
+    min-height:100%;
+}
+
+body{
     font-family:Tahoma,Arial,sans-serif;
     background:#030b14;
     color:#fff;
@@ -74,29 +81,51 @@ header{
 }
 
 
-/* HERO اصلی */
+/* =========================
+   HERO
+   ========================= */
 
 .hero{
+    position:relative;
+    width:100%;
     min-height:100vh;
+    height:100vh;
+
     padding-top:75px;
+
     display:flex;
     align-items:center;
-    position:relative;
 
-    background:
+    overflow:hidden;
+
+    background-color:#030b14;
+
+    background-image:
     linear-gradient(
         90deg,
         rgba(0,0,0,.55),
         rgba(0,0,0,.25),
         rgba(0,0,0,.05)
     ),
-    url("industrial-hero.png") center/cover no-repeat;
+    url("industrial-hero.png");
+
+    background-position:center center;
+    background-repeat:no-repeat;
+
+    /*
+       تصویر کل Hero را پر می‌کند
+    */
+    background-size:100% 100%;
 }
 
 .hero-content{
-    max-width:1450px;
+    position:relative;
+    z-index:2;
+
     width:94%;
-    margin:auto;
+    max-width:1450px;
+
+    margin:0 auto;
 }
 
 .small-title{
@@ -426,6 +455,7 @@ footer{
 
     .hero{
         min-height:720px;
+        height:720px;
     }
 
 }
@@ -434,6 +464,11 @@ footer{
 
     .industries{
         grid-template-columns:1fr;
+    }
+
+    .hero{
+        min-height:700px;
+        height:700px;
     }
 
     .hero h1{
