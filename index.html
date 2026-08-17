@@ -21,8 +21,8 @@
             min-height: 100vh;
             font-family: Tahoma, Arial, sans-serif;
             color: white;
+            overflow-x: hidden;
 
-            /* عکس صنعتی به عنوان پس‌زمینه کل صفحه */
             background-image:
                 linear-gradient(
                     rgba(0, 0, 0, 0.30),
@@ -34,31 +34,32 @@
             background-position: center center;
             background-repeat: no-repeat;
             background-attachment: fixed;
-
-            overflow-x: hidden;
         }
 
-        /* لایه اصلی سایت */
         .page {
             min-height: 100vh;
             background: rgba(0, 0, 0, 0.08);
         }
 
-        /* منو */
+        /* ========================================
+           HEADER
+        ======================================== */
+
         header {
             position: fixed;
             top: 0;
             right: 0;
             left: 0;
-            height: 75px;
+
+            height: 95px;
 
             display: flex;
             align-items: center;
             justify-content: space-between;
 
-            padding: 0 6%;
+            padding: 0 4%;
 
-            background: rgba(0, 0, 0, 0.35);
+            background: rgba(0, 0, 0, 0.42);
             backdrop-filter: blur(8px);
 
             border-bottom: 1px solid rgba(255,255,255,0.15);
@@ -66,32 +67,70 @@
             z-index: 1000;
         }
 
-        .logo {
-            font-size: 22px;
-            font-weight: bold;
+        /* لوگو سمت راست */
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+
+            text-decoration: none;
         }
 
-        .logo span {
-            color: #39bdf8;
+        .logo-image {
+            width: 80px;
+            height: 80px;
+
+            object-fit: contain;
+
+            border-radius: 50%;
+
+            display: block;
+
+            filter:
+                drop-shadow(
+                    0 4px 12px rgba(0,0,0,0.7)
+                );
+
+            transition:
+                transform 0.3s ease;
         }
+
+        .logo-image:hover {
+            transform: scale(1.06);
+        }
+
+        /* ========================================
+           NAVIGATION
+        ======================================== */
 
         nav {
             display: flex;
-            gap: 28px;
+            align-items: center;
+            gap: 32px;
         }
 
         nav a {
-            color: white;
+            color: #ffffff;
+
             text-decoration: none;
+
             font-size: 15px;
-            transition: 0.3s;
+            font-weight: 500;
+
+            transition:
+                color 0.3s ease,
+                transform 0.3s ease;
         }
 
         nav a:hover {
             color: #39bdf8;
+            transform: translateY(-2px);
         }
 
-        /* بخش اصلی */
+        /* ========================================
+           HERO
+        ======================================== */
+
         .hero {
             min-height: 100vh;
 
@@ -101,19 +140,31 @@
 
             text-align: center;
 
-            padding: 110px 20px 70px;
+            padding:
+                120px
+                20px
+                70px;
         }
 
         .hero-content {
+            width: 100%;
             max-width: 950px;
+
+            margin: auto;
         }
 
         .hero h1 {
-            font-size: clamp(45px, 8vw, 90px);
-            margin-bottom: 20px;
+            font-size:
+                clamp(45px, 8vw, 90px);
+
+            line-height: 1.1;
+
+            margin-bottom: 25px;
+
+            font-weight: 800;
 
             text-shadow:
-                0 5px 25px rgba(0,0,0,0.8);
+                0 5px 25px rgba(0,0,0,0.9);
         }
 
         .hero h1 span {
@@ -121,482 +172,54 @@
         }
 
         .hero p {
-            font-size: clamp(17px, 2.5vw, 24px);
+            font-size:
+                clamp(17px, 2.5vw, 24px);
+
             line-height: 2;
-            margin-bottom: 35px;
+
+            margin-bottom: 38px;
+
+            color: #f0f5f8;
 
             text-shadow:
-                0 3px 15px rgba(0,0,0,0.9);
+                0 3px 15px rgba(0,0,0,0.95);
         }
+
+        /* ========================================
+           BUTTONS
+        ======================================== */
 
         .buttons {
             display: flex;
+
             justify-content: center;
+            align-items: center;
+
             gap: 15px;
+
             flex-wrap: wrap;
         }
 
         .button {
-            display: inline-block;
+            display: inline-flex;
 
-            padding: 14px 30px;
+            align-items: center;
+            justify-content: center;
 
-            color: white;
+            min-width: 170px;
+
+            padding:
+                14px
+                30px;
+
+            color: #ffffff;
+
             text-decoration: none;
 
             border-radius: 8px;
 
-            background: rgba(14,165,233,0.9);
-
-            transition: 0.3s;
-        }
-
-        .button:hover {
-            transform: translateY(-3px);
-            background: #0284c7;
-        }
-
-        .button.secondary {
-            background: rgba(0,0,0,0.35);
-            border: 1px solid rgba(255,255,255,0.4);
-        }
-
-        /* بخش‌ها */
-        section:not(.hero) {
-            padding: 100px 7%;
-
-            background: rgba(3, 12, 18, 0.78);
-
-            backdrop-filter: blur(3px);
-        }
-
-        .title {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .title h2 {
-            font-size: 35px;
-            margin-bottom: 12px;
-        }
-
-        .title p {
-            color: #c3d0d8;
-        }
-
-        /* درباره */
-        .about {
-            max-width: 1100px;
-            margin: auto;
-
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .card {
-            padding: 30px 22px;
-
-            text-align: center;
-
-            background: rgba(255,255,255,0.07);
-
-            border: 1px solid rgba(255,255,255,0.12);
-
-            border-radius: 15px;
-
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-6px);
-            border-color: #39bdf8;
-        }
-
-        .card h3 {
-            margin-bottom: 15px;
-        }
-
-        .card p {
-            color: #c5d0d7;
-            line-height: 1.9;
-        }
-
-        /* صنایع */
-        .industries {
-            max-width: 1300px;
-            margin: auto;
-
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 18px;
-        }
-
-        .industry {
-            height: 300px;
-
-            position: relative;
-            overflow: hidden;
-
-            border-radius: 15px;
-
-            border: 1px solid rgba(255,255,255,0.15);
-
-            text-decoration: none;
-
-            background: rgba(0,0,0,0.3);
-
-            transition: 0.35s;
-        }
-
-        .industry:hover {
-            transform: translateY(-7px);
-            border-color: #39bdf8;
-        }
-
-        .industry img {
-            width: 100%;
-            height: 100%;
-
-            object-fit: cover;
-
-            transition: 0.5s;
-        }
-
-        .industry:hover img {
-            transform: scale(1.08);
-        }
-
-        .industry::after {
-            content: "";
-
-            position: absolute;
-            inset: 0;
-
             background:
-                linear-gradient(
-                    transparent 35%,
-                    rgba(0,0,0,0.9)
-                );
-        }
-
-        .industry-name {
-            position: absolute;
-
-            bottom: 20px;
-            right: 10px;
-            left: 10px;
-
-            z-index: 2;
-
-            text-align: center;
-
-            color: white;
-
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        /* پروژه */
-        .project-box {
-            max-width: 1000px;
-            margin: auto;
-
-            padding: 45px;
-
-            text-align: center;
-
-            background: rgba(255,255,255,0.07);
+                rgba(14,165,233,0.92);
 
             border:
-                1px solid rgba(255,255,255,0.12);
-
-            border-radius: 18px;
-        }
-
-        .project-box p {
-            margin-top: 20px;
-
-            line-height: 2;
-
-            color: #c5d0d7;
-        }
-
-        /* فوتر */
-        footer {
-            padding: 30px;
-
-            text-align: center;
-
-            background: rgba(0,0,0,0.75);
-
-            color: #aebbc3;
-        }
-
-        /* موبایل */
-        @media (max-width: 900px) {
-
-            .about {
-                grid-template-columns: 1fr;
-            }
-
-            .industries {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            nav {
-                display: none;
-            }
-        }
-
-        @media (max-width: 600px) {
-
-            body {
-                background-attachment: scroll;
-                background-position: center center;
-            }
-
-            .hero h1 {
-                font-size: 45px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            .industries {
-                grid-template-columns: 1fr;
-            }
-
-            .industry {
-                height: 280px;
-            }
-
-            section:not(.hero) {
-                padding: 70px 20px;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-<div class="page">
-
-    <!-- منو -->
-    <header>
-
-        <div class="logo">
-            Mohsen <span>Nasri</span>
-        </div>
-
-        <nav>
-            <a href="#home">خانه</a>
-            <a href="#about">درباره من</a>
-            <a href="#industries">صنایع</a>
-            <a href="#projects">پروژه‌ها</a>
-        </nav>
-
-    </header>
-
-
-    <!-- صفحه اصلی -->
-    <section class="hero" id="home">
-
-        <div class="hero-content">
-
-            <h1>
-                Mohsen <span>Nasri</span>
-            </h1>
-
-            <p>
-                مهندسی مکانیک و مهندسی صنعتی
-                <br>
-                تخصص در ماشین‌آلات و پروژه‌های صنعتی
-            </p>
-
-            <div class="buttons">
-
-                <a href="#industries" class="button">
-                    مشاهده صنایع
-                </a>
-
-                <a href="#projects" class="button secondary">
-                    پروژه‌ها
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- درباره من -->
-    <section id="about">
-
-        <div class="title">
-
-            <h2>حوزه فعالیت</h2>
-
-            <p>
-                مهندسی و پروژه‌های صنعتی
-            </p>
-
-        </div>
-
-        <div class="about">
-
-            <div class="card">
-
-                <h3>مهندسی مکانیک</h3>
-
-                <p>
-                    طراحی، تحلیل و بررسی ماشین‌آلات
-                    و تجهیزات صنعتی.
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>تجهیزات صنعتی</h3>
-
-                <p>
-                    فعالیت در زمینه ماشین‌آلات
-                    و خطوط تولید صنعتی.
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>پروژه‌های صنعتی</h3>
-
-                <p>
-                    اجرای پروژه، نصب تجهیزات
-                    و مستندسازی فنی.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- صنایع -->
-    <section id="industries">
-
-        <div class="title">
-
-            <h2>صنایع</h2>
-
-            <p>
-                حوزه‌های تخصصی فعالیت
-            </p>
-
-        </div>
-
-        <div class="industries">
-
-            <a href="rewinding.html" class="industry">
-
-                <img src="rewinding.jpg" alt="سیم پیچی">
-
-                <div class="industry-name">
-                    سیم‌پیچی
-                </div>
-
-            </a>
-
-
-            <a href="float-glass.html" class="industry">
-
-                <img src="float-glass.jpg" alt="شیشه فلوت">
-
-                <div class="industry-name">
-                    شیشه فلوت و تخت
-                </div>
-
-            </a>
-
-
-            <a href="cable.html" class="industry">
-
-                <img src="cable.jpg" alt="کابل سازی">
-
-                <div class="industry-name">
-                    کابل‌سازی
-                </div>
-
-            </a>
-
-
-            <a href="steel.html" class="industry">
-
-                <img src="steel.jpg" alt="فولاد">
-
-                <div class="industry-name">
-                    فولاد
-                </div>
-
-            </a>
-
-
-            <a href="container-glass.html" class="industry">
-
-                <img src="container-glass.jpg" alt="شیشه بطری">
-
-                <div class="industry-name">
-                    شیشه بطری
-                </div>
-
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- پروژه‌ها -->
-    <section id="projects">
-
-        <div class="title">
-
-            <h2>پروژه‌ها</h2>
-
-            <p>
-                پروژه‌ها و تجربیات مهندسی
-            </p>
-
-        </div>
-
-        <div class="project-box">
-
-            <h2>
-                پروژه‌های صنعتی
-            </h2>
-
-            <p>
-                معرفی پروژه‌ها، ماشین‌آلات،
-                تجهیزات و تجربیات فنی
-                در حوزه صنایع مختلف.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- فوتر -->
-    <footer>
-
-        © 2026 Mohsen Nasri | Industrial Engineering
-
-    </footer>
-
-</div>
-
-</body>
-</html>
+                1px solid
