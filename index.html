@@ -4,10 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>صنعت فولاد | Mohsen Nasri</title>
+<title>صنایع | Mohsen Nasri</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -20,1111 +19,436 @@ html{
 
 body{
     font-family:Tahoma,Arial,sans-serif;
-    color:#fff;
     background:#071017;
+    color:#fff;
     overflow-x:hidden;
 }
-
-
-/* ==============================
-   HEADER
-============================== */
 
 header{
     position:fixed;
     top:0;
     right:0;
     left:0;
-    height:88px;
-
+    height:85px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-
     padding:0 5%;
-
-    background:rgba(0,0,0,.60);
+    background:rgba(0,0,0,.65);
     backdrop-filter:blur(12px);
-
     border-bottom:1px solid rgba(255,255,255,.12);
-
-    z-index:9999;
-}
-
-
-/* ==============================
-   LOGO
-============================== */
-
-.logo-link{
-    display:flex;
-    align-items:center;
+    z-index:1000;
 }
 
 .logo{
-    width:70px;
-    height:70px;
+    width:65px;
+    height:65px;
     object-fit:contain;
-
-    filter:drop-shadow(
-        0 5px 15px rgba(0,0,0,.8)
-    );
-
-    transition:.3s ease;
 }
-
-.logo:hover{
-    transform:scale(1.07);
-}
-
-
-/* ==============================
-   MENU
-============================== */
 
 nav{
     display:flex;
-    align-items:center;
-    gap:30px;
+    gap:28px;
 }
 
 nav a{
-    position:relative;
-
     color:#fff;
     text-decoration:none;
-
-    font-size:15px;
-
-    padding:10px 3px;
-
-    transition:.3s ease;
+    font-size:14px;
+    transition:.3s;
 }
 
 nav a:hover{
     color:#38bdf8;
 }
 
-nav a::after{
-    content:"";
-
-    position:absolute;
-
-    right:0;
-    bottom:0;
-
-    width:0;
-    height:2px;
-
-    background:#38bdf8;
-
-    transition:.3s ease;
-}
-
-nav a:hover::after{
-    width:100%;
-}
-
-
-/* ==============================
-   FULL SCREEN INDUSTRY HERO
-============================== */
-
-.industry-hero{
-
+.industry{
     min-height:100vh;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
     text-align:center;
-
-    padding:120px 20px 100px;
-
-    background-image:
-
-        linear-gradient(
-            rgba(0,0,0,.22),
-            rgba(0,0,0,.72)
-        ),
-
-        url("steel.jpg");
-
+    padding:120px 20px 90px;
+    position:relative;
     background-size:cover;
-
     background-position:center;
-
-    background-repeat:no-repeat;
-
     background-attachment:fixed;
 }
 
-
-/* ==============================
-   HERO CONTENT
-============================== */
-
-.hero-content{
-    width:100%;
-    max-width:1000px;
+.industry::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        rgba(0,0,0,.25),
+        rgba(0,0,0,.78)
+    );
 }
 
-.hero-label{
-    display:inline-block;
-
-    padding:9px 22px;
-
-    margin-bottom:25px;
-
-    border:1px solid rgba(56,189,248,.7);
-
-    border-radius:30px;
-
-    background:rgba(0,0,0,.35);
-
-    backdrop-filter:blur(6px);
-
-    font-size:14px;
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:950px;
 }
 
 .hero-content h1{
-
-    font-size:
-        clamp(48px,8vw,90px);
-
-    line-height:1.1;
-
+    font-size:clamp(45px,8vw,90px);
     margin-bottom:25px;
-
-    font-weight:800;
-
-    text-shadow:
-        0 6px 30px rgba(0,0,0,.95);
+    text-shadow:0 5px 30px #000;
 }
 
 .hero-content p{
-
-    max-width:800px;
-
-    margin:
-        0 auto 35px;
-
-    font-size:
-        clamp(16px,2vw,21px);
-
+    font-size:19px;
     line-height:2;
-
-    color:#edf7fb;
-
-    text-shadow:
-        0 3px 15px rgba(0,0,0,1);
+    color:#e8f4f8;
 }
 
-
-/* ==============================
-   HERO BUTTON
-============================== */
-
-.hero-button{
-
+.badge{
     display:inline-block;
-
-    padding:14px 32px;
-
-    background:#0ea5e9;
-
-    color:#fff;
-
-    text-decoration:none;
-
-    border-radius:8px;
-
-    transition:.3s ease;
+    margin-bottom:25px;
+    padding:9px 22px;
+    border:1px solid #38bdf8;
+    border-radius:30px;
+    background:rgba(0,0,0,.35);
 }
-
-.hero-button:hover{
-
-    background:#0284c7;
-
-    transform:translateY(-4px);
-}
-
-
-/* ==============================
-   CONTENT AREA
-============================== */
 
 .content{
-
     background:#071017;
-
-    padding:
-        90px 5% 100px;
+    padding:90px 5%;
 }
 
 .container{
-
     max-width:1200px;
-
     margin:auto;
 }
 
-
-/* ==============================
-   CONTENT SECTION
-============================== */
-
 .section{
-
-    margin-bottom:55px;
-
-    padding:45px;
-
-    background:
-        rgba(255,255,255,.035);
-
-    border:
-        1px solid rgba(255,255,255,.09);
-
+    margin-bottom:45px;
+    padding:40px;
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,255,255,.1);
     border-radius:18px;
-
-    box-shadow:
-        0 15px 40px rgba(0,0,0,.25);
 }
 
 .section h2{
-
-    font-size:
-        clamp(27px,4vw,38px);
-
-    margin-bottom:25px;
-
     color:#38bdf8;
+    font-size:32px;
+    margin-bottom:22px;
 }
 
 .section h3{
-
-    font-size:22px;
-
-    margin:
-        25px 0 12px;
-
     color:#fff;
+    font-size:21px;
+    margin-bottom:12px;
 }
 
 .section p{
-
-    color:#d0d9de;
-
-    font-size:16px;
-
+    color:#ccd7dc;
     line-height:2.2;
-
-    margin-bottom:18px;
+    margin-bottom:15px;
 }
 
-
-/* ==============================
-   INFORMATION BOXES
-============================== */
-
-.info-grid{
-
+.cards{
     display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
+    grid-template-columns:repeat(3,1fr);
     gap:20px;
-
-    margin-top:30px;
 }
 
-.info-box{
-
+.card{
     padding:25px;
-
+    background:rgba(0,0,0,.3);
+    border:1px solid rgba(255,255,255,.08);
     border-radius:14px;
-
-    background:
-        rgba(0,0,0,.30);
-
-    border:
-        1px solid rgba(255,255,255,.08);
-
-    transition:.3s ease;
+    transition:.3s;
 }
 
-.info-box:hover{
-
-    transform:
-        translateY(-5px);
-
-    border-color:
-        rgba(56,189,248,.5);
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#38bdf8;
 }
 
-.info-box h3{
-
-    margin:0 0 12px;
-
-    color:#38bdf8;
-
-    font-size:20px;
-}
-
-.info-box p{
-
-    font-size:14px;
-
-    line-height:2;
-
-    margin:0;
-}
-
-
-/* ==============================
-   PROJECTS
-============================== */
-
-.project-grid{
-
+.projects{
     display:grid;
-
-    grid-template-columns:
-        repeat(2,1fr);
-
+    grid-template-columns:repeat(2,1fr);
     gap:20px;
-
-    margin-top:30px;
 }
 
 .project{
-
-    min-height:220px;
-
     padding:30px;
-
+    min-height:200px;
+    background:rgba(0,0,0,.3);
     border-radius:15px;
-
-    background:
-        rgba(0,0,0,.30);
-
-    border:
-        1px solid rgba(255,255,255,.09);
+    border:1px solid rgba(255,255,255,.08);
 }
-
-.project h3{
-
-    margin-top:0;
-
-    color:#38bdf8;
-}
-
-
-/* ==============================
-   GALLERY
-============================== */
 
 .gallery{
-
     display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
+    grid-template-columns:repeat(3,1fr);
     gap:18px;
-
-    margin-top:30px;
 }
 
-.gallery-item{
-
-    height:230px;
-
-    overflow:hidden;
-
-    border-radius:14px;
-
-    background:#111;
-
-    border:
-        1px solid rgba(255,255,255,.10);
-}
-
-.gallery-item img{
-
+.gallery img{
     width:100%;
-    height:100%;
-
+    height:230px;
     object-fit:cover;
-
-    transition:.5s ease;
+    border-radius:14px;
+    transition:.4s;
 }
 
-.gallery-item:hover img{
-
-    transform:scale(1.08);
+.gallery img:hover{
+    transform:scale(1.04);
 }
 
-
-/* ==============================
-   ARTICLES / CONTENT
-============================== */
-
-.article{
-
-    margin-top:30px;
-
-    padding:30px;
-
-    border-radius:15px;
-
-    background:
-        rgba(0,0,0,.28);
-
-    border:
-        1px solid rgba(255,255,255,.08);
-}
-
-.article h3{
-
-    margin-top:0;
-
-    color:#38bdf8;
-}
-
-.article p{
-
-    margin-bottom:0;
-}
-
-
-/* ==============================
-   CONTACT
-============================== */
-
-.contact{
-
+.add{
     text-align:center;
-
-    padding:80px 20px;
-
-    background:#02070a;
-
-    border-top:
-        1px solid rgba(255,255,255,.08);
+    padding:45px 25px;
+    border:1px dashed #38bdf8;
+    border-radius:16px;
 }
 
-.contact h2{
-
-    font-size:36px;
-
-    margin-bottom:18px;
-}
-
-.contact p{
-
-    color:#b9c6cc;
-
-    line-height:2;
-
-    margin-bottom:25px;
-}
-
-.contact-button{
-
+.back{
     display:inline-block;
-
-    padding:13px 32px;
-
+    margin-top:20px;
+    padding:13px 30px;
     background:#0ea5e9;
-
     color:#fff;
-
     text-decoration:none;
-
     border-radius:8px;
-
-    transition:.3s ease;
 }
-
-.contact-button:hover{
-
-    background:#0284c7;
-
-    transform:translateY(-3px);
-}
-
-
-/* ==============================
-   FOOTER
-============================== */
 
 footer{
-
-    padding:28px 20px;
-
-    text-align:center;
-
     background:#000;
-
-    color:#8f9ba1;
-
-    font-size:13px;
+    text-align:center;
+    padding:25px;
+    color:#89969c;
 }
 
+@media(max-width:900px){
 
-/* ==============================
-   TABLET
-============================== */
-
-@media(max-width:1000px){
-
-    .info-grid{
-
-        grid-template-columns:
-            repeat(2,1fr);
+    .cards{
+        grid-template-columns:1fr 1fr;
     }
 
     .gallery{
-
-        grid-template-columns:
-            repeat(2,1fr);
+        grid-template-columns:1fr 1fr;
     }
 }
 
-
-/* ==============================
-   MOBILE
-============================== */
-
-@media(max-width:700px){
-
-    body{
-        overflow-x:hidden;
-    }
+@media(max-width:650px){
 
     header{
-
-        height:78px;
-
-        padding:0 18px;
+        height:75px;
+        padding:0 15px;
     }
 
     .logo{
-
-        width:60px;
-        height:60px;
+        width:55px;
+        height:55px;
     }
 
     nav{
-
-        gap:12px;
+        gap:10px;
     }
 
     nav a{
-
-        font-size:11px;
+        font-size:10px;
     }
 
-    .industry-hero{
-
+    .industry{
         background-attachment:scroll;
-
-        padding:
-            110px 20px 80px;
-    }
-
-    .hero-content h1{
-
-        font-size:46px;
-    }
-
-    .hero-content p{
-
-        font-size:15px;
-    }
-
-    .content{
-
-        padding:
-            60px 20px 80px;
     }
 
     .section{
-
-        padding:
-            28px 20px;
+        padding:25px 18px;
     }
 
-    .info-grid{
-
-        grid-template-columns:1fr;
-    }
-
-    .project-grid{
-
-        grid-template-columns:1fr;
-    }
-
+    .cards,
+    .projects,
     .gallery{
-
         grid-template-columns:1fr;
     }
 
-    .gallery-item{
-
+    .gallery img{
         height:250px;
     }
 }
-
-
-/* ==============================
-   SMALL MOBILE
-============================== */
-
-@media(max-width:480px){
-
-    header{
-
-        height:70px;
-
-        padding:0 12px;
-    }
-
-    .logo{
-
-        width:54px;
-        height:54px;
-    }
-
-    nav{
-
-        gap:8px;
-    }
-
-    nav a{
-
-        font-size:9px;
-    }
-
-    .hero-content h1{
-
-        font-size:39px;
-    }
-
-    .hero-content p{
-
-        font-size:14px;
-    }
-}
-
 </style>
 </head>
 
-
 <body>
-
-
-<!-- ==================================
-     HEADER
-================================== -->
 
 <header>
 
-    <a
-        href="index.html"
-        class="logo-link">
+<a href="index.html">
+<img src="logo.jpg" class="logo" alt="Mohsen Nasri">
+</a>
 
-        <img
-            src="logo.jpg"
-            alt="Mohsen Nasri"
-            class="logo">
-
-    </a>
-
-
-    <nav>
-
-        <a href="index.html">
-            خانه
-        </a>
-
-        <a href="index.html#projects">
-            پروژه‌ها
-        </a>
-
-        <a href="#content">
-            مطالب
-        </a>
-
-        <a href="index.html#contact">
-            تماس با ما
-        </a>
-
-    </nav>
+<nav>
+<a href="index.html">خانه</a>
+<a href="index.html#projects">پروژه‌ها</a>
+<a href="#content">مطالب</a>
+<a href="index.html#contact">تماس</a>
+</nav>
 
 </header>
 
 
-<!-- ==================================
-     INDUSTRY HERO
-================================== -->
+<!-- ==================================================
+     صنعت فولاد
+================================================== -->
 
-<section class="industry-hero">
+<section
+class="industry"
+style="background-image:url('steel.jpg');">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-        <div class="hero-label">
-            INDUSTRIAL ENGINEERING
-        </div>
+<div class="badge">
+INDUSTRIAL ENGINEERING
+</div>
 
+<h1>صنعت فولاد</h1>
 
-        <h1>
-            صنعت فولاد
-        </h1>
+<p>
+اطلاعات، پروژه‌ها، تجربیات و مطالب تخصصی
+مرتبط با صنعت فولاد
+</p>
 
-
-        <p>
-            اطلاعات، پروژه‌ها، تجربیات
-            و مطالب تخصصی مرتبط با
-            صنعت فولاد
-        </p>
-
-
-        <a
-            href="#content"
-            class="hero-button">
-
-            ورود به مطالب
-
-        </a>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- ==================================
-     MAIN CONTENT
-================================== -->
-
-<main
-    class="content"
-    id="content">
+<main class="content" id="content">
 
 <div class="container">
 
-
-<!-- ==================================
-     INTRODUCTION
-================================== -->
-
 <section class="section">
 
-    <h2>
-        معرفی صنعت فولاد
-    </h2>
+<h2>معرفی صنعت فولاد</h2>
 
-
-    <p>
-
-        در این قسمت می‌توان معرفی کامل
-        صنعت فولاد، سابقه فعالیت،
-        حوزه‌های کاری و تجربیات تخصصی
-        را قرار داد.
-
-    </p>
-
-
-    <p>
-
-        این صفحه مخصوص صنعت فولاد است
-        و مطالب آن مستقل از سایر صنایع
-        سایت خواهد بود.
-
-    </p>
+<p>
+اینجا محل قرار گرفتن معرفی کامل صنعت فولاد،
+تجربیات کاری، حوزه فعالیت و توضیحات تخصصی است.
+</p>
 
 </section>
 
-
-<!-- ==================================
-     TECHNICAL INFORMATION
-================================== -->
-
 <section class="section">
 
-    <h2>
-        اطلاعات فنی
-    </h2>
+<h2>اطلاعات فنی</h2>
 
+<div class="cards">
 
-    <div class="info-grid">
+<div class="card">
+<h3>ماشین‌آلات</h3>
+<p>
+اطلاعات ماشین‌آلات و تجهیزات صنعتی.
+</p>
+</div>
 
+<div class="card">
+<h3>فرآیند تولید</h3>
+<p>
+شرح فرآیندها و خطوط تولید.
+</p>
+</div>
 
-        <div class="info-box">
+<div class="card">
+<h3>مهندسی</h3>
+<p>
+اطلاعات و تجربیات مهندسی.
+</p>
+</div>
 
-            <h3>
-                ماشین‌آلات
-            </h3>
-
-            <p>
-
-                اطلاعات ماشین‌آلات،
-                تجهیزات و سیستم‌های
-                صنعتی مورد استفاده.
-
-            </p>
-
-        </div>
-
-
-        <div class="info-box">
-
-            <h3>
-                فرآیند تولید
-            </h3>
-
-            <p>
-
-                توضیحات مربوط به فرآیندهای
-                تولید، خطوط تولید و تجهیزات.
-
-            </p>
-
-        </div>
-
-
-        <div class="info-box">
-
-            <h3>
-                مهندسی
-            </h3>
-
-            <p>
-
-                تجربیات مهندسی و اطلاعات
-                تخصصی پروژه‌های صنعتی.
-
-            </p>
-
-        </div>
-
-
-    </div>
+</div>
 
 </section>
 
-
-<!-- ==================================
-     PROJECTS
-================================== -->
-
 <section class="section">
 
-    <h2>
-        پروژه‌های صنعت فولاد
-    </h2>
+<h2>پروژه‌ها</h2>
 
+<div class="projects">
 
-    <div class="project-grid">
+<div class="project">
+<h3>پروژه فولاد شماره ۱</h3>
+<p>
+شرح پروژه، مشخصات فنی و تجربیات اجرایی
+در این قسمت قرار می‌گیرد.
+</p>
+</div>
 
+<div class="project">
+<h3>پروژه فولاد شماره ۲</h3>
+<p>
+اطلاعات پروژه بعدی را می‌توان اینجا اضافه کرد.
+</p>
+</div>
 
-        <div class="project">
-
-            <h3>
-                پروژه شماره ۱
-            </h3>
-
-            <p>
-
-                عنوان پروژه و توضیحات
-                کامل پروژه را در این قسمت
-                می‌توان اضافه کرد.
-
-            </p>
-
-        </div>
-
-
-        <div class="project">
-
-            <h3>
-                پروژه شماره ۲
-            </h3>
-
-            <p>
-
-                اطلاعات پروژه،
-                تجهیزات، مشخصات فنی
-                و تجربیات اجرایی.
-
-            </p>
-
-        </div>
-
-
-    </div>
+</div>
 
 </section>
 
-
-<!-- ==================================
-     ARTICLES
-================================== -->
-
 <section class="section">
 
-    <h2>
-        مطالب تخصصی
-    </h2>
+<h2>مطالب تخصصی</h2>
 
+<div class="card">
 
-    <div class="article">
+<h3>عنوان مطلب</h3>
 
-        <h3>
-            عنوان مطلب اول
-        </h3>
+<p>
+هر مقاله یا مطلب تخصصی مربوط به فولاد
+را می‌توان در این قسمت اضافه کرد.
+</p>
 
-        <p>
-
-            متن مطلب تخصصی خودت را
-            می‌توانی از این قسمت اضافه کنی.
-            این بخش برای مقالات و مطالب
-            فنی سایت طراحی شده است.
-
-        </p>
-
-    </div>
-
-
-    <div class="article">
-
-        <h3>
-            عنوان مطلب دوم
-        </h3>
-
-        <p>
-
-            این قسمت نیز برای اضافه کردن
-            مطالب، تجربیات و توضیحات
-            تخصصی بیشتر آماده است.
-
-        </p>
-
-    </div>
+</div>
 
 </section>
 
-
-<!-- ==================================
-     GALLERY
-================================== -->
-
 <section class="section">
 
-    <h2>
-        گالری تصاویر
-    </h2>
+<h2>گالری تصاویر</h2>
 
+<div class="gallery">
 
-    <p>
+<img src="steel.jpg" alt="فولاد">
 
-        تصاویر پروژه‌ها و تجهیزات
-        صنعت فولاد در این قسمت
-        قرار می‌گیرند.
+<img src="steel.jpg" alt="تجهیزات فولاد">
 
-    </p>
+<img src="steel.jpg" alt="پروژه فولاد">
 
-
-    <div class="gallery">
-
-
-        <div class="gallery-item">
-
-            <img
-                src="steel.jpg"
-                alt="صنعت فولاد">
-
-        </div>
-
-
-        <div class="gallery-item">
-
-            <img
-                src="steel.jpg"
-                alt="تجهیزات فولاد">
-
-        </div>
-
-
-        <div class="gallery-item">
-
-            <img
-                src="steel.jpg"
-                alt="پروژه فولاد">
-
-        </div>
-
-
-    </div>
+</div>
 
 </section>
 
+<section class="section">
+
+<div class="add">
+
+<h2>افزودن مطالب جدید</h2>
+
+<p>
+این قسمت برای مطالب جدید، پروژه‌های جدید،
+عکس‌ها و اطلاعات تخصصی آینده آماده است.
+</p>
+
+</div>
+
+</section>
+
+<a href="index.html" class="back">
+بازگشت به صفحه اصلی
+</a>
 
 </div>
 
 </main>
 
-
-<!-- ==================================
-     CONTACT
-================================== -->
-
-<section
-    class="contact"
-    id="contact">
-
-    <h2>
-        تماس با ما
-    </h2>
-
-
-    <p>
-
-        برای همکاری،
-        پروژه‌های صنعتی
-        و مشاوره فنی
-        با ما در ارتباط باشید.
-
-    </p>
-
-
-    <a
-        href="index.html#contact"
-        class="contact-button">
-
-        تماس با ما
-
-    </a>
-
-</section>
-
-
-<!-- ==================================
-     FOOTER
-================================== -->
-
 <footer>
-
-    © 2026 Mohsen Nasri
-    |
-    Industrial Engineering
-
+© 2026 Mohsen Nasri | Industrial Engineering
 </footer>
-
 
 </body>
 </html>
