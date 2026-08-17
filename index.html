@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mohsen Nasri | Industrial Engineering</title>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Mohsen Nasri | Industrial Engineering
+    </title>
+
 
     <style>
+
+        /* ==============================
+           RESET
+        ============================== */
+
         * {
             margin: 0;
             padding: 0;
@@ -17,209 +29,1173 @@
             scroll-behavior: smooth;
         }
 
+
+        /* ==============================
+           BODY
+        ============================== */
+
         body {
+
             min-height: 100vh;
-            font-family: Tahoma, Arial, sans-serif;
-            color: white;
+
+            font-family:
+                Tahoma,
+                Arial,
+                sans-serif;
+
+            color: #ffffff;
+
             overflow-x: hidden;
 
+
             background-image:
+
                 linear-gradient(
-                    rgba(0, 0, 0, 0.30),
-                    rgba(0, 0, 0, 0.30)
+                    rgba(0, 0, 0, 0.32),
+                    rgba(0, 0, 0, 0.48)
                 ),
+
                 url("industrial-hero.png");
 
+
             background-size: cover;
-            background-position: center center;
+
+            background-position:
+                center center;
+
             background-repeat: no-repeat;
+
             background-attachment: fixed;
+
         }
+
+
+        /* ==============================
+           PAGE
+        ============================== */
 
         .page {
+
             min-height: 100vh;
-            background: rgba(0, 0, 0, 0.08);
+
+            background:
+                rgba(0, 0, 0, 0.06);
+
         }
 
-        /* ========================================
+
+        /* ==============================
            HEADER
-        ======================================== */
+        ============================== */
 
         header {
+
             position: fixed;
+
             top: 0;
             right: 0;
             left: 0;
 
-            height: 95px;
+
+            height: 92px;
+
 
             display: flex;
+
             align-items: center;
-            justify-content: space-between;
 
-            padding: 0 4%;
+            justify-content:
+                space-between;
 
-            background: rgba(0, 0, 0, 0.42);
-            backdrop-filter: blur(8px);
 
-            border-bottom: 1px solid rgba(255,255,255,0.15);
+            padding:
+                0 5%;
+
+
+            background:
+                rgba(3, 10, 16, 0.72);
+
+
+            backdrop-filter:
+                blur(12px);
+
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,0.14);
+
 
             z-index: 1000;
+
         }
 
-        /* لوگو سمت راست */
+
+        /* ==============================
+           LOGO
+        ============================== */
 
         .logo-link {
+
             display: flex;
+
             align-items: center;
 
             text-decoration: none;
+
         }
 
+
         .logo-image {
-            width: 80px;
-            height: 80px;
+
+            width: 76px;
+
+            height: 76px;
+
 
             object-fit: contain;
 
+
             border-radius: 50%;
+
 
             display: block;
 
+
             filter:
+
                 drop-shadow(
-                    0 4px 12px rgba(0,0,0,0.7)
+                    0 5px 15px
+                    rgba(0,0,0,0.75)
                 );
 
+
             transition:
-                transform 0.3s ease;
+                0.3s ease;
+
         }
+
 
         .logo-image:hover {
-            transform: scale(1.06);
+
+            transform:
+                scale(1.07);
+
         }
 
-        /* ========================================
+
+        /* ==============================
            NAVIGATION
-        ======================================== */
+        ============================== */
 
         nav {
+
             display: flex;
+
             align-items: center;
-            gap: 32px;
+
+            gap: 30px;
+
         }
 
+
         nav a {
+
+            position: relative;
+
             color: #ffffff;
 
             text-decoration: none;
 
             font-size: 15px;
-            font-weight: 500;
+
+            padding:
+                10px 3px;
+
 
             transition:
-                color 0.3s ease,
-                transform 0.3s ease;
+                0.3s ease;
+
         }
+
+
+        nav a::after {
+
+            content: "";
+
+            position: absolute;
+
+            right: 0;
+
+            bottom: 0;
+
+            width: 0;
+
+            height: 2px;
+
+            background:
+                #38bdf8;
+
+
+            transition:
+                0.3s ease;
+
+        }
+
 
         nav a:hover {
-            color: #39bdf8;
-            transform: translateY(-2px);
+
+            color:
+                #38bdf8;
+
         }
 
-        /* ========================================
+
+        nav a:hover::after {
+
+            width: 100%;
+
+        }
+
+
+        /* ==============================
            HERO
-        ======================================== */
+        ============================== */
 
         .hero {
+
             min-height: 100vh;
 
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
+
 
             text-align: center;
 
+
             padding:
-                120px
-                20px
-                70px;
+                130px 20px 100px;
+
         }
+
 
         .hero-content {
+
             width: 100%;
-            max-width: 950px;
+
+            max-width: 1000px;
 
             margin: auto;
+
         }
+
+
+        .hero-label {
+
+            display: inline-block;
+
+
+            padding:
+                9px 22px;
+
+
+            margin-bottom:
+                25px;
+
+
+            border:
+                1px solid
+                rgba(56,189,248,0.65);
+
+
+            border-radius:
+                30px;
+
+
+            background:
+                rgba(0,0,0,0.35);
+
+
+            color:
+                #d8f5ff;
+
+
+            font-size:
+                14px;
+
+
+            backdrop-filter:
+                blur(6px);
+
+        }
+
 
         .hero h1 {
+
             font-size:
-                clamp(45px, 8vw, 90px);
+                clamp(48px, 8vw, 88px);
 
-            line-height: 1.1;
 
-            margin-bottom: 25px;
+            line-height:
+                1.1;
 
-            font-weight: 800;
+
+            margin-bottom:
+                25px;
+
+
+            font-weight:
+                800;
+
+
+            letter-spacing:
+                1px;
+
 
             text-shadow:
-                0 5px 25px rgba(0,0,0,0.9);
+                0 6px 30px
+                rgba(0,0,0,0.9);
+
         }
+
 
         .hero h1 span {
-            color: #39bdf8;
+
+            color:
+                #38bdf8;
+
         }
 
-        .hero p {
+
+        .hero-description {
+
+            max-width:
+                800px;
+
+
+            margin:
+                0 auto 38px;
+
+
             font-size:
-                clamp(17px, 2.5vw, 24px);
+                clamp(16px, 2.2vw, 22px);
 
-            line-height: 2;
 
-            margin-bottom: 38px;
+            line-height:
+                2;
 
-            color: #f0f5f8;
+
+            color:
+                #edf6fa;
+
 
             text-shadow:
-                0 3px 15px rgba(0,0,0,0.95);
+                0 3px 15px
+                rgba(0,0,0,0.95);
+
         }
 
-        /* ========================================
-           BUTTONS
-        ======================================== */
 
-        .buttons {
+        /* ==============================
+           HERO BUTTONS
+        ============================== */
+
+        .hero-buttons {
+
             display: flex;
 
-            justify-content: center;
             align-items: center;
+
+            justify-content: center;
 
             gap: 15px;
 
             flex-wrap: wrap;
+
         }
 
-        .button {
-            display: inline-flex;
 
-            align-items: center;
-            justify-content: center;
+        .btn {
 
-            min-width: 170px;
+            min-width:
+                175px;
+
 
             padding:
-                14px
-                30px;
+                14px 28px;
 
-            color: #ffffff;
 
-            text-decoration: none;
+            border-radius:
+                8px;
 
-            border-radius: 8px;
+
+            text-decoration:
+                none;
+
+
+            color:
+                #ffffff;
+
+
+            font-size:
+                15px;
+
+
+            transition:
+                0.3s ease;
+
+        }
+
+
+        .btn-primary {
 
             background:
-                rgba(14,165,233,0.92);
+                rgba(14,165,233,0.95);
+
+
+            box-shadow:
+                0 8px 25px
+                rgba(14,165,233,0.25);
+
+        }
+
+
+        .btn-primary:hover {
+
+            background:
+                #0284c7;
+
+
+            transform:
+                translateY(-4px);
+
+        }
+
+
+        .btn-secondary {
+
+            background:
+                rgba(0,0,0,0.42);
+
 
             border:
                 1px solid
+                rgba(255,255,255,0.45);
+
+
+            backdrop-filter:
+                blur(5px);
+
+        }
+
+
+        .btn-secondary:hover {
+
+            background:
+                rgba(255,255,255,0.12);
+
+
+            transform:
+                translateY(-4px);
+
+        }
+
+
+        /* ==============================
+           SPACE BEFORE INDUSTRIES
+        ============================== */
+
+        .main-space {
+
+            min-height:
+                18vh;
+
+        }
+
+
+        /* ==============================
+           INDUSTRIES
+           پایین صفحه
+        ============================== */
+
+        .industries-section {
+
+            padding:
+                90px 5% 110px;
+
+
+            background:
+                rgba(3,10,16,0.86);
+
+
+            backdrop-filter:
+                blur(5px);
+
+
+            border-top:
+                1px solid
+                rgba(255,255,255,0.08);
+
+        }
+
+
+        .section-heading {
+
+            text-align:
+                center;
+
+
+            margin-bottom:
+                50px;
+
+        }
+
+
+        .section-heading h2 {
+
+            font-size:
+                clamp(30px, 4vw, 42px);
+
+
+            margin-bottom:
+                12px;
+
+
+            text-shadow:
+                0 4px 15px
+                rgba(0,0,0,0.8);
+
+        }
+
+
+        .section-heading p {
+
+            color:
+                #b9c8d0;
+
+
+            font-size:
+                15px;
+
+        }
+
+
+        /* ==============================
+           FIVE INDUSTRIES
+        ============================== */
+
+        .industries {
+
+            width: 100%;
+
+            max-width:
+                1350px;
+
+
+            margin:
+                auto;
+
+
+            display: grid;
+
+
+            grid-template-columns:
+                repeat(5, 1fr);
+
+
+            gap:
+                18px;
+
+        }
+
+
+        /* ==============================
+           INDUSTRY CARD
+        ============================== */
+
+        .industry-card {
+
+            position:
+                relative;
+
+
+            display:
+                block;
+
+
+            height:
+                310px;
+
+
+            overflow:
+                hidden;
+
+
+            border-radius:
+                16px;
+
+
+            border:
+                1px solid
+                rgba(255,255,255,0.14);
+
+
+            background:
+                rgba(0,0,0,0.3);
+
+
+            text-decoration:
+                none;
+
+
+            box-shadow:
+                0 10px 30px
+                rgba(0,0,0,0.3);
+
+
+            transition:
+                transform 0.35s ease,
+                border-color 0.35s ease,
+                box-shadow 0.35s ease;
+
+        }
+
+
+        .industry-card:hover {
+
+            transform:
+                translateY(-9px);
+
+
+            border-color:
+                #38bdf8;
+
+
+            box-shadow:
+                0 18px 40px
+                rgba(0,0,0,0.55);
+
+        }
+
+
+        .industry-card img {
+
+            position:
+                absolute;
+
+
+            top:
+                0;
+
+
+            right:
+                0;
+
+
+            width:
+                100%;
+
+
+            height:
+                100%;
+
+
+            object-fit:
+                cover;
+
+
+            transition:
+                transform 0.55s ease;
+
+        }
+
+
+        .industry-card:hover img {
+
+            transform:
+                scale(1.09);
+
+        }
+
+
+        .industry-card::after {
+
+            content:
+                "";
+
+
+            position:
+                absolute;
+
+
+            inset:
+                0;
+
+
+            background:
+
+                linear-gradient(
+                    to bottom,
+                    rgba(0,0,0,0.02) 25%,
+                    rgba(0,0,0,0.90) 100%
+                );
+
+        }
+
+
+        .industry-title {
+
+            position:
+                absolute;
+
+
+            right:
+                15px;
+
+
+            left:
+                15px;
+
+
+            bottom:
+                22px;
+
+
+            z-index:
+                2;
+
+
+            text-align:
+                center;
+
+
+            color:
+                #ffffff;
+
+
+            font-size:
+                18px;
+
+
+            font-weight:
+                bold;
+
+
+            text-shadow:
+                0 3px 10px
+                rgba(0,0,0,0.95);
+
+        }
+
+
+        /* ==============================
+           CONTACT
+        ============================== */
+
+        .contact-section {
+
+            padding:
+                85px 20px;
+
+
+            text-align:
+                center;
+
+
+            background:
+                rgba(3,10,16,0.90);
+
+
+            border-top:
+                1px solid
+                rgba(255,255,255,0.08);
+
+        }
+
+
+        .contact-section h2 {
+
+            font-size:
+                clamp(28px, 4vw, 40px);
+
+
+            margin-bottom:
+                18px;
+
+        }
+
+
+        .contact-section p {
+
+            color:
+                #c4d0d6;
+
+
+            margin-bottom:
+                28px;
+
+
+            line-height:
+                2;
+
+        }
+
+
+        .contact-button {
+
+            display:
+                inline-block;
+
+
+            padding:
+                14px 35px;
+
+
+            border-radius:
+                8px;
+
+
+            background:
+                #0ea5e9;
+
+
+            color:
+                #ffffff;
+
+
+            text-decoration:
+                none;
+
+
+            transition:
+                0.3s ease;
+
+        }
+
+
+        .contact-button:hover {
+
+            background:
+                #0284c7;
+
+
+            transform:
+                translateY(-3px);
+
+        }
+
+
+        /* ==============================
+           FOOTER
+        ============================== */
+
+        footer {
+
+            padding:
+                28px 20px;
+
+
+            text-align:
+                center;
+
+
+            background:
+                rgba(0,0,0,0.90);
+
+
+            color:
+                #9eabb3;
+
+
+            font-size:
+                13px;
+
+
+            border-top:
+                1px solid
+                rgba(255,255,255,0.08);
+
+        }
+
+
+        /* ==============================
+           TABLET
+        ============================== */
+
+        @media (max-width: 1100px) {
+
+            .industries {
+
+                grid-template-columns:
+                    repeat(3, 1fr);
+
+            }
+
+        }
+
+
+        /* ==============================
+           MOBILE
+        ============================== */
+
+        @media (max-width: 700px) {
+
+            body {
+
+                background-attachment:
+                    scroll;
+
+            }
+
+
+            header {
+
+                height:
+                    80px;
+
+
+                padding:
+                    0 20px;
+
+            }
+
+
+            .logo-image {
+
+                width:
+                    62px;
+
+
+                height:
+                    62px;
+
+            }
+
+
+            nav {
+
+                gap:
+                    13px;
+
+            }
+
+
+            nav a {
+
+                font-size:
+                    11px;
+
+            }
+
+
+            .hero {
+
+                padding:
+                    110px 20px 80px;
+
+            }
+
+
+            .hero h1 {
+
+                font-size:
+                    45px;
+
+            }
+
+
+            .hero-description {
+
+                font-size:
+                    16px;
+
+            }
+
+
+            .main-space {
+
+                min-height:
+                    8vh;
+
+            }
+
+
+            .industries-section {
+
+                padding:
+                    70px 20px 85px;
+
+            }
+
+
+            .industries {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+
+                gap:
+                    14px;
+
+            }
+
+
+            .industry-card {
+
+                height:
+                    260px;
+
+            }
+
+        }
+
+
+        /* ==============================
+           SMALL MOBILE
+        ============================== */
+
+        @media (max-width: 480px) {
+
+            header {
+
+                height:
+                    72px;
+
+
+                padding:
+                    0 15px;
+
+            }
+
+
+            .logo-image {
+
+                width:
+                    55px;
+
+
+                height:
+                    55px;
+
+            }
+
+
+            nav {
+
+                gap:
+                    8px;
+
+            }
+
+
+            nav a {
+
+                font-size:
+                    10px;
+
+            }
+
+
+            .hero h1 {
+
+                font-size:
+                    39px;
+
+            }
+
+
+            .hero-description {
+
+                font-size:
+                    14px;
+
+            }
+
+
+            .hero-buttons {
+
+                flex-direction:
+                    column;
+
+            }
+
+
+            .btn {
+
+                width:
+                    90%;
+
+
+                max-width:
+                    280px;
+
+            }
+
+
+            .industries {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .industry-card {
+
+                height:
+                    285px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="page">
+
+
+    <!-- =================================
+         HEADER
+    ================================== -->
+
+    <header>
+
+
+        <!-- لوگو سمت راست -->
+
+        <a
+            href="#home"
+            class="logo-link">
+
+            <img
+                src="logo.jpg"
+                alt="Mohsen Nasri"
+                class="logo-image">
+
+        </a>
+
+
+        <!-- منو سمت چپ -->
+
+        <nav>
+
+            <a href="#home">
+                خانه
+            </a>
+
+
+            <a href="#projects">
+                پروژه‌ها
+            </a>
+
+
+           
