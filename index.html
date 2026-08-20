@@ -1,100 +1,80 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
-
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Mohsen Nasri | Industrial Engineering</title>
 
+<meta name="description"
+content="Mohsen Nasri - Mechanical and Industrial Engineering, Industrial Projects, Technical Documentation and Engineering Services.">
+
 <style>
 
-/* =========================
-   RESET
-========================= */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    font-family:Tahoma,Arial,sans-serif;
-    color:#fff;
-    background:#050b10;
-    overflow-x:hidden;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #071018;
+    color: #ffffff;
+    line-height: 1.6;
 }
-
 
 /* =========================
    HEADER
 ========================= */
 
-header{
-    position:fixed;
-    top:0;
-    right:0;
-    left:0;
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 
-    height:88px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+    padding: 18px 6%;
 
-    padding:0 5%;
+    background: rgba(5, 12, 18, 0.82);
+    backdrop-filter: blur(12px);
 
-    background:rgba(0,0,0,.68);
-
-    backdrop-filter:blur(12px);
-
-    border-bottom:1px solid rgba(255,255,255,.12);
-
-    z-index:9999;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-
-/* LOGO */
-
-.logo{
-    width:70px;
-    height:70px;
-
-    object-fit:contain;
-
-    display:block;
-
-    filter:drop-shadow(
-        0 4px 12px rgba(0,0,0,.8)
-    );
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
-
-/* NAVIGATION */
-
-nav{
-    display:flex;
-    align-items:center;
-    gap:30px;
+.logo span {
+    color: #00bcd4;
 }
 
-nav a{
-    color:#fff;
-
-    text-decoration:none;
-
-    font-size:14px;
-
-    transition:.3s;
+nav {
+    display: flex;
+    gap: 28px;
 }
 
-nav a:hover{
-    color:#38bdf8;
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00bcd4;
 }
 
 
@@ -102,316 +82,267 @@ nav a:hover{
    HERO
 ========================= */
 
-.hero{
+.hero {
+    min-height: 100vh;
 
-    min-height:100vh;
+    display: flex;
+    align-items: center;
 
-    display:flex;
+    padding: 120px 7% 80px;
 
-    align-items:center;
-
-    justify-content:center;
-
-    text-align:center;
-
-    padding:120px 20px 80px;
+    position: relative;
 
     background:
-
-    linear-gradient(
-        rgba(0,0,0,.25),
-        rgba(0,0,0,.62)
-    ),
-
-    url("industrial-hero.png");
-
-    background-size:cover;
-
-    background-position:center;
-
-    background-repeat:no-repeat;
-
-    background-attachment:fixed;
+        linear-gradient(
+            90deg,
+            rgba(3, 10, 15, 0.92),
+            rgba(3, 10, 15, 0.58),
+            rgba(3, 10, 15, 0.35)
+        ),
+        url("industrial-hero.png") center/cover no-repeat;
 }
 
-
-.hero-content{
-    width:100%;
-    max-width:1000px;
+.hero-content {
+    max-width: 760px;
 }
 
-
-/* BADGE */
-
-.badge{
-
-    display:inline-block;
-
-    padding:9px 22px;
-
-    margin-bottom:25px;
-
-    border:1px solid #38bdf8;
-
-    border-radius:30px;
-
-    background:rgba(0,0,0,.4);
-
-    font-size:13px;
-
-    letter-spacing:.5px;
+.hero h1 {
+    font-size: clamp(42px, 6vw, 78px);
+    line-height: 1.05;
+    margin-bottom: 25px;
 }
 
-
-/* TITLE */
-
-.hero h1{
-
-    font-size:
-    clamp(
-        48px,
-        8vw,
-        90px
-    );
-
-    line-height:1.1;
-
-    margin-bottom:25px;
-
-    text-shadow:
-    0 5px 30px rgba(0,0,0,.95);
+.hero h1 span {
+    color: #00bcd4;
 }
 
-
-.hero h1 span{
-    color:#38bdf8;
+.hero p {
+    font-size: 20px;
+    color: #d5dce1;
+    max-width: 650px;
+    margin-bottom: 35px;
 }
 
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
 
-/* DESCRIPTION */
+.btn {
+    display: inline-block;
 
-.hero-text{
+    padding: 13px 25px;
 
-    font-size:
-    clamp(
-        17px,
-        2.5vw,
-        22px
-    );
+    border-radius: 5px;
 
-    line-height:2;
+    text-decoration: none;
+    font-weight: 600;
 
-    margin-bottom:35px;
+    transition: 0.3s;
+}
 
-    text-shadow:
-    0 3px 15px rgba(0,0,0,.95);
+.btn-primary {
+    background: #00bcd4;
+    color: #001015;
+}
+
+.btn-primary:hover {
+    background: #00d9f5;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    border: 1px solid rgba(255,255,255,0.5);
+    color: white;
+}
+
+.btn-outline:hover {
+    background: rgba(255,255,255,0.1);
 }
 
 
 /* =========================
-   BUTTONS
+   GENERAL SECTION
 ========================= */
 
-.btn{
-
-    display:inline-block;
-
-    padding:14px 32px;
-
-    margin:5px;
-
-    border-radius:8px;
-
-    text-decoration:none;
-
-    color:#fff;
-
-    background:#0ea5e9;
-
-    transition:.3s;
+section {
+    padding: 100px 7%;
 }
 
-.btn:hover{
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
 
-    background:#0284c7;
+.section-title h2 {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
 
-    transform:translateY(-4px);
-
-    box-shadow:
-    0 8px 20px
-    rgba(0,0,0,.35);
+.section-title p {
+    color: #aeb9c0;
 }
 
 
 /* =========================
-   INDUSTRIES SECTION
+   ABOUT
 ========================= */
 
-.industries-section{
-
-    padding:
-    95px 5%
-    110px;
-
-    background:
-    rgba(3,10,16,.97);
+.about {
+    background: #0a151e;
 }
 
+.about-grid {
+    max-width: 1100px;
+    margin: auto;
 
-.section-title{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
-    text-align:center;
+    gap: 50px;
 
-    margin-bottom:50px;
+    align-items: center;
 }
 
-
-.section-title h2{
-
-    font-size:42px;
-
-    margin-bottom:12px;
+.about-text h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
 }
 
+.about-text p {
+    color: #bdc8ce;
+    margin-bottom: 15px;
+}
 
-.section-title p{
+.about-box {
+    padding: 35px;
 
-    color:#b8c6cd;
+    background: rgba(255,255,255,0.04);
 
-    font-size:15px;
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 10px;
+}
+
+.about-box div {
+    padding: 16px 0;
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.08);
+}
+
+.about-box div:last-child {
+    border-bottom: none;
+}
+
+.about-box strong {
+    color: #00bcd4;
 }
 
 
 /* =========================
-   INDUSTRY GRID
+   INDUSTRIES
 ========================= */
 
-.industries{
+.industries {
+    background: #071018;
+}
 
-    width:100%;
+.industry-grid {
+    max-width: 1250px;
 
-    max-width:1400px;
+    margin: auto;
 
-    margin:auto;
-
-    display:grid;
+    display: grid;
 
     grid-template-columns:
-    repeat(5,1fr);
+        repeat(5, 1fr);
 
-    gap:20px;
+    gap: 18px;
 }
 
+.industry-card {
+    position: relative;
 
-/* =========================
-   INDUSTRY CARD
-========================= */
+    height: 390px;
 
-.industry-card{
+    overflow: hidden;
 
-    position:relative;
+    border-radius: 10px;
 
-    display:block;
+    background: #101c25;
 
-    height:320px;
+    text-decoration: none;
 
-    overflow:hidden;
-
-    border-radius:16px;
+    color: white;
 
     border:
-    1px solid
-    rgba(255,255,255,.15);
+        1px solid rgba(255,255,255,0.08);
 
-    background:#111;
-
-    text-decoration:none;
-
-    transition:.35s;
+    transition: 0.4s;
 }
 
+.industry-card img {
+    width: 100%;
+    height: 100%;
 
-.industry-card:hover{
+    object-fit: cover;
 
-    transform:
-    translateY(-10px);
-
-    border-color:#38bdf8;
-
-    box-shadow:
-    0 15px 40px
-    rgba(0,0,0,.5);
+    transition: 0.5s;
 }
 
+.industry-card::after {
+    content: "";
 
-/* IMAGE */
+    position: absolute;
 
-.industry-card img{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-    display:block;
-
-    transition:.55s;
-}
-
-
-.industry-card:hover img{
-
-    transform:
-    scale(1.09);
-}
-
-
-/* DARK OVERLAY */
-
-.industry-card::after{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
+    inset: 0;
 
     background:
-    linear-gradient(
-        to bottom,
-        transparent 25%,
-        rgba(0,0,0,.95)
-    );
-
-    z-index:1;
+        linear-gradient(
+            to top,
+            rgba(0,0,0,0.9),
+            rgba(0,0,0,0.05)
+        );
 }
 
+.industry-card:hover {
+    transform: translateY(-10px);
 
-/* CARD TITLE */
+    border-color: #00bcd4;
 
-.industry-title{
+    box-shadow:
+        0 15px 45px rgba(0,188,212,0.15);
+}
 
-    position:absolute;
+.industry-card:hover img {
+    transform: scale(1.08);
+}
 
-    right:15px;
+.industry-content {
+    position: absolute;
 
-    left:15px;
+    z-index: 2;
 
-    bottom:25px;
+    bottom: 0;
+    left: 0;
 
-    z-index:2;
+    width: 100%;
 
-    text-align:center;
+    padding: 25px;
+}
 
-    color:#fff;
+.industry-content h3 {
+    font-size: 23px;
 
-    font-size:18px;
+    margin-bottom: 8px;
+}
 
-    font-weight:bold;
+.industry-content p {
+    color: #cbd5da;
 
-    text-shadow:
-    0 3px 10px #000;
+    font-size: 14px;
 }
 
 
@@ -419,92 +350,139 @@ nav a:hover{
    PROJECTS
 ========================= */
 
-.projects{
-
-    padding:90px 20px;
-
-    background:#071017;
-
-    text-align:center;
+.projects {
+    background: #0a151e;
 }
 
+.project-grid {
+    max-width: 1100px;
 
-.projects-box{
+    margin: auto;
 
-    width:100%;
+    display: grid;
 
-    max-width:900px;
+    grid-template-columns:
+        repeat(3, 1fr);
 
-    margin:auto;
+    gap: 25px;
+}
 
-    padding:50px 30px;
+.project-card {
+    background: #101c25;
 
-    background:
-    rgba(255,255,255,.04);
+    padding: 30px;
+
+    border-radius: 10px;
 
     border:
-    1px solid
-    rgba(255,255,255,.1);
+        1px solid rgba(255,255,255,0.07);
 
-    border-radius:18px;
+    transition: 0.3s;
 }
 
+.project-card:hover {
+    transform: translateY(-7px);
 
-.projects-box h2{
-
-    font-size:38px;
-
-    margin-bottom:20px;
+    border-color: #00bcd4;
 }
 
+.project-card .number {
+    font-size: 40px;
 
-.projects-box p{
+    color: #00bcd4;
 
-    color:#c5d1d7;
+    font-weight: bold;
 
-    line-height:2;
+    margin-bottom: 15px;
+}
 
-    font-size:16px;
+.project-card h3 {
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: #aebbc2;
 }
 
 
 /* =========================
-   CONTACT
+   SERVICES
 ========================= */
 
-.contact{
+.services {
+    background: #071018;
+}
 
-    padding:90px 20px;
+.service-grid {
+    max-width: 1100px;
 
-    background:#020608;
+    margin: auto;
 
-    text-align:center;
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.service-card {
+    padding: 30px;
+
+    background: #0d1922;
+
+    border-radius: 10px;
+
+    border:
+        1px solid rgba(255,255,255,0.07);
+}
+
+.service-card h3 {
+    color: #00bcd4;
+
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #b7c2c8;
 }
 
 
-.contact-box{
+/* =========================
+   QUESTIONS
+========================= */
 
-    max-width:900px;
-
-    margin:auto;
+.questions {
+    background: #0a151e;
 }
 
+.question-box {
+    max-width: 850px;
 
-.contact h2{
+    margin: auto;
 
-    font-size:38px;
+    text-align: center;
 
-    margin-bottom:20px;
+    padding: 45px;
+
+    background: #101c25;
+
+    border-radius: 12px;
+
+    border:
+        1px solid rgba(255,255,255,0.08);
 }
 
+.question-box h3 {
+    font-size: 28px;
 
-.contact p{
+    margin-bottom: 15px;
+}
 
-    color:#c5d1d7;
+.question-box p {
+    color: #b7c2c8;
 
-    line-height:2;
-
-    font-size:16px;
+    margin-bottom: 25px;
 }
 
 
@@ -512,17 +490,21 @@ nav a:hover{
    FOOTER
 ========================= */
 
-footer{
+footer {
+    padding: 35px 7%;
 
-    padding:28px 20px;
+    text-align: center;
 
-    text-align:center;
+    background: #040a0f;
 
-    background:#000;
+    color: #89969e;
 
-    color:#8d9aa0;
+    border-top:
+        1px solid rgba(255,255,255,0.07);
+}
 
-    font-size:13px;
+footer strong {
+    color: #00bcd4;
 }
 
 
@@ -530,13 +512,11 @@ footer{
    TABLET
 ========================= */
 
-@media(max-width:1100px){
+@media (max-width: 1100px) {
 
-    .industries{
-
+    .industry-grid {
         grid-template-columns:
-        repeat(3,1fr);
-
+            repeat(3, 1fr);
     }
 
 }
@@ -546,60 +526,32 @@ footer{
    MOBILE
 ========================= */
 
-@media(max-width:700px){
+@media (max-width: 800px) {
 
-    header{
-
-        height:78px;
-
-        padding:0 15px;
-
+    header {
+        padding: 15px 5%;
     }
 
-
-    .logo{
-
-        width:58px;
-
-        height:58px;
-
+    nav {
+        gap: 14px;
     }
 
-
-    nav{
-
-        gap:12px;
-
+    nav a {
+        font-size: 13px;
     }
 
-
-    nav a{
-
-        font-size:10px;
-
+    .about-grid {
+        grid-template-columns: 1fr;
     }
 
-
-    .hero{
-
-        background-attachment:
-        scroll;
-
+    .project-grid,
+    .service-grid {
+        grid-template-columns: 1fr 1fr;
     }
 
-
-    .industries{
-
+    .industry-grid {
         grid-template-columns:
-        repeat(2,1fr);
-
-    }
-
-
-    .industry-card{
-
-        height:270px;
-
+            repeat(2, 1fr);
     }
 
 }
@@ -609,364 +561,713 @@ footer{
    SMALL MOBILE
 ========================= */
 
-@media(max-width:480px){
+@media (max-width: 550px) {
 
-    .industries{
-
-        grid-template-columns:
-        1fr;
-
+    header {
+        position: absolute;
     }
 
-
-    .industry-card{
-
-        height:290px;
-
+    nav {
+        display: none;
     }
 
+    .hero {
+        padding: 120px 6% 70px;
+    }
 
-    .hero h1{
+    .hero p {
+        font-size: 17px;
+    }
 
-        font-size:46px;
+    section {
+        padding: 75px 6%;
+    }
 
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .industry-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .industry-card {
+        height: 330px;
+    }
+
+    .project-grid,
+    .service-grid {
+        grid-template-columns: 1fr;
     }
 
 }
 
 </style>
-
 </head>
 
 
 <body>
 
 
-<!-- =================================
+<!-- =========================
      HEADER
-================================= -->
+========================= -->
 
 <header>
 
-<a href="index.html">
+    <div class="logo">
+        Mohsen <span>Nasri</span>
+    </div>
 
-<img
-src="logo.jpg"
-class="logo"
-alt="Mohsen Nasri">
+    <nav>
 
-</a>
+        <a href="#home">
+            Home
+        </a>
 
+        <a href="#about">
+            About
+        </a>
 
-<nav>
+        <a href="#industries">
+            Industries
+        </a>
 
-<a href="#home">
-خانه
-</a>
+        <a href="#projects">
+            Projects
+        </a>
 
-<a href="#industries">
-صنایع
-</a>
+        <a href="#services">
+            Services
+        </a>
 
-<a href="#projects">
-پروژه‌ها
-</a>
+        <a href="#questions">
+            Questions
+        </a>
 
-<a href="#contact">
-تماس با ما
-</a>
-
-</nav>
+    </nav>
 
 </header>
 
 
 
-<!-- =================================
+<!-- =========================
      HERO
-================================= -->
+========================= -->
 
 <section
-class="hero"
-id="home">
+    class="hero"
+    id="home">
+
+    <div class="hero-content">
+
+        <h1>
+
+            Mohsen Nasri
+
+            <br>
+
+            <span>
+                Industrial Engineering
+            </span>
+
+        </h1>
 
 
-<div
-class="hero-content">
+        <p>
+
+            Mechanical and Industrial Engineering,
+            Technical Documentation, Industrial Projects
+            and Engineering Solutions.
+
+        </p>
 
 
-<div class="badge">
+        <div class="hero-buttons">
 
-INDUSTRIAL & MECHANICAL ENGINEERING
+            <a
+                href="#industries"
+                class="btn btn-primary">
 
-</div>
+                Explore Industries
 
-
-<h1>
-
-Mohsen
-
-<span>Nasri</span>
-
-</h1>
+            </a>
 
 
-<p class="hero-text">
+            <a
+                href="#projects"
+                class="btn btn-outline">
 
-مهندسی مکانیک و مهندسی صنعتی
+                View Projects
 
-<br>
+            </a>
 
-ماشین‌آلات، تجهیزات و پروژه‌های صنعتی
+        </div>
 
-</p>
-
-
-<a
-href="#industries"
-class="btn">
-
-مشاهده صنایع
-
-</a>
-
-
-<a
-href="#projects"
-class="btn">
-
-پروژه‌ها
-
-</a>
-
-
-</div>
+    </div>
 
 </section>
 
 
 
-<!-- =================================
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section
+    class="about"
+    id="about">
+
+
+    <div class="section-title">
+
+        <h2>
+            About
+        </h2>
+
+        <p>
+            Engineering experience across multiple
+            industrial fields
+        </p>
+
+    </div>
+
+
+
+    <div class="about-grid">
+
+
+        <div class="about-text">
+
+            <h3>
+                Engineering Experience
+            </h3>
+
+
+            <p>
+
+                This website presents selected engineering
+                experience, industrial projects, technical
+                documentation and professional activities.
+
+            </p>
+
+
+            <p>
+
+                Each industrial field has its own dedicated
+                section so that projects, images, videos and
+                technical information can be presented separately.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="about-box">
+
+
+            <div>
+
+                <strong>
+                    Engineering
+                </strong>
+
+                <br>
+
+                Mechanical & Industrial Engineering
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Projects
+                </strong>
+
+                <br>
+
+                Industrial Projects & Technical Documentation
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Experience
+                </strong>
+
+                <br>
+
+                Industrial Equipment & Manufacturing
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Focus
+                </strong>
+
+                <br>
+
+                Engineering Solutions & Technical Development
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
      INDUSTRIES
-================================= -->
+========================= -->
 
 <section
-class="industries-section"
-id="industries">
+    class="industries"
+    id="industries">
 
 
-<div class="section-title">
+    <div class="section-title">
 
-<h2>
-صنایع
-</h2>
+        <h2>
+            Industries
+        </h2>
 
-<p>
-حوزه‌های فعالیت و تجربیات تخصصی
-</p>
+        <p>
+            Explore dedicated industrial engineering fields
+        </p>
 
-</div>
-
-
-
-<div class="industries">
-
-
-<!-- ===============================
-     REWINDING
-================================ -->
-
-<a
-href="rewinding.html"
-class="industry-card">
-
-<img
-src="rewinding.jpg"
-alt="سیم پیچی">
-
-<div class="industry-title">
-
-سیم‌پیچی
-
-</div>
-
-</a>
+    </div>
 
 
 
-<!-- ===============================
-     FLOAT GLASS
-================================ -->
-
-<a
-href="float-glass.html"
-class="industry-card">
-
-<img
-src="float-glass.jpg"
-alt="شیشه فلوت و تخت">
-
-<div class="industry-title">
-
-شیشه فلوت و تخت
-
-</div>
-
-</a>
+    <div class="industry-grid">
 
 
 
-<!-- ===============================
-     CABLE
-================================ -->
+        <!-- =====================
+             REWINDING
+        ====================== -->
 
-<a
-href="cable.html"
-class="industry-card">
-
-<img
-src="cable.jpg"
-alt="کابل سازی">
-
-<div class="industry-title">
-
-کابل‌سازی
-
-</div>
-
-</a>
+        <a
+            href="rewinding.html"
+            class="industry-card">
 
 
+            <img
+                src="rewinding.jpg"
+                alt="Rewinding Industry">
 
-<!-- ===============================
-     STEEL
-================================ -->
 
-<a
-href="steel.html"
-class="industry-card">
+            <div class="industry-content">
 
-<img
-src="steel.jpg"
-alt="فولاد">
+                <h3>
+                    Rewinding
+                </h3>
 
-<div class="industry-title">
+                <p>
+                    Industrial winding and rewinding systems
+                </p>
 
-فولاد
+            </div>
 
-</div>
 
-</a>
+        </a>
 
 
 
-<!-- ===============================
-     CONTAINER GLASS
-================================ -->
+        <!-- =====================
+             FLOAT GLASS
+        ====================== -->
 
-<a
-href="container-glass.html"
-class="industry-card">
-
-<img
-src="container-glass.jpg"
-alt="شیشه بطری">
-
-<div class="industry-title">
-
-شیشه بطری
-
-</div>
-
-</a>
+        <a
+            href="float-glass.html"
+            class="industry-card">
 
 
-</div>
+            <img
+                src="float-glass.jpg"
+                alt="Float Glass Industry">
+
+
+            <div class="industry-content">
+
+                <h3>
+                    Float Glass
+                </h3>
+
+                <p>
+                    Float glass production and industrial systems
+                </p>
+
+            </div>
+
+
+        </a>
+
+
+
+        <!-- =====================
+             CABLE
+        ====================== -->
+
+        <a
+            href="cable.html"
+            class="industry-card">
+
+
+            <img
+                src="cable.jpg"
+                alt="Cable Manufacturing">
+
+
+            <div class="industry-content">
+
+                <h3>
+                    Cable Manufacturing
+                </h3>
+
+                <p>
+                    Cable production equipment and processes
+                </p>
+
+            </div>
+
+
+        </a>
+
+
+
+        <!-- =====================
+             STEEL
+        ====================== -->
+
+        <a
+            href="steel.html"
+            class="industry-card">
+
+
+            <img
+                src="steel.jpg"
+                alt="Steel Industry">
+
+
+            <div class="industry-content">
+
+                <h3>
+                    Steel
+                </h3>
+
+                <p>
+                    Steel production and industrial engineering
+                </p>
+
+            </div>
+
+
+        </a>
+
+
+
+        <!-- =====================
+             CONTAINER GLASS
+        ====================== -->
+
+        <a
+            href="container-glass.html"
+            class="industry-card">
+
+
+            <img
+                src="container-glass.jpg"
+                alt="Container Glass Industry">
+
+
+            <div class="industry-content">
+
+                <h3>
+                    Container Glass
+                </h3>
+
+                <p>
+                    Glass container manufacturing systems
+                </p>
+
+            </div>
+
+
+        </a>
+
+
+    </div>
 
 </section>
 
 
 
-<!-- =================================
+<!-- =========================
      PROJECTS
-================================= -->
+========================= -->
 
 <section
-class="projects"
-id="projects">
+    class="projects"
+    id="projects">
 
 
-<div class="projects-box">
+    <div class="section-title">
+
+        <h2>
+            Projects
+        </h2>
+
+        <p>
+            Selected engineering and industrial projects
+        </p>
+
+    </div>
 
 
-<h2>
 
-پروژه‌ها
-
-</h2>
+    <div class="project-grid">
 
 
-<p>
+        <div class="project-card">
 
-پروژه‌ها و تجربیات مهندسی
-در زمینه ماشین‌آلات،
-تجهیزات و صنایع مختلف
-در این قسمت قرار می‌گیرند.
+            <div class="number">
+                01
+            </div>
 
-</p>
+            <h3>
+                Industrial Machinery
+            </h3>
+
+            <p>
+
+                Engineering activities related to industrial
+                machinery, production equipment and technical systems.
+
+            </p>
+
+        </div>
 
 
-</div>
+
+        <div class="project-card">
+
+            <div class="number">
+                02
+            </div>
+
+            <h3>
+                Technical Documentation
+            </h3>
+
+            <p>
+
+                Preparation and development of professional
+                technical manuals and engineering documentation.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="project-card">
+
+            <div class="number">
+                03
+            </div>
+
+            <h3>
+                Industrial Systems
+            </h3>
+
+            <p>
+
+                Engineering analysis and documentation of
+                industrial production systems and equipment.
+
+            </p>
+
+        </div>
+
+
+    </div>
 
 </section>
 
 
 
-<!-- =================================
-     CONTACT
-================================= -->
+<!-- =========================
+     SERVICES
+========================= -->
 
 <section
-class="contact"
-id="contact">
+    class="services"
+    id="services">
 
 
-<div class="contact-box">
+    <div class="section-title">
+
+        <h2>
+            Services
+        </h2>
+
+        <p>
+            Engineering and technical services
+        </p>
+
+    </div>
 
 
-<h2>
 
-تماس با ما
-
-</h2>
+    <div class="service-grid">
 
 
-<p>
+        <div class="service-card">
 
-برای همکاری، پروژه‌های صنعتی
-و مشاوره فنی با ما در ارتباط باشید.
+            <h3>
+                Technical Documentation
+            </h3>
 
-</p>
+            <p>
+
+                Professional preparation and development
+                of industrial technical documentation
+                and manuals.
+
+            </p>
+
+        </div>
 
 
-</div>
+
+        <div class="service-card">
+
+            <h3>
+                Industrial Engineering
+            </h3>
+
+            <p>
+
+                Engineering analysis, industrial equipment
+                documentation and technical project development.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="service-card">
+
+            <h3>
+                Technical Consulting
+            </h3>
+
+            <p>
+
+                Technical consulting and engineering support
+                for industrial equipment and manufacturing systems.
+
+            </p>
+
+        </div>
+
+
+    </div>
 
 </section>
 
 
 
-<!-- =================================
+<!-- =========================
+     QUESTIONS
+========================= -->
+
+<section
+    class="questions"
+    id="questions">
+
+
+    <div class="section-title">
+
+        <h2>
+            Questions
+        </h2>
+
+        <p>
+            Have an engineering question?
+        </p>
+
+    </div>
+
+
+
+    <div class="question-box">
+
+
+        <h3>
+            Industrial Engineering Q&A
+        </h3>
+
+
+        <p>
+
+            This section can later be connected to a question
+            and answer system where visitors can submit
+            technical questions.
+
+        </p>
+
+
+        <a
+            href="mailto:your-email@example.com"
+            class="btn btn-primary">
+
+            Ask a Question
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
      FOOTER
-================================= -->
+========================= -->
 
 <footer>
 
-© 2026 Mohsen Nasri |
-Industrial Engineering
+    <p>
+
+        © 2026
+
+        <strong>
+            Mohsen Nasri
+        </strong>
+
+        — Industrial Engineering
+
+    </p>
 
 </footer>
 
 
 </body>
-
 </html>
