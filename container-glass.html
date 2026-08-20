@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Container Glass Industry | Mohsen Nasri</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #071018;
+    color: white;
+    line-height: 1.7;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 7%;
+
+    background: rgba(4,10,15,0.88);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #00bcd4;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+.hero {
+    min-height: 75vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 130px 7% 80px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(2,8,13,0.94),
+            rgba(2,8,13,0.60),
+            rgba(2,8,13,0.30)
+        ),
+        url("container-glass.jpg") center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero h1 {
+    font-size: clamp(42px,6vw,72px);
+    line-height: 1.1;
+}
+
+.hero h1 span {
+    color: #00bcd4;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #d0d9de;
+    margin-top: 20px;
+}
+
+section {
+    padding: 90px 7%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+}
+
+.section-title p {
+    color: #9eabb2;
+}
+
+.content,
+.project,
+.video-box {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.content p {
+    color: #c3cdd2;
+    margin-bottom: 20px;
+}
+
+.info-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 22px;
+}
+
+.info-card {
+    background: #0d1922;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.info-card h3 {
+    color: #00bcd4;
+    margin-bottom: 12px;
+}
+
+.info-card p {
+    color: #aebbc2;
+}
+
+.project {
+    background: #0d1922;
+    padding: 35px;
+    border-radius: 10px;
+}
+
+.project h3 {
+    color: #00bcd4;
+    margin-bottom: 15px;
+}
+
+.project p {
+    color: #b9c4ca;
+}
+
+.gallery {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.video-box video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.back {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 28px;
+    border-radius: 5px;
+    background: #00bcd4;
+    color: #001015;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #040a0f;
+    color: #7f8c94;
+}
+
+@media(max-width:800px) {
+
+    nav {
+        display: none;
+    }
+
+    .info-grid,
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        Mohsen <span>Nasri</span>
+    </div>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#videos">Videos</a>
+
+    </nav>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Container Glass
+            <br>
+            <span>Industry</span>
+        </h1>
+
+        <p>
+            Glass container manufacturing,
+            forming machinery and industrial engineering.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section id="about">
+
+    <div class="section-title">
+
+        <h2>
+            Container Glass Engineering
+        </h2>
+
+        <p>
+            Dedicated industrial and technical section
+        </p>
+
+    </div>
+
+    <div class="content">
+
+        <p>
+            This section is dedicated to container glass
+            manufacturing systems, forming equipment,
+            industrial machinery and engineering projects.
+        </p>
+
+        <p>
+            Technical information, photographs, videos,
+            project records and professional experience
+            can be maintained independently here.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <div class="section-title">
+
+        <h2>
+            Technical Areas
+        </h2>
+
+    </div>
+
+    <div class="info-grid">
+
+        <div class="info-card">
+
+            <h3>
+                Glass Forming
+            </h3>
+
+            <p>
+                Glass forming machinery and production systems.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+                Industrial Machinery
+            </h3>
+
+            <p>
+                Mechanical equipment and production machinery.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+                Technical Documentation
+            </h3>
+
+            <p>
+                Technical manuals, engineering documents
+                and project records.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="projects">
+
+    <div class="section-title">
+
+        <h2>
+            Projects
+        </h2>
+
+        <p>
+            Container glass industry projects
+        </p>
+
+    </div>
+
+    <div class="project">
+
+        <h3>
+            Project 01
+        </h3>
+
+        <p>
+            Project information can be added here.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section id="gallery">
+
+    <div class="section-title">
+
+        <h2>
+            Gallery
+        </h2>
+
+        <p>
+            Container glass industry photographs
+        </p>
+
+    </div>
+
+    <div class="gallery">
+
+        <img
+            src="container-glass.jpg"
+            alt="Container Glass">
+
+        <img
+            src="container-glass.jpg"
+            alt="Container Glass">
+
+        <img
+            src="container-glass.jpg"
+            alt="Container Glass">
+
+    </div>
+
+</section>
+
+
+<section id="videos">
+
+    <div class="section-title">
+
+        <h2>
+            Videos
+        </h2>
+
+        <p>
+            Container glass industrial videos
+        </p>
+
+    </div>
+
+    <div class="video-box">
+
+        <!--
+        <video controls>
+            <source
+                src="container-glass-video.mp4"
+                type="video/mp4">
+        </video>
+        -->
+
+        <p style="text-align:center;color:#89969e;">
+            Video content can be added here.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="back">
+
+    <a href="index.html" class="btn">
+        ← Back to Main Website
+    </a>
+
+</section>
+
+
+<footer>
+
+    © 2026 Mohsen Nasri — Industrial Engineering
+
+</footer>
+
+</body>
+</html>
