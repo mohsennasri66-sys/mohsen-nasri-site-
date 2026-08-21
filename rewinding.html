@@ -4,34 +4,155 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>صنعت سیم‌پیچی | Mohsen Nasri</title>
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:Tahoma,Arial,sans-serif;background:#071018;color:#fff;line-height:1.9;direction:rtl}
 header{position:fixed;top:0;left:0;width:100%;z-index:1000;display:flex;justify-content:space-between;align-items:center;padding:17px 6%;background:rgba(5,12,18,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08);direction:ltr}
 .logo{font-size:23px;font-weight:bold}.logo span{color:#00bcd4}
-nav{display:flex;gap:25px;direction:rtl}nav a{color:#fff;text-decoration:none;font-size:15px;transition:.3s}nav a:hover{color:#00bcd4}
-.hero{min-height:78vh;display:flex;align-items:center;padding:130px 7% 80px;background:linear-gradient(90deg,rgba(3,10,15,.92),rgba(3,10,15,.58),rgba(3,10,15,.35)),var(--hero) center/cover no-repeat;direction:ltr;text-align:left}
-.hero-content{max-width:800px}.hero h1{font-size:clamp(42px,6vw,76px);line-height:1.08;margin-bottom:22px}.hero h1 span{color:#00bcd4}.hero p{font-size:19px;color:#d5dce1}
-main{direction:rtl}section{padding:90px 7%}.dark{background:#0a151e}.section-title{text-align:center;margin-bottom:45px}.section-title h2{font-size:38px;margin-bottom:8px}.section-title p{color:#aeb9c0}
-.content{max-width:1100px;margin:auto}.content p{color:#c5cfd4;margin-bottom:18px}
-.grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:#0d1922;padding:28px;border-radius:10px;border:1px solid rgba(255,255,255,.07);transition:.3s}.card:hover{transform:translateY(-6px);border-color:#00bcd4}.card h3{color:#00bcd4;margin-bottom:10px}.card p{color:#b7c3c9}
-.gallery{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.gallery img{width:100%;height:240px;object-fit:cover;border-radius:9px}
-.project{max-width:1100px;margin:auto;background:#0d1922;padding:32px;border-radius:10px;border:1px solid rgba(255,255,255,.07)}.project h3{color:#00bcd4;margin-bottom:10px}.project p{color:#b7c3c9}
-.video{max-width:1000px;margin:auto}.video video{width:100%;border-radius:10px;background:#000}
-.back{text-align:center}.btn{display:inline-block;padding:12px 26px;border-radius:5px;background:#00bcd4;color:#001015;text-decoration:none;font-weight:bold}
-footer{text-align:center;padding:30px;background:#040a0f;color:#89969e}footer strong{color:#00bcd4}
-@media(max-width:800px){header{padding:14px 5%}nav{display:none}.grid,.gallery{grid-template-columns:1fr}.hero{min-height:68vh;padding:120px 6% 70px}.hero h1{font-size:clamp(40px,11vw,60px)}section{padding:70px 6%}}
+nav{display:flex;gap:25px;direction:rtl}
+nav a{color:#fff;text-decoration:none;font-size:15px;transition:.3s}
+nav a:hover{color:#00bcd4}
+
+.hero{
+min-height:78vh;
+display:flex;
+align-items:center;
+padding:130px 7% 80px;
+background:linear-gradient(90deg,rgba(3,10,15,.92),rgba(3,10,15,.58),rgba(3,10,15,.35)),var(--hero) center/cover no-repeat;
+direction:ltr;
+text-align:left
+}
+
+.hero-content{max-width:800px}
+.hero h1{font-size:clamp(42px,6vw,76px);line-height:1.08;margin-bottom:22px}
+.hero h1 span{color:#00bcd4}
+.hero p{font-size:19px;color:#d5dce1}
+
+main{direction:rtl}
+section{padding:90px 7%}
+.dark{background:#0a151e}
+.section-title{text-align:center;margin-bottom:45px}
+.section-title h2{font-size:38px;margin-bottom:8px}
+.section-title p{color:#aeb9c0}
+
+.content{max-width:1100px;margin:auto}
+.content p{color:#c5cfd4;margin-bottom:18px}
+
+.grid{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px
+}
+
+.card{
+background:#0d1922;
+padding:28px;
+border-radius:10px;
+border:1px solid rgba(255,255,255,.07);
+transition:.3s
+}
+
+.card:hover{
+transform:translateY(-6px);
+border-color:#00bcd4
+}
+
+.card h3{color:#00bcd4;margin-bottom:10px}
+.card p{color:#b7c3c9}
+
+.gallery{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px
+}
+
+.gallery img{
+width:100%;
+height:240px;
+object-fit:cover;
+border-radius:9px;
+display:block;
+transition:.3s;
+cursor:pointer
+}
+
+.gallery img:hover{
+transform:scale(1.03)
+}
+
+.gallery-message{
+grid-column:1/-1;
+text-align:center;
+color:#89969e;
+padding:30px
+}
+
+.project{
+max-width:1100px;
+margin:auto;
+background:#0d1922;
+padding:32px;
+border-radius:10px;
+border:1px solid rgba(255,255,255,.07)
+}
+
+.project h3{color:#00bcd4;margin-bottom:10px}
+.project p{color:#b7c3c9}
+
+.video{max-width:1000px;margin:auto}
+.video video{width:100%;border-radius:10px;background:#000}
+
+.back{text-align:center}
+.btn{
+display:inline-block;
+padding:12px 26px;
+border-radius:5px;
+background:#00bcd4;
+color:#001015;
+text-decoration:none;
+font-weight:bold
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#040a0f;
+color:#89969e
+}
+
+footer strong{color:#00bcd4}
+
+@media(max-width:800px){
+header{padding:14px 5%}
+nav{display:none}
+.grid,.gallery{grid-template-columns:1fr}
+.hero{min-height:68vh;padding:120px 6% 70px}
+.hero h1{font-size:clamp(40px,11vw,60px)}
+section{padding:70px 6%}
+}
 </style>
 </head>
+
 <body>
+
 <header>
   <div class="logo">Mohsen <span>Nasri</span></div>
+
   <nav>
-    <a href="index.html">خانه</a><a href="#about">معرفی</a>
-    <a href="#projects">پروژه‌ها</a><a href="#gallery">گالری</a><a href="#videos">ویدئوها</a>
+    <a href="index.html">خانه</a>
+    <a href="#about">معرفی</a>
+    <a href="#projects">پروژه‌ها</a>
+    <a href="#gallery">گالری</a>
+    <a href="#videos">ویدئوها</a>
   </nav>
 </header>
+
 
 <section class="hero" style="--hero:url('rewinding.jpg')">
   <div class="hero-content">
@@ -40,46 +161,235 @@ footer{text-align:center;padding:30px;background:#040a0f;color:#89969e}footer st
   </div>
 </section>
 
+
 <main>
+
 <section id="about">
-  <div class="section-title"><h2>سیم‌پیچی</h2><p>تجهیزات و سیستم‌های صنعتی سیم‌پیچی و بازپیچی.</p></div>
-  <div class="content"><p>این صفحه برای معرفی تجربه، تجهیزات، پروژه‌ها و مستندات فنی مرتبط با صنعت سیم‌پیچی طراحی شده است.</p><p>در این بخش می‌توان اطلاعات فنی، سوابق کاری، تصاویر، ویدئوها، پروژه‌ها و مستندات مرتبط با این صنعت را به‌صورت مستقل اضافه و مدیریت کرد.</p></div>
+
+  <div class="section-title">
+    <h2>سیم‌پیچی</h2>
+    <p>تجهیزات و سیستم‌های صنعتی سیم‌پیچی و بازپیچی.</p>
+  </div>
+
+  <div class="content">
+    <p>
+      این صفحه برای معرفی تجربه، تجهیزات، پروژه‌ها و مستندات فنی مرتبط با صنعت سیم‌پیچی طراحی شده است.
+    </p>
+
+    <p>
+      در این بخش می‌توان اطلاعات فنی، سوابق کاری، تصاویر، ویدئوها، پروژه‌ها و مستندات مرتبط با این صنعت را به‌صورت مستقل اضافه و مدیریت کرد.
+    </p>
+  </div>
+
 </section>
+
 
 <section class="dark">
-  <div class="section-title"><h2>حوزه‌های تخصصی</h2><p>اطلاعات اختصاصی این صنعت</p></div>
-  <div class="grid"><div class="card"><h3>ماشین‌آلات سیم‌پیچی</h3><p>معرفی ماشین‌آلات، تجهیزات و سیستم‌های تولید.</p></div>
-<div class="card"><h3>مهندسی مکانیک</h3><p>بررسی تجهیزات و سیستم‌های مکانیکی مرتبط.</p></div>
-<div class="card"><h3>مستندات فنی</h3><p>ارائه نقشه‌ها، دستورالعمل‌ها و مدارک مهندسی.</p></div></div>
+
+  <div class="section-title">
+    <h2>حوزه‌های تخصصی</h2>
+    <p>اطلاعات اختصاصی این صنعت</p>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>ماشین‌آلات سیم‌پیچی</h3>
+      <p>معرفی ماشین‌آلات، تجهیزات و سیستم‌های تولید.</p>
+    </div>
+
+    <div class="card">
+      <h3>مهندسی مکانیک</h3>
+      <p>بررسی تجهیزات و سیستم‌های مکانیکی مرتبط.</p>
+    </div>
+
+    <div class="card">
+      <h3>مستندات فنی</h3>
+      <p>ارائه نقشه‌ها، دستورالعمل‌ها و مدارک مهندسی.</p>
+    </div>
+
+  </div>
+
 </section>
+
 
 <section id="projects">
-  <div class="section-title"><h2>پروژه‌ها</h2><p>پروژه‌های انجام‌شده و سوابق اجرایی</p></div>
-  <div class="project"><h3>پروژه شماره ۱</h3><p>اطلاعات پروژه، نوع ماشین، محدوده فعالیت، مسئولیت‌ها و نتایج پروژه را می‌توان در این قسمت وارد کرد.</p></div>
+
+  <div class="section-title">
+    <h2>پروژه‌ها</h2>
+    <p>پروژه‌های انجام‌شده و سوابق اجرایی</p>
+  </div>
+
+  <div class="project">
+    <h3>پروژه شماره ۱</h3>
+    <p>
+      اطلاعات پروژه، نوع ماشین، محدوده فعالیت، مسئولیت‌ها و نتایج پروژه را می‌توان در این قسمت وارد کرد.
+    </p>
+  </div>
+
 </section>
+
 
 <section id="gallery" class="dark">
-  <div class="section-title"><h2>گالری تصاویر</h2><p>تصاویر اختصاصی این صنعت</p></div>
-  <div class="gallery"><img src="rewinding.jpg" alt="سیم‌پیچی">
-<img src="rewinding.jpg" alt="سیم‌پیچی">
-<img src="rewinding.jpg" alt="سیم‌پیچی"></div>
+
+  <div class="section-title">
+    <h2>گالری تصاویر</h2>
+    <p>تصاویر اختصاصی این صنعت</p>
+  </div>
+
+  <div class="gallery" id="rewindingGallery">
+    <div class="gallery-message">
+      در حال بارگذاری تصاویر...
+    </div>
+  </div>
+
 </section>
 
+
 <section id="videos">
-  <div class="section-title"><h2>ویدئوها</h2><p>ویدئوهای صنعتی و پروژه‌ای</p></div>
-  <div class="video">
-    <!-- برای اضافه کردن ویدئو:
-    <video controls><source src="نام-ویدئو.mp4" type="video/mp4"></video>
-    -->
-    <p style="text-align:center;color:#89969e">ویدئوهای این بخش را می‌توان بعداً اضافه کرد.</p>
+
+  <div class="section-title">
+    <h2>ویدئوها</h2>
+    <p>ویدئوهای صنعتی و پروژه‌ای</p>
   </div>
+
+  <div class="video">
+
+    <p style="text-align:center;color:#89969e">
+      ویدئوهای این بخش را می‌توان بعداً اضافه کرد.
+    </p>
+
+  </div>
+
 </section>
+
 
 <section class="back">
   <a href="index.html" class="btn">بازگشت به صفحه اصلی</a>
 </section>
+
 </main>
 
-<footer>© 2026 <strong>Mohsen Nasri</strong> — مهندسی صنعتی</footer>
+
+<footer>
+© 2026 <strong>Mohsen Nasri</strong> — مهندسی صنعتی
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+
+const SUPABASE_URL =
+"https://eurmybgotfgnerdxrwua.supabase.co";
+
+const SUPABASE_ANON_KEY =
+"sb_publishable_X3LYjYSbJU7YJ0ezzn6YfA_ZHsbd1K3";
+
+const supabaseClient = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_ANON_KEY
+);
+
+
+async function loadRewindingGallery(){
+
+  const gallery =
+    document.getElementById("rewindingGallery");
+
+  try{
+
+    const { data, error } = await supabaseClient
+      .from("industry_media")
+      .select("*")
+      .eq("industry", "rewinding")
+      .eq("media_type", "image")
+      .order("created_at", { ascending: true });
+
+
+    if(error){
+
+      console.error("Supabase Gallery Error:", error);
+
+      gallery.innerHTML = `
+        <div class="gallery-message">
+          خطا در دریافت تصاویر گالری
+        </div>
+      `;
+
+      return;
+    }
+
+
+    const validImages = (data || []).filter(item =>
+      item.file_path &&
+      item.file_path.trim() !== ""
+    );
+
+
+    if(validImages.length === 0){
+
+      gallery.innerHTML = `
+        <div class="gallery-message">
+          هنوز تصویری برای این صنعت ثبت نشده است.
+        </div>
+      `;
+
+      return;
+    }
+
+
+    gallery.innerHTML = "";
+
+
+    validImages.forEach(item => {
+
+      const imageUrl =
+        `${SUPABASE_URL}/storage/v1/object/public/project-media/${item.file_path}`;
+
+
+      const img = document.createElement("img");
+
+      img.src = imageUrl;
+      img.alt = "تصویر صنعت سیم‌پیچی";
+      img.loading = "lazy";
+
+
+      img.onerror = function(){
+
+        console.error(
+          "Image could not be loaded:",
+          imageUrl
+        );
+
+        this.style.display = "none";
+
+      };
+
+
+      gallery.appendChild(img);
+
+    });
+
+
+  }catch(error){
+
+    console.error("Gallery Error:", error);
+
+    gallery.innerHTML = `
+      <div class="gallery-message">
+        خطا در اتصال به گالری
+      </div>
+    `;
+
+  }
+
+}
+
+
+loadRewindingGallery();
+
+</script>
+
 </body>
 </html>
