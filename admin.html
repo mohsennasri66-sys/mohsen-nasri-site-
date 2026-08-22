@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>پنل مدیریت | Mohsen Nasri</title>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Tahoma,Arial,sans-serif;
+    background:#06101a;
+    color:#fff;
+}
+
+button,
+input,
+textarea,
+select{
+    font-family:inherit;
+}
+
+header{
+    background:#020911;
+    border-bottom:1px solid #263746;
+    padding:18px 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+header h1{
+    margin:0;
+    font-size:21px;
+}
+
+header span{
+    color:#38bdf8;
+}
+
+.container{
+    width:min(1200px,94%);
+    margin:30px auto;
+}
+
+.card{
+    background:#0b1824;
+    border:1px solid #263746;
+    border-radius:16px;
+    padding:25px;
+    margin-bottom:25px;
+}
+
+h2{
+    margin-top:0;
+    color:#38bdf8;
+}
+
+label{
+    display:block;
+    margin:15px 0 7px;
+    color:#b8c6cd;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+    background:#071017;
+    border:1px solid #344858;
+    color:#fff;
+    padding:13px;
+    border-radius:8px;
+    outline:none;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+    border-color:#38bdf8;
+}
+
+textarea{
+    min-height:150px;
+    resize:vertical;
+}
+
+button{
+    border:0;
+    border-radius:8px;
+    padding:12px 22px;
+    cursor:pointer;
+    margin:8px 4px;
+    font-weight:bold;
+}
+
+.primary{
+    background:#0ea5e9;
+    color:#fff;
+}
+
+.success{
+    background:#16a34a;
+    color:#fff;
+}
+
+.danger{
+    background:#dc2626;
+    color:#fff;
+}
+
+.secondary{
+    background:#334155;
+    color:#fff;
+}
+
+.hidden{
+    display:none!important;
+}
+
+.status{
+    padding:12px;
+    border-radius:8px;
+    margin:15px 0;
+    background:#111f2c;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.content-item{
+    background:#071017;
+    border:1px solid #263746;
+    border-radius:12px;
+    padding:18px;
+}
+
+.content-item h3{
+    color:#38bdf8;
+    margin-top:0;
+}
+
+.content-item p{
+    color:#c7d2da;
+    white-space:pre-wrap;
+}
+
+.media-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.media-card{
+    background:#071017;
+    border:1px solid #263746;
+    border-radius:12px;
+    padding:10px;
+}
+
+.media-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+.small{
+    color:#8ea2b2;
+    font-size:12px;
+}
+
+.logout{
+    background:#dc2626;
+    color:#fff;
+}
+
+@media(max-width:800px){
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .media-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:500px){
+    .media-grid{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>
+پنل مدیریت
+<span>Mohsen Nasri</span>
+</h1>
+
+<button class="logout hidden" id="logoutBtn">
+خروج
+</button>
+
+</header>
+
+
+<div class="container">
+
+
+<!-- LOGIN -->
+
+<section class="card" id="loginBox">
+
+<h2>ورود مدیر</h2>
+
+<p>
+برای مدیریت محتوای صنایع وارد شوید.
+</p>
+
+<label>ایمیل</label>
+
+<input
+    type="email"
+    id="email"
+    placeholder="ایمیل مدیر"
+>
+
+<label>رمز عبور</label>
+
+<input
+    type="password"
+    id="password"
+    placeholder="رمز عبور"
+>
+
+<button
+    class="primary"
+    onclick="login()"
+>
+ورود به پنل
+</button>
+
+<div id="loginStatus" class="status"></div>
+
+</section>
+
+
+<!-- ADMIN -->
+
+<section id="adminPanel" class="hidden">
+
+
+<div class="card">
+
+<h2>انتخاب صنعت</h2>
+
+<select id="industrySelect" onchange="loadIndustry()">
+
+<option value="rewinding">
+سیم‌پیچی و برق صنعتی
+</option>
+
+<option value="float-glass">
+شیشه فلوت و تخت
+</option>
+
+<option value="cable">
+صنعت کابل‌سازی
+</option>
+
+<option value="steel">
+صنعت فولاد
+</option>
+
+<option value="container-glass">
+شیشه بطری
+</option>
+
+</select>
+
+<div id="mainStatus" class="status">
+یک صنعت را انتخاب کنید.
+</div>
+
+</div>
+
+
+<!-- ADD TEXT -->
+
+<div class="card">
+
+<h2>افزودن / ویرایش متن</h2>
+
+<input
+    type="hidden"
+    id="editId"
+>
+
+<label>نوع محتوا</label>
+
+<select id="contentType">
+
+<option value="intro">
+معرفی
+</option>
+
+<option value="section">
+بخش جدید
+</option>
+
+<option value="project">
+پروژه
+</option>
+
+</select>
+
+<label>عنوان</label>
+
+<input
+    type="text"
+    id="contentTitle"
+    placeholder="مثلاً معرفی صنعت سیم‌پیچی"
+>
+
+<label>زیرعنوان</label>
+
+<input
+    type="text"
+    id="contentSubtitle"
+    placeholder="اختیاری"
+>
+
+<label>متن</label>
+
+<textarea
+    id="contentText"
+    placeholder="متن مورد نظر را وارد کنید..."
+></textarea>
+
+<label>ترتیب نمایش</label>
+
+<input
+    type="number"
+    id="sortOrder"
+    value="0"
+>
+
+<button
+    class="success"
+    onclick="saveContent()"
+>
+ذخیره محتوا
+</button>
+
+<button
+    class="secondary"
+    onclick="clearForm()"
+>
+پاک کردن فرم
+</button>
+
+</div>
+
+
+<!-- CONTENT LIST -->
+
+<div class="card">
+
+<h2>محتوای این صنعت</h2>
+
+<div id="contentList" class="grid">
+</div>
+
+</div>
+
+
+<!-- IMAGE -->
+
+<div class="card">
+
+<h2>افزودن تصویر</h2>
+
+<label>انتخاب تصویر</label>
+
+<input
+    type="file"
+    id="imageFile"
+    accept="image/*"
+>
+
+<label>عنوان تصویر</label>
+
+<input
+    type="text"
+    id="imageTitle"
+    placeholder="عنوان اختیاری"
+>
+
+<button
+    class="primary"
+    onclick="uploadImage()"
+>
+آپلود تصویر
+</button>
+
+<div id="uploadStatus" class="status"></div>
+
+</div>
+
+
+<!-- GALLERY -->
+
+<div class="card">
+
+<h2>گالری تصاویر این صنعت</h2>
+
+<div id="gallery" class="media-grid">
+</div>
+
+</div>
+
+
+<!-- VIDEO -->
+
+<div class="card">
+
+<h2>افزودن ویدئو</h2>
+
+<label>عنوان ویدئو</label>
+
+<input
+    type="text"
+    id="videoTitle"
+    placeholder="عنوان ویدئو"
+>
+
+<label>لینک ویدئو</label>
+
+<input
+    type="url"
+    id="videoUrl"
+    placeholder="https://..."
+>
+
+<label>توضیحات</label>
+
+<textarea
+    id="videoDescription"
+></textarea>
+
+<button
+    class="primary"
+    onclick="saveVideo()"
+>
+ذخیره ویدئو
+</button>
+
+</div>
+
+
+<!-- VIDEOS -->
+
+<div class="card">
+
+<h2>ویدئوهای این صنعت</h2>
+
+<div id="videoList" class="grid">
+</div>
+
+</div>
+
+
+</section>
+
+</div>
+
+
+<script>
+
+/* =========================================
+   SUPABASE
+========================================= */
+
+const SUPABASE_URL =
+"https://eurmybgotfgnerdxrwua.supabase.co";
+
+const SUPABASE_KEY =
+"sb_publishable_X3LYjYSbJU7YJ0ezzn6YfA_ZHsbd1K3";
+
+const supabaseClient =
+supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+);
+
+
+/* =========================================
+   LOGIN
+========================================= */
+
+async function login(){
+
+    const email =
+        document.getElementById("email").value.trim();
+
+    const password =
+        document.getElementById("password").value;
+
+    const status =
+        document.getElementById("loginStatus");
+
+    if(!email || !password){
+
+        status.textContent =
+        "ایمیل و رمز عبور را وارد کنید.";
+
+        return;
+    }
+
+    status.textContent =
+    "در حال ورود...";
+
+    const {data,error} =
+    await supabaseClient.auth.signInWithPassword({
+        email,
+        password
+    });
+
+    if(error){
+
+        status.textContent =
+        "خطا در ورود: " + error.message;
+
+        return;
+    }
+
+    showAdmin();
+
+}
+
+
+/* =========================================
+   AUTH STATE
+========================================= */
+
+async function checkSession(){
+
+    const {data} =
+    await supabaseClient.auth.getSession();
+
+    if(data.session){
+
+        showAdmin();
+
+    }
+
+}
+
+
+function showAdmin(){
+
+    document
+    .getElementById("loginBox")
+    .classList.add("hidden");
+
+    document
+    .getElementById("adminPanel")
+    .classList.remove("hidden");
+
+    document
+    .getElementById("logoutBtn")
+    .classList.remove("hidden");
+
+    loadIndustry();
+
+}
+
+
+document
+.getElementById("logoutBtn")
+.addEventListener("click",async()=>{
+
+    await supabaseClient.auth.signOut();
+
+    location.reload();
+
+});
+
+
+/* =========================================
+   CURRENT INDUSTRY
+========================================= */
+
+function currentIndustry(){
+
+    return document
+        .getElementById("industrySelect")
+        .value;
+
+}
+
+
+/* =========================================
+   LOAD INDUSTRY
+========================================= */
+
+async function loadIndustry(){
+
+    clearForm();
+
+    await loadContent();
+
+    await loadGallery();
+
+    await loadVideos();
+
+}
+
+
+/* =========================================
+   SAVE CONTENT
+========================================= */
+
+async function saveContent(){
+
+    const id =
+        document.getElementById("editId").value;
+
+    const industry =
+        currentIndustry();
+
+    const contentType =
+        document.getElementById("contentType").value;
+
+    const title =
+        document.getElementById("contentTitle").value.trim();
+
+    const subtitle =
+        document.getElementById("contentSubtitle").value.trim();
+
+    const content =
+        document.getElementById("contentText").value.trim();
+
+    const sortOrder =
+        Number(document.getElementById("sortOrder").value) || 0;
+
+    if(!title && !content){
+
+        alert("عنوان یا متن را وارد کنید.");
+
+        return;
+    }
+
+
+    const payload = {
+
+        industry,
+        content_type:contentType,
+        title,
+        subtitle,
+        content,
+        sort_order:sortOrder,
+        is_visible:true,
+        updated_at:new Date().toISOString()
+
+    };
+
+
+    let result;
+
+
+    if(id){
+
+        result =
+        await supabaseClient
+        .from("industry_content")
+        .update(payload)
+        .eq("id",id);
+
+    }else{
+
+        result =
+        await supabaseClient
+        .from("industry_content")
+        .insert(payload);
+
+    }
+
+
+    if(result.error){
+
+        alert(
+            "خطا در ذخیره:\n" +
+            result.error.message
+        );
+
+        return;
+    }
+
+
+    alert("محتوا با موفقیت ذخیره شد.");
+
+    clearForm();
+
+    loadContent();
+
+}
+
+
+/* =========================================
+   LOAD CONTENT
+========================================= */
+
+async function loadContent(){
+
+    const industry =
+        currentIndustry();
+
+    const list =
+        document.getElementById("contentList");
+
+    list.innerHTML =
+    "در حال دریافت محتوا...";
+
+
+    const {data,error} =
+    await supabaseClient
+    .from("industry_content")
+    .select("*")
+    .eq("industry",industry)
+    .order("sort_order",{ascending:true})
+    .order("id",{ascending:true});
+
+
+    if(error){
+
+        list.innerHTML =
+        "خطا: " + error.message;
+
+        return;
+    }
+
+
+    if(!data || data.length === 0){
+
+        list.innerHTML =
+        "<p>هنوز محتوایی ثبت نشده است.</p>";
+
+        return;
+    }
+
+
+    list.innerHTML = "";
+
+
+    data.forEach(item=>{
+
+        const div =
+        document.createElement("div");
+
+        div.className =
+        "content-item";
+
+
+        div.innerHTML = `
+
+            <div class="small">
+                ${item.content_type}
+            </div>
+
+            <h3>
+                ${escapeHtml(item.title || "")}
+            </h3>
+
+            <p>
+                ${escapeHtml(item.content || "")}
+            </p>
+
+            <button
+                class="primary"
+                onclick="editContent(${item.id})"
+            >
+                ویرایش
+            </button>
+
+            <button
+                class="danger"
+                onclick="deleteContent(${item.id})"
+            >
+                حذف
+            </button>
+
+        `;
+
+
+        list.appendChild(div);
+
+    });
+
+}
+
+
+/* =========================================
+   EDIT CONTENT
+========================================= */
+
+async function editContent(id){
+
+    const {data,error} =
+    await supabaseClient
+    .from("industry_content")
+    .select("*")
+    .eq("id",id)
+    .single();
+
+
+    if(error){
+
+        alert(error.message);
+
+        return;
+    }
+
+
+    document
+    .getElementById("editId")
+    .value = data.id;
+
+    document
+    .getElementById("contentType")
+    .value = data.content_type;
+
+    document
+    .getElementById("contentTitle")
+    .value = data.title || "";
+
+    document
+    .getElementById("contentSubtitle")
+    .value = data.subtitle || "";
+
+    document
+    .getElementById("contentText")
+    .value = data.content || "";
+
+    document
+    .getElementById("sortOrder")
+    .value = data.sort_order || 0;
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+
+/* =========================================
+   DELETE CONTENT
+========================================= */
+
+async function deleteContent(id){
+
+    if(!confirm(
+        "این محتوا حذف شود؟"
+    )) return;
+
+
+    const {error} =
+    await supabaseClient
+    .from("industry_content")
+    .delete()
+    .eq("id",id);
+
+
+    if(error){
+
+        alert(error.message);
+
+        return;
+    }
+
+
+    loadContent();
+
+}
+
+
+/* =========================================
+   CLEAR FORM
+========================================= */
+
+function clearForm(){
+
+    document
+    .getElementById("editId")
+    .value = "";
+
+    document
+    .getElementById("contentTitle")
+    .value = "";
+
+    document
+    .getElementById("contentSubtitle")
+    .value = "";
+
+    document
+    .getElementById("contentText")
+    .value = "";
+
+    document
+    .getElementById("sortOrder")
+    .value = 0;
+
+}
+
+
+/* =========================================
+   UPLOAD IMAGE
+========================================= */
+
+async function uploadImage(){
+
+    const file =
+    document
+    .getElementById("imageFile")
+    .files[0];
+
+    const title =
+    document
+    .getElementById("imageTitle")
+    .value.trim();
+
+    const status =
+    document
+    .getElementById("uploadStatus");
+
+
+    if(!file){
+
+        status.textContent =
+        "ابتدا یک تصویر انتخاب کنید.";
+
+        return;
+    }
+
+
+    const industry =
+    currentIndustry();
+
+
+    status.textContent =
+    "در حال آپلود تصویر...";
+
+
+    const extension =
+    file.name
+    .split(".")
+    .pop()
+    .toLowerCase();
+
+
+    const safeName =
+    Date.now() +
+    "-" +
+    Math.random()
+    .toString(36)
+    .substring(2,8) +
+    "." +
+    extension;
+
+
+    const filePath =
+    industry +
+    "/" +
+    safeName;
+
+
+    const {error:uploadError} =
+    await supabaseClient
+    .storage
+    .from("project-media")
+    .upload(
+        filePath,
+        file,
+        {
+            cacheControl:"3600",
+            upsert:false
+        }
+    );
+
+
+    if(uploadError){
+
+        status.textContent =
+        "خطا در آپلود: " +
+        uploadError.message;
+
+        return;
+    }
+
+
+    const {data:urlData} =
+    supabaseClient
+    .storage
+    .from("project-media")
+    .getPublicUrl(filePath);
+
+
+    const {error:dbError} =
+    await supabaseClient
+    .from("industry_media")
+    .insert({
+
+        industry,
+        media_type:"image",
+        file_path:filePath
+
+    });
+
+
+    if(dbError){
+
+        status.textContent =
+        "تصویر آپلود شد ولی ثبت اطلاعات خطا داشت: " +
+        dbError.message;
+
+        return;
+    }
+
+
+    status.innerHTML =
+    "تصویر با موفقیت اضافه شد.";
+
+    document
+    .getElementById("imageFile")
+    .value = "";
+
+    document
+    .getElementById("imageTitle")
+    .value = "";
+
+    loadGallery();
+
+}
+
+
+/* =========================================
+   LOAD GALLERY
+========================================= */
+
+async function loadGallery(){
+
+    const industry =
+    currentIndustry();
+
+    const gallery =
+    document.getElementById("gallery");
+
+    gallery.innerHTML =
+    "در حال دریافت تصاویر...";
+
+
+    const {data,error} =
+    await supabaseClient
+    .from("industry_media")
+    .select("*")
+    .eq("industry",industry)
+    .eq("media_type","image")
+    .order("id",{ascending:false});
+
+
+    if(error){
+
+        gallery.innerHTML =
+        "خطا: " + error.message;
+
+        return;
+    }
+
+
+    if(!data || data.length===0){
+
+        gallery.innerHTML =
+        "<p>هنوز تصویری ثبت نشده است.</p>";
+
+        return;
+    }
+
+
+    gallery.innerHTML = "";
+
+
+    data.forEach(item=>{
+
+        let imageUrl = "";
+
+
+        if(item.file_path){
+
+            const result =
+            supabaseClient
+            .storage
+            .from("project-media")
+            .getPublicUrl(item.file_path);
+
+            imageUrl =
+            result.data.publicUrl;
+
+        }
+
+
+        const card =
+        document.createElement("div");
+
+        card.className =
+        "media-card";
+
+
+        card.innerHTML = `
+
+            ${
+                imageUrl
+                ?
+                `<img src="${imageUrl}" alt="">`
+                :
+                `<div>بدون تصویر</div>`
+            }
+
+            <button
+                class="danger"
+                onclick="deleteImage(${item.id},'${escapeAttribute(item.file_path || "")}')"
+            >
+                حذف تصویر
+            </button>
+
+        `;
+
+
+        gallery.appendChild(card);
+
+    });
+
+}
+
+
+/* =========================================
+   DELETE IMAGE
+========================================= */
+
+async function deleteImage(id,path){
+
+    if(!confirm(
+        "این تصویر حذف شود؟"
+    )) return;
+
+
+    if(path){
+
+        await supabaseClient
+        .storage
+        .from("project-media")
+        .remove([path]);
+
+    }
+
+
+    const {error} =
+    await supabaseClient
+    .from("industry_media")
+    .delete()
+    .eq("id",id);
+
+
+    if(error){
+
+        alert(
+            "خطا در حذف: " +
+            error.message
+        );
+
+        return;
+    }
+
+
+    loadGallery();
+
+}
+
+
+/* =========================================
+   SAVE VIDEO
+========================================= */
+
+async function saveVideo(){
+
+    const industry =
+    currentIndustry();
+
+    const title =
+    document
+    .getElementById("videoTitle")
+    .value.trim();
+
+    const url =
+    document
+    .getElementById("videoUrl")
+    .value.trim();
+
+    const description =
+    document
+    .getElementById("videoDescription")
+    .value.trim();
+
+
+    if(!url){
+
+        alert("لینک ویدئو را وارد کنید.");
+
+        return;
+    }
+
+
+    const {error} =
+    await supabaseClient
+    .from("industry_content")
+    .insert({
+
+        industry,
+        content_type:"video",
+        title,
+        content:description,
+        subtitle:url,
+        sort_order:0,
+        is_visible:true
+
+    });
+
+
+    if(error){
+
+        alert(
+            "خطا در ذخیره ویدئو:\n" +
+            error.message
+        );
+
+        return;
+    }
+
+
+    alert("ویدئو اضافه شد.");
+
+
+    document
+    .getElementById("videoTitle")
+    .value = "";
+
+    document
+    .getElementById("videoUrl")
+    .value = "";
+
+    document
+    .getElementById("videoDescription")
+    .value = "";
+
+
+    loadVideos();
+
+}
+
+
+/* =========================================
+   LOAD VIDEOS
+========================================= */
+
+async function loadVideos(){
+
+    const industry =
+    currentIndustry();
+
+    const list =
+    document.getElementById("videoList");
+
+
+    const {data,error} =
+    await supabaseClient
+    .from("industry_content")
+    .select("*")
+    .eq("industry",industry)
+    .eq("content_type","video")
+    .order("id",{ascending:false});
+
+
+    if(error){
+
+        list.innerHTML =
+        "خطا: " + error.message;
+
+        return;
+    }
+
+
+    if(!data || data.length===0){
+
+        list.innerHTML =
+        "<p>هنوز ویدئویی ثبت نشده است.</p>";
+
+        return;
+    }
+
+
+    list.innerHTML = "";
+
+
+    data.forEach(item=>{
+
+        const div =
+        document.createElement("div");
+
+        div.className =
+        "content-item";
+
+
+        div.innerHTML = `
+
+            <h3>
+                ${escapeHtml(item.title || "ویدئو")}
+            </h3>
+
+            <p>
+                ${escapeHtml(item.content || "")}
+            </p>
+
+            <a
+                href="${escapeAttribute(item.subtitle || "")}"
+                target="_blank"
+                rel="noopener"
+                style="color:#38bdf8"
+            >
+                مشاهده ویدئو
+            </a>
+
+            <br>
+
+            <button
+                class="danger"
+                onclick="deleteContent(${item.id})"
+            >
+                حذف
+            </button>
+
+        `;
+
+
+        list.appendChild(div);
+
+    });
+
+}
+
+
+/* =========================================
+   SECURITY HELPERS
+========================================= */
+
+function escapeHtml(value){
+
+    return String(value)
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;");
+
+}
+
+
+function escapeAttribute(value){
+
+    return escapeHtml(value);
+
+}
+
+
+/* =========================================
+   START
+========================================= */
+
+checkSession();
+
+</script>
+
+</body>
+</html>
