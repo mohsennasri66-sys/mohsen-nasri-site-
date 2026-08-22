@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <title>صنعت سیم‌پیچی | Mohsen Nasri</title>
+
 
 <style>
 
@@ -25,6 +29,9 @@ color:#fff;
 line-height:1.9;
 direction:rtl
 }
+
+
+/* ================= HEADER ================= */
 
 header{
 position:fixed;
@@ -69,12 +76,16 @@ color:#00bcd4
 }
 
 
-/* HERO */
+/* ================= HERO ================= */
 
 .hero{
+
 min-height:78vh;
+
 display:flex;
+
 align-items:center;
+
 padding:130px 7% 80px;
 
 background:
@@ -87,6 +98,7 @@ rgba(3,10,15,.35)
 var(--hero) center/cover no-repeat;
 
 direction:ltr;
+
 text-align:left
 }
 
@@ -110,7 +122,7 @@ color:#d5dce1
 }
 
 
-/* MAIN */
+/* ================= MAIN ================= */
 
 main{
 direction:rtl
@@ -138,6 +150,9 @@ margin-bottom:8px
 color:#aeb9c0
 }
 
+
+/* ================= CONTENT ================= */
+
 .content{
 max-width:1100px;
 margin:auto
@@ -149,7 +164,7 @@ margin-bottom:18px
 }
 
 
-/* GRID */
+/* ================= GRID ================= */
 
 .grid{
 max-width:1100px;
@@ -182,48 +197,19 @@ color:#b7c3c9
 }
 
 
-/* GALLERY */
-
-.gallery{
-max-width:1100px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px
-}
-
-.gallery img{
-width:100%;
-height:240px;
-object-fit:cover;
-border-radius:9px;
-display:block;
-transition:.3s;
-cursor:pointer
-}
-
-.gallery img:hover{
-transform:scale(1.03)
-}
-
-.gallery-message{
-grid-column:1/-1;
-text-align:center;
-color:#89969e;
-padding:30px
-}
-
-
-/* PROJECT */
+/* ================= PROJECT ================= */
 
 .project{
 max-width:1100px;
-margin:auto;
+margin:0 auto 20px;
+
 background:#0d1922;
+
 padding:32px;
+
 border-radius:10px;
-border:1px solid rgba(255,255,255,.07);
-margin-bottom:20px
+
+border:1px solid rgba(255,255,255,.07)
 }
 
 .project h3{
@@ -237,65 +223,143 @@ white-space:pre-line
 }
 
 
-/* VIDEO */
+/* ================= GALLERY ================= */
+
+.gallery{
+
+max-width:1100px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:18px
+}
+
+.gallery img{
+
+width:100%;
+
+height:240px;
+
+object-fit:cover;
+
+border-radius:9px;
+
+display:block;
+
+transition:.3s;
+
+cursor:pointer
+}
+
+.gallery img:hover{
+
+transform:scale(1.03)
+}
+
+.gallery-message{
+
+grid-column:1/-1;
+
+text-align:center;
+
+color:#89969e;
+
+padding:30px
+}
+
+
+/* ================= VIDEO ================= */
 
 .video{
+
 max-width:1000px;
+
 margin:auto
 }
 
 .video-item{
+
 background:#0d1922;
+
 border:1px solid rgba(255,255,255,.07);
+
 border-radius:10px;
+
 padding:25px;
+
 margin-bottom:20px
 }
 
 .video-item h3{
+
 color:#00bcd4;
+
 margin-bottom:10px
 }
 
 .video-item p{
+
 color:#b7c3c9;
+
 margin-bottom:15px
 }
 
 .video-link{
+
 display:inline-block;
+
 padding:10px 20px;
+
 background:#00bcd4;
+
 color:#001015;
+
 border-radius:5px;
+
 text-decoration:none;
+
 font-weight:bold
 }
 
 
-/* BACK */
+/* ================= BUTTON ================= */
 
 .back{
 text-align:center
 }
 
 .btn{
+
 display:inline-block;
+
 padding:12px 26px;
+
 border-radius:5px;
+
 background:#00bcd4;
+
 color:#001015;
+
 text-decoration:none;
+
 font-weight:bold
 }
 
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer{
+
 text-align:center;
+
 padding:30px;
+
 background:#040a0f;
+
 color:#89969e
 }
 
@@ -304,16 +368,7 @@ color:#00bcd4
 }
 
 
-/* LOADING */
-
-.dynamic-loading{
-text-align:center;
-color:#89969e;
-padding:20px
-}
-
-
-/* MOBILE */
+/* ================= MOBILE ================= */
 
 @media(max-width:800px){
 
@@ -331,12 +386,19 @@ grid-template-columns:1fr
 }
 
 .hero{
+
 min-height:68vh;
+
 padding:120px 6% 70px
 }
 
 .hero h1{
-font-size:clamp(40px,11vw,60px)
+
+font-size:clamp(
+40px,
+11vw,
+60px
+)
 }
 
 section{
@@ -346,23 +408,29 @@ padding:70px 6%
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 
 <header>
 
 <div class="logo">
+
 Mohsen <span>Nasri</span>
+
 </div>
+
 
 <nav>
 
-<a href="index.html">خانه</a>
+<a href="index.html">
+خانه
+</a>
 
 <a href="#about">
 معرفی
@@ -390,7 +458,7 @@ Mohsen <span>Nasri</span>
 
 
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 
 <section
 class="hero"
@@ -400,10 +468,17 @@ style="--hero:url('rewinding.jpg')"
 <div class="hero-content">
 
 <h1>
+
 سیم‌پیچی
+
 <br>
-<span>Industrial Engineering</span>
+
+<span>
+Industrial Engineering
+</span>
+
 </h1>
+
 
 <p>
 تجهیزات و سیستم‌های صنعتی سیم‌پیچی و بازپیچی.
@@ -418,9 +493,7 @@ style="--hero:url('rewinding.jpg')"
 <main>
 
 
-<!-- =====================================
-ABOUT
-===================================== -->
+<!-- ================= ABOUT ================= -->
 
 <section id="about">
 
@@ -442,9 +515,9 @@ class="content"
 id="introContent"
 >
 
-<div class="dynamic-loading">
+<p>
 در حال دریافت اطلاعات...
-</div>
+</p>
 
 </div>
 
@@ -452,9 +525,7 @@ id="introContent"
 
 
 
-<!-- =====================================
-SPECIALTIES
-===================================== -->
+<!-- ================= SPECIALTIES ================= -->
 
 <section
 class="dark"
@@ -479,8 +550,10 @@ class="grid"
 id="specialtiesContent"
 >
 
-<div class="dynamic-loading">
+<div class="gallery-message">
+
 در حال دریافت اطلاعات...
+
 </div>
 
 </div>
@@ -489,9 +562,7 @@ id="specialtiesContent"
 
 
 
-<!-- =====================================
-PROJECTS
-===================================== -->
+<!-- ================= PROJECTS ================= -->
 
 <section id="projects">
 
@@ -512,8 +583,10 @@ PROJECTS
 id="projectsContent"
 >
 
-<div class="dynamic-loading">
+<div class="gallery-message">
+
 در حال دریافت پروژه‌ها...
+
 </div>
 
 </div>
@@ -522,9 +595,7 @@ id="projectsContent"
 
 
 
-<!-- =====================================
-GALLERY
-===================================== -->
+<!-- ================= GALLERY ================= -->
 
 <section
 id="gallery"
@@ -538,7 +609,7 @@ class="dark"
 </h2>
 
 <p>
-تصاویر اختصاصی این صنعت
+تصاویر اختصاصی صنعت سیم‌پیچی
 </p>
 
 </div>
@@ -550,7 +621,9 @@ id="rewindingGallery"
 >
 
 <div class="gallery-message">
-در حال بارگذاری تصاویر...
+
+در حال دریافت تصاویر...
+
 </div>
 
 </div>
@@ -559,9 +632,7 @@ id="rewindingGallery"
 
 
 
-<!-- =====================================
-VIDEOS
-===================================== -->
+<!-- ================= VIDEOS ================= -->
 
 <section id="videos">
 
@@ -583,8 +654,10 @@ class="video"
 id="videosContent"
 >
 
-<div class="dynamic-loading">
+<div class="gallery-message">
+
 در حال دریافت ویدئوها...
+
 </div>
 
 </div>
@@ -593,7 +666,7 @@ id="videosContent"
 
 
 
-<!-- BACK -->
+<!-- ================= BACK ================= -->
 
 <section class="back">
 
@@ -601,7 +674,9 @@ id="videosContent"
 href="index.html"
 class="btn"
 >
+
 بازگشت به صفحه اصلی
+
 </a>
 
 </section>
@@ -611,22 +686,25 @@ class="btn"
 
 
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
 © 2026
+
 <strong>
 Mohsen Nasri
 </strong>
+
 —
+
 مهندسی صنعتی
 
 </footer>
 
 
 
-<!-- SUPABASE -->
+<!-- ================= SUPABASE ================= -->
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
@@ -634,9 +712,9 @@ Mohsen Nasri
 <script>
 
 
-/* ==========================================
+/* =====================================================
 SUPABASE CONNECTION
-========================================== */
+===================================================== */
 
 const SUPABASE_URL =
 "https://eurmybgotfgnerdxrwua.supabase.co";
@@ -648,47 +726,68 @@ const SUPABASE_ANON_KEY =
 
 const supabaseClient =
 window.supabase.createClient(
+
 SUPABASE_URL,
+
 SUPABASE_ANON_KEY
+
 );
 
 
-/* ==========================================
-CURRENT INDUSTRY
-========================================== */
+/* =====================================================
+INDUSTRY
+===================================================== */
 
 const CURRENT_INDUSTRY =
 "rewinding";
 
 
-
-/* ==========================================
-ESCAPE HTML
-========================================== */
+/* =====================================================
+ESCAPE
+===================================================== */
 
 function escapeHtml(value){
 
 return String(value || "")
+
 .replaceAll("&","&amp;")
+
 .replaceAll("<","&lt;")
+
 .replaceAll(">","&gt;")
+
 .replaceAll('"',"&quot;")
+
 .replaceAll("'","&#039;");
 
 }
 
 
-
-/* ==========================================
-LOAD ALL CONTENT
-========================================== */
+/* =====================================================
+LOAD CONTENT
+===================================================== */
 
 async function loadIndustryContent(){
 
+const introBox =
+document.getElementById(
+"introContent"
+);
+
+const specialtiesBox =
+document.getElementById(
+"specialtiesContent"
+);
+
+const projectsBox =
+document.getElementById(
+"projectsContent"
+);
+
+
 try{
 
-const {data,error} =
-
+const result =
 await supabaseClient
 
 .from("industry_content")
@@ -720,57 +819,38 @@ ascending:true
 );
 
 
-if(error){
+if(result.error){
 
 console.error(
-"Content Error:",
-error
+result.error
 );
+
+introBox.innerHTML = `
+<p>
+خطا در دریافت محتوای این صنعت:
+${escapeHtml(result.error.message)}
+</p>
+`;
 
 return;
 
 }
 
 
-/* --------------------------
-FILTER CONTENT
--------------------------- */
+const data =
+result.data || [];
+
+
+/* ================= INTRO ================= */
 
 const intro =
-(data || [])
-.filter(
+data.filter(
 item =>
 item.content_type === "intro"
 );
 
 
-const specialties =
-(data || [])
-.filter(
-item =>
-item.content_type === "section"
-);
-
-
-const projects =
-(data || [])
-.filter(
-item =>
-item.content_type === "project"
-);
-
-
-/* --------------------------
-INTRO
--------------------------- */
-
-const introBox =
-document.getElementById(
-"introContent"
-);
-
-
-if(intro.length){
+if(intro.length > 0){
 
 introBox.innerHTML =
 "";
@@ -778,47 +858,66 @@ introBox.innerHTML =
 
 intro.forEach(item=>{
 
-const title =
+const block =
+document.createElement("div");
+
+block.style.marginBottom =
+"25px";
+
+
+block.innerHTML = `
+
+${
 item.title
 ?
-`<h3 style="color:#00bcd4;margin-bottom:10px">
+`
+<h3 style="
+color:#00bcd4;
+margin-bottom:10px;
+">
 ${escapeHtml(item.title)}
-</h3>`
+</h3>
+`
 :
-"";
+""
+}
 
 
-const subtitle =
+${
 item.subtitle
 ?
-`<p style="color:#aeb9c0">
+`
+<p style="
+color:#aeb9c0;
+">
 ${escapeHtml(item.subtitle)}
-</p>`
+</p>
+`
 :
-"";
+""
+}
 
 
-const text =
+${
 item.content
 ?
-`<p>
-${escapeHtml(item.content)}
-</p>`
-:
-"";
-
-
-introBox.innerHTML +=
 `
-<div style="margin-bottom:25px">
-${title}
-${subtitle}
-${text}
-</div>
+<p>
+${escapeHtml(item.content)}
+</p>
+`
+:
+""
+}
+
 `;
 
-});
 
+introBox.appendChild(
+block
+);
+
+});
 
 }else{
 
@@ -829,7 +928,7 @@ introBox.innerHTML = `
 </p>
 
 <p>
-در این بخش می‌توان اطلاعات فنی، سوابق کاری، تصاویر، ویدئوها، پروژه‌ها و مستندات مرتبط با این صنعت را به‌صورت مستقل مدیریت کرد.
+در این بخش می‌توان اطلاعات فنی، سوابق کاری، تصاویر، ویدئوها، پروژه‌ها و مستندات مرتبط با این صنعت را به‌صورت مستقل اضافه و مدیریت کرد.
 </p>
 
 `;
@@ -837,18 +936,16 @@ introBox.innerHTML = `
 }
 
 
+/* ================= SPECIALTIES ================= */
 
-/* --------------------------
-SPECIALTIES
--------------------------- */
-
-const specialtiesBox =
-document.getElementById(
-"specialtiesContent"
+const specialties =
+data.filter(
+item =>
+item.content_type === "section"
 );
 
 
-if(specialties.length){
+if(specialties.length > 0){
 
 specialtiesBox.innerHTML =
 "";
@@ -856,34 +953,48 @@ specialtiesBox.innerHTML =
 
 specialties.forEach(item=>{
 
-specialtiesBox.innerHTML +=
+const card =
+document.createElement("div");
 
-`
-<div class="card">
+card.className =
+"card";
+
+
+card.innerHTML = `
 
 <h3>
 ${escapeHtml(item.title)}
 </h3>
 
+
 ${
 item.subtitle
 ?
-`<div style="color:#89969e;margin-bottom:8px">
+`
+<div style="
+color:#89969e;
+margin-bottom:8px;
+">
 ${escapeHtml(item.subtitle)}
-</div>`
+</div>
+`
 :
 ""
 }
+
 
 <p>
 ${escapeHtml(item.content)}
 </p>
 
-</div>
 `;
 
-});
 
+specialtiesBox.appendChild(
+card
+);
+
+});
 
 }else{
 
@@ -932,18 +1043,16 @@ specialtiesBox.innerHTML = `
 }
 
 
+/* ================= PROJECTS ================= */
 
-/* --------------------------
-PROJECTS
--------------------------- */
-
-const projectsBox =
-document.getElementById(
-"projectsContent"
+const projects =
+data.filter(
+item =>
+item.content_type === "project"
 );
 
 
-if(projects.length){
+if(projects.length > 0){
 
 projectsBox.innerHTML =
 "";
@@ -951,34 +1060,47 @@ projectsBox.innerHTML =
 
 projects.forEach(item=>{
 
-projectsBox.innerHTML +=
+const project =
+document.createElement("div");
 
-`
-<div class="project">
+project.className =
+"project";
+
+
+project.innerHTML = `
 
 <h3>
 ${escapeHtml(item.title)}
 </h3>
 
+
 ${
 item.subtitle
 ?
-`<p style="color:#89969e">
+`
+<p style="
+color:#89969e;
+">
 ${escapeHtml(item.subtitle)}
-</p>`
+</p>
+`
 :
 ""
 }
+
 
 <p>
 ${escapeHtml(item.content)}
 </p>
 
-</div>
 `;
 
-});
 
+projectsBox.appendChild(
+project
+);
+
+});
 
 }else{
 
@@ -1004,19 +1126,26 @@ projectsBox.innerHTML = `
 }catch(error){
 
 console.error(
-"Industry Content Error:",
 error
 );
 
-}
+introBox.innerHTML = `
+
+<p>
+خطا در اتصال به سیستم محتوا:
+${escapeHtml(error.message)}
+</p>
+
+`;
 
 }
 
+}
 
 
-/* ==========================================
+/* =====================================================
 LOAD GALLERY
-========================================== */
+===================================================== */
 
 async function loadRewindingGallery(){
 
@@ -1026,16 +1155,30 @@ document.getElementById(
 );
 
 
+gallery.innerHTML = `
+
+<div class="gallery-message">
+
+در حال دریافت تصاویر...
+
+</div>
+
+`;
+
+
 try{
 
 
-const {data,error} =
+/* ================= DATABASE ================= */
 
+const result =
 await supabaseClient
 
 .from("industry_media")
 
-.select("*")
+.select(
+"id,industry,media_type,file_path"
+)
 
 .eq(
 "industry",
@@ -1048,24 +1191,33 @@ CURRENT_INDUSTRY
 )
 
 .order(
-"created_at",
+"id",
 {
-ascending:true
+ascending:false
 }
 );
 
 
-if(error){
+if(result.error){
 
 console.error(
-"Supabase Gallery Error:",
-error
+"GALLERY DATABASE ERROR:",
+result.error
 );
+
 
 gallery.innerHTML = `
 
 <div class="gallery-message">
-خطا در دریافت تصاویر گالری
+
+خطا در دریافت تصاویر:
+
+<br><br>
+
+${escapeHtml(
+result.error.message
+)}
+
 </div>
 
 `;
@@ -1075,22 +1227,24 @@ return;
 }
 
 
+const data =
+result.data || [];
 
-const validImages =
-(data || []).filter(
-item =>
-item.file_path &&
-item.file_path.trim() !== ""
+
+console.log(
+"GALLERY DATA:",
+data
 );
 
 
-
-if(validImages.length === 0){
+if(data.length === 0){
 
 gallery.innerHTML = `
 
 <div class="gallery-message">
+
 هنوز تصویری برای این صنعت ثبت نشده است.
+
 </div>
 
 `;
@@ -1098,25 +1252,50 @@ gallery.innerHTML = `
 return;
 
 }
-
 
 
 gallery.innerHTML =
 "";
 
 
+/* ================= IMAGES ================= */
 
-validImages.forEach(item=>{
+data.forEach(item=>{
+
+
+if(!item.file_path){
+
+return;
+
+}
+
+
+const publicResult =
+supabaseClient
+
+.storage
+
+.from("project-media")
+
+.getPublicUrl(
+item.file_path
+);
 
 
 const imageUrl =
+publicResult.data.publicUrl;
 
-`${SUPABASE_URL}/storage/v1/object/public/project-media/${item.file_path}`;
 
+console.log(
+"IMAGE URL:",
+imageUrl
+);
 
 
 const img =
-document.createElement("img");
+document.createElement(
+"img"
+);
 
 
 img.src =
@@ -1146,12 +1325,26 @@ img.onerror =
 function(){
 
 console.error(
-"Image could not be loaded:",
+"IMAGE LOAD ERROR:",
 imageUrl
 );
 
-this.style.display =
-"none";
+
+this.outerHTML = `
+
+<div class="gallery-message">
+
+فایل تصویر پیدا نشد:
+
+<br><br>
+
+${escapeHtml(
+item.file_path
+)}
+
+</div>
+
+`;
 
 };
 
@@ -1165,8 +1358,9 @@ img
 
 }catch(error){
 
+
 console.error(
-"Gallery Error:",
+"GALLERY ERROR:",
 error
 );
 
@@ -1174,7 +1368,15 @@ error
 gallery.innerHTML = `
 
 <div class="gallery-message">
-خطا در اتصال به گالری
+
+خطا در اتصال به گالری:
+
+<br><br>
+
+${escapeHtml(
+error.message
+)}
+
 </div>
 
 `;
@@ -1184,10 +1386,9 @@ gallery.innerHTML = `
 }
 
 
-
-/* ==========================================
+/* =====================================================
 LOAD VIDEOS
-========================================== */
+===================================================== */
 
 async function loadVideos(){
 
@@ -1199,9 +1400,7 @@ document.getElementById(
 
 try{
 
-
-const {data,error} =
-
+const result =
 await supabaseClient
 
 .from("industry_content")
@@ -1238,17 +1437,20 @@ ascending:true
 );
 
 
-if(error){
-
-console.error(
-"Video Error:",
-error
-);
+if(result.error){
 
 box.innerHTML = `
 
-<div class="dynamic-loading">
-خطا در دریافت ویدئوها
+<div class="gallery-message">
+
+خطا در دریافت ویدئوها:
+
+<br>
+
+${escapeHtml(
+result.error.message
+)}
+
 </div>
 
 `;
@@ -1258,13 +1460,18 @@ return;
 }
 
 
+const data =
+result.data || [];
 
-if(!data || data.length === 0){
+
+if(data.length === 0){
 
 box.innerHTML = `
 
-<div class="dynamic-loading">
+<div class="gallery-message">
+
 هنوز ویدئویی برای این صنعت ثبت نشده است.
+
 </div>
 
 `;
@@ -1272,7 +1479,6 @@ box.innerHTML = `
 return;
 
 }
-
 
 
 box.innerHTML =
@@ -1280,10 +1486,6 @@ box.innerHTML =
 
 
 data.forEach(item=>{
-
-
-const videoUrl =
-item.subtitle || "";
 
 
 const div =
@@ -1299,80 +1501,5 @@ div.className =
 div.innerHTML = `
 
 <h3>
-${escapeHtml(item.title || "ویدئو")}
-</h3>
 
 ${
-item.content
-?
-`<p>
-${escapeHtml(item.content)}
-</p>`
-:
-""
-}
-
-${
-videoUrl
-?
-`
-<a
-class="video-link"
-href="${escapeHtml(videoUrl)}"
-target="_blank"
-rel="noopener noreferrer"
->
-مشاهده ویدئو
-</a>
-`
-:
-""
-}
-
-`;
-
-
-box.appendChild(
-div
-);
-
-});
-
-
-}catch(error){
-
-console.error(
-"Video Error:",
-error
-);
-
-box.innerHTML = `
-
-<div class="dynamic-loading">
-خطا در اتصال به ویدئوها
-</div>
-
-`;
-
-}
-
-}
-
-
-
-/* ==========================================
-START
-========================================== */
-
-loadIndustryContent();
-
-loadRewindingGallery();
-
-loadVideos();
-
-
-</script>
-
-
-</body>
-</html>
