@@ -1,23 +1,15 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <title>صنعت سیم‌پیچی | Mohsen Nasri</title>
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box}
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
 font-family:Tahoma,Arial,sans-serif;
@@ -32,16 +24,12 @@ top:0;
 left:0;
 width:100%;
 z-index:1000;
-
 display:flex;
 justify-content:space-between;
 align-items:center;
-
 padding:17px 6%;
-
-background:rgba(5,12,18,.9);
+background:rgba(5,12,18,.92);
 backdrop-filter:blur(12px);
-
 border-bottom:1px solid rgba(255,255,255,.08);
 direction:ltr;
 }
@@ -72,12 +60,9 @@ color:#00bcd4;
 }
 
 .hero{
-
 min-height:78vh;
-
 display:flex;
 align-items:center;
-
 padding:130px 7% 80px;
 
 background:
@@ -110,10 +95,6 @@ color:#00bcd4;
 .hero p{
 font-size:19px;
 color:#d5dce1;
-}
-
-main{
-direction:rtl;
 }
 
 section{
@@ -151,28 +132,16 @@ margin-bottom:18px;
 .grid{
 max-width:1100px;
 margin:auto;
-
 display:grid;
 grid-template-columns:repeat(3,1fr);
-
 gap:22px;
 }
 
 .card{
 background:#0d1922;
-
 padding:28px;
-
 border-radius:10px;
-
 border:1px solid rgba(255,255,255,.07);
-
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-6px);
-border-color:#00bcd4;
 }
 
 .card h3{
@@ -187,18 +156,14 @@ color:#b7c3c9;
 .project-list{
 max-width:1100px;
 margin:auto;
-
 display:grid;
 gap:20px;
 }
 
 .project{
 background:#0d1922;
-
 padding:32px;
-
 border-radius:10px;
-
 border:1px solid rgba(255,255,255,.07);
 }
 
@@ -211,94 +176,59 @@ margin-bottom:10px;
 color:#b7c3c9;
 }
 
+
 /* GALLERY */
 
 .gallery{
 max-width:1100px;
 margin:auto;
-
 display:grid;
-
-grid-template-columns:
-repeat(3,1fr);
-
+grid-template-columns:repeat(3,1fr);
 gap:18px;
 }
 
 .gallery-card{
 background:#0d1922;
-
 border-radius:10px;
-
 overflow:hidden;
-
 border:1px solid rgba(255,255,255,.08);
-
-transition:.3s;
-}
-
-.gallery-card:hover{
-transform:translateY(-5px);
-border-color:#00bcd4;
 }
 
 .gallery-card img{
 width:100%;
-height:250px;
-
+height:260px;
 display:block;
-
 object-fit:cover;
-
 cursor:pointer;
 }
 
 .gallery-title{
 padding:12px;
-
 text-align:center;
-
 color:#d5dce1;
-
-background:#0d1922;
 }
 
-.gallery-message{
+.message{
 grid-column:1/-1;
-
 text-align:center;
-
 padding:35px;
-
 color:#00bcd4;
 }
 
-.error-box{
+.error{
 grid-column:1/-1;
-
-background:#321719;
-
+background:#351518;
 border:1px solid #8d3338;
-
-padding:25px;
-
 border-radius:10px;
-
-color:#ffb8b8;
-
+padding:25px;
 text-align:center;
+color:#ffb8b8;
 }
-
-/* VIDEOS */
 
 .video-card{
 background:#0d1922;
-
 border-radius:10px;
-
 overflow:hidden;
-
-border:1px solid rgba(255,255,255,.08);
 }
 
 .video-card video{
@@ -307,49 +237,24 @@ display:block;
 background:#000;
 }
 
-.empty{
-text-align:center;
-
-color:#89969e;
-
-padding:30px;
-}
-
-.loading{
-text-align:center;
-
-color:#00bcd4;
-
-padding:30px;
-}
-
 .back{
 text-align:center;
 }
 
 .btn{
 display:inline-block;
-
 padding:12px 26px;
-
 border-radius:5px;
-
 background:#00bcd4;
-
 color:#001015;
-
 text-decoration:none;
-
 font-weight:bold;
 }
 
 footer{
 text-align:center;
-
 padding:30px;
-
 background:#040a0f;
-
 color:#89969e;
 }
 
@@ -374,7 +279,6 @@ grid-template-columns:1fr;
 
 .hero{
 min-height:68vh;
-
 padding:120px 6% 70px;
 }
 
@@ -387,13 +291,11 @@ padding:70px 6%;
 }
 
 }
-
 </style>
 </head>
 
 
 <body>
-
 
 <header>
 
@@ -402,17 +304,11 @@ Mohsen <span>Nasri</span>
 </div>
 
 <nav>
-
 <a href="index.html">خانه</a>
-
 <a href="#about">معرفی</a>
-
 <a href="#projects">پروژه‌ها</a>
-
 <a href="#gallery">گالری</a>
-
 <a href="#videos">ویدئوها</a>
-
 </nav>
 
 </header>
@@ -473,50 +369,25 @@ Mohsen <span>Nasri</span>
 
 <h2>حوزه‌های تخصصی</h2>
 
-<p>
-اطلاعات اختصاصی این صنعت
-</p>
+<p>اطلاعات اختصاصی این صنعت</p>
 
 </div>
 
 <div class="grid">
 
 <div class="card">
-
-<h3>
-ماشین‌آلات سیم‌پیچی
-</h3>
-
-<p>
-معرفی ماشین‌آلات، تجهیزات و سیستم‌های تولید.
-</p>
-
+<h3>ماشین‌آلات سیم‌پیچی</h3>
+<p>معرفی ماشین‌آلات، تجهیزات و سیستم‌های تولید.</p>
 </div>
 
-
 <div class="card">
-
-<h3>
-مهندسی مکانیک
-</h3>
-
-<p>
-بررسی تجهیزات و سیستم‌های مکانیکی مرتبط.
-</p>
-
+<h3>مهندسی مکانیک</h3>
+<p>بررسی تجهیزات و سیستم‌های مکانیکی مرتبط.</p>
 </div>
 
-
 <div class="card">
-
-<h3>
-مستندات فنی
-</h3>
-
-<p>
-ارائه نقشه‌ها، دستورالعمل‌ها و مدارک مهندسی.
-</p>
-
+<h3>مستندات فنی</h3>
+<p>ارائه نقشه‌ها، دستورالعمل‌ها و مدارک مهندسی.</p>
 </div>
 
 </div>
@@ -528,22 +399,18 @@ Mohsen <span>Nasri</span>
 
 <div class="section-title">
 
-<h2>
-پروژه‌ها
-</h2>
+<h2>پروژه‌ها</h2>
 
-<p>
-پروژه‌های انجام‌شده و سوابق اجرایی
-</p>
+<p>پروژه‌های انجام‌شده و سوابق اجرایی</p>
 
 </div>
 
 <div
-id="projects-container"
+id="projectsBox"
 class="project-list"
 >
 
-<div class="loading">
+<div class="message">
 در حال دریافت پروژه‌ها...
 </div>
 
@@ -556,23 +423,19 @@ class="project-list"
 
 <div class="section-title">
 
-<h2>
-گالری تصاویر
-</h2>
+<h2>گالری تصاویر</h2>
 
-<p>
-تصاویر اختصاصی صنعت سیم‌پیچی
-</p>
+<p>تصاویر اختصاصی صنعت سیم‌پیچی</p>
 
 </div>
 
 <div
-id="rewindingGallery"
+id="galleryBox"
 class="gallery"
 >
 
-<div class="loading">
-در حال دریافت تصاویر...
+<div class="message">
+در حال دریافت تصویر...
 </div>
 
 </div>
@@ -584,22 +447,18 @@ class="gallery"
 
 <div class="section-title">
 
-<h2>
-ویدئوها
-</h2>
+<h2>ویدئوها</h2>
 
-<p>
-ویدئوهای صنعتی و پروژه‌ای
-</p>
+<p>ویدئوهای صنعتی و پروژه‌ای</p>
 
 </div>
 
 <div
-id="videos-container"
+id="videoBox"
 class="gallery"
 >
 
-<div class="loading">
+<div class="message">
 در حال دریافت ویدئوها...
 </div>
 
@@ -610,10 +469,7 @@ class="gallery"
 
 <section class="back">
 
-<a
-href="index.html"
-class="btn"
->
+<a href="index.html" class="btn">
 بازگشت به صفحه اصلی
 </a>
 
@@ -626,11 +482,7 @@ class="btn"
 <footer>
 
 © 2026
-
-<strong>
-Mohsen Nasri
-</strong>
-
+<strong>Mohsen Nasri</strong>
 — مهندسی صنعتی
 
 </footer>
@@ -638,59 +490,46 @@ Mohsen Nasri
 
 <script>
 
-
-/* ================================
+/* =========================
    SUPABASE
-================================ */
+========================= */
 
 const SUPABASE_URL =
 "https://eurmybgotfgnerdxrwua.supabase.co";
 
-
 const SUPABASE_KEY =
 "sb_publishable_X3LYjYSbJU7YJ0ezzn6YfA_ZHsbd1K3";
-
-
-const INDUSTRY =
-"rewinding";
-
 
 const BUCKET =
 "project-media";
 
 
-/* ================================
-   SUPABASE REQUEST
-================================ */
+/* =========================
+   مستقیم‌ترین مسیر عکس فعلی
+========================= */
 
-async function supabaseRequest(
-endpoint
-){
+const TEST_IMAGE =
+"https://eurmybgotfgnerdxrwua.supabase.co/storage/v1/object/public/project-media/rewinding/1787393177366-qthlzp.webp";
+
+
+/* =========================
+   درخواست Supabase
+========================= */
+
+async function request(url){
 
 const response =
-await fetch(
-SUPABASE_URL + endpoint,
-{
-
-method:"GET",
-
+await fetch(url,{
 headers:{
 "apikey":SUPABASE_KEY,
-"Authorization":"Bearer "+SUPABASE_KEY,
-"Content-Type":"application/json"
+"Authorization":"Bearer "+SUPABASE_KEY
 }
-
 });
-
 
 if(!response.ok){
 
-const text =
-await response.text();
-
 throw new Error(
-text ||
-"خطا در ارتباط با Supabase"
+"Supabase HTTP "+response.status
 );
 
 }
@@ -700,197 +539,110 @@ return response.json();
 }
 
 
-/* ================================
-   ESCAPE HTML
-================================ */
+/* =========================
+   HTML امن
+========================= */
 
-function escapeHTML(value){
+function safe(value){
 
 return String(value || "")
-
 .replaceAll("&","&amp;")
-
 .replaceAll("<","&lt;")
-
 .replaceAll(">","&gt;")
-
 .replaceAll('"',"&quot;")
-
 .replaceAll("'","&#039;");
 
 }
 
 
-/* ================================
-   STORAGE URL
-================================ */
-
-function buildStorageURL(
-filePath
-){
-
-if(!filePath){
-return "";
-}
-
-return (
-
-SUPABASE_URL +
-
-"/storage/v1/object/public/" +
-
-BUCKET +
-
-"/" +
-
-filePath
-
-);
-
-}
-
-
-/* ================================
-   LOAD GALLERY
-================================ */
+/* =========================
+   گالری
+========================= */
 
 async function loadGallery(){
 
-const gallery =
-document.getElementById(
-"rewindingGallery"
-);
+const box =
+document.getElementById("galleryBox");
 
-
-gallery.innerHTML = `
-
-<div class="gallery-message">
-
-در حال دریافت تصاویر...
-
-</div>
-
-`;
+box.innerHTML =
+'<div class="message">در حال دریافت تصاویر...</div>';
 
 
 try{
 
-const data =
-await supabaseRequest(
-
+const url =
+SUPABASE_URL +
 "/rest/v1/industry_media" +
-
 "?industry=eq.rewinding" +
-
 "&media_type=eq.image" +
-
 "&is_visible=eq.true" +
-
-"&order=id.desc"
-
-);
+"&order=id.desc";
 
 
-console.log(
-"GALLERY DATA:",
-data
-);
+const rows =
+await request(url);
 
 
-gallery.innerHTML = "";
+box.innerHTML="";
 
 
-if(
-!data ||
-data.length === 0
-){
+if(!rows || rows.length===0){
 
-gallery.innerHTML = `
-
-<div class="gallery-message">
-
-هنوز تصویری برای صنعت سیم‌پیچی ثبت نشده است.
-
-</div>
-
-`;
+box.innerHTML =
+'<div class="message">هنوز تصویری ثبت نشده است.</div>';
 
 return;
 
 }
 
 
-let imageCount = 0;
+let count=0;
 
 
-data.forEach(
-item => {
+rows.forEach(item=>{
 
-
-if(
-!item.file_path
-){
-
-console.warn(
-"FILE PATH EMPTY:",
-item
-);
+if(!item.file_path){
 
 return;
 
 }
 
 
-imageCount++;
+count++;
 
 
 const imageURL =
 item.file_url ||
-
 item.media_url ||
-
-buildStorageURL(
+(
+SUPABASE_URL +
+"/storage/v1/object/public/" +
+BUCKET +
+"/" +
 item.file_path
 );
 
 
-console.log(
-"IMAGE URL:",
-imageURL
-);
-
-
 const card =
-document.createElement(
-"div"
-);
-
+document.createElement("div");
 
 card.className =
 "gallery-card";
 
 
 const img =
-document.createElement(
-"img"
-);
+document.createElement("img");
 
-
-img.src =
-imageURL;
-
+img.src=imageURL;
 
 img.alt =
 item.title ||
-"تصویر صنعت سیم‌پیچی";
+"تصویر سیم‌پیچی";
+
+img.loading="lazy";
 
 
-img.loading =
-"lazy";
-
-
-img.onclick =
-function(){
+img.onclick=function(){
 
 window.open(
 imageURL,
@@ -900,20 +652,13 @@ imageURL,
 };
 
 
-img.onerror =
-function(){
+img.onerror=function(){
 
-console.error(
-"IMAGE LOAD ERROR:",
-imageURL
-);
+card.innerHTML=`
 
+<div class="error">
 
-card.innerHTML = `
-
-<div class="error-box">
-
-خطا در نمایش تصویر
+تصویر از Supabase دریافت نشد.
 
 <br><br>
 
@@ -921,19 +666,13 @@ card.innerHTML = `
 
 <br>
 
-${escapeHTML(
-item.file_path
-)}
+${safe(item.file_path)}
 
 <br><br>
 
-<a
-href="${imageURL}"
-target="_blank"
-style="color:#00bcd4"
->
-باز کردن مستقیم تصویر
-</a>
+کد خطا:
+
+IMAGE_LOAD_ERROR
 
 </div>
 
@@ -942,17 +681,13 @@ style="color:#00bcd4"
 };
 
 
-card.appendChild(
-img
-);
+card.appendChild(img);
 
 
 if(item.title){
 
 const title =
-document.createElement(
-"div"
-);
+document.createElement("div");
 
 title.className =
 "gallery-title";
@@ -960,33 +695,20 @@ title.className =
 title.textContent =
 item.title;
 
-card.appendChild(
-title
-);
+card.appendChild(title);
 
 }
 
 
-gallery.appendChild(
-card
-);
+box.appendChild(card);
 
 });
 
 
-if(
-imageCount === 0
-){
+if(count===0){
 
-gallery.innerHTML = `
-
-<div class="gallery-message">
-
-رکورد تصویر وجود دارد اما مسیر فایل خالی است.
-
-</div>
-
-`;
+box.innerHTML =
+'<div class="message">رکورد وجود دارد ولی مسیر فایل خالی است.</div>';
 
 }
 
@@ -994,23 +716,17 @@ gallery.innerHTML = `
 
 catch(error){
 
-console.error(
-"GALLERY ERROR:",
-error
-);
+console.error(error);
 
+box.innerHTML=`
 
-gallery.innerHTML = `
+<div class="error">
 
-<div class="error-box">
-
-خطا در دریافت تصاویر
+خطا در دریافت گالری
 
 <br><br>
 
-${escapeHTML(
-error.message
-)}
+${safe(error.message)}
 
 </div>
 
@@ -1021,95 +737,63 @@ error.message
 }
 
 
-/* ================================
-   LOAD PROJECTS
-================================ */
+/* =========================
+   پروژه‌ها
+========================= */
 
 async function loadProjects(){
 
-const container =
-document.getElementById(
-"projects-container"
-);
+const box =
+document.getElementById("projectsBox");
 
 
 try{
 
-const projects =
-await supabaseRequest(
-
+const url =
+SUPABASE_URL +
 "/rest/v1/projects" +
-
 "?industry=eq.rewinding" +
-
 "&is_visible=eq.true" +
-
-"&order=sort_order.asc"
-
-);
+"&order=sort_order.asc";
 
 
-container.innerHTML = "";
+const rows =
+await request(url);
 
 
-if(
-!projects ||
-projects.length === 0
-){
+box.innerHTML="";
 
-container.innerHTML = `
 
-<div class="empty">
+if(!rows || rows.length===0){
 
-هنوز پروژه‌ای برای صنعت سیم‌پیچی ثبت نشده است.
-
-</div>
-
-`;
+box.innerHTML =
+'<div class="message">هنوز پروژه‌ای ثبت نشده است.</div>';
 
 return;
 
 }
 
 
-projects.forEach(
-project => {
+rows.forEach(item=>{
 
+const project =
+document.createElement("div");
 
-const item =
-document.createElement(
-"div"
-);
+project.className="project";
 
-
-item.className =
-"project";
-
-
-item.innerHTML = `
+project.innerHTML=`
 
 <h3>
-
-${escapeHTML(
-project.title || "پروژه"
-)}
-
+${safe(item.title || "پروژه")}
 </h3>
 
 <p>
-
-${escapeHTML(
-project.description || ""
-)}
-
+${safe(item.description || "")}
 </p>
 
 `;
 
-
-container.appendChild(
-item
-);
+box.appendChild(project);
 
 });
 
@@ -1117,147 +801,93 @@ item
 
 catch(error){
 
-console.error(
-"PROJECT ERROR:",
-error
-);
+console.error(error);
 
-
-container.innerHTML = `
-
-<div class="empty">
-
-دریافت پروژه‌ها با خطا مواجه شد.
-
-</div>
-
-`;
+box.innerHTML =
+'<div class="message">دریافت پروژه‌ها با خطا مواجه شد.</div>';
 
 }
 
 }
 
 
-/* ================================
-   LOAD VIDEOS
-================================ */
+/* =========================
+   ویدئوها
+========================= */
 
 async function loadVideos(){
 
-const container =
-document.getElementById(
-"videos-container"
-);
+const box =
+document.getElementById("videoBox");
 
 
 try{
 
-const data =
-await supabaseRequest(
-
+const url =
+SUPABASE_URL +
 "/rest/v1/industry_media" +
-
 "?industry=eq.rewinding" +
-
 "&media_type=eq.video" +
-
 "&is_visible=eq.true" +
-
-"&order=id.desc"
-
-);
+"&order=id.desc";
 
 
-container.innerHTML = "";
+const rows =
+await request(url);
 
 
-if(
-!data ||
-data.length === 0
-){
+box.innerHTML="";
 
-container.innerHTML = `
 
-<div class="empty">
+if(!rows || rows.length===0){
 
-هنوز ویدئویی برای صنعت سیم‌پیچی ثبت نشده است.
-
-</div>
-
-`;
+box.innerHTML =
+'<div class="message">هنوز ویدئویی ثبت نشده است.</div>';
 
 return;
 
 }
 
 
-data.forEach(
-item => {
+rows.forEach(item=>{
 
-
-if(
-!item.file_path
-)return;
+if(!item.file_path)return;
 
 
 const videoURL =
 item.file_url ||
-
 item.media_url ||
-
-buildStorageURL(
+(
+SUPABASE_URL +
+"/storage/v1/object/public/" +
+BUCKET +
+"/" +
 item.file_path
 );
 
 
 const card =
-document.createElement(
-"div"
-);
+document.createElement("div");
+
+card.className="video-card";
 
 
-card.className =
-"video-card";
+card.innerHTML=`
 
+<video controls preload="metadata">
 
-const video =
-document.createElement(
-"video"
-);
+<source
+src="${videoURL}"
+type="video/mp4"
+>
 
+مرورگر شما از پخش ویدئو پشتیبانی نمی‌کند.
 
-video.controls = true;
+</video>
 
-video.preload = "metadata";
+`;
 
-
-const source =
-document.createElement(
-"source"
-);
-
-
-source.src =
-videoURL;
-
-
-source.type =
-"video/mp4";
-
-
-video.appendChild(
-source
-);
-
-
-card.appendChild(
-video
-);
-
-
-container.appendChild(
-card
-);
+box.appendChild(card);
 
 });
 
@@ -1265,30 +895,19 @@ card
 
 catch(error){
 
-console.error(
-"VIDEO ERROR:",
-error
-);
+console.error(error);
 
-
-container.innerHTML = `
-
-<div class="empty">
-
-دریافت ویدئوها با خطا مواجه شد.
-
-</div>
-
-`;
+box.innerHTML =
+'<div class="message">دریافت ویدئوها با خطا مواجه شد.</div>';
 
 }
 
 }
 
 
-/* ================================
-   START
-================================ */
+/* =========================
+   اجرا
+========================= */
 
 document.addEventListener(
 "DOMContentLoaded",
@@ -1304,7 +923,5 @@ loadVideos();
 
 </script>
 
-
 </body>
-
 </html>
