@@ -1,60 +1,58 @@
-async function loadGallery(){
+<script>
 
-    const box = document.getElementById("galleryBox");
+const IMAGE_URL =
+"https://eurmybgotfgnerdxrwua.supabase.co/storage/v1/object/public/project-media/rewinding/1787393789750-ox1w9a.jpg";
 
-    box.innerHTML = `
-        <div class="message">
-            در حال دریافت تصویر...
-        </div>
-    `;
+document.addEventListener("DOMContentLoaded", function(){
 
-    try{
+    const gallery = document.getElementById("galleryBox");
 
-        const imageURL =
-        "https://eurmybgotfgnerdxrwua.supabase.co/storage/v1/object/public/project-media/rewinding/1787393789750-ox1w9a.jpg";
+    gallery.innerHTML = "";
 
-        box.innerHTML = "";
+    const card = document.createElement("div");
 
-        const card = document.createElement("div");
-        card.className = "gallery-card";
+    card.className = "gallery-card";
 
-        const img = document.createElement("img");
+    const img = document.createElement("img");
 
-        img.src = imageURL;
-        img.alt = "تصویر صنعت سیم‌پیچی";
-        img.loading = "lazy";
+    img.src = IMAGE_URL;
 
-        img.onclick = function(){
-            window.open(imageURL, "_blank");
-        };
+    img.alt = "تصویر صنعت سیم‌پیچی";
 
-        img.onerror = function(){
+    img.style.width = "100%";
 
-            card.innerHTML = `
-                <div class="error">
-                    تصویر باز نشد.
-                    <br><br>
-                    مسیر فایل:
-                    <br>
-                    rewinding/1787393789750-ox1w9a.jpg
-                </div>
-            `;
+    img.style.height = "400px";
 
-        };
+    img.style.objectFit = "contain";
 
-        card.appendChild(img);
-        box.appendChild(card);
+    img.style.background = "#000";
 
-    }catch(error){
+    img.style.display = "block";
 
-        console.error(error);
+    img.onload = function(){
 
-        box.innerHTML = `
+        console.log("IMAGE LOADED");
+
+    };
+
+    img.onerror = function(){
+
+        console.log("IMAGE ERROR");
+
+        gallery.innerHTML = `
             <div class="error">
-                خطا در نمایش تصویر
+                عکس از Supabase قابل دریافت نیست.
                 <br><br>
-                ${safe(error.message)}
+                احتمالاً دسترسی عمومی Bucket یا مسیر فایل مشکل دارد.
             </div>
         `;
-    }
-}
+
+    };
+
+    card.appendChild(img);
+
+    gallery.appendChild(card);
+
+});
+
+</script>
