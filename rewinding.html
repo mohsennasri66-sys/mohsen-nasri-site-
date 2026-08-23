@@ -2,9 +2,8 @@
 <html lang="fa" dir="rtl">
 
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>صنعت سیم‌پیچی | Mohsen Nasri</title>
 
@@ -13,11 +12,11 @@
 *{
 margin:0;
 padding:0;
-box-sizing:border-box
+box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth
+scroll-behavior:smooth;
 }
 
 body{
@@ -25,7 +24,6 @@ font-family:Tahoma,Arial,sans-serif;
 background:#071018;
 color:#fff;
 line-height:1.9;
-direction:rtl
 }
 
 header{
@@ -41,38 +39,38 @@ align-items:center;
 
 padding:17px 6%;
 
-background:rgba(5,12,18,.88);
+background:rgba(5,12,18,.9);
 backdrop-filter:blur(12px);
 
 border-bottom:1px solid rgba(255,255,255,.08);
 
-direction:ltr
+direction:ltr;
 }
 
 .logo{
 font-size:23px;
-font-weight:bold
+font-weight:bold;
 }
 
 .logo span{
-color:#00bcd4
+color:#00bcd4;
 }
 
 nav{
 display:flex;
 gap:25px;
-direction:rtl
+direction:rtl;
 }
 
 nav a{
 color:#fff;
 text-decoration:none;
 font-size:15px;
-transition:.3s
+transition:.3s;
 }
 
 nav a:hover{
-color:#00bcd4
+color:#00bcd4;
 }
 
 .hero{
@@ -85,230 +83,254 @@ align-items:center;
 padding:130px 7% 80px;
 
 background:
+
 linear-gradient(
 90deg,
 rgba(3,10,15,.92),
 rgba(3,10,15,.58),
 rgba(3,10,15,.35)
 ),
-var(--hero) center/cover no-repeat;
+
+url("rewinding.jpg") center/cover no-repeat;
 
 direction:ltr;
-text-align:left
+text-align:left;
 }
 
 .hero-content{
-max-width:800px
+max-width:800px;
 }
 
 .hero h1{
 font-size:clamp(42px,6vw,76px);
 line-height:1.08;
-margin-bottom:22px
+margin-bottom:22px;
 }
 
 .hero h1 span{
-color:#00bcd4
+color:#00bcd4;
 }
 
 .hero p{
 font-size:19px;
-color:#d5dce1
-}
-
-main{
-direction:rtl
+color:#d5dce1;
 }
 
 section{
-padding:90px 7%
+padding:90px 7%;
 }
 
 .dark{
-background:#0a151e
+background:#0a151e;
 }
 
 .section-title{
 text-align:center;
-margin-bottom:45px
+margin-bottom:45px;
 }
 
 .section-title h2{
 font-size:38px;
-margin-bottom:8px
+margin-bottom:8px;
 }
 
 .section-title p{
-color:#aeb9c0
+color:#aeb9c0;
 }
 
 .content{
 max-width:1100px;
-margin:auto
+margin:auto;
 }
 
 .content p{
 color:#c5cfd4;
-margin-bottom:18px
+margin-bottom:18px;
 }
 
 .grid{
+
 max-width:1100px;
 margin:auto;
 
 display:grid;
-grid-template-columns:repeat(3,1fr);
 
-gap:22px
+grid-template-columns:
+repeat(3,1fr);
+
+gap:22px;
 }
 
 .card{
+
 background:#0d1922;
+
 padding:28px;
+
 border-radius:10px;
 
-border:1px solid rgba(255,255,255,.07);
+border:
+1px solid rgba(255,255,255,.07);
 
-transition:.3s
+transition:.3s;
 }
 
 .card:hover{
+
 transform:translateY(-6px);
-border-color:#00bcd4
+
+border-color:#00bcd4;
 }
 
 .card h3{
 color:#00bcd4;
-margin-bottom:10px
+margin-bottom:10px;
 }
 
 .card p{
-color:#b7c3c9
+color:#b7c3c9;
 }
 
 .project-list{
+
 max-width:1100px;
 margin:auto;
 
 display:grid;
-gap:20px
+
+gap:20px;
 }
 
 .project{
+
 background:#0d1922;
+
 padding:32px;
+
 border-radius:10px;
 
-border:1px solid rgba(255,255,255,.07)
+border:
+1px solid rgba(255,255,255,.07);
 }
 
 .project h3{
 color:#00bcd4;
-margin-bottom:10px
+margin-bottom:10px;
 }
 
 .project p{
-color:#b7c3c9
+color:#b7c3c9;
 }
 
 .gallery{
+
 max-width:1100px;
 margin:auto;
 
 display:grid;
-grid-template-columns:repeat(3,1fr);
 
-gap:18px
+grid-template-columns:
+repeat(3,1fr);
+
+gap:18px;
 }
 
 .gallery-card{
+
 background:#0d1922;
 
 border-radius:10px;
 
 overflow:hidden;
 
-border:1px solid rgba(255,255,255,.07);
-
-transition:.3s
-}
-
-.gallery-card:hover{
-transform:translateY(-5px);
-border-color:#00bcd4
+border:
+1px solid rgba(255,255,255,.08);
 }
 
 .gallery-card img{
+
 width:100%;
+
 height:240px;
 
 object-fit:cover;
 
 display:block;
 
-cursor:pointer
+cursor:pointer;
+
+transition:.3s;
+}
+
+.gallery-card img:hover{
+
+transform:scale(1.03);
 }
 
 .gallery-title{
-padding:12px;
 
-text-align:center;
+padding:10px 14px;
 
 color:#d5dce1;
-
-font-size:14px
 }
 
-.gallery video{
-width:100%;
-height:240px;
+.video-list{
 
-object-fit:cover;
+max-width:1100px;
+margin:auto;
+
+display:grid;
+
+grid-template-columns:
+repeat(2,1fr);
+
+gap:20px;
+}
+
+.video-list video{
+
+width:100%;
 
 border-radius:10px;
 
-background:#000
+background:#000;
 }
 
-.loading{
-text-align:center;
+.message{
 
-color:#00bcd4;
-
-padding:35px;
-
-grid-column:1/-1
-}
-
-.empty{
 text-align:center;
 
 color:#89969e;
 
 padding:35px;
 
-grid-column:1/-1
+background:#0d1922;
+
+border-radius:10px;
+
+border:
+1px solid rgba(255,255,255,.06);
 }
 
 .error-box{
-background:#321416;
 
-color:#ffb8b8;
+color:#ff9b9b;
+
+background:#241316;
 
 padding:25px;
 
 border-radius:10px;
 
 text-align:center;
-
-grid-column:1/-1
 }
 
 .back{
-text-align:center
+text-align:center;
 }
 
 .btn{
+
 display:inline-block;
 
 padding:12px 26px;
@@ -321,49 +343,57 @@ color:#001015;
 
 text-decoration:none;
 
-font-weight:bold
+font-weight:bold;
 }
 
 footer{
+
 text-align:center;
 
 padding:30px;
 
 background:#040a0f;
 
-color:#89969e
+color:#89969e;
 }
 
 footer strong{
-color:#00bcd4
+color:#00bcd4;
 }
 
 @media(max-width:800px){
 
 header{
-padding:14px 5%
+padding:14px 5%;
 }
 
 nav{
-display:none
+display:none;
 }
 
 .grid,
-.gallery{
-grid-template-columns:1fr
+.gallery,
+.video-list{
+
+grid-template-columns:1fr;
 }
 
 .hero{
+
 min-height:68vh;
-padding:120px 6% 70px
+
+padding:
+120px 6% 70px;
 }
 
 .hero h1{
-font-size:clamp(40px,11vw,60px)
+
+font-size:
+clamp(40px,11vw,60px);
 }
 
 section{
-padding:70px 6%
+padding:70px 6%;
 }
 
 }
@@ -379,20 +409,33 @@ padding:70px 6%
 <header>
 
 <div class="logo">
+
 Mohsen <span>Nasri</span>
+
 </div>
+
 
 <nav>
 
-<a href="index.html">خانه</a>
+<a href="index.html">
+خانه
+</a>
 
-<a href="#about">معرفی</a>
+<a href="#about">
+معرفی
+</a>
 
-<a href="#projects">پروژه‌ها</a>
+<a href="#projects">
+پروژه‌ها
+</a>
 
-<a href="#gallery">گالری</a>
+<a href="#gallery">
+گالری
+</a>
 
-<a href="#videos">ویدئوها</a>
+<a href="#videos">
+ویدئوها
+</a>
 
 </nav>
 
@@ -400,10 +443,7 @@ Mohsen <span>Nasri</span>
 
 
 
-<section
-class="hero"
-style="--hero:url('rewinding.jpg')"
->
+<section class="hero">
 
 <div class="hero-content">
 
@@ -413,14 +453,14 @@ style="--hero:url('rewinding.jpg')"
 
 <br>
 
-<span>Industrial Engineering</span>
+<span>
+Industrial Engineering
+</span>
 
 </h1>
 
 <p>
-
 تجهیزات و سیستم‌های صنعتی سیم‌پیچی و بازپیچی.
-
 </p>
 
 </div>
@@ -436,13 +476,16 @@ style="--hero:url('rewinding.jpg')"
 
 <div class="section-title">
 
-<h2>سیم‌پیچی</h2>
+<h2>
+سیم‌پیچی
+</h2>
 
 <p>
 تجهیزات و سیستم‌های صنعتی سیم‌پیچی و بازپیچی.
 </p>
 
 </div>
+
 
 <div class="content">
 
@@ -464,9 +507,13 @@ style="--hero:url('rewinding.jpg')"
 
 <div class="section-title">
 
-<h2>حوزه‌های تخصصی</h2>
+<h2>
+حوزه‌های تخصصی
+</h2>
 
-<p>اطلاعات اختصاصی این صنعت</p>
+<p>
+اطلاعات اختصاصی این صنعت
+</p>
 
 </div>
 
@@ -476,7 +523,9 @@ style="--hero:url('rewinding.jpg')"
 
 <div class="card">
 
-<h3>ماشین‌آلات سیم‌پیچی</h3>
+<h3>
+ماشین‌آلات سیم‌پیچی
+</h3>
 
 <p>
 معرفی ماشین‌آلات، تجهیزات و سیستم‌های تولید.
@@ -487,7 +536,9 @@ style="--hero:url('rewinding.jpg')"
 
 <div class="card">
 
-<h3>مهندسی مکانیک</h3>
+<h3>
+مهندسی مکانیک
+</h3>
 
 <p>
 بررسی تجهیزات و سیستم‌های مکانیکی مرتبط.
@@ -498,7 +549,9 @@ style="--hero:url('rewinding.jpg')"
 
 <div class="card">
 
-<h3>مستندات فنی</h3>
+<h3>
+مستندات فنی
+</h3>
 
 <p>
 ارائه نقشه‌ها، دستورالعمل‌ها و مدارک مهندسی.
@@ -517,9 +570,13 @@ style="--hero:url('rewinding.jpg')"
 
 <div class="section-title">
 
-<h2>پروژه‌ها</h2>
+<h2>
+پروژه‌ها
+</h2>
 
-<p>پروژه‌های انجام‌شده و سوابق اجرایی</p>
+<p>
+پروژه‌های انجام‌شده و سوابق اجرایی
+</p>
 
 </div>
 
@@ -529,7 +586,7 @@ id="projects-container"
 class="project-list"
 >
 
-<div class="loading">
+<div class="message">
 در حال دریافت پروژه‌ها...
 </div>
 
@@ -546,9 +603,13 @@ class="dark"
 
 <div class="section-title">
 
-<h2>گالری تصاویر</h2>
+<h2>
+گالری تصاویر
+</h2>
 
-<p>تصاویر اختصاصی صنعت سیم‌پیچی</p>
+<p>
+تصاویر اختصاصی صنعت سیم‌پیچی
+</p>
 
 </div>
 
@@ -558,8 +619,10 @@ id="rewindingGallery"
 class="gallery"
 >
 
-<div class="loading">
+<div class="message">
+
 در حال دریافت تصاویر...
+
 </div>
 
 </div>
@@ -572,20 +635,26 @@ class="gallery"
 
 <div class="section-title">
 
-<h2>ویدئوها</h2>
+<h2>
+ویدئوها
+</h2>
 
-<p>ویدئوهای صنعتی و پروژه‌ای</p>
+<p>
+ویدئوهای صنعتی و پروژه‌ای
+</p>
 
 </div>
 
 
 <div
 id="videos-container"
-class="gallery"
+class="video-list"
 >
 
-<div class="loading">
+<div class="message">
+
 در حال دریافت ویدئوها...
+
 </div>
 
 </div>
@@ -600,10 +669,13 @@ class="gallery"
 href="index.html"
 class="btn"
 >
+
 بازگشت به صفحه اصلی
+
 </a>
 
 </section>
+
 
 </main>
 
@@ -612,7 +684,11 @@ class="btn"
 <footer>
 
 © 2026
-<strong>Mohsen Nasri</strong>
+
+<strong>
+Mohsen Nasri
+</strong>
+
 — مهندسی صنعتی
 
 </footer>
@@ -641,7 +717,7 @@ const INDUSTRY =
 
 function escapeHTML(value){
 
-return String(value ?? "")
+return String(value || "")
 
 .replaceAll("&","&amp;")
 
@@ -657,7 +733,49 @@ return String(value ?? "")
 
 
 
-function storageURL(filePath){
+async function supabaseRequest(url){
+
+const response =
+await fetch(
+
+SUPABASE_URL + url,
+
+{
+
+method:"GET",
+
+headers:{
+
+"apikey":
+SUPABASE_KEY,
+
+"Authorization":
+"Bearer " + SUPABASE_KEY
+
+}
+
+}
+
+);
+
+
+if(!response.ok){
+
+const text =
+await response.text();
+
+throw new Error(text);
+
+}
+
+
+return await response.json();
+
+}
+
+
+
+function buildStorageURL(filePath){
 
 return (
 
@@ -677,160 +795,32 @@ filePath
 
 
 
-async function supabaseRequest(endpoint){
+function getFileURL(item){
 
-const response = await fetch(
+if(item.file_url){
 
-SUPABASE_URL + endpoint,
-
-{
-
-method:"GET",
-
-headers:{
-
-"apikey":SUPABASE_KEY,
-
-"Authorization":
-"Bearer " + SUPABASE_KEY,
-
-"Content-Type":
-"application/json",
-
-"Accept":
-"application/json"
+return item.file_url;
 
 }
 
+
+if(item.media_url){
+
+return item.media_url;
+
 }
 
+
+if(item.file_path){
+
+return buildStorageURL(
+item.file_path
 );
 
-
-if(!response.ok){
-
-const text =
-await response.text();
-
-throw new Error(text);
-
 }
 
 
-return response.json();
-
-}
-
-
-
-/* =========================
-   PROJECTS
-========================= */
-
-async function loadProjects(){
-
-const container =
-document.getElementById(
-"projects-container"
-);
-
-try{
-
-const projects =
-await supabaseRequest(
-
-"/rest/v1/projects" +
-
-"?select=*" +
-
-"&industry=eq.rewinding" +
-
-"&is_visible=eq.true" +
-
-"&order=sort_order.asc"
-
-);
-
-
-container.innerHTML="";
-
-
-if(!projects.length){
-
-container.innerHTML=`
-
-<div class="empty">
-
-هنوز پروژه‌ای برای این صنعت ثبت نشده است.
-
-</div>
-
-`;
-
-return;
-
-}
-
-
-projects.forEach(project=>{
-
-const card =
-document.createElement("div");
-
-card.className="project";
-
-
-card.innerHTML=`
-
-<h3>
-
-${escapeHTML(
-project.title || "پروژه"
-)}
-
-</h3>
-
-<p>
-
-${escapeHTML(
-project.description || ""
-)}
-
-</p>
-
-`;
-
-
-container.appendChild(card);
-
-});
-
-}
-
-catch(error){
-
-console.error(
-"PROJECT ERROR",
-error
-);
-
-container.innerHTML=`
-
-<div class="error-box">
-
-خطا در دریافت پروژه‌ها
-
-<br><br>
-
-${escapeHTML(
-error.message
-)}
-
-</div>
-
-`;
-
-}
+return "";
 
 }
 
@@ -840,6 +830,7 @@ error.message
    GALLERY
 ========================= */
 
+
 async function loadGallery(){
 
 const gallery =
@@ -848,9 +839,9 @@ document.getElementById(
 );
 
 
-gallery.innerHTML=`
+gallery.innerHTML = `
 
-<div class="loading">
+<div class="message">
 
 در حال دریافت تصاویر...
 
@@ -861,101 +852,73 @@ gallery.innerHTML=`
 
 try{
 
+
 const data =
 await supabaseRequest(
 
 "/rest/v1/industry_media" +
 
-"?select=id,industry,media_type,title,description,file_path,file_url,media_url,is_visible,sort_order" +
+"?select=id,industry,media_type,file_path,title,file_url,media_url" +
 
 "&industry=eq.rewinding" +
 
 "&media_type=eq.image" +
 
-"&is_visible=eq.true" +
-
-"&order=sort_order.asc,id.desc"
+"&order=id.desc"
 
 );
 
 
 console.log(
-"REWINDING GALLERY:",
+"GALLERY DATA:",
 data
 );
 
 
-gallery.innerHTML="";
+gallery.innerHTML = "";
 
 
-if(!data || data.length===0){
-
-gallery.innerHTML=`
-
-<div class="empty">
-
-هنوز تصویری برای صنعت سیم‌پیچی ثبت نشده است.
-
-</div>
-
-`;
-
-return;
-
-}
+let imageCount = 0;
 
 
-let count=0;
-
-
-data.forEach(item=>{
+data.forEach(item => {
 
 
 if(!item.file_path){
 
-console.warn(
-"FILE PATH EMPTY:",
-item
-);
+return;
+
+}
+
+
+const imageURL =
+getFileURL(item);
+
+
+if(!imageURL){
 
 return;
 
 }
 
 
-count++;
-
-
-/*
- مسیر دقیق فایل:
-
-project-media/
-rewinding/
-1787393177366-qthlzp.webp
-*/
-
-
-const imageURL =
-storageURL(
-item.file_path
-);
-
-
-console.log(
-"FINAL IMAGE URL:",
-imageURL
-);
+imageCount++;
 
 
 const card =
-document.createElement("div");
+document.createElement(
+"div"
+);
+
 
 card.className =
 "gallery-card";
 
 
 const img =
-document.createElement("img");
+document.createElement(
+"img"
+);
 
 
 img.src =
@@ -971,7 +934,8 @@ img.loading =
 "lazy";
 
 
-img.onclick=function(){
+img.onclick =
+function(){
 
 window.open(
 imageURL,
@@ -981,23 +945,20 @@ imageURL,
 };
 
 
-img.onerror=function(){
+img.onerror =
+function(){
 
 console.error(
-"IMAGE ERROR:",
+"IMAGE LOAD ERROR:",
 imageURL
 );
 
-card.innerHTML=`
 
-<div class="error-box"
-style="
-margin:0;
-border:0;
-border-radius:0;
-">
+card.innerHTML = `
 
-تصویر پیدا نشد
+<div class="error-box">
+
+خطا در نمایش تصویر
 
 <br><br>
 
@@ -1019,16 +980,22 @@ item.file_path
 card.appendChild(img);
 
 
+
 if(item.title){
 
 const title =
-document.createElement("div");
+document.createElement(
+"div"
+);
+
 
 title.className =
 "gallery-title";
 
+
 title.textContent =
 item.title;
+
 
 card.appendChild(title);
 
@@ -1037,23 +1004,24 @@ card.appendChild(title);
 
 gallery.appendChild(card);
 
+
 });
 
 
-if(count===0){
+if(imageCount === 0){
 
-gallery.innerHTML=`
+gallery.innerHTML = `
 
-<div class="empty">
+<div class="message">
 
-رکورد تصویر وجود دارد،
-اما مسیر فایل خالی است.
+هنوز تصویری برای صنعت سیم‌پیچی ثبت نشده است.
 
 </div>
 
 `;
 
 }
+
 
 }
 
@@ -1065,7 +1033,7 @@ error
 );
 
 
-gallery.innerHTML=`
+gallery.innerHTML = `
 
 <div class="error-box">
 
@@ -1088,8 +1056,126 @@ error.message
 
 
 /* =========================
+   PROJECTS
+========================= */
+
+
+async function loadProjects(){
+
+const container =
+document.getElementById(
+"projects-container"
+);
+
+
+try{
+
+
+const projects =
+await supabaseRequest(
+
+"/rest/v1/projects" +
+
+"?select=id,industry,title,description,sort_order,is_visible" +
+
+"&industry=eq.rewinding" +
+
+"&is_visible=eq.true" +
+
+"&order=sort_order.asc"
+
+);
+
+
+container.innerHTML = "";
+
+
+if(!projects.length){
+
+container.innerHTML = `
+
+<div class="message">
+
+هنوز پروژه‌ای برای این صنعت ثبت نشده است.
+
+</div>
+
+`;
+
+return;
+
+}
+
+
+projects.forEach(project => {
+
+
+const item =
+document.createElement(
+"div"
+);
+
+
+item.className =
+"project";
+
+
+item.innerHTML = `
+
+<h3>
+
+${escapeHTML(
+project.title || "پروژه"
+)}
+
+</h3>
+
+<p>
+
+${escapeHTML(
+project.description || ""
+)}
+
+</p>
+
+`;
+
+
+container.appendChild(item);
+
+});
+
+
+}
+
+catch(error){
+
+console.error(
+"PROJECT ERROR:",
+error
+);
+
+
+container.innerHTML = `
+
+<div class="error-box">
+
+خطا در دریافت پروژه‌ها
+
+</div>
+
+`;
+
+}
+
+}
+
+
+
+/* =========================
    VIDEOS
 ========================= */
+
 
 async function loadVideos(){
 
@@ -1101,95 +1187,72 @@ document.getElementById(
 
 try{
 
-const data =
+
+const videos =
 await supabaseRequest(
 
 "/rest/v1/industry_media" +
 
-"?select=id,industry,media_type,title,file_path,file_url,media_url,is_visible,sort_order" +
+"?select=id,industry,media_type,file_path,title,file_url,media_url" +
 
 "&industry=eq.rewinding" +
 
 "&media_type=eq.video" +
 
-"&is_visible=eq.true" +
-
-"&order=sort_order.asc,id.desc"
+"&order=id.desc"
 
 );
 
 
-console.log(
-"REWINDING VIDEOS:",
-data
-);
+container.innerHTML = "";
 
 
-container.innerHTML="";
+let videoCount = 0;
 
 
-if(!data || data.length===0){
+videos.forEach(item => {
 
-container.innerHTML=`
 
-<div class="empty">
+const videoURL =
+getFileURL(item);
 
-هنوز ویدئویی برای صنعت سیم‌پیچی ثبت نشده است.
 
-</div>
-
-`;
+if(!videoURL){
 
 return;
 
 }
 
 
-let count=0;
-
-
-data.forEach(item=>{
-
-
-if(!item.file_path){
-
-return;
-
-}
-
-
-count++;
-
-
-const card =
-document.createElement("div");
-
-card.className =
-"gallery-card";
+videoCount++;
 
 
 const video =
-document.createElement("video");
-
-
-video.controls=true;
-
-video.preload="metadata";
-
-
-const source =
-document.createElement("source");
-
-
-source.src =
-item.file_url ||
-item.media_url ||
-storageURL(
-item.file_path
+document.createElement(
+"video"
 );
 
 
-source.type="video/mp4";
+video.controls =
+true;
+
+
+video.preload =
+"metadata";
+
+
+const source =
+document.createElement(
+"source"
+);
+
+
+source.src =
+videoURL;
+
+
+source.type =
+"video/mp4";
 
 
 video.appendChild(
@@ -1197,46 +1260,27 @@ source
 );
 
 
-card.appendChild(
+container.appendChild(
 video
 );
-
-
-if(item.title){
-
-const title =
-document.createElement("div");
-
-title.className =
-"gallery-title";
-
-title.textContent =
-item.title;
-
-card.appendChild(title);
-
-}
-
-
-container.appendChild(card);
 
 });
 
 
-if(count===0){
+if(videoCount === 0){
 
-container.innerHTML=`
+container.innerHTML = `
 
-<div class="empty">
+<div class="message">
 
-رکورد ویدئو وجود دارد،
-اما مسیر فایل خالی است.
+هنوز ویدئویی برای این صنعت ثبت نشده است.
 
 </div>
 
 `;
 
 }
+
 
 }
 
@@ -1248,17 +1292,11 @@ error
 );
 
 
-container.innerHTML=`
+container.innerHTML = `
 
 <div class="error-box">
 
 خطا در دریافت ویدئوها
-
-<br><br>
-
-${escapeHTML(
-error.message
-)}
 
 </div>
 
@@ -1274,20 +1312,23 @@ error.message
    START
 ========================= */
 
+
 document.addEventListener(
 "DOMContentLoaded",
 function(){
 
-loadProjects();
-
 loadGallery();
+
+loadProjects();
 
 loadVideos();
 
 }
 );
 
+
 </script>
+
 
 </body>
 
