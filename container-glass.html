@@ -3,83 +3,1072 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
 <title>صنعت شیشه بطری | Mohsen Nasri</title>
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:Tahoma,Arial,sans-serif;background:#071018;color:#fff;line-height:1.9;direction:rtl}
-header{position:fixed;top:0;left:0;width:100%;z-index:1000;display:flex;justify-content:space-between;align-items:center;padding:17px 6%;background:rgba(5,12,18,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08);direction:ltr}
-.logo{font-size:23px;font-weight:bold}.logo span{color:#00bcd4}
-nav{display:flex;gap:25px;direction:rtl}nav a{color:#fff;text-decoration:none;font-size:15px;transition:.3s}nav a:hover{color:#00bcd4}
-.hero{min-height:78vh;display:flex;align-items:center;padding:130px 7% 80px;background:linear-gradient(90deg,rgba(3,10,15,.92),rgba(3,10,15,.58),rgba(3,10,15,.35)),var(--hero) center/cover no-repeat;direction:ltr;text-align:left}
-.hero-content{max-width:800px}.hero h1{font-size:clamp(42px,6vw,76px);line-height:1.08;margin-bottom:22px}.hero h1 span{color:#00bcd4}.hero p{font-size:19px;color:#d5dce1}
-main{direction:rtl}section{padding:90px 7%}.dark{background:#0a151e}.section-title{text-align:center;margin-bottom:45px}.section-title h2{font-size:38px;margin-bottom:8px}.section-title p{color:#aeb9c0}
-.content{max-width:1100px;margin:auto}.content p{color:#c5cfd4;margin-bottom:18px}
-.grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:#0d1922;padding:28px;border-radius:10px;border:1px solid rgba(255,255,255,.07);transition:.3s}.card:hover{transform:translateY(-6px);border-color:#00bcd4}.card h3{color:#00bcd4;margin-bottom:10px}.card p{color:#b7c3c9}
-.gallery{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.gallery img{width:100%;height:240px;object-fit:cover;border-radius:9px}
-.project{max-width:1100px;margin:auto;background:#0d1922;padding:32px;border-radius:10px;border:1px solid rgba(255,255,255,.07)}.project h3{color:#00bcd4;margin-bottom:10px}.project p{color:#b7c3c9}
-.video{max-width:1000px;margin:auto}.video video{width:100%;border-radius:10px;background:#000}
-.back{text-align:center}.btn{display:inline-block;padding:12px 26px;border-radius:5px;background:#00bcd4;color:#001015;text-decoration:none;font-weight:bold}
-footer{text-align:center;padding:30px;background:#040a0f;color:#89969e}footer strong{color:#00bcd4}
-@media(max-width:800px){header{padding:14px 5%}nav{display:none}.grid,.gallery{grid-template-columns:1fr}.hero{min-height:68vh;padding:120px 6% 70px}.hero h1{font-size:clamp(40px,11vw,60px)}section{padding:70px 6%}}
+
+body{
+font-family:Tahoma,Arial,sans-serif;
+background:#071018;
+color:#fff;
+line-height:1.9;
+direction:rtl
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:17px 6%;
+background:rgba(5,12,18,.88);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(255,255,255,.08);
+direction:ltr
+}
+
+.logo{
+font-size:23px;
+font-weight:bold
+}
+
+.logo span{
+color:#00bcd4
+}
+
+nav{
+display:flex;
+gap:25px;
+direction:rtl
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+font-size:15px;
+transition:.3s
+}
+
+nav a:hover{
+color:#00bcd4
+}
+
+.hero{
+min-height:78vh;
+display:flex;
+align-items:center;
+padding:130px 7% 80px;
+
+background:
+linear-gradient(
+90deg,
+rgba(3,10,15,.92),
+rgba(3,10,15,.58),
+rgba(3,10,15,.35)
+),
+var(--hero) center/cover no-repeat;
+
+direction:ltr;
+text-align:left
+}
+
+.hero-content{
+max-width:800px
+}
+
+.hero h1{
+font-size:clamp(42px,6vw,76px);
+line-height:1.08;
+margin-bottom:22px
+}
+
+.hero h1 span{
+color:#00bcd4
+}
+
+.hero p{
+font-size:19px;
+color:#d5dce1
+}
+
+main{
+direction:rtl
+}
+
+section{
+padding:90px 7%
+}
+
+.dark{
+background:#0a151e
+}
+
+.section-title{
+text-align:center;
+margin-bottom:45px
+}
+
+.section-title h2{
+font-size:38px;
+margin-bottom:8px
+}
+
+.section-title p{
+color:#aeb9c0
+}
+
+.content{
+max-width:1100px;
+margin:auto
+}
+
+.content p{
+color:#c5cfd4;
+margin-bottom:18px
+}
+
+.grid{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px
+}
+
+.card{
+background:#0d1922;
+padding:28px;
+border-radius:10px;
+border:1px solid rgba(255,255,255,.07);
+transition:.3s
+}
+
+.card:hover{
+transform:translateY(-6px);
+border-color:#00bcd4
+}
+
+.card h3{
+color:#00bcd4;
+margin-bottom:10px
+}
+
+.card p{
+color:#b7c3c9
+}
+
+.project-list{
+max-width:1100px;
+margin:auto;
+display:grid;
+gap:20px
+}
+
+.project{
+background:#0d1922;
+padding:32px;
+border-radius:10px;
+border:1px solid rgba(255,255,255,.07)
+}
+
+.project h3{
+color:#00bcd4;
+margin-bottom:10px
+}
+
+.project p{
+color:#b7c3c9
+}
+
+.gallery{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px
+}
+
+.gallery-card{
+background:#0d1922;
+border-radius:10px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,.07)
+}
+
+.gallery-card img{
+width:100%;
+height:240px;
+object-fit:cover;
+display:block;
+cursor:pointer;
+transition:.3s
+}
+
+.gallery-card img:hover{
+transform:scale(1.03)
+}
+
+.gallery-title{
+padding:10px 14px;
+color:#c5cfd4;
+text-align:center
+}
+
+.video-card{
+background:#0d1922;
+border-radius:10px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,.07)
+}
+
+.video-card video{
+width:100%;
+display:block;
+background:#000
+}
+
+.empty,
+.loading,
+.error-box{
+text-align:center;
+padding:30px;
+color:#89969e;
+width:100%
+}
+
+.loading{
+color:#00bcd4
+}
+
+.error-box{
+color:#ff8a8a
+}
+
+.back{
+text-align:center
+}
+
+.btn{
+display:inline-block;
+padding:12px 26px;
+border-radius:5px;
+background:#00bcd4;
+color:#001015;
+text-decoration:none;
+font-weight:bold
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#040a0f;
+color:#89969e
+}
+
+footer strong{
+color:#00bcd4
+}
+
+@media(max-width:800px){
+
+header{
+padding:14px 5%
+}
+
+nav{
+display:none
+}
+
+.grid,
+.gallery{
+grid-template-columns:1fr
+}
+
+.hero{
+min-height:68vh;
+padding:120px 6% 70px
+}
+
+.hero h1{
+font-size:clamp(40px,11vw,60px)
+}
+
+section{
+padding:70px 6%
+}
+
+}
 </style>
 </head>
+
 <body>
+
 <header>
-  <div class="logo">Mohsen <span>Nasri</span></div>
-  <nav>
-    <a href="index.html">خانه</a><a href="#about">معرفی</a>
-    <a href="#projects">پروژه‌ها</a><a href="#gallery">گالری</a><a href="#videos">ویدئوها</a>
-  </nav>
+
+<div class="logo">
+Mohsen <span>Nasri</span>
+</div>
+
+<nav>
+<a href="index.html">خانه</a>
+<a href="#about">معرفی</a>
+<a href="#projects">پروژه‌ها</a>
+<a href="#gallery">گالری</a>
+<a href="#videos">ویدئوها</a>
+</nav>
+
 </header>
 
-<section class="hero" style="--hero:url('container-glass.jpg')">
-  <div class="hero-content">
-    <h1>شیشه بطری<br><span>Industrial Engineering</span></h1>
-    <p>تولید ظروف شیشه‌ای، ماشین‌آلات شکل‌دهی و سیستم‌های صنعتی.</p>
-  </div>
+
+<section
+class="hero"
+style="--hero:url('container-glass.jpg')"
+>
+
+<div class="hero-content">
+
+<h1>
+شیشه بطری<br>
+<span>Industrial Engineering</span>
+</h1>
+
+<p>
+تولید ظروف شیشه‌ای، ماشین‌آلات شکل‌دهی و سیستم‌های صنعتی.
+</p>
+
+</div>
+
 </section>
+
 
 <main>
+
+
 <section id="about">
-  <div class="section-title"><h2>شیشه بطری</h2><p>تولید ظروف شیشه‌ای، ماشین‌آلات شکل‌دهی و سیستم‌های صنعتی.</p></div>
-  <div class="content"><p>این صفحه برای معرفی تجربه و دانش فنی مرتبط با تولید شیشه بطری و تجهیزات شکل‌دهی شیشه اختصاص یافته است.</p><p>در این بخش می‌توان اطلاعات فنی، سوابق کاری، تصاویر، ویدئوها، پروژه‌ها و مستندات مرتبط با این صنعت را به‌صورت مستقل اضافه و مدیریت کرد.</p></div>
+
+<div class="section-title">
+
+<h2>شیشه بطری</h2>
+
+<p>
+تولید ظروف شیشه‌ای، ماشین‌آلات شکل‌دهی و سیستم‌های صنعتی.
+</p>
+
+</div>
+
+<div class="content">
+
+<p>
+این صفحه برای معرفی تجربه و دانش فنی مرتبط با تولید شیشه بطری و تجهیزات شکل‌دهی شیشه اختصاص یافته است.
+</p>
+
+<p>
+در این بخش اطلاعات فنی، سوابق کاری، تصاویر، ویدئوها، پروژه‌ها و مستندات مرتبط با این صنعت به‌صورت مستقل نمایش داده می‌شوند.
+</p>
+
+</div>
+
 </section>
+
 
 <section class="dark">
-  <div class="section-title"><h2>حوزه‌های تخصصی</h2><p>اطلاعات اختصاصی این صنعت</p></div>
-  <div class="grid"><div class="card"><h3>شکل‌دهی شیشه</h3><p>معرفی ماشین‌آلات و فرآیندهای شکل‌دهی ظروف شیشه‌ای.</p></div>
-<div class="card"><h3>ماشین‌آلات صنعتی</h3><p>تجهیزات مکانیکی و سیستم‌های تولید.</p></div>
-<div class="card"><h3>مستندات فنی</h3><p>کتابچه‌ها، نقشه‌ها و مدارک مهندسی.</p></div></div>
+
+<div class="section-title">
+
+<h2>حوزه‌های تخصصی</h2>
+
+<p>
+اطلاعات اختصاصی صنعت شیشه بطری
+</p>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>
+شکل‌دهی شیشه
+</h3>
+
+<p>
+معرفی ماشین‌آلات و فرآیندهای شکل‌دهی ظروف شیشه‌ای.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+ماشین‌آلات صنعتی
+</h3>
+
+<p>
+تجهیزات مکانیکی و سیستم‌های تولید شیشه.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+مستندات فنی
+</h3>
+
+<p>
+کتابچه‌ها، نقشه‌ها و مدارک مهندسی.
+</p>
+
+</div>
+
+</div>
+
 </section>
+
 
 <section id="projects">
-  <div class="section-title"><h2>پروژه‌ها</h2><p>پروژه‌های انجام‌شده و سوابق اجرایی</p></div>
-  <div class="project"><h3>پروژه شماره ۱</h3><p>اطلاعات پروژه، ماشین‌آلات، فعالیت‌های مهندسی و نتایج اجرایی را می‌توان اینجا اضافه کرد.</p></div>
+
+<div class="section-title">
+
+<h2>
+پروژه‌ها
+</h2>
+
+<p>
+پروژه‌های انجام‌شده و سوابق اجرایی
+</p>
+
+</div>
+
+
+<div
+id="projects-container"
+class="project-list"
+>
+
+<div class="loading">
+در حال دریافت پروژه‌ها...
+</div>
+
+</div>
+
 </section>
 
-<section id="gallery" class="dark">
-  <div class="section-title"><h2>گالری تصاویر</h2><p>تصاویر اختصاصی این صنعت</p></div>
-  <div class="gallery"><img src="container-glass.jpg" alt="شیشه بطری">
-<img src="container-glass.jpg" alt="شیشه بطری">
-<img src="container-glass.jpg" alt="شیشه بطری"></div>
+
+<section
+id="gallery"
+class="dark"
+>
+
+<div class="section-title">
+
+<h2>
+گالری تصاویر
+</h2>
+
+<p>
+تصاویر اختصاصی صنعت شیشه بطری
+</p>
+
+</div>
+
+
+<div
+id="gallery-container"
+class="gallery"
+>
+
+<div class="loading">
+در حال دریافت تصاویر...
+</div>
+
+</div>
+
 </section>
+
 
 <section id="videos">
-  <div class="section-title"><h2>ویدئوها</h2><p>ویدئوهای صنعتی و پروژه‌ای</p></div>
-  <div class="video">
-    <!-- برای اضافه کردن ویدئو:
-    <video controls><source src="نام-ویدئو.mp4" type="video/mp4"></video>
-    -->
-    <p style="text-align:center;color:#89969e">ویدئوهای این بخش را می‌توان بعداً اضافه کرد.</p>
-  </div>
+
+<div class="section-title">
+
+<h2>
+ویدئوها
+</h2>
+
+<p>
+ویدئوهای صنعتی و پروژه‌ای
+</p>
+
+</div>
+
+
+<div
+id="videos-container"
+class="gallery"
+>
+
+<div class="loading">
+در حال دریافت ویدئوها...
+</div>
+
+</div>
+
 </section>
+
 
 <section class="back">
-  <a href="index.html" class="btn">بازگشت به صفحه اصلی</a>
+
+<a
+href="index.html"
+class="btn"
+>
+بازگشت به صفحه اصلی
+</a>
+
 </section>
+
 </main>
 
-<footer>© 2026 <strong>Mohsen Nasri</strong> — مهندسی صنعتی</footer>
+
+<footer>
+
+© 2026
+<strong>Mohsen Nasri</strong>
+—
+مهندسی صنعتی
+
+</footer>
+
+
+<script>
+
+const SUPABASE_URL =
+"https://eurmybgotfgnerdxrwua.supabase.co";
+
+
+const SUPABASE_KEY =
+"sb_publishable_X3LYjYSbJU7YJ0ezzn6YfA_ZHsbd1K3";
+
+
+const INDUSTRY =
+"container-glass";
+
+
+const BUCKET =
+"project-media";
+
+
+async function supabaseRequest(endpoint){
+
+const response =
+await fetch(
+SUPABASE_URL + endpoint,
+{
+headers:{
+"apikey":SUPABASE_KEY,
+"Authorization":
+"Bearer " + SUPABASE_KEY
+}
+}
+);
+
+if(!response.ok){
+
+const errorText =
+await response.text();
+
+throw new Error(
+errorText ||
+"خطا در ارتباط با Supabase"
+);
+
+}
+
+return response.json();
+
+}
+
+
+function escapeHTML(value){
+
+return String(value || "")
+
+.replaceAll("&","&amp;")
+.replaceAll("<","&lt;")
+.replaceAll(">","&gt;")
+.replaceAll('"',"&quot;")
+.replaceAll("'","&#039;");
+
+}
+
+
+function buildStorageURL(filePath){
+
+return (
+SUPABASE_URL +
+"/storage/v1/object/public/" +
+BUCKET +
+"/" +
+filePath
+);
+
+}
+
+
+async function loadProjects(){
+
+const container =
+document.getElementById(
+"projects-container"
+);
+
+try{
+
+const projects =
+await supabaseRequest(
+
+"/rest/v1/projects" +
+"?industry=eq." +
+encodeURIComponent(INDUSTRY) +
+"&is_visible=eq.true" +
+"&order=sort_order.asc"
+
+);
+
+container.innerHTML="";
+
+if(!projects || projects.length===0){
+
+container.innerHTML=`
+
+<div class="empty">
+
+هنوز پروژه‌ای برای صنعت شیشه بطری ثبت نشده است.
+
+</div>
+
+`;
+
+return;
+
+}
+
+projects.forEach(project=>{
+
+const item =
+document.createElement("div");
+
+item.className="project";
+
+const title =
+document.createElement("h3");
+
+title.textContent =
+project.title ||
+"پروژه";
+
+const description =
+document.createElement("p");
+
+description.textContent =
+project.description ||
+"";
+
+item.appendChild(title);
+item.appendChild(description);
+
+container.appendChild(item);
+
+});
+
+}
+
+catch(error){
+
+console.error(
+"PROJECT ERROR:",
+error
+);
+
+container.innerHTML=`
+
+<div class="error-box">
+
+خطا در دریافت پروژه‌ها.
+
+<br><br>
+
+${escapeHTML(error.message)}
+
+</div>
+
+`;
+
+}
+
+}
+
+
+async function loadGallery(){
+
+const gallery =
+document.getElementById(
+"gallery-container"
+);
+
+gallery.innerHTML=`
+
+<div class="loading">
+
+در حال دریافت تصاویر...
+
+</div>
+
+`;
+
+try{
+
+const media =
+await supabaseRequest(
+
+"/rest/v1/industry_media" +
+"?industry=eq." +
+encodeURIComponent(INDUSTRY) +
+"&media_type=eq.image" +
+"&is_visible=eq.true" +
+"&order=id.desc"
+
+);
+
+gallery.innerHTML="";
+
+if(!media || media.length===0){
+
+gallery.innerHTML=`
+
+<div class="empty">
+
+هنوز تصویری برای صنعت شیشه بطری ثبت نشده است.
+
+</div>
+
+`;
+
+return;
+
+}
+
+let count=0;
+
+media.forEach(item=>{
+
+if(!item.file_path){
+
+return;
+
+}
+
+count++;
+
+const imageURL =
+buildStorageURL(
+item.file_path
+);
+
+const card =
+document.createElement("div");
+
+card.className =
+"gallery-card";
+
+const img =
+document.createElement("img");
+
+img.src =
+imageURL;
+
+img.alt =
+item.title ||
+"تصویر صنعت شیشه بطری";
+
+img.loading =
+"lazy";
+
+img.onclick =
+function(){
+
+window.open(
+imageURL,
+"_blank"
+);
+
+};
+
+img.onerror =
+function(){
+
+card.innerHTML=`
+
+<div class="error-box">
+
+خطا در نمایش تصویر
+
+<br><br>
+
+مسیر فایل:
+
+<br>
+
+${escapeHTML(
+item.file_path
+)}
+
+</div>
+
+`;
+
+};
+
+card.appendChild(img);
+
+if(item.title){
+
+const title =
+document.createElement("div");
+
+title.className =
+"gallery-title";
+
+title.textContent =
+item.title;
+
+card.appendChild(title);
+
+}
+
+gallery.appendChild(card);
+
+});
+
+if(count===0){
+
+gallery.innerHTML=`
+
+<div class="empty">
+
+رکورد تصویر وجود دارد اما مسیر فایل خالی است.
+
+</div>
+
+`;
+
+}
+
+}
+
+catch(error){
+
+console.error(
+"GALLERY ERROR:",
+error
+);
+
+gallery.innerHTML=`
+
+<div class="error-box">
+
+خطا در اتصال به گالری:
+
+<br><br>
+
+${escapeHTML(
+error.message
+)}
+
+</div>
+
+`;
+
+}
+
+}
+
+
+async function loadVideos(){
+
+const container =
+document.getElementById(
+"videos-container"
+);
+
+container.innerHTML=`
+
+<div class="loading">
+
+در حال دریافت ویدئوها...
+
+</div>
+
+`;
+
+try{
+
+const media =
+await supabaseRequest(
+
+"/rest/v1/industry_media" +
+"?industry=eq." +
+encodeURIComponent(INDUSTRY) +
+"&media_type=eq.video" +
+"&is_visible=eq.true" +
+"&order=id.desc"
+
+);
+
+container.innerHTML="";
+
+if(!media || media.length===0){
+
+container.innerHTML=`
+
+<div class="empty">
+
+هنوز ویدئویی برای صنعت شیشه بطری ثبت نشده است.
+
+</div>
+
+`;
+
+return;
+
+}
+
+let count=0;
+
+media.forEach(item=>{
+
+if(!item.file_path){
+
+return;
+
+}
+
+count++;
+
+const videoURL =
+buildStorageURL(
+item.file_path
+);
+
+const card =
+document.createElement("div");
+
+card.className =
+"video-card";
+
+const video =
+document.createElement("video");
+
+video.controls=true;
+video.preload="metadata";
+
+const source =
+document.createElement("source");
+
+source.src =
+videoURL;
+
+source.type =
+"video/mp4";
+
+video.appendChild(source);
+
+card.appendChild(video);
+
+if(item.title){
+
+const title =
+document.createElement("div");
+
+title.className =
+"gallery-title";
+
+title.textContent =
+item.title;
+
+card.appendChild(title);
+
+}
+
+container.appendChild(card);
+
+});
+
+if(count===0){
+
+container.innerHTML=`
+
+<div class="empty">
+
+رکورد ویدئو وجود دارد اما مسیر فایل خالی است.
+
+</div>
+
+`;
+
+}
+
+}
+
+catch(error){
+
+console.error(
+"VIDEO ERROR:",
+error
+);
+
+container.innerHTML=`
+
+<div class="error-box">
+
+خطا در دریافت ویدئوها:
+
+<br><br>
+
+${escapeHTML(
+error.message
+)}
+
+</div>
+
+`;
+
+}
+
+}
+
+
+document.addEventListener(
+"DOMContentLoaded",
+function(){
+
+loadProjects();
+loadGallery();
+loadVideos();
+
+}
+);
+
+</script>
+
 </body>
 </html>
