@@ -4,18 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<title>صنعت کابل‌سازی | Mohsen Nasri</title>
+<title>صنعت فولاد | Mohsen Nasri</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box
-}
-
-html{
-scroll-behavior:smooth
-}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
 
 body{
 font-family:Tahoma,Arial,sans-serif;
@@ -336,18 +329,18 @@ Mohsen <span>Nasri</span>
 
 <section
 class="hero"
-style="--hero:url('cable.jpg')"
+style="--hero:url('steel.jpg')"
 >
 
 <div class="hero-content">
 
 <h1>
-کابل‌سازی<br>
+فولاد<br>
 <span>Industrial Engineering</span>
 </h1>
 
 <p>
-تجهیزات تولید کابل، خطوط تولید و سیستم‌های مهندسی صنعتی.
+تولید فولاد، تجهیزات صنعتی و مهندسی سیستم‌های تولید.
 </p>
 
 </div>
@@ -362,10 +355,10 @@ style="--hero:url('cable.jpg')"
 
 <div class="section-title">
 
-<h2>کابل‌سازی</h2>
+<h2>فولاد</h2>
 
 <p>
-تجهیزات تولید کابل، خطوط تولید و سیستم‌های مهندسی صنعتی.
+تولید فولاد، تجهیزات صنعتی و مهندسی سیستم‌های تولید.
 </p>
 
 </div>
@@ -373,7 +366,7 @@ style="--hero:url('cable.jpg')"
 <div class="content">
 
 <p>
-این صفحه برای ارائه سوابق، پروژه‌ها و اطلاعات فنی مرتبط با صنعت کابل‌سازی ایجاد شده است.
+این صفحه به معرفی تجربه و فعالیت‌های مهندسی در زمینه تجهیزات و سیستم‌های صنعت فولاد اختصاص دارد.
 </p>
 
 <p>
@@ -392,7 +385,7 @@ style="--hero:url('cable.jpg')"
 <h2>حوزه‌های تخصصی</h2>
 
 <p>
-اطلاعات اختصاصی صنعت کابل‌سازی
+اطلاعات اختصاصی صنعت فولاد
 </p>
 
 </div>
@@ -406,7 +399,7 @@ style="--hero:url('cable.jpg')"
 </h3>
 
 <p>
-معرفی ماشین‌آلات و تجهیزات تولید کابل.
+ماشین‌آلات و تجهیزات خطوط تولید فولاد.
 </p>
 
 </div>
@@ -415,11 +408,11 @@ style="--hero:url('cable.jpg')"
 <div class="card">
 
 <h3>
-سیستم‌های صنعتی
+سیستم‌های مکانیکی
 </h3>
 
 <p>
-سیستم‌های مکانیکی و تولیدی خطوط کابل.
+سیستم‌های مکانیکی و تجهیزات صنعتی.
 </p>
 
 </div>
@@ -428,11 +421,11 @@ style="--hero:url('cable.jpg')"
 <div class="card">
 
 <h3>
-مستندات مهندسی
+مستندات فنی
 </h3>
 
 <p>
-مدارک فنی، نقشه‌ها و سوابق پروژه.
+نقشه‌ها، دستورالعمل‌ها و مستندات مهندسی.
 </p>
 
 </div>
@@ -483,7 +476,7 @@ class="dark"
 </h2>
 
 <p>
-تصاویر اختصاصی صنعت کابل‌سازی
+تصاویر اختصاصی صنعت فولاد
 </p>
 
 </div>
@@ -567,31 +560,26 @@ const SUPABASE_KEY =
 
 
 const INDUSTRY =
-"cable";
+"steel";
 
 
 const BUCKET =
 "project-media";
 
 
-async function supabaseRequest(
-endpoint
-){
+async function supabaseRequest(endpoint){
 
 const response =
 await fetch(
 SUPABASE_URL + endpoint,
 {
-
 headers:{
 "apikey":SUPABASE_KEY,
 "Authorization":
 "Bearer " + SUPABASE_KEY
 }
-
 }
 );
-
 
 if(!response.ok){
 
@@ -604,7 +592,6 @@ errorText ||
 );
 
 }
-
 
 return response.json();
 
@@ -624,9 +611,7 @@ return String(value || "")
 }
 
 
-function buildStorageURL(
-filePath
-){
+function buildStorageURL(filePath){
 
 return (
 SUPABASE_URL +
@@ -659,20 +644,15 @@ encodeURIComponent(INDUSTRY) +
 
 );
 
-
 container.innerHTML="";
 
-
-if(
-!projects ||
-projects.length===0
-){
+if(!projects || projects.length===0){
 
 container.innerHTML=`
 
 <div class="empty">
 
-هنوز پروژه‌ای برای صنعت کابل‌سازی ثبت نشده است.
+هنوز پروژه‌ای برای صنعت فولاد ثبت نشده است.
 
 </div>
 
@@ -682,15 +662,12 @@ return;
 
 }
 
-
-projects.forEach(
-project=>{
+projects.forEach(project=>{
 
 const item =
 document.createElement("div");
 
 item.className="project";
-
 
 const title =
 document.createElement("h3");
@@ -699,14 +676,12 @@ title.textContent =
 project.title ||
 "پروژه";
 
-
 const description =
 document.createElement("p");
 
 description.textContent =
 project.description ||
 "";
-
 
 item.appendChild(title);
 item.appendChild(description);
@@ -716,7 +691,6 @@ container.appendChild(item);
 });
 
 }
-
 
 catch(error){
 
@@ -761,7 +735,6 @@ gallery.innerHTML=`
 
 `;
 
-
 try{
 
 const media =
@@ -776,20 +749,15 @@ encodeURIComponent(INDUSTRY) +
 
 );
 
-
 gallery.innerHTML="";
 
-
-if(
-!media ||
-media.length===0
-){
+if(!media || media.length===0){
 
 gallery.innerHTML=`
 
 <div class="empty">
 
-هنوز تصویری برای صنعت کابل‌سازی ثبت نشده است.
+هنوز تصویری برای صنعت فولاد ثبت نشده است.
 
 </div>
 
@@ -799,12 +767,9 @@ return;
 
 }
 
-
 let count=0;
 
-
-media.forEach(
-item=>{
+media.forEach(item=>{
 
 if(!item.file_path){
 
@@ -812,22 +777,18 @@ return;
 
 }
 
-
 count++;
-
 
 const imageURL =
 buildStorageURL(
 item.file_path
 );
 
-
 const card =
 document.createElement("div");
 
 card.className =
 "gallery-card";
-
 
 const img =
 document.createElement("img");
@@ -837,11 +798,10 @@ imageURL;
 
 img.alt =
 item.title ||
-"تصویر صنعت کابل‌سازی";
+"تصویر صنعت فولاد";
 
 img.loading =
 "lazy";
-
 
 img.onclick =
 function(){
@@ -852,7 +812,6 @@ imageURL,
 );
 
 };
-
 
 img.onerror =
 function(){
@@ -879,9 +838,7 @@ item.file_path
 
 };
 
-
 card.appendChild(img);
-
 
 if(item.title){
 
@@ -898,11 +855,9 @@ card.appendChild(title);
 
 }
 
-
 gallery.appendChild(card);
 
 });
-
 
 if(count===0){
 
@@ -919,7 +874,6 @@ gallery.innerHTML=`
 }
 
 }
-
 
 catch(error){
 
@@ -956,7 +910,6 @@ document.getElementById(
 "videos-container"
 );
 
-
 container.innerHTML=`
 
 <div class="loading">
@@ -966,7 +919,6 @@ container.innerHTML=`
 </div>
 
 `;
-
 
 try{
 
@@ -982,20 +934,15 @@ encodeURIComponent(INDUSTRY) +
 
 );
 
-
 container.innerHTML="";
 
-
-if(
-!media ||
-media.length===0
-){
+if(!media || media.length===0){
 
 container.innerHTML=`
 
 <div class="empty">
 
-هنوز ویدئویی برای صنعت کابل‌سازی ثبت نشده است.
+هنوز ویدئویی برای صنعت فولاد ثبت نشده است.
 
 </div>
 
@@ -1005,12 +952,9 @@ return;
 
 }
 
-
 let count=0;
 
-
-media.forEach(
-item=>{
+media.forEach(item=>{
 
 if(!item.file_path){
 
@@ -1018,15 +962,12 @@ return;
 
 }
 
-
 count++;
-
 
 const videoURL =
 buildStorageURL(
 item.file_path
 );
-
 
 const card =
 document.createElement("div");
@@ -1034,14 +975,11 @@ document.createElement("div");
 card.className =
 "video-card";
 
-
 const video =
 document.createElement("video");
 
 video.controls=true;
-
 video.preload="metadata";
-
 
 const source =
 document.createElement("source");
@@ -1052,16 +990,9 @@ videoURL;
 source.type =
 "video/mp4";
 
+video.appendChild(source);
 
-video.appendChild(
-source
-);
-
-
-card.appendChild(
-video
-);
-
+card.appendChild(video);
 
 if(item.title){
 
@@ -1078,13 +1009,9 @@ card.appendChild(title);
 
 }
 
-
-container.appendChild(
-card
-);
+container.appendChild(card);
 
 });
-
 
 if(count===0){
 
@@ -1101,7 +1028,6 @@ container.innerHTML=`
 }
 
 }
-
 
 catch(error){
 
@@ -1136,9 +1062,7 @@ document.addEventListener(
 function(){
 
 loadProjects();
-
 loadGallery();
-
 loadVideos();
 
 }
