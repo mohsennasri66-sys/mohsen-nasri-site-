@@ -2,20 +2,30 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>صنعت سیم‌پیچی | Mohsen Nasri</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mohsen Nasri | Industrial Engineering</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
 
 body{
     font-family:Tahoma,Arial,sans-serif;
     background:#071018;
     color:#fff;
-    line-height:1.9;
-    direction:rtl
+    line-height:1.8;
 }
+
+/* ================= HEADER ================= */
 
 header{
     position:fixed;
@@ -23,317 +33,380 @@ header{
     left:0;
     width:100%;
     z-index:1000;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:17px 6%;
-    background:rgba(5,12,18,.88);
-    backdrop-filter:blur(12px);
+
+    padding:18px 6%;
+
+    background:rgba(4,11,17,.82);
+    backdrop-filter:blur(14px);
+
     border-bottom:1px solid rgba(255,255,255,.08);
-    direction:ltr
 }
 
 .logo{
-    font-size:23px;
-    font-weight:bold
+    direction:ltr;
+    font-size:24px;
+    font-weight:bold;
+    white-space:nowrap;
 }
 
 .logo span{
-    color:#00bcd4
+    color:#00bcd4;
 }
 
 nav{
     display:flex;
-    gap:25px;
-    direction:rtl
+    gap:28px;
 }
 
 nav a{
     color:#fff;
     text-decoration:none;
     font-size:15px;
-    transition:.3s
+    transition:.3s;
 }
 
 nav a:hover{
-    color:#00bcd4
+    color:#00bcd4;
 }
 
+/* ================= HERO ================= */
+
 .hero{
-    min-height:78vh;
+    min-height:100vh;
+
     display:flex;
     align-items:center;
-    padding:130px 7% 80px;
+
+    padding:140px 8% 100px;
+
+    position:relative;
+
     background:
         linear-gradient(
             90deg,
-            rgba(3,10,15,.92),
-            rgba(3,10,15,.58),
-            rgba(3,10,15,.35)
+            rgba(2,9,14,.94),
+            rgba(2,9,14,.70),
+            rgba(2,9,14,.35)
         ),
-        var(--hero) center/cover no-repeat;
-    direction:ltr;
-    text-align:left
+        url("industrial-hero.png") center/cover no-repeat;
 }
 
 .hero-content{
-    max-width:800px
+    max-width:900px;
+    direction:ltr;
+    text-align:left;
 }
 
 .hero h1{
-    font-size:clamp(42px,6vw,76px);
-    line-height:1.08;
-    margin-bottom:22px
+    font-size:clamp(45px,7vw,88px);
+    line-height:1.05;
+    margin-bottom:25px;
 }
 
 .hero h1 span{
-    color:#00bcd4
+    color:#00bcd4;
 }
 
 .hero p{
-    font-size:19px;
-    color:#d5dce1
+    font-size:20px;
+    color:#d3dce1;
+    max-width:700px;
 }
 
-main{
-    direction:rtl
-}
+/* ================= SECTIONS ================= */
 
 section{
-    padding:90px 7%
+    padding:90px 7%;
 }
 
 .dark{
-    background:#0a151e
+    background:#0a151e;
 }
 
 .section-title{
     text-align:center;
-    margin-bottom:45px
+    margin-bottom:50px;
 }
 
 .section-title h2{
     font-size:38px;
-    margin-bottom:8px
+    margin-bottom:8px;
 }
 
 .section-title p{
-    color:#aeb9c0
+    color:#9eabb3;
 }
 
-.content{
-    max-width:1100px;
-    margin:auto
-}
+/* ================= ABOUT ================= */
 
-.content p{
-    color:#c5cfd4;
-    margin-bottom:18px
-}
-
-.grid{
+.about-content{
     max-width:1100px;
     margin:auto;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px
+    text-align:center;
 }
 
-.card{
-    background:#0d1922;
-    padding:28px;
-    border-radius:10px;
-    border:1px solid rgba(255,255,255,.07);
-    transition:.3s
+.about-content p{
+    color:#c6d0d5;
+    font-size:17px;
+    margin-bottom:18px;
 }
 
-.card:hover{
-    transform:translateY(-6px);
-    border-color:#00bcd4
-}
+/* ================= INDUSTRIES ================= */
 
-.card h3{
-    color:#00bcd4;
-    margin-bottom:10px
-}
-
-.card p{
-    color:#b7c3c9
-}
-
-/* GALLERY */
-
-.gallery{
-    max-width:1100px;
+.industries{
+    max-width:1200px;
     margin:auto;
+
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px
+    grid-template-columns:repeat(5,1fr);
+    gap:20px;
 }
 
-.gallery-item{
+.industry-card{
+    min-height:280px;
+
     position:relative;
     overflow:hidden;
-    border-radius:9px;
-    background:#0d1922;
-    border:1px solid rgba(255,255,255,.07);
-    min-height:240px
-}
 
-.gallery-item img{
-    width:100%;
-    height:240px;
-    object-fit:cover;
-    display:block;
-    transition:.4s
-}
+    display:flex;
+    align-items:flex-end;
 
-.gallery-item:hover img{
-    transform:scale(1.06)
-}
+    border-radius:12px;
 
-.gallery-caption{
-    position:absolute;
-    right:0;
-    left:0;
-    bottom:0;
-    padding:12px;
-    background:linear-gradient(
-        transparent,
-        rgba(0,0,0,.85)
-    );
+    background-size:cover;
+    background-position:center;
+
+    border:1px solid rgba(255,255,255,.10);
+
+    text-decoration:none;
     color:#fff;
-    padding-top:35px
+
+    transition:.35s;
 }
 
-/* VIDEO */
+.industry-card::before{
+    content:"";
 
-.video-grid{
-    max-width:1100px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:22px
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.92),
+            rgba(0,0,0,.15)
+        );
+
+    transition:.35s;
 }
 
-.video-card{
-    background:#0d1922;
-    padding:15px;
-    border-radius:10px;
-    border:1px solid rgba(255,255,255,.07)
+.industry-card:hover{
+    transform:translateY(-8px);
+    border-color:#00bcd4;
 }
 
-.video-card video{
+.industry-card:hover::before{
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,188,212,.55),
+            rgba(0,0,0,.15)
+        );
+}
+
+.industry-content{
+    position:relative;
+    z-index:2;
+
     width:100%;
-    display:block;
-    border-radius:8px;
-    background:#000
+
+    padding:25px;
 }
 
-.video-title{
-    color:#00bcd4;
-    padding:12px 5px 4px;
-    font-weight:bold
+.industry-content h3{
+    font-size:22px;
+    margin-bottom:7px;
 }
 
-.video-description{
-    color:#aeb9c0;
+.industry-content p{
+    color:#d0d8dc;
     font-size:14px;
-    padding:0 5px 5px
 }
 
-.empty-message{
-    grid-column:1/-1;
-    text-align:center;
-    color:#89969e;
-    padding:35px 15px;
-    background:#0d1922;
-    border-radius:10px;
-    border:1px solid rgba(255,255,255,.07)
+/* ================= INDUSTRY IMAGES ================= */
+
+.rewinding{
+    background-image:url("rewinding.jpg");
 }
 
-.project{
+.float-glass{
+    background-image:url("float-glass.jpg");
+}
+
+.cable{
+    background-image:url("cable.jpg");
+}
+
+.steel{
+    background-image:url("steel.jpg");
+}
+
+.container-glass{
+    background-image:url("container-glass.jpg");
+}
+
+/* ================= SERVICES ================= */
+
+.services{
     max-width:1100px;
     margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.service-card{
     background:#0d1922;
-    padding:32px;
-    border-radius:10px;
-    border:1px solid rgba(255,255,255,.07)
+
+    padding:30px;
+
+    border-radius:12px;
+
+    border:1px solid rgba(255,255,255,.07);
+
+    transition:.3s;
 }
 
-.project h3{
+.service-card:hover{
+    transform:translateY(-6px);
+    border-color:#00bcd4;
+}
+
+.service-card h3{
     color:#00bcd4;
-    margin-bottom:10px
+    margin-bottom:12px;
 }
 
-.project p{
-    color:#b7c3c9
+.service-card p{
+    color:#b7c3c9;
 }
 
-.back{
-    text-align:center
+/* ================= CONTACT ================= */
+
+.contact{
+    max-width:900px;
+    margin:auto;
+
+    text-align:center;
+}
+
+.contact p{
+    color:#c5cfd4;
+    margin-bottom:20px;
 }
 
 .btn{
     display:inline-block;
-    padding:12px 26px;
-    border-radius:5px;
+
+    padding:13px 30px;
+
+    border-radius:6px;
+
     background:#00bcd4;
+
     color:#001015;
+
     text-decoration:none;
-    font-weight:bold
+
+    font-weight:bold;
+
+    transition:.3s;
 }
+
+.btn:hover{
+    transform:translateY(-3px);
+    background:#19cbe1;
+}
+
+/* ================= FOOTER ================= */
 
 footer{
     text-align:center;
-    padding:30px;
+
+    padding:32px;
+
     background:#040a0f;
-    color:#89969e
+
+    color:#89969e;
 }
 
 footer strong{
-    color:#00bcd4
+    color:#00bcd4;
 }
 
-.loading{
-    text-align:center;
-    color:#89969e;
-    padding:30px
+/* ================= MOBILE ================= */
+
+@media(max-width:1050px){
+
+    .industries{
+        grid-template-columns:repeat(3,1fr);
+    }
+
 }
 
 @media(max-width:800px){
 
     header{
-        padding:14px 5%
+        padding:14px 5%;
     }
 
     nav{
-        display:none
-    }
-
-    .grid,
-    .gallery,
-    .video-grid{
-        grid-template-columns:1fr
+        display:none;
     }
 
     .hero{
-        min-height:68vh;
-        padding:120px 6% 70px
+        min-height:90vh;
+        padding:120px 6% 70px;
     }
 
     .hero h1{
-        font-size:clamp(40px,11vw,60px)
+        font-size:clamp(40px,11vw,65px);
+    }
+
+    .hero p{
+        font-size:17px;
     }
 
     section{
-        padding:70px 6%
+        padding:70px 6%;
     }
+
+    .industries{
+        grid-template-columns:1fr;
+    }
+
+    .industry-card{
+        min-height:230px;
+    }
+
+    .services{
+        grid-template-columns:1fr;
+    }
+
 }
+
 </style>
 </head>
 
 <body>
+
+
+<!-- ================= HEADER ================= -->
 
 <header>
 
@@ -342,32 +415,50 @@ footer strong{
     </div>
 
     <nav>
-        <a href="index.html">خانه</a>
-        <a href="#about">معرفی</a>
-        <a href="#projects">پروژه‌ها</a>
-        <a href="#gallery">گالری</a>
-        <a href="#videos">ویدئوها</a>
+
+        <a href="#home">
+            خانه
+        </a>
+
+        <a href="#industries">
+            صنایع
+        </a>
+
+        <a href="#services">
+            خدمات
+        </a>
+
+        <a href="#contact">
+            تماس با من
+        </a>
+
     </nav>
 
 </header>
 
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 
 <section
+    id="home"
     class="hero"
-    style="--hero:url('rewinding.jpg')"
 >
 
     <div class="hero-content">
 
         <h1>
-            سیم‌پیچی<br>
-            <span>Industrial Engineering</span>
+            Mohsen
+            <span>Nasri</span>
+        </h1>
+
+        <h1>
+            Industrial Engineering
         </h1>
 
         <p>
-            تجهیزات و سیستم‌های صنعتی سیم‌پیچی و بازپیچی.
+            مهندسی مکانیک و مهندسی صنعتی
+            با تمرکز بر تجهیزات، ماشین‌آلات،
+            خطوط تولید و پروژه‌های صنعتی.
         </p>
 
     </div>
@@ -378,31 +469,34 @@ footer strong{
 <main>
 
 
-<!-- ABOUT -->
+<!-- ================= ABOUT ================= -->
 
-<section id="about">
+<section>
 
     <div class="section-title">
 
-        <h2>سیم‌پیچی</h2>
+        <h2>
+            درباره من
+        </h2>
 
         <p>
-            تجهیزات و سیستم‌های صنعتی سیم‌پیچی و بازپیچی.
+            تجربه و تخصص در محیط‌های صنعتی
         </p>
 
     </div>
 
-    <div class="content">
+
+    <div class="about-content">
 
         <p>
-            این صفحه برای معرفی تجربه، تجهیزات، پروژه‌ها و
-            مستندات فنی مرتبط با صنعت سیم‌پیچی طراحی شده است.
+            این وب‌سایت برای معرفی سوابق حرفه‌ای،
+            تجربیات اجرایی، پروژه‌ها و حوزه‌های تخصصی
+            مهندس محسن نصری ایجاد شده است.
         </p>
 
         <p>
-            در این بخش می‌توان اطلاعات فنی، سوابق کاری،
-            تصاویر، ویدئوها، پروژه‌ها و مستندات مرتبط با
-            این صنعت را به‌صورت مستقل اضافه و مدیریت کرد.
+            تمرکز اصلی فعالیت‌ها بر مهندسی مکانیک،
+            تجهیزات صنعتی، ماشین‌آلات و خطوط تولید است.
         </p>
 
     </div>
@@ -410,543 +504,270 @@ footer strong{
 </section>
 
 
-<!-- SPECIALIZED AREAS -->
+<!-- ================= INDUSTRIES ================= -->
 
-<section class="dark">
+<section
+    id="industries"
+    class="dark"
+>
 
     <div class="section-title">
 
-        <h2>حوزه‌های تخصصی</h2>
+        <h2>
+            حوزه‌های صنعتی
+        </h2>
 
         <p>
-            اطلاعات اختصاصی این صنعت
+            برای مشاهده اطلاعات هر صنعت روی کارت مربوطه کلیک کنید.
         </p>
 
     </div>
 
-    <div class="grid">
 
-        <div class="card">
-
-            <h3>
-                ماشین‌آلات سیم‌پیچی
-            </h3>
-
-            <p>
-                معرفی ماشین‌آلات، تجهیزات و سیستم‌های تولید.
-            </p>
-
-        </div>
+    <div class="industries">
 
 
-        <div class="card">
+        <!-- REWINDING -->
+
+        <a
+            href="rewinding.html"
+            class="industry-card rewinding"
+        >
+
+            <div class="industry-content">
+
+                <h3>
+                    سیم‌پیچی
+                </h3>
+
+                <p>
+                    تجهیزات و سیستم‌های صنعتی سیم‌پیچی و بازپیچی
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- FLOAT GLASS -->
+
+        <a
+            href="float-glass.html"
+            class="industry-card float-glass"
+        >
+
+            <div class="industry-content">
+
+                <h3>
+                    شیشه فلوت و تخت
+                </h3>
+
+                <p>
+                    تجهیزات و خطوط تولید شیشه تخت
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- CABLE -->
+
+        <a
+            href="cable.html"
+            class="industry-card cable"
+        >
+
+            <div class="industry-content">
+
+                <h3>
+                    کابل‌سازی
+                </h3>
+
+                <p>
+                    ماشین‌آلات و تجهیزات تولید کابل
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- STEEL -->
+
+        <a
+            href="steel.html"
+            class="industry-card steel"
+        >
+
+            <div class="industry-content">
+
+                <h3>
+                    فولاد
+                </h3>
+
+                <p>
+                    تجهیزات و فرآیندهای صنعتی فولاد
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- CONTAINER GLASS -->
+
+        <a
+            href="container-glass.html"
+            class="industry-card container-glass"
+        >
+
+            <div class="industry-content">
+
+                <h3>
+                    شیشه بطری
+                </h3>
+
+                <p>
+                    ماشین‌آلات و خطوط تولید ظروف شیشه‌ای
+                </p>
+
+            </div>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section
+    id="services"
+>
+
+    <div class="section-title">
+
+        <h2>
+            خدمات تخصصی
+        </h2>
+
+        <p>
+            حوزه‌های فعالیت حرفه‌ای
+        </p>
+
+    </div>
+
+
+    <div class="services">
+
+
+        <div class="service-card">
 
             <h3>
                 مهندسی مکانیک
             </h3>
 
             <p>
-                بررسی تجهیزات و سیستم‌های مکانیکی مرتبط.
+                بررسی، تحلیل و مدیریت تجهیزات
+                و سیستم‌های مکانیکی صنعتی.
             </p>
 
         </div>
 
 
-        <div class="card">
+        <div class="service-card">
 
             <h3>
-                مستندات فنی
+                ماشین‌آلات صنعتی
             </h3>
 
             <p>
-                ارائه نقشه‌ها، دستورالعمل‌ها و مدارک مهندسی.
+                تجربه در زمینه ماشین‌آلات،
+                تجهیزات تولید و خطوط صنعتی.
             </p>
 
         </div>
 
-    </div>
 
-</section>
+        <div class="service-card">
 
+            <h3>
+                پروژه‌های صنعتی
+            </h3>
 
-<!-- PROJECTS -->
+            <p>
+                بررسی پروژه‌ها، مستندات فنی،
+                تجهیزات و فعالیت‌های اجرایی.
+            </p>
 
-<section id="projects">
+        </div>
 
-    <div class="section-title">
-
-        <h2>پروژه‌ها</h2>
-
-        <p>
-            پروژه‌های انجام‌شده و سوابق اجرایی
-        </p>
-
-    </div>
-
-    <div class="project">
-
-        <h3>
-            پروژه شماره ۱
-        </h3>
-
-        <p>
-            اطلاعات پروژه، نوع ماشین، محدوده فعالیت،
-            مسئولیت‌ها و نتایج پروژه را می‌توان در این قسمت وارد کرد.
-        </p>
 
     </div>
 
 </section>
 
 
-<!-- GALLERY -->
+<!-- ================= CONTACT ================= -->
 
-<section id="gallery" class="dark">
+<section
+    id="contact"
+    class="dark"
+>
 
     <div class="section-title">
 
         <h2>
-            گالری تصاویر
+            تماس با من
         </h2>
 
         <p>
-            تصاویر اختصاصی صنعت سیم‌پیچی
+            برای همکاری و پروژه‌های صنعتی
         </p>
 
     </div>
 
-    <div
-        id="galleryContainer"
-        class="gallery"
-    >
 
-        <div class="loading">
-            در حال بارگذاری تصاویر...
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- VIDEOS -->
-
-<section id="videos">
-
-    <div class="section-title">
-
-        <h2>
-            ویدئوها
-        </h2>
+    <div class="contact">
 
         <p>
-            ویدئوهای صنعتی و پروژه‌ای
+            جهت همکاری، پروژه‌های مهندسی
+            و فعالیت‌های صنعتی می‌توانید
+            با من در ارتباط باشید.
         </p>
 
-    </div>
-
-    <div
-        id="videoContainer"
-        class="video-grid"
-    >
-
-        <div class="loading">
-            در حال بارگذاری ویدئوها...
-        </div>
+        <a
+            href="mailto:"
+            class="btn"
+        >
+            تماس
+        </a>
 
     </div>
 
 </section>
 
-
-<!-- BACK -->
-
-<section class="back">
-
-    <a
-        href="index.html"
-        class="btn"
-    >
-        بازگشت به صفحه اصلی
-    </a>
-
-</section>
 
 </main>
 
 
+<!-- ================= FOOTER ================= -->
+
 <footer>
 
     © 2026
-    <strong>Mohsen Nasri</strong>
-    — مهندسی صنعتی
+
+    <strong>
+        Mohsen Nasri
+    </strong>
+
+    — Industrial Engineering
 
 </footer>
 
-
-<!-- SUPABASE -->
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
-<script>
-
-const SUPABASE_URL =
-    "SUPABASE_URL";
-
-const SUPABASE_ANON_KEY =
-    "SUPABASE_ANON_KEY";
-
-
-const supabaseClient =
-    window.supabase.createClient(
-        SUPABASE_URL,
-        SUPABASE_ANON_KEY
-    );
-
-
-const INDUSTRY =
-    "rewinding";
-
-
-const BUCKET =
-    "project-media";
-
-
-function getMediaUrl(path){
-
-    if(!path) return "";
-
-    if(
-        path.startsWith("http://") ||
-        path.startsWith("https://")
-    ){
-        return path;
-    }
-
-    const result =
-        supabaseClient
-            .storage
-            .from(BUCKET)
-            .getPublicUrl(path);
-
-    return result.data.publicUrl;
-}
-
-
-/*
- * بارگذاری رسانه‌های صنعت سیم‌پیچی
- */
-
-async function loadIndustryMedia(){
-
-    const gallery =
-        document.getElementById(
-            "galleryContainer"
-        );
-
-    const videos =
-        document.getElementById(
-            "videoContainer"
-        );
-
-
-    gallery.innerHTML =
-        '<div class="loading">در حال بارگذاری تصاویر...</div>';
-
-    videos.innerHTML =
-        '<div class="loading">در حال بارگذاری ویدئوها...</div>';
-
-
-    const {
-        data,
-        error
-    } =
-        await supabaseClient
-            .from("industry_media")
-            .select("*")
-            .eq("industry", INDUSTRY)
-            .order("sort_order", {
-                ascending:true
-            });
-
-
-    if(error){
-
-        console.error(
-            "Supabase media error:",
-            error
-        );
-
-        gallery.innerHTML =
-            '<div class="empty-message">تصویری برای این صنعت ثبت نشده است.</div>';
-
-        videos.innerHTML =
-            '<div class="empty-message">ویدئویی برای این صنعت ثبت نشده است.</div>';
-
-        return;
-    }
-
-
-    const media =
-        Array.isArray(data)
-            ? data
-            : [];
-
-
-    const images =
-        media.filter(item => {
-
-            const type =
-                String(
-                    item.media_type ||
-                    item.type ||
-                    ""
-                ).toLowerCase();
-
-            return (
-                type === "image" ||
-                type === "photo" ||
-                type === "jpg" ||
-                type === "jpeg" ||
-                type === "png" ||
-                type === "webp"
-            );
-
-        });
-
-
-    const videosList =
-        media.filter(item => {
-
-            const type =
-                String(
-                    item.media_type ||
-                    item.type ||
-                    ""
-                ).toLowerCase();
-
-            return (
-                type === "video" ||
-                type === "mp4" ||
-                type === "webm" ||
-                type === "mov"
-            );
-
-        });
-
-
-    /*
-     * اگر نوع رسانه در جدول ثبت نشده باشد،
-     * از پسوند فایل تشخیص می‌دهیم.
-     */
-
-    const remaining =
-        media.filter(item => {
-
-            const type =
-                String(
-                    item.media_type ||
-                    item.type ||
-                    ""
-                ).toLowerCase();
-
-            return !type;
-
-        });
-
-
-    remaining.forEach(item => {
-
-        const path =
-            item.file_path ||
-            item.path ||
-            item.url ||
-            item.media_url ||
-            item.file_url ||
-            "";
-
-
-        const ext =
-            path
-                .split("?")[0]
-                .split(".")
-                .pop()
-                .toLowerCase();
-
-
-        if(
-            ["jpg","jpeg","png","webp","gif"].includes(ext)
-        ){
-
-            images.push(item);
-
-        }
-        else if(
-            ["mp4","webm","mov","m4v"].includes(ext)
-        ){
-
-            videosList.push(item);
-
-        }
-
-    });
-
-
-    /*
-     * نمایش تصاویر
-     */
-
-    if(images.length === 0){
-
-        gallery.innerHTML =
-            '<div class="empty-message">هنوز تصویری برای صنعت سیم‌پیچی اضافه نشده است.</div>';
-
-    }
-    else{
-
-        gallery.innerHTML = "";
-
-        images.forEach(item => {
-
-            const path =
-                item.file_path ||
-                item.path ||
-                item.url ||
-                item.media_url ||
-                item.file_url ||
-                "";
-
-            const url =
-                getMediaUrl(path);
-
-
-            if(!url) return;
-
-
-            const title =
-                item.title ||
-                item.caption ||
-                "سیم‌پیچی";
-
-
-            const box =
-                document.createElement("div");
-
-            box.className =
-                "gallery-item";
-
-
-            box.innerHTML = `
-                <img
-                    src="${url}"
-                    alt="${title}"
-                    loading="lazy"
-                >
-                ${
-                    title
-                    ? `<div class="gallery-caption">${title}</div>`
-                    : ""
-                }
-            `;
-
-
-            gallery.appendChild(box);
-
-        });
-
-    }
-
-
-    /*
-     * نمایش ویدئوها
-     */
-
-    if(videosList.length === 0){
-
-        videos.innerHTML =
-            '<div class="empty-message">هنوز ویدئویی برای صنعت سیم‌پیچی اضافه نشده است.</div>';
-
-    }
-    else{
-
-        videos.innerHTML = "";
-
-        videosList.forEach(item => {
-
-            const path =
-                item.file_path ||
-                item.path ||
-                item.url ||
-                item.media_url ||
-                item.file_url ||
-                "";
-
-            const url =
-                getMediaUrl(path);
-
-
-            if(!url) return;
-
-
-            const title =
-                item.title ||
-                item.caption ||
-                "ویدئوی سیم‌پیچی";
-
-
-            const description =
-                item.description ||
-                "";
-
-
-            const box =
-                document.createElement("div");
-
-            box.className =
-                "video-card";
-
-
-            box.innerHTML = `
-
-                <video
-                    controls
-                    preload="metadata"
-                >
-
-                    <source
-                        src="${url}"
-                        type="video/mp4"
-                    >
-
-                    مرورگر شما از پخش ویدئو پشتیبانی نمی‌کند.
-
-                </video>
-
-                <div class="video-title">
-                    ${title}
-                </div>
-
-                ${
-                    description
-                    ? `<div class="video-description">${description}</div>`
-                    : ""
-                }
-
-            `;
-
-
-            videos.appendChild(box);
-
-        });
-
-    }
-
-}
-
-
-loadIndustryMedia();
-
-</script>
 
 </body>
 </html>
