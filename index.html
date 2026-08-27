@@ -60,7 +60,6 @@ header{
 nav{
     display:flex;
     gap:28px;
-    align-items:center;
 }
 
 nav a{
@@ -72,23 +71,6 @@ nav a{
 
 nav a:hover{
     color:#00bcd4;
-}
-
-/* ================= ADMIN BUTTON ================= */
-
-.admin-link{
-    color:#00bcd4 !important;
-    font-weight:bold;
-    border:1px solid rgba(0,188,212,.45);
-    padding:5px 12px;
-    border-radius:6px;
-    transition:.3s;
-}
-
-.admin-link:hover{
-    background:#00bcd4;
-    color:#001015 !important;
-    border-color:#00bcd4;
 }
 
 /* ================= HERO ================= */
@@ -328,6 +310,24 @@ section{
     margin-bottom:20px;
 }
 
+/* شماره تماس */
+
+.phone-number{
+    direction:ltr;
+    display:inline-block;
+
+    font-size:28px;
+    font-weight:bold;
+
+    color:#00bcd4;
+
+    margin:10px 0 25px;
+
+    letter-spacing:1px;
+}
+
+/* دکمه تماس */
+
 .btn{
     display:inline-block;
 
@@ -349,6 +349,10 @@ section{
 .btn:hover{
     transform:translateY(-3px);
     background:#19cbe1;
+}
+
+.call-btn{
+    margin-top:5px;
 }
 
 /* ================= FOOTER ================= */
@@ -416,6 +420,10 @@ footer strong{
         grid-template-columns:1fr;
     }
 
+    .phone-number{
+        font-size:24px;
+    }
+
 }
 
 </style>
@@ -448,15 +456,6 @@ footer strong{
 
         <a href="#contact">
             تماس با من
-        </a>
-
-        <!-- ADMIN -->
-
-        <a
-            href="admin.html"
-            class="admin-link"
-        >
-            ⚙ مدیریت
         </a>
 
     </nav>
@@ -766,11 +765,20 @@ footer strong{
             با من در ارتباط باشید.
         </p>
 
+
+        <div class="phone-number">
+            09193890454
+        </div>
+
+
+        <br>
+
+
         <a
-            href="mailto:"
-            class="btn"
+            href="tel:09193890454"
+            class="btn call-btn"
         >
-            تماس
+            📞 تماس مستقیم
         </a>
 
     </div>
