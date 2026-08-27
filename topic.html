@@ -26,8 +26,6 @@ color:#fff;
 line-height:2;
 }
 
-/* HEADER */
-
 header{
 position:fixed;
 top:0;
@@ -68,9 +66,6 @@ border-radius:7px;
 .home-link:hover{
 color:#00bcd4;
 }
-
-
-/* HERO */
 
 .hero{
 min-height:65vh;
@@ -120,9 +115,6 @@ color:#c8d2d7;
 font-size:19px;
 }
 
-
-/* DESCRIPTION */
-
 .article{
 max-width:1050px;
 margin:auto;
@@ -153,9 +145,6 @@ font-size:18px;
 white-space:pre-line;
 box-shadow:0 15px 50px rgba(0,0,0,.18);
 }
-
-
-/* GALLERY */
 
 .media-section{
 padding:90px 7%;
@@ -204,9 +193,6 @@ transition:.4s;
 transform:scale(1.05);
 }
 
-
-/* VIDEOS */
-
 .video-section{
 padding:90px 7%;
 }
@@ -234,9 +220,6 @@ border-radius:10px;
 background:#000;
 }
 
-
-/* EMPTY */
-
 .empty{
 max-width:1000px;
 margin:auto;
@@ -246,9 +229,6 @@ color:#71818a;
 border:1px dashed rgba(255,255,255,.15);
 border-radius:12px;
 }
-
-
-/* BACK */
 
 .back{
 text-align:center;
@@ -265,13 +245,6 @@ border-radius:8px;
 font-weight:bold;
 }
 
-.back a:hover{
-transform:translateY(-3px);
-}
-
-
-/* FOOTER */
-
 footer{
 text-align:center;
 padding:30px;
@@ -282,9 +255,6 @@ color:#71818a;
 footer strong{
 color:#00bcd4;
 }
-
-
-/* ADMIN BUTTON */
 
 #adminButton{
 position:fixed;
@@ -310,9 +280,6 @@ cursor:pointer;
 box-shadow:0 5px 25px rgba(0,0,0,.4);
 }
 
-
-/* OVERLAY */
-
 #adminOverlay{
 position:fixed;
 inset:0;
@@ -320,9 +287,6 @@ z-index:6000;
 display:none;
 background:rgba(0,0,0,.7);
 }
-
-
-/* ADMIN */
 
 #adminPanel{
 position:fixed;
@@ -471,9 +435,6 @@ text-overflow:ellipsis;
 display:none;
 }
 
-
-/* MOBILE */
-
 @media(max-width:850px){
 
 .gallery{
@@ -543,9 +504,7 @@ grid-template-columns:1fr;
 
 </head>
 
-
 <body>
-
 
 <header>
 
@@ -553,20 +512,14 @@ grid-template-columns:1fr;
 Mohsen <span>Nasri</span>
 </div>
 
-<a
-class="home-link"
-href="index.html">
-
+<a class="home-link" href="index.html">
 ← صفحه اصلی
-
 </a>
 
 </header>
 
 
-<section
-class="hero"
-id="hero">
+<section class="hero" id="hero">
 
 <div class="hero-content">
 
@@ -598,18 +551,12 @@ INDUSTRIAL ENGINEERING
 </h2>
 
 <p>
-شرح موضوع
+شرح کامل موضوع
 </p>
 
 </div>
 
-<div
-id="description"
-class="description">
-
-در حال دریافت اطلاعات...
-
-</div>
+<div id="description" class="description"></div>
 
 </section>
 
@@ -628,9 +575,7 @@ class="description">
 
 </div>
 
-<div
-id="gallery"
-class="gallery">
+<div id="gallery" class="gallery">
 
 <div class="empty">
 در حال دریافت تصاویر...
@@ -655,9 +600,7 @@ class="gallery">
 
 </div>
 
-<div
-id="videos"
-class="videos">
+<div id="videos" class="videos">
 
 <div class="empty">
 در حال دریافت ویدئوها...
@@ -686,19 +629,12 @@ class="videos">
 </footer>
 
 
-<button
-id="adminButton"
-onclick="openAdmin()">
-
+<button id="adminButton" onclick="openAdmin()">
 ⚙ مدیریت عکس و ویدئو
-
 </button>
 
 
-<div
-id="adminOverlay"
-onclick="closeAdmin()">
-</div>
+<div id="adminOverlay" onclick="closeAdmin()"></div>
 
 
 <div id="adminPanel">
@@ -709,20 +645,14 @@ onclick="closeAdmin()">
 مدیریت عکس و ویدئو
 </h2>
 
-<button
-class="close"
-onclick="closeAdmin()">
-
+<button class="close" onclick="closeAdmin()">
 ×
-
 </button>
 
 </div>
 
 
-<div
-id="loginBox"
-class="admin-box">
+<div id="loginBox" class="admin-box">
 
 <h3>
 ورود مدیر
@@ -738,24 +668,16 @@ id="password"
 type="password"
 placeholder="رمز عبور">
 
-<button
-onclick="login()">
-
+<button onclick="login()">
 ورود
-
 </button>
 
-<div
-id="loginStatus"
-class="status">
-</div>
+<div id="loginStatus" class="status"></div>
 
 </div>
 
 
-<div
-id="manageBox"
-style="display:none;">
+<div id="manageBox" style="display:none;">
 
 
 <div class="admin-box">
@@ -769,17 +691,11 @@ id="imageFile"
 type="file"
 accept="image/*">
 
-<button
-onclick="uploadImage()">
-
+<button onclick="uploadImage()">
 ＋ افزودن تصویر
-
 </button>
 
-<div
-id="imageStatus"
-class="status">
-</div>
+<div id="imageStatus" class="status"></div>
 
 </div>
 
@@ -795,17 +711,11 @@ id="videoFile"
 type="file"
 accept="video/*">
 
-<button
-onclick="uploadVideo()">
-
+<button onclick="uploadVideo()">
 ＋ افزودن ویدئو
-
 </button>
 
-<div
-id="videoStatus"
-class="status">
-</div>
+<div id="videoStatus" class="status"></div>
 
 </div>
 
@@ -816,25 +726,18 @@ class="status">
 عکس‌ها و ویدئوهای موجود
 </h3>
 
-<div
-id="adminList"
-class="admin-list">
-</div>
+<div id="adminList" class="admin-list"></div>
 
 </div>
 
 
 <div class="admin-box">
 
-<button
-onclick="logout()">
-
+<button onclick="logout()">
 خروج مدیر
-
 </button>
 
 </div>
-
 
 </div>
 
@@ -843,9 +746,8 @@ onclick="logout()">
 
 <script>
 
-
 /* =====================================================
-   SUPABASE
+   تنظیمات
 ===================================================== */
 
 const SUPABASE_URL =
@@ -859,211 +761,138 @@ const BUCKET =
 
 
 /* =====================================================
-   INDUSTRY
+   موضوع
 ===================================================== */
 
 const params =
-new URLSearchParams(
-window.location.search
-);
+new URLSearchParams(window.location.search);
 
 const industry =
-params.get("industry") ||
-"rewinding";
+params.get("industry") || "rewinding";
 
 
 /* =====================================================
-   TOPIC DATA
-   این قسمت مستقل از industry_content است.
+   اطلاعات ثابت موضوع
+   متن دیگر وابسته به دیتابیس نیست
 ===================================================== */
 
 const topics = {
 
 rewinding:{
+
 title:"سیم‌پیچی",
+
 english:"Rewinding",
+
 question:"سیم‌پیچی چیست؟",
+
 image:"rewinding.jpg",
 
 text:
 "سیم‌پیچی یکی از فرآیندهای مهم در تجهیزات و ماشین‌آلات الکتریکی و صنعتی است که در آن سیم یا هادی الکتریکی با آرایش مشخص و مهندسی‌شده روی هسته، شیار یا قالب مخصوص قرار می‌گیرد. هدف از این فرآیند ایجاد یک مدار الکتریکی مناسب برای تولید، انتقال یا کنترل میدان مغناطیسی و انرژی الکتریکی است.\n\nدر صنایع مختلف، کیفیت سیم‌پیچی تأثیر مستقیم بر عملکرد، راندمان، قابلیت اطمینان و طول عمر تجهیزات دارد. انتخاب نوع سیم، تعداد دور، نحوه قرارگیری سیم، عایق‌کاری و کنترل ابعادی از عوامل مهم در اجرای صحیح سیم‌پیچی هستند.\n\nدر این صفحه می‌توان شرح تخصصی موضوع، تصاویر واقعی پروژه‌ها و ویدئوهای مرتبط با فرآیند سیم‌پیچی را مشاهده کرد."
+
 },
 
 "float-glass":{
+
 title:"شیشه فلوت و تخت",
+
 english:"Float & Flat Glass",
+
 question:"شیشه فلوت و تخت چیست؟",
+
 image:"float-glass.jpg",
 
 text:
-"شیشه فلوت یکی از فرآیندهای اصلی تولید شیشه تخت است که در آن شیشه مذاب روی سطح فلز مذاب حرکت کرده و به صورت نوار پیوسته شکل می‌گیرد.\n\nکنترل دما، سرعت خط، ضخامت شیشه و شرایط فرآیند از عوامل مهم در کیفیت محصول نهایی هستند.\n\nاین صفحه برای ارائه توضیحات تخصصی، تصاویر و ویدئوهای مرتبط با صنعت شیشه فلوت و تخت طراحی شده است."
+"شیشه فلوت یکی از فرآیندهای اصلی تولید شیشه تخت است که در آن شیشه مذاب روی سطح فلز مذاب حرکت کرده و به صورت نوار پیوسته شکل می‌گیرد.\n\nکنترل دما، سرعت خط، ضخامت شیشه و شرایط فرآیند از عوامل مهم در کیفیت محصول نهایی هستند."
+
 },
 
 cable:{
+
 title:"کابل‌سازی",
+
 english:"Cable Manufacturing",
+
 question:"کابل‌سازی چیست؟",
+
 image:"cable.jpg",
 
 text:
-"کابل‌سازی مجموعه‌ای از فرآیندهای صنعتی برای تولید کابل‌های الکتریکی و کنترلی است. این فرآیند می‌تواند شامل آماده‌سازی هادی، عایق‌کاری، تاباندن، روکش‌گذاری و کنترل نهایی محصول باشد.\n\nکیفیت مواد اولیه، کنترل فرآیند و دقت تجهیزات در کیفیت کابل نهایی اهمیت زیادی دارد.\n\nدر این صفحه اطلاعات، تصاویر و ویدئوهای مرتبط با موضوع کابل‌سازی ارائه می‌شود."
+"کابل‌سازی مجموعه‌ای از فرآیندهای صنعتی برای تولید کابل‌های الکتریکی و کنترلی است. این فرآیند می‌تواند شامل آماده‌سازی هادی، عایق‌کاری، تاباندن، روکش‌گذاری و کنترل نهایی محصول باشد."
+
 },
 
 steel:{
+
 title:"صنعت فولاد",
+
 english:"Steel Industry",
+
 question:"صنعت فولاد چیست؟",
+
 image:"steel.jpg",
 
 text:
-"صنعت فولاد یکی از صنایع مهم و زیرساختی است که مجموعه‌ای از فرآیندهای تولید، شکل‌دهی و انتقال مواد را در بر می‌گیرد.\n\nعملکرد صحیح تجهیزات مکانیکی، سیستم‌های انتقال قدرت، موتورخانه‌ها، خطوط تولید و تجهیزات جانبی نقش مهمی در پایداری و بهره‌وری خطوط فولاد دارد.\n\nاین صفحه برای ارائه توضیحات تخصصی، تصاویر و ویدئوهای مرتبط با صنعت فولاد استفاده می‌شود."
+"صنعت فولاد یکی از صنایع مهم و زیرساختی است که مجموعه‌ای از فرآیندهای تولید، شکل‌دهی و انتقال مواد را در بر می‌گیرد.\n\nعملکرد صحیح تجهیزات مکانیکی، سیستم‌های انتقال قدرت، موتورخانه‌ها، خطوط تولید و تجهیزات جانبی نقش مهمی در پایداری و بهره‌وری خطوط فولاد دارد."
+
 },
 
 "container-glass":{
+
 title:"شیشه بطری",
+
 english:"Container Glass",
+
 question:"تولید شیشه بطری چیست؟",
+
 image:"container-glass.jpg",
 
 text:
-"تولید شیشه بطری فرآیندی صنعتی برای شکل‌دهی شیشه مذاب و تولید ظروف شیشه‌ای است.\n\nدر این فرآیند تجهیزات شکل‌دهی، سیستم‌های انتقال، کنترل دما، خنک‌کاری و تجهیزات مکانیکی مختلف با یکدیگر کار می‌کنند.\n\nاین صفحه برای معرفی موضوع و نمایش تصاویر و ویدئوهای مرتبط با صنعت شیشه بطری طراحی شده است."
+"تولید شیشه بطری فرآیندی صنعتی برای شکل‌دهی شیشه مذاب و تولید ظروف شیشه‌ای است.\n\nدر این فرآیند تجهیزات شکل‌دهی، سیستم‌های انتقال، کنترل دما، خنک‌کاری و تجهیزات مکانیکی مختلف با یکدیگر کار می‌کنند."
+
 }
 
 };
 
 
 const current =
-topics[industry] ||
-topics.rewinding;
+topics[industry] || topics.rewinding;
 
 
 /* =====================================================
-   PAGE
+   نمایش موضوع
 ===================================================== */
 
 document.title =
-current.title +
-" | Mohsen Nasri";
+current.title + " | Mohsen Nasri";
 
-document.getElementById(
-"title"
-).innerHTML =
+document.getElementById("title").innerHTML =
 current.title +
 "<br><span>" +
 current.english +
 "</span>";
 
-document.getElementById(
-"subtitle"
-).textContent =
+document.getElementById("subtitle").textContent =
 current.question;
 
-document.getElementById(
-"descriptionTitle"
-).textContent =
+document.getElementById("descriptionTitle").textContent =
 current.question;
 
-document.getElementById(
-"description"
-).textContent =
+document.getElementById("description").textContent =
 current.text;
 
-document.getElementById(
-"hero"
-).style.setProperty(
+document.getElementById("hero").style.setProperty(
 "--hero-image",
-"url('" +
-current.image +
-"')"
+"url('" + current.image + "')"
 );
 
 
 /* =====================================================
-   API
+   آدرس فایل
 ===================================================== */
 
-async function api(
-path,
-options={}
-){
-
-const token =
-sessionStorage.getItem(
-"mn_access_token"
-);
-
-const response =
-await fetch(
-
-SUPABASE_URL +
-path,
-
-{
-
-...options,
-
-headers:{
-
-"apikey":
-SUPABASE_KEY,
-
-"Authorization":
-"Bearer " +
-(
-token ||
-SUPABASE_KEY
-),
-
-"Content-Type":
-"application/json",
-
-...(options.headers || {})
-
-}
-
-}
-
-);
-
-if(!response.ok){
-
-throw new Error(
-await response.text()
-);
-
-}
-
-const text =
-await response.text();
-
-return text ?
-JSON.parse(text) :
-null;
-
-}
-
-
-/* =====================================================
-   ESCAPE
-===================================================== */
-
-function escapeHTML(value){
-
-return String(value || "")
-.replace(/&/g,"&amp;")
-.replace(/</g,"&lt;")
-.replace(/>/g,"&gt;")
-.replace(/"/g,"&quot;")
-.replace(/'/g,"&#039;");
-
-}
-
-
-/* =====================================================
-   FILE URL
-===================================================== */
-
-function fileURL(item){
+function getFileURL(item){
 
 if(item.file_url)
 return item.file_url;
@@ -1092,45 +921,75 @@ return "";
 
 
 /* =====================================================
-   LOAD MEDIA
+   دریافت عکس و فیلم
 ===================================================== */
 
 async function loadMedia(){
 
 const gallery =
-document.getElementById(
-"gallery"
-);
+document.getElementById("gallery");
 
 const videos =
-document.getElementById(
-"videos"
-);
+document.getElementById("videos");
+
 
 try{
 
-const data =
-await api(
-
+const url =
+SUPABASE_URL +
 "/rest/v1/industry_media" +
 "?industry=eq." +
 encodeURIComponent(industry) +
-"&order=created_at.desc"
+"&order=created_at.desc";
 
+
+const response =
+await fetch(url,{
+
+method:"GET",
+
+headers:{
+
+"apikey":SUPABASE_KEY,
+
+"Authorization":
+"Bearer " + SUPABASE_KEY,
+
+"Accept":
+"application/json"
+
+}
+
+});
+
+
+if(!response.ok){
+
+throw new Error(
+"Database error " +
+response.status
 );
 
-
-let images="";
-let videoHTML="";
+}
 
 
-(data || []).forEach(item=>{
+const data =
+await response.json();
 
-const url =
-fileURL(item);
 
-if(!url)
-return;
+let images = "";
+
+let videoHTML = "";
+
+
+for(const item of data){
+
+const fileURL =
+getFileURL(item);
+
+if(!fileURL)
+continue;
+
 
 const type =
 String(
@@ -1139,85 +998,109 @@ item.media_type || ""
 
 
 if(
-type==="image" ||
-type==="images" ||
-type==="photo"
+type === "image" ||
+type === "images" ||
+type === "photo"
 ){
 
-images +=
+images += `
 
-"<div class='gallery-item'>" +
+<div class="gallery-item">
 
-"<img src='" +
-escapeHTML(url) +
-"' alt='" +
-escapeHTML(
-item.title ||
-current.title
-) +
-"' loading='lazy'>" +
+<img
+src="${fileURL}"
+alt="${current.title}"
+loading="lazy">
 
-"</div>";
+</div>
+
+`;
 
 }
 
 
-if(
-type==="video" ||
-type==="videos"
+else if(
+type === "video" ||
+type === "videos"
 ){
 
-videoHTML +=
+videoHTML += `
 
-"<div class='video-box'>" +
+<div class="video-box">
 
-"<video controls preload='metadata'>" +
+<video
+controls
+preload="metadata">
 
-"<source src='" +
-escapeHTML(url) +
-"'>" +
+<source src="${fileURL}">
 
-"مرورگر شما از پخش ویدئو پشتیبانی نمی‌کند." +
+مرورگر شما از پخش ویدئو پشتیبانی نمی‌کند.
 
-"</video>" +
+</video>
 
-"</div>";
+</div>
+
+`;
 
 }
 
-});
+}
 
 
 gallery.innerHTML =
 images ||
 
-"<div class='empty'>" +
-"هنوز تصویری برای این موضوع ثبت نشده است." +
-"</div>";
+`<div class="empty">
+هنوز تصویری برای این موضوع ثبت نشده است.
+</div>`;
 
 
 videos.innerHTML =
 videoHTML ||
 
-"<div class='empty'>" +
-"هنوز ویدئویی برای این موضوع ثبت نشده است." +
-"</div>";
+`<div class="empty">
+هنوز ویدئویی برای این موضوع ثبت نشده است.
+</div>`;
+
 
 }
 
 catch(error){
 
-console.error(error);
+console.error(
+"MEDIA ERROR:",
+error
+);
+
 
 gallery.innerHTML =
-"<div class='empty'>" +
-"خطا در دریافت تصاویر." +
-"</div>";
+
+`<div class="empty">
+
+امکان دریافت تصاویر وجود ندارد.
+
+<br>
+
+<span style="font-size:12px">
+بررسی اتصال Supabase
+</span>
+
+</div>`;
+
 
 videos.innerHTML =
-"<div class='empty'>" +
-"خطا در دریافت ویدئوها." +
-"</div>";
+
+`<div class="empty">
+
+امکان دریافت ویدئوها وجود ندارد.
+
+<br>
+
+<span style="font-size:12px">
+بررسی اتصال Supabase
+</span>
+
+</div>`;
 
 }
 
@@ -1225,7 +1108,7 @@ videos.innerHTML =
 
 
 /* =====================================================
-   ADMIN OPEN / CLOSE
+   پنل مدیریت
 ===================================================== */
 
 function openAdmin(){
@@ -1239,6 +1122,7 @@ document.getElementById(
 ).style.display="block";
 
 }
+
 
 function closeAdmin(){
 
@@ -1254,25 +1138,19 @@ document.getElementById(
 
 
 /* =====================================================
-   LOGIN
+   ورود
 ===================================================== */
 
 async function login(){
 
 const email =
-document.getElementById(
-"email"
-).value.trim();
+document.getElementById("email").value.trim();
 
 const password =
-document.getElementById(
-"password"
-).value;
+document.getElementById("password").value;
 
 const status =
-document.getElementById(
-"loginStatus"
-);
+document.getElementById("loginStatus");
 
 
 if(!email || !password){
@@ -1347,19 +1225,16 @@ sessionStorage.setItem(
 data.access_token
 );
 
-sessionStorage.setItem(
-"mn_refresh_token",
-data.refresh_token
-);
-
 
 document.getElementById(
 "loginBox"
 ).style.display="none";
 
+
 document.getElementById(
 "manageBox"
 ).style.display="block";
+
 
 document.getElementById(
 "adminButton"
@@ -1367,6 +1242,7 @@ document.getElementById(
 
 
 status.textContent="";
+
 
 loadAdminMedia();
 
@@ -1384,7 +1260,7 @@ error.message;
 
 
 /* =====================================================
-   LOGOUT
+   خروج
 ===================================================== */
 
 function logout(){
@@ -1395,10 +1271,6 @@ sessionStorage.removeItem(
 
 sessionStorage.removeItem(
 "mn_access_token"
-);
-
-sessionStorage.removeItem(
-"mn_refresh_token"
 );
 
 document.getElementById(
@@ -1417,7 +1289,7 @@ document.getElementById(
 
 
 /* =====================================================
-   CHECK LOGIN
+   بررسی ورود
 ===================================================== */
 
 function checkLogin(){
@@ -1448,7 +1320,7 @@ loadAdminMedia();
 
 
 /* =====================================================
-   UPLOAD FILE
+   آپلود
 ===================================================== */
 
 async function uploadFile(
@@ -1462,7 +1334,7 @@ if(!file){
 statusElement.textContent =
 "ابتدا فایل را انتخاب کنید.";
 
-return;
+return false;
 
 }
 
@@ -1492,6 +1364,12 @@ Math.random()
 extension;
 
 
+const token =
+sessionStorage.getItem(
+"mn_access_token"
+);
+
+
 const upload =
 await fetch(
 
@@ -1511,10 +1389,7 @@ headers:{
 SUPABASE_KEY,
 
 "Authorization":
-"Bearer " +
-sessionStorage.getItem(
-"mn_access_token"
-),
+"Bearer " + token,
 
 "Content-Type":
 file.type
@@ -1553,10 +1428,7 @@ headers:{
 SUPABASE_KEY,
 
 "Authorization":
-"Bearer " +
-sessionStorage.getItem(
-"mn_access_token"
-),
+"Bearer " + token,
 
 "Content-Type":
 "application/json",
@@ -1608,7 +1480,7 @@ catch(error){
 console.error(error);
 
 statusElement.textContent =
-"خطا: " +
+"خطا در آپلود: " +
 error.message;
 
 return false;
@@ -1619,7 +1491,7 @@ return false;
 
 
 /* =====================================================
-   IMAGE
+   عکس
 ===================================================== */
 
 async function uploadImage(){
@@ -1634,24 +1506,23 @@ document.getElementById(
 "imageStatus"
 );
 
-const file =
-input.files[0];
-
-const result =
+if(
 await uploadFile(
-file,
+input.files[0],
 "image",
 status
-);
+)
+){
 
-if(result)
 input.value="";
+
+}
 
 }
 
 
 /* =====================================================
-   VIDEO
+   فیلم
 ===================================================== */
 
 async function uploadVideo(){
@@ -1666,24 +1537,23 @@ document.getElementById(
 "videoStatus"
 );
 
-const file =
-input.files[0];
-
-const result =
+if(
 await uploadFile(
-file,
+input.files[0],
 "video",
 status
-);
+)
+){
 
-if(result)
 input.value="";
+
+}
 
 }
 
 
 /* =====================================================
-   ADMIN MEDIA
+   لیست مدیریت
 ===================================================== */
 
 async function loadAdminMedia(){
@@ -1696,26 +1566,60 @@ document.getElementById(
 
 try{
 
-const data =
-await api(
+const token =
+sessionStorage.getItem(
+"mn_access_token"
+);
 
+
+const response =
+await fetch(
+
+SUPABASE_URL +
 "/rest/v1/industry_media" +
 "?industry=eq." +
 encodeURIComponent(industry) +
-"&order=created_at.desc"
+"&order=created_at.desc",
+
+{
+
+headers:{
+
+"apikey":
+SUPABASE_KEY,
+
+"Authorization":
+"Bearer " + token
+
+}
+
+}
 
 );
+
+
+if(!response.ok){
+
+throw new Error(
+await response.text()
+);
+
+}
+
+
+const data =
+await response.json();
 
 
 box.innerHTML="";
 
 
-if(!data || !data.length){
+if(!data.length){
 
 box.innerHTML =
-"<div class='empty'>" +
-"فایلی وجود ندارد." +
-"</div>";
+`<div class="empty">
+هنوز عکس یا ویدئویی اضافه نشده است.
+</div>`;
 
 return;
 
@@ -1725,21 +1629,12 @@ return;
 data.forEach(item=>{
 
 const url =
-fileURL(item);
+getFileURL(item);
 
 const type =
 String(
 item.media_type || ""
 ).toLowerCase();
-
-
-const div =
-document.createElement(
-"div"
-);
-
-div.className =
-"admin-item";
 
 
 const isImage =
@@ -1748,120 +1643,106 @@ type==="images" ||
 type==="photo";
 
 
+const div =
+document.createElement("div");
+
+div.className =
+"admin-item";
+
+
 if(isImage){
 
-div.innerHTML =
+div.innerHTML = `
 
-"<img src='" +
-escapeHTML(url) +
-"'>" +
+<img
+src="${url}"
+alt="">
 
-"<small>" +
-escapeHTML(
-item.title ||
-"تصویر"
-) +
-"</small>" +
+<small>
+${item.title || "تصویر"}
+</small>
 
-"<input " +
-"class='replace-input' " +
-"type='file' " +
-"accept='image/*'>" +
+<input
+class="replace-input"
+type="file"
+accept="image/*">
 
-"<button class='edit'>" +
-"ویرایش / جایگزینی" +
-"</button>" +
+<button class="edit">
+ویرایش / جایگزینی
+</button>
 
-"<button class='delete'>" +
-"حذف" +
-"</button>";
+<button class="delete">
+حذف
+</button>
+
+`;
 
 }else{
 
-div.innerHTML =
+div.innerHTML = `
 
-"<video controls>" +
+<video controls>
 
-"<source src='" +
-escapeHTML(url) +
-"'>" +
+<source src="${url}">
 
-"</video>" +
+</video>
 
-"<small>" +
-escapeHTML(
-item.title ||
-"ویدئو"
-) +
-"</small>" +
+<small>
+${item.title || "ویدئو"}
+</small>
 
-"<input " +
-"class='replace-input' " +
-"type='file' " +
-"accept='video/*'>" +
+<input
+class="replace-input"
+type="file"
+accept="video/*">
 
-"<button class='edit'>" +
-"ویرایش / جایگزینی" +
-"</button>" +
+<button class="edit">
+ویرایش / جایگزینی
+</button>
 
-"<button class='delete'>" +
-"حذف" +
-"</button>";
+<button class="delete">
+حذف
+</button>
+
+`;
 
 }
 
 
-/* EDIT */
-
-const editButton =
-div.querySelector(
-".edit"
-);
-
-const replaceInput =
+const input =
 div.querySelector(
 ".replace-input"
 );
 
 
-editButton.onclick =
+div.querySelector(
+".edit"
+).onclick =
 function(){
 
-replaceInput.click();
+input.click();
 
 };
 
 
-replaceInput.onchange =
+input.onchange =
 async function(){
 
 const file =
-replaceInput.files[0];
+input.files[0];
 
 if(!file)
 return;
 
-const ok =
+
 await replaceMedia(
 item,
 file,
-isImage ?
-"image" :
-"video"
+isImage ? "image" : "video"
 );
-
-if(ok){
-
-await loadMedia();
-
-await loadAdminMedia();
-
-}
 
 };
 
-
-/* DELETE */
 
 div.querySelector(
 ".delete"
@@ -1884,9 +1765,9 @@ catch(error){
 console.error(error);
 
 box.innerHTML =
-"<div class='empty'>" +
-"خطا در دریافت فایل‌ها." +
-"</div>";
+`<div class="empty">
+خطا در دریافت فایل‌ها.
+</div>`;
 
 }
 
@@ -1894,7 +1775,7 @@ box.innerHTML =
 
 
 /* =====================================================
-   REPLACE MEDIA
+   جایگزینی
 ===================================================== */
 
 async function replaceMedia(
@@ -1905,7 +1786,11 @@ mediaType
 
 try{
 
-/* آپلود فایل جدید */
+const token =
+sessionStorage.getItem(
+"mn_access_token"
+);
+
 
 const extension =
 newFile.name
@@ -1945,10 +1830,7 @@ headers:{
 SUPABASE_KEY,
 
 "Authorization":
-"Bearer " +
-sessionStorage.getItem(
-"mn_access_token"
-),
+"Bearer " + token,
 
 "Content-Type":
 newFile.type
@@ -1971,8 +1853,6 @@ await upload.text()
 }
 
 
-/* تغییر رکورد */
-
 const update =
 await fetch(
 
@@ -1990,16 +1870,10 @@ headers:{
 SUPABASE_KEY,
 
 "Authorization":
-"Bearer " +
-sessionStorage.getItem(
-"mn_access_token"
-),
+"Bearer " + token,
 
 "Content-Type":
-"application/json",
-
-"Prefer":
-"return=minimal"
+"application/json"
 
 },
 
@@ -2027,8 +1901,6 @@ await update.text()
 }
 
 
-/* حذف فایل قبلی */
-
 if(oldItem.file_path){
 
 await fetch(
@@ -2047,10 +1919,7 @@ headers:{
 SUPABASE_KEY,
 
 "Authorization":
-"Bearer " +
-sessionStorage.getItem(
-"mn_access_token"
-),
+"Bearer " + token,
 
 "Content-Type":
 "application/json"
@@ -2068,18 +1937,23 @@ oldItem.file_path
 }
 
 
-return true;
+await loadMedia();
+
+await loadAdminMedia();
+
+
+alert(
+"فایل با موفقیت جایگزین شد."
+);
 
 }
 
 catch(error){
 
 alert(
-"خطا در جایگزینی فایل:\n" +
+"خطا در جایگزینی:\n" +
 error.message
 );
-
-return false;
 
 }
 
@@ -2087,7 +1961,7 @@ return false;
 
 
 /* =====================================================
-   DELETE MEDIA
+   حذف
 ===================================================== */
 
 async function deleteMedia(item){
@@ -2096,16 +1970,17 @@ if(
 !confirm(
 "آیا از حذف این فایل مطمئن هستید؟"
 )
-){
-
+)
 return;
-
-}
 
 
 try{
 
-/* حذف از Storage */
+const token =
+sessionStorage.getItem(
+"mn_access_token"
+);
+
 
 if(item.file_path){
 
@@ -2125,10 +2000,7 @@ headers:{
 SUPABASE_KEY,
 
 "Authorization":
-"Bearer " +
-sessionStorage.getItem(
-"mn_access_token"
-),
+"Bearer " + token,
 
 "Content-Type":
 "application/json"
@@ -2143,8 +2015,6 @@ item.file_path
 
 }
 
-
-/* حذف از دیتابیس */
 
 const response =
 await fetch(
@@ -2163,10 +2033,7 @@ headers:{
 SUPABASE_KEY,
 
 "Authorization":
-"Bearer " +
-sessionStorage.getItem(
-"mn_access_token"
-)
+"Bearer " + token
 
 }
 
@@ -2203,7 +2070,7 @@ error.message
 
 
 /* =====================================================
-   START
+   شروع صفحه
 ===================================================== */
 
 loadMedia();
