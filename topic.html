@@ -7,6 +7,7 @@
 <title>Mohsen Nasri | موضوع</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -19,30 +20,29 @@ scroll-behavior:smooth;
 
 body{
 font-family:Tahoma,Arial,sans-serif;
-background:#071018;
-color:#fff;
+background:#f4f7f9;
+color:#17232d;
 line-height:2;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
+
 header{
-position:fixed;
+position:sticky;
 top:0;
-left:0;
-width:100%;
-height:70px;
 z-index:1000;
+height:72px;
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:0 7%;
-background:rgba(4,10,15,.94);
-backdrop-filter:blur(12px);
-border-bottom:1px solid rgba(255,255,255,.08);
+padding:0 6%;
+background:#071018;
+color:#fff;
+box-shadow:0 3px 20px rgba(0,0,0,.18);
 }
 
 .logo{
-font-size:22px;
+font-size:21px;
 font-weight:bold;
 direction:ltr;
 }
@@ -51,216 +51,293 @@ direction:ltr;
 color:#00bcd4;
 }
 
-.home-link{
+.header-left{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.home-link,
+.login-link{
 color:#fff;
 text-decoration:none;
-padding:8px 16px;
+padding:8px 15px;
 border-radius:7px;
 }
 
-.home-link:hover{
-color:#00bcd4;
+.home-link:hover,
+.login-link:hover{
+background:#00bcd4;
+color:#001015;
 }
 
-/* HERO */
-.hero{
-min-height:58vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:120px 7% 70px;
+/* ================= SEARCH ================= */
 
-background:
-linear-gradient(
-rgba(3,10,15,.78),
-rgba(3,10,15,.94)
-),
-var(--hero-image);
-
-background-size:cover;
-background-position:center;
+.search-box{
+position:relative;
 }
 
-.hero-content{
-max-width:1000px;
+.search-box input{
+width:230px;
+padding:9px 14px;
+border:1px solid rgba(255,255,255,.15);
+border-radius:8px;
+background:#101d26;
+color:#fff;
+font-family:Tahoma;
+outline:none;
 }
 
-.label{
-color:#00bcd4;
-font-size:15px;
-font-weight:bold;
-margin-bottom:15px;
-letter-spacing:1px;
+.search-box input:focus{
+border-color:#00bcd4;
 }
 
-.hero h1{
-font-size:clamp(40px,6vw,72px);
-line-height:1.25;
-margin-bottom:18px;
-}
+/* ================= PAGE ================= */
 
-.hero h1 span{
-color:#00bcd4;
-}
-
-.hero p{
-color:#c8d2d7;
-font-size:19px;
-}
-
-/* ARTICLE */
-.article{
-max-width:1050px;
+.page{
+max-width:1250px;
 margin:auto;
-padding:85px 7%;
+padding:45px 25px 80px;
 }
 
-.article-title{
-text-align:center;
-margin-bottom:35px;
+.breadcrumb{
+font-size:13px;
+color:#71818a;
+margin-bottom:20px;
 }
 
-.article-title h2{
-font-size:34px;
+.breadcrumb a{
+color:#00a5bd;
+text-decoration:none;
+}
+
+/* ================= LAYOUT ================= */
+
+.content-layout{
+display:grid;
+grid-template-columns:280px minmax(0,1fr);
+gap:30px;
+align-items:start;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar{
+position:sticky;
+top:95px;
+background:#fff;
+border:1px solid #e2e8ec;
+border-radius:14px;
+padding:22px;
+box-shadow:0 8px 30px rgba(0,0,0,.06);
+}
+
+.sidebar h3{
+font-size:19px;
+margin-bottom:15px;
+color:#071018;
+border-bottom:2px solid #00bcd4;
+padding-bottom:10px;
+}
+
+.toc{
+list-style:none;
+}
+
+.toc li{
+margin:5px 0;
+}
+
+.toc a{
+display:block;
+padding:7px 9px;
+border-radius:6px;
+color:#52616b;
+text-decoration:none;
+font-size:14px;
+transition:.2s;
+}
+
+.toc a:hover{
+background:#e8f8fb;
+color:#009bb2;
+}
+
+/* ================= ARTICLE ================= */
+
+.article{
+background:#fff;
+border:1px solid #e2e8ec;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 8px 30px rgba(0,0,0,.06);
+}
+
+.article-head{
+padding:35px 40px 25px;
+border-bottom:1px solid #e8edf0;
+}
+
+.category{
+color:#00a5bd;
+font-size:13px;
+font-weight:bold;
 margin-bottom:8px;
 }
 
-.article-title p{
-color:#899aa3;
+.article-head h1{
+font-size:38px;
+line-height:1.5;
+color:#101b23;
+margin-bottom:10px;
 }
 
-.description{
-background:#0d1922;
-border:1px solid rgba(255,255,255,.07);
-border-radius:18px;
-padding:40px;
-color:#dce4e7;
+.article-head .english{
+color:#00a5bd;
 font-size:18px;
-white-space:pre-line;
-box-shadow:0 15px 50px rgba(0,0,0,.2);
+direction:ltr;
+display:inline-block;
 }
 
-/* TOPIC IMAGES */
-.media-section{
-padding:80px 7%;
-background:#0a151e;
+.article-body{
+padding:35px 40px 45px;
 }
+
+.article-section{
+margin-bottom:45px;
+scroll-margin-top:100px;
+}
+
+.article-section h2{
+font-size:27px;
+color:#10212b;
+margin-bottom:18px;
+padding-right:14px;
+border-right:4px solid #00bcd4;
+}
+
+.article-section p{
+font-size:17px;
+color:#46545d;
+margin-bottom:18px;
+white-space:pre-line;
+}
+
+/* ================= ARTICLE IMAGE ================= */
+
+.article-image{
+margin:25px 0;
+text-align:center;
+}
+
+.article-image img{
+width:100%;
+max-height:600px;
+object-fit:cover;
+border-radius:12px;
+display:block;
+box-shadow:0 8px 25px rgba(0,0,0,.12);
+}
+
+/* ================= MEDIA ================= */
 
 .media-title{
-text-align:center;
-margin-bottom:35px;
-}
-
-.media-title h2{
-font-size:32px;
-margin-bottom:8px;
-}
-
-.media-title p{
-color:#899aa3;
+font-size:27px;
+color:#10212b;
+margin:35px 0 20px;
+padding-right:14px;
+border-right:4px solid #00bcd4;
 }
 
 .gallery{
-max-width:1200px;
-margin:auto;
 display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:22px;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
 }
 
 .gallery-item{
 overflow:hidden;
-border-radius:16px;
-background:#0d1922;
-border:1px solid rgba(255,255,255,.08);
-box-shadow:0 10px 35px rgba(0,0,0,.18);
+border-radius:12px;
+background:#edf2f4;
+border:1px solid #e0e7ea;
 }
 
 .gallery-item img{
 width:100%;
 height:280px;
-display:block;
 object-fit:cover;
-transition:.4s;
+display:block;
+transition:.35s;
+cursor:pointer;
 }
 
 .gallery-item:hover img{
 transform:scale(1.04);
 }
 
-/* VIDEOS */
-.video-section{
-padding:80px 7%;
-background:#071018;
-}
-
 .videos{
-max-width:1100px;
-margin:auto;
 display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:25px;
+grid-template-columns:1fr;
+gap:20px;
 }
 
 .video-box{
-background:#0d1922;
-padding:14px;
-border-radius:16px;
-border:1px solid rgba(255,255,255,.08);
+background:#071018;
+padding:12px;
+border-radius:12px;
 }
 
 .video-box video{
 width:100%;
+max-height:550px;
 display:block;
-border-radius:10px;
+border-radius:8px;
 background:#000;
 }
 
-/* EMPTY */
+/* ================= EMPTY ================= */
+
 .empty{
-width:100%;
+padding:25px;
 text-align:center;
-padding:28px;
-color:#71818a;
-border:1px dashed rgba(255,255,255,.15);
-border-radius:12px;
+border:1px dashed #ccd7dc;
+border-radius:10px;
+color:#7b8b94;
+background:#f8fafb;
 }
 
-/* BACK */
+/* ================= BACK ================= */
+
 .back{
 text-align:center;
-padding:65px 20px 90px;
+margin-top:35px;
 }
 
 .back a{
 display:inline-block;
+padding:11px 25px;
+border-radius:8px;
 background:#00bcd4;
 color:#001015;
 text-decoration:none;
-padding:13px 28px;
-border-radius:8px;
 font-weight:bold;
-transition:.25s;
 }
 
-.back a:hover{
-transform:translateY(-3px);
-}
+/* ================= FOOTER ================= */
 
-/* FOOTER */
 footer{
+background:#071018;
+color:#73828a;
 text-align:center;
-padding:30px;
-background:#040a0f;
-color:#71818a;
+padding:28px;
 }
 
 footer strong{
 color:#00bcd4;
 }
 
-/* ADMIN BUTTON */
+/* ================= ADMIN BUTTON ================= */
+
 #adminButton{
 position:fixed;
 left:22px;
@@ -275,30 +352,33 @@ color:#001015;
 font-family:Tahoma;
 font-weight:bold;
 cursor:pointer;
-box-shadow:0 5px 25px rgba(0,0,0,.4);
+box-shadow:0 5px 25px rgba(0,0,0,.3);
 }
 
-/* OVERLAY */
+/* ================= OVERLAY ================= */
+
 #adminOverlay{
 position:fixed;
 inset:0;
 z-index:6000;
 display:none;
-background:rgba(0,0,0,.72);
+background:rgba(0,0,0,.7);
 }
 
-/* ADMIN PANEL */
+/* ================= ADMIN ================= */
+
 #adminPanel{
 position:fixed;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
-width:min(92%,700px);
+width:min(94%,720px);
 max-height:90vh;
 overflow:auto;
 z-index:7000;
 display:none;
 background:#0b1720;
+color:#fff;
 border:1px solid rgba(0,188,212,.35);
 border-radius:16px;
 padding:25px;
@@ -374,8 +454,8 @@ color:#111;
 }
 
 .status{
-margin-top:12px;
-color:#9aabb3;
+margin-top:10px;
+color:#aebbc1;
 font-size:13px;
 }
 
@@ -396,7 +476,7 @@ border:1px solid rgba(255,255,255,.08);
 .admin-item img,
 .admin-item video{
 width:100%;
-height:150px;
+height:160px;
 object-fit:cover;
 border-radius:7px;
 background:#000;
@@ -415,15 +495,27 @@ text-overflow:ellipsis;
 display:none;
 }
 
-/* MOBILE */
-@media(max-width:850px){
+/* ================= LOGIN ================= */
+
+#loginBox{
+display:block;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+.content-layout{
+grid-template-columns:1fr;
+}
+
+.sidebar{
+position:relative;
+top:auto;
+}
 
 .gallery{
 grid-template-columns:1fr 1fr;
-}
-
-.videos{
-grid-template-columns:1fr;
 }
 
 }
@@ -431,39 +523,62 @@ grid-template-columns:1fr;
 @media(max-width:600px){
 
 header{
-height:62px;
-padding:0 5%;
+height:auto;
+min-height:65px;
+padding:10px 5%;
+gap:10px;
+flex-wrap:wrap;
 }
 
 .logo{
-font-size:18px;
+font-size:17px;
 }
 
-.home-link{
-font-size:13px;
+.search-box{
+order:3;
+width:100%;
 }
 
-.hero{
-min-height:55vh;
-padding:100px 6% 60px;
+.search-box input{
+width:100%;
 }
 
-.hero h1{
-font-size:40px;
+.header-left{
+gap:5px;
 }
 
-.hero p{
-font-size:16px;
+.home-link,
+.login-link{
+font-size:12px;
+padding:7px 9px;
 }
 
-.article,
-.media-section,
-.video-section{
-padding:60px 5%;
+.page{
+padding:25px 12px 60px;
 }
 
-.description{
-padding:24px;
+.content-layout{
+gap:18px;
+}
+
+.article-head{
+padding:25px 20px;
+}
+
+.article-head h1{
+font-size:30px;
+}
+
+.article-body{
+padding:25px 20px;
+}
+
+.article-section h2,
+.media-title{
+font-size:23px;
+}
+
+.article-section p{
 font-size:16px;
 }
 
@@ -480,6 +595,35 @@ grid-template-columns:1fr;
 }
 
 }
+
+/* ================= SEARCH RESULTS ================= */
+
+#searchResults{
+position:absolute;
+top:45px;
+right:0;
+width:100%;
+background:#fff;
+border-radius:8px;
+overflow:hidden;
+display:none;
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+z-index:2000;
+}
+
+#searchResults a{
+display:block;
+padding:10px 12px;
+color:#25333c;
+text-decoration:none;
+border-bottom:1px solid #eee;
+font-size:13px;
+}
+
+#searchResults a:hover{
+background:#eefafd;
+}
+
 </style>
 </head>
 
@@ -491,61 +635,179 @@ grid-template-columns:1fr;
 Mohsen <span>Nasri</span>
 </div>
 
-<a class="home-link" href="index.html">
-← صفحه اصلی
+<div class="search-box">
+
+<input
+id="searchInput"
+type="search"
+placeholder="جستجو در موضوعات..."
+autocomplete="off">
+
+<div id="searchResults"></div>
+
+</div>
+
+<div class="header-left">
+
+<a class="login-link" href="#" onclick="openAdmin();return false;">
+ورود مدیر
 </a>
+
+<a class="home-link" href="index.html">
+صفحه اصلی
+</a>
+
+</div>
 
 </header>
 
 
-<!-- فقط صفحه همین موضوع -->
-<section class="hero" id="hero">
+<main class="page">
 
-<div class="hero-content">
+<div class="breadcrumb">
+<a href="index.html">خانه</a>
+&nbsp; / &nbsp;
+<span id="breadcrumbTitle">موضوع</span>
+</div>
 
-<div class="label">
+
+<div class="content-layout">
+
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+<h3>
+فهرست مطالب
+</h3>
+
+<ul class="toc" id="toc">
+
+<li>
+<a href="#intro">
+معرفی موضوع
+</a>
+</li>
+
+<li>
+<a href="#definition">
+این موضوع چیست؟
+</a>
+</li>
+
+<li>
+<a href="#applications">
+کاربردها و حوزه فعالیت
+</a>
+</li>
+
+<li>
+<a href="#media">
+تصاویر مرتبط
+</a>
+</li>
+
+<li>
+<a href="#videos">
+ویدئوهای مرتبط
+</a>
+</li>
+
+</ul>
+
+</aside>
+
+
+<!-- ================= ARTICLE ================= -->
+
+<article class="article">
+
+<div class="article-head">
+
+<div class="category">
 INDUSTRIAL ENGINEERING
 </div>
 
-<h1 id="title"></h1>
+<h1 id="pageTitle">
+سیم‌پیچی
+</h1>
 
-<p id="subtitle"></p>
+<div
+id="englishTitle"
+class="english">
+Rewinding
+</div>
 
 </div>
 
-</section>
+
+<div class="article-body">
 
 
-<!-- متن اختصاصی همان موضوع -->
-<section class="article">
+<section
+id="intro"
+class="article-section">
 
-<div class="article-title">
+<h2 id="introTitle">
+معرفی موضوع
+</h2>
 
-<h2 id="descriptionTitle"></h2>
-
-<p>شرح کامل موضوع</p>
-
-</div>
-
-<div id="description" class="description">
+<p id="introText">
 در حال دریافت اطلاعات...
-</div>
+</p>
 
 </section>
 
 
-<!-- فقط عکس‌های همین موضوع -->
-<section class="media-section">
+<section
+id="definition"
+class="article-section">
 
-<div class="media-title">
+<h2 id="definitionTitle">
+این موضوع چیست؟
+</h2>
 
-<h2>تصاویر این موضوع</h2>
+<p id="definitionText">
+در حال دریافت اطلاعات...
+</p>
 
-<p>تصاویر اختصاصی مربوط به همین موضوع</p>
+</section>
 
+
+<section
+id="applications"
+class="article-section">
+
+<h2 id="applicationsTitle">
+کاربردها و حوزه فعالیت
+</h2>
+
+<p id="applicationsText">
+در حال دریافت اطلاعات...
+</p>
+
+</section>
+
+
+<!-- IMAGE INSIDE ARTICLE -->
+
+<div
+id="articleImages">
 </div>
 
-<div id="gallery" class="gallery">
+
+<section
+id="media"
+class="article-section">
+
+<h2 class="media-title">
+تصاویر مرتبط
+</h2>
+
+<div
+id="gallery"
+class="gallery">
 
 <div class="empty">
 در حال دریافت تصاویر...
@@ -556,18 +818,17 @@ INDUSTRIAL ENGINEERING
 </section>
 
 
-<!-- فقط ویدئوهای همین موضوع -->
-<section class="video-section">
+<section
+id="videos"
+class="article-section">
 
-<div class="media-title">
+<h2 class="media-title">
+ویدئوهای مرتبط
+</h2>
 
-<h2>ویدئوهای این موضوع</h2>
-
-<p>ویدئوهای اختصاصی مربوط به همین موضوع</p>
-
-</div>
-
-<div id="videos" class="videos">
+<div
+id="videosBox"
+class="videos">
 
 <div class="empty">
 در حال دریافت ویدئوها...
@@ -578,6 +839,13 @@ INDUSTRIAL ENGINEERING
 </section>
 
 
+</div>
+
+</article>
+
+</div>
+
+
 <div class="back">
 
 <a href="index.html">
@@ -585,6 +853,8 @@ INDUSTRIAL ENGINEERING
 </a>
 
 </div>
+
+</main>
 
 
 <footer>
@@ -596,16 +866,25 @@ INDUSTRIAL ENGINEERING
 </footer>
 
 
-<!-- دکمه مدیریت -->
-<button id="adminButton" onclick="openAdmin()">
+<!-- ================= ADMIN BUTTON ================= -->
+
+<button
+id="adminButton"
+onclick="openAdmin()">
+
 ⚙ مدیریت عکس و ویدئو
+
 </button>
 
 
-<div id="adminOverlay" onclick="closeAdmin()"></div>
+<div
+id="adminOverlay"
+onclick="closeAdmin()">
+</div>
 
 
-<!-- پنل مدیریت -->
+<!-- ================= ADMIN PANEL ================= -->
+
 <div id="adminPanel">
 
 <div class="admin-header">
@@ -614,15 +893,18 @@ INDUSTRIAL ENGINEERING
 مدیریت عکس و ویدئو
 </h2>
 
-<button class="close" onclick="closeAdmin()">
+<button
+class="close"
+onclick="closeAdmin()">
 ×
 </button>
 
 </div>
 
 
-<!-- ورود -->
-<div id="loginBox" class="admin-box">
+<div
+id="loginBox"
+class="admin-box">
 
 <h3>
 ورود مدیر
@@ -642,19 +924,25 @@ placeholder="رمز عبور">
 ورود
 </button>
 
-<div id="loginStatus" class="status"></div>
+<div
+id="loginStatus"
+class="status">
+</div>
 
 </div>
 
 
-<div id="manageBox" style="display:none;">
+<div
+id="manageBox"
+style="display:none;">
 
 
-<!-- افزودن عکس -->
+<!-- IMAGE -->
+
 <div class="admin-box">
 
 <h3>
-افزودن تصویر برای همین موضوع
+افزودن تصویر
 </h3>
 
 <input
@@ -666,16 +954,20 @@ accept="image/*">
 ＋ افزودن تصویر
 </button>
 
-<div id="imageStatus" class="status"></div>
+<div
+id="imageStatus"
+class="status">
+</div>
 
 </div>
 
 
-<!-- افزودن فیلم -->
+<!-- VIDEO -->
+
 <div class="admin-box">
 
 <h3>
-افزودن ویدئو برای همین موضوع
+افزودن ویدئو
 </h3>
 
 <input
@@ -687,19 +979,25 @@ accept="video/*">
 ＋ افزودن ویدئو
 </button>
 
-<div id="videoStatus" class="status"></div>
+<div
+id="videoStatus"
+class="status">
+</div>
 
 </div>
 
 
-<!-- مدیریت -->
+<!-- MEDIA LIST -->
+
 <div class="admin-box">
 
 <h3>
-فایل‌های همین موضوع
+مدیریت فایل‌های همین موضوع
 </h3>
 
-<div id="adminList" class="admin-list">
+<div
+id="adminList"
+class="admin-list">
 </div>
 
 </div>
@@ -720,9 +1018,9 @@ accept="video/*">
 
 <script>
 
-/* =====================================================
+/* =========================================================
    SUPABASE
-===================================================== */
+========================================================= */
 
 const SUPABASE_URL =
 "https://eurmybgotfgnerdxrwua.supabase.co";
@@ -734,9 +1032,9 @@ const BUCKET =
 "project-media";
 
 
-/* =====================================================
-   تشخیص موضوع از آدرس
-===================================================== */
+/* =========================================================
+   CURRENT TOPIC
+========================================================= */
 
 const params =
 new URLSearchParams(
@@ -748,61 +1046,96 @@ params.get("industry") ||
 "rewinding";
 
 
-/* =====================================================
-   اطلاعات اختصاصی موضوع
-   این بخش به مطالب صفحه اصلی وابسته نیست
-===================================================== */
+/* =========================================================
+   TOPIC INFORMATION
+   این بخش مستقل از محتوای صفحه اصلی است.
+========================================================= */
 
 const topics = {
 
 rewinding:{
-title:"سیم‌پیچی",
-english:"Rewinding",
-question:"سیم‌پیچی چیست؟",
-image:"rewinding.jpg",
 
-text:
-"سیم‌پیچی یکی از فرآیندهای مهم در تجهیزات و ماشین‌آلات الکتریکی و صنعتی است که در آن سیم یا هادی الکتریکی با آرایش مشخص و مهندسی‌شده روی هسته، شیار یا قالب مخصوص قرار می‌گیرد. هدف از این فرآیند ایجاد یک مدار الکتریکی مناسب برای تولید، انتقال یا کنترل میدان مغناطیسی و انرژی الکتریکی است.\n\nدر صنایع مختلف، کیفیت سیم‌پیچی تأثیر مستقیم بر عملکرد، راندمان، قابلیت اطمینان و طول عمر تجهیزات دارد. انتخاب نوع سیم، تعداد دور، نحوه قرارگیری سیم، عایق‌کاری و کنترل ابعادی از عوامل مهم در اجرای صحیح سیم‌پیچی هستند."
+title:"سیم‌پیچی",
+
+english:"Rewinding",
+
+intro:
+"سیم‌پیچی یکی از فرآیندهای مهم در تعمیر، بازسازی و ساخت تجهیزات الکتریکی و صنعتی است. اجرای صحیح این فرآیند نیازمند شناخت دقیق تجهیزات، مشخصات فنی و شرایط کاری ماشین است.",
+
+definition:
+"سیم‌پیچی فرآیندی است که در آن سیم یا هادی الکتریکی با آرایش مشخص روی هسته، شیار یا قالب قرار می‌گیرد تا مدار الکتریکی مورد نیاز تجهیز ایجاد شود. نوع سیم، تعداد دور، سطح مقطع هادی، نحوه آرایش و عایق‌کاری از عوامل مهم در کیفیت نهایی سیم‌پیچی هستند.",
+
+applications:
+"سیم‌پیچی در موتورهای الکتریکی، ژنراتورها، ترانسفورماتورها و بسیاری از تجهیزات صنعتی مورد استفاده قرار می‌گیرد. کنترل دقیق ابعاد، اتصالات، عایق‌بندی و شرایط کاری در افزایش قابلیت اطمینان تجهیز اهمیت دارد."
+
 },
 
 "float-glass":{
-title:"شیشه فلوت و تخت",
-english:"Float & Flat Glass",
-question:"شیشه فلوت و تخت چیست؟",
-image:"float-glass.jpg",
 
-text:
-"شیشه فلوت یکی از فرآیندهای اصلی تولید شیشه تخت است که در آن شیشه مذاب روی سطح فلز مذاب حرکت کرده و به صورت نوار پیوسته شکل می‌گیرد.\n\nکنترل دما، سرعت خط، ضخامت شیشه و شرایط فرآیند از عوامل مهم در کیفیت محصول نهایی هستند."
+title:"شیشه فلوت و تخت",
+
+english:"Float & Flat Glass",
+
+intro:
+"صنعت شیشه فلوت یکی از فرآیندهای مهم تولید شیشه تخت است که در آن شیشه مذاب به صورت پیوسته شکل گرفته و به محصول تخت تبدیل می‌شود.",
+
+definition:
+"در فرآیند فلوت، شیشه مذاب روی حمام فلز مذاب حرکت می‌کند و تحت شرایط کنترل‌شده به نوار شیشه‌ای تبدیل می‌شود. کنترل دما، سرعت خط، ضخامت و کیفیت سطح از عوامل مهم فرآیند هستند.",
+
+applications:
+"محصولات این صنعت در ساختمان، خودرو، تجهیزات صنعتی و بسیاری از کاربردهای تخصصی استفاده می‌شوند."
+
 },
 
 cable:{
-title:"کابل‌سازی",
-english:"Cable Manufacturing",
-question:"کابل‌سازی چیست؟",
-image:"cable.jpg",
 
-text:
-"کابل‌سازی مجموعه‌ای از فرآیندهای صنعتی برای تولید کابل‌های الکتریکی و کنترلی است. این فرآیند می‌تواند شامل آماده‌سازی هادی، عایق‌کاری، تاباندن، روکش‌گذاری و کنترل نهایی محصول باشد.\n\nکیفیت مواد اولیه، کنترل فرآیند و دقت تجهیزات در کیفیت کابل نهایی اهمیت زیادی دارد."
+title:"کابل‌سازی",
+
+english:"Cable Manufacturing",
+
+intro:
+"کابل‌سازی مجموعه‌ای از فرآیندهای صنعتی برای تولید کابل‌های برق، کنترل و انتقال سیگنال است.",
+
+definition:
+"فرآیند تولید کابل می‌تواند شامل آماده‌سازی هادی، عایق‌کاری، تاباندن، روکش‌گذاری و کنترل نهایی باشد. هر مرحله نیازمند تجهیزات و کنترل دقیق فرآیند است.",
+
+applications:
+"کابل‌های تولیدشده در صنایع برق، ساختمان، کارخانه‌ها، ماشین‌آلات و سیستم‌های کنترلی مورد استفاده قرار می‌گیرند."
+
 },
 
 steel:{
-title:"صنعت فولاد",
-english:"Steel Industry",
-question:"صنعت فولاد چیست؟",
-image:"steel.jpg",
 
-text:
-"صنعت فولاد یکی از صنایع مهم و زیرساختی است که مجموعه‌ای از فرآیندهای تولید، شکل‌دهی و انتقال مواد را در بر می‌گیرد.\n\nعملکرد صحیح تجهیزات مکانیکی، سیستم‌های انتقال قدرت، موتورخانه‌ها، خطوط تولید و تجهیزات جانبی نقش مهمی در پایداری و بهره‌وری خطوط فولاد دارد."
+title:"صنعت فولاد",
+
+english:"Steel Industry",
+
+intro:
+"صنعت فولاد یکی از صنایع مادر و زیرساختی است که مجموعه بزرگی از فرآیندهای مکانیکی، حرارتی، الکتریکی و کنترلی را در بر می‌گیرد.",
+
+definition:
+"تولید فولاد شامل مراحل مختلف آماده‌سازی مواد، ذوب، تصفیه، ریخته‌گری و شکل‌دهی است. عملکرد صحیح تجهیزات مکانیکی و سیستم‌های انتقال قدرت برای پایداری خطوط تولید اهمیت زیادی دارد.",
+
+applications:
+"تجهیزات دوار، گیربکس‌ها، موتورهای صنعتی، سیستم‌های انتقال مواد و تجهیزات مکانیکی بخش مهمی از زیرساخت کارخانه‌های فولاد هستند."
+
 },
 
 "container-glass":{
-title:"شیشه بطری",
-english:"Container Glass",
-question:"تولید شیشه بطری چیست؟",
-image:"container-glass.jpg",
 
-text:
-"تولید شیشه بطری فرآیندی صنعتی برای شکل‌دهی شیشه مذاب و تولید ظروف شیشه‌ای است.\n\nدر این فرآیند تجهیزات شکل‌دهی، سیستم‌های انتقال، کنترل دما، خنک‌کاری و تجهیزات مکانیکی مختلف با یکدیگر کار می‌کنند."
+title:"شیشه بطری",
+
+english:"Container Glass",
+
+intro:
+"تولید شیشه بطری فرآیندی صنعتی برای تبدیل شیشه مذاب به ظروف شیشه‌ای با شکل و ابعاد مشخص است.",
+
+definition:
+"در خطوط تولید شیشه بطری، شیشه مذاب پس از آماده‌سازی به ماشین‌های شکل‌دهی منتقل شده و با استفاده از قالب‌ها به محصول نهایی تبدیل می‌شود.",
+
+applications:
+"بطری‌ها و ظروف شیشه‌ای در صنایع غذایی، نوشیدنی، دارویی و سایر صنایع بسته‌بندی مورد استفاده قرار می‌گیرند."
+
 }
 
 };
@@ -813,40 +1146,48 @@ topics[industry] ||
 topics.rewinding;
 
 
-/* =====================================================
-   نمایش موضوع
-===================================================== */
+/* =========================================================
+   PAGE TEXT
+========================================================= */
 
 document.title =
 current.title +
 " | Mohsen Nasri";
 
-document.getElementById("title").innerHTML =
-current.title +
-"<br><span>" +
-current.english +
-"</span>";
+document.getElementById(
+"pageTitle"
+).textContent =
+current.title;
 
-document.getElementById("subtitle").textContent =
-current.question;
+document.getElementById(
+"englishTitle"
+).textContent =
+current.english;
 
-document.getElementById("descriptionTitle").textContent =
-current.question;
+document.getElementById(
+"breadcrumbTitle"
+).textContent =
+current.title;
 
-document.getElementById("description").textContent =
-current.text;
+document.getElementById(
+"introText"
+).textContent =
+current.intro;
 
-document.getElementById("hero").style.setProperty(
-"--hero-image",
-"url('" +
-current.image +
-"')"
-);
+document.getElementById(
+"definitionText"
+).textContent =
+current.definition;
+
+document.getElementById(
+"applicationsText"
+).textContent =
+current.applications;
 
 
-/* =====================================================
-   آدرس فایل Supabase
-===================================================== */
+/* =========================================================
+   FILE URL
+========================================================= */
 
 function getFileURL(item){
 
@@ -876,9 +1217,10 @@ return "";
 }
 
 
-/* =====================================================
-   دریافت فقط رسانه‌های همین موضوع
-===================================================== */
+/* =========================================================
+   LOAD MEDIA
+   فقط فایل‌های همین industry
+========================================================= */
 
 async function loadMedia(){
 
@@ -886,7 +1228,10 @@ const gallery =
 document.getElementById("gallery");
 
 const videos =
-document.getElementById("videos");
+document.getElementById("videosBox");
+
+const articleImages =
+document.getElementById("articleImages");
 
 try{
 
@@ -901,17 +1246,24 @@ encodeURIComponent(industry) +
 
 {
 
-method:"GET",
-
 headers:{
-"apikey":SUPABASE_KEY,
-"Authorization":"Bearer " + SUPABASE_KEY,
-"Accept":"application/json"
+
+"apikey":
+SUPABASE_KEY,
+
+"Authorization":
+"Bearer " +
+SUPABASE_KEY,
+
+"Accept":
+"application/json"
+
 }
 
 }
 
 );
+
 
 if(!response.ok){
 
@@ -922,21 +1274,22 @@ response.status
 
 }
 
+
 const data =
 await response.json();
 
-let images = "";
-let videoHTML = "";
 
+let images="";
+let videosHTML="";
+let articleImageHTML="";
 
-/* فقط رکوردهایی که industry آنها دقیقاً همین موضوع است */
 
 for(const item of data){
 
-const fileURL =
+const url =
 getFileURL(item);
 
-if(!fileURL)
+if(!url)
 continue;
 
 const type =
@@ -946,18 +1299,37 @@ item.media_type || ""
 
 
 if(
-type === "image" ||
-type === "images" ||
-type === "photo"
+type==="image" ||
+type==="images" ||
+type==="photo"
 ){
+
+/* گالری */
 
 images += `
 
 <div class="gallery-item">
 
 <img
-src="${fileURL}"
-alt="${current.title}"
+src="${escapeHTML(url)}"
+alt="${escapeHTML(current.title)}"
+loading="lazy"
+onclick="openImage('${escapeHTML(url)}')">
+
+</div>
+
+`;
+
+
+/* تصاویر همان موضوع داخل متن */
+
+articleImageHTML += `
+
+<div class="article-image">
+
+<img
+src="${escapeHTML(url)}"
+alt="${escapeHTML(current.title)}"
 loading="lazy">
 
 </div>
@@ -968,11 +1340,11 @@ loading="lazy">
 
 
 if(
-type === "video" ||
-type === "videos"
+type==="video" ||
+type==="videos"
 ){
 
-videoHTML += `
+videosHTML += `
 
 <div class="video-box">
 
@@ -980,7 +1352,8 @@ videoHTML += `
 controls
 preload="metadata">
 
-<source src="${fileURL}">
+<source
+src="${escapeHTML(url)}">
 
 مرورگر شما از پخش ویدئو پشتیبانی نمی‌کند.
 
@@ -995,22 +1368,30 @@ preload="metadata">
 }
 
 
+/* نمایش عکس داخل مقاله */
+
+articleImages.innerHTML =
+articleImageHTML;
+
+
+/* نمایش گالری */
+
 gallery.innerHTML =
 images ||
-`
-<div class="empty">
-هنوز تصویری برای «${current.title}» ثبت نشده است.
-</div>
-`;
 
+`<div class="empty">
+هنوز تصویری برای این موضوع ثبت نشده است.
+</div>`;
+
+
+/* نمایش ویدئو */
 
 videos.innerHTML =
-videoHTML ||
-`
-<div class="empty">
-هنوز ویدئویی برای «${current.title}» ثبت نشده است.
-</div>
-`;
+videosHTML ||
+
+`<div class="empty">
+هنوز ویدئویی برای این موضوع ثبت نشده است.
+</div>`;
 
 }
 
@@ -1019,27 +1400,95 @@ catch(error){
 console.error(error);
 
 gallery.innerHTML =
-`
-<div class="empty">
-امکان دریافت تصاویر این موضوع وجود ندارد.
-</div>
-`;
+`<div class="empty">
+خطا در دریافت تصاویر.
+</div>`;
 
 videos.innerHTML =
-`
-<div class="empty">
-امکان دریافت ویدئوهای این موضوع وجود ندارد.
-</div>
-`;
+`<div class="empty">
+خطا در دریافت ویدئوها.
+</div>`;
 
 }
 
 }
 
 
-/* =====================================================
-   پنل مدیریت
-===================================================== */
+/* =========================================================
+   ESCAPE
+========================================================= */
+
+function escapeHTML(value){
+
+return String(value || "")
+.replace(/&/g,"&amp;")
+.replace(/</g,"&lt;")
+.replace(/>/g,"&gt;")
+.replace(/"/g,"&quot;")
+.replace(/'/g,"&#039;");
+
+}
+
+
+/* =========================================================
+   IMAGE VIEW
+========================================================= */
+
+function openImage(url){
+
+const win =
+window.open();
+
+if(!win)
+return;
+
+win.document.write(`
+
+<!DOCTYPE html>
+
+<html dir="rtl">
+
+<head>
+
+<title>تصویر</title>
+
+<style>
+
+body{
+margin:0;
+background:#071018;
+display:flex;
+align-items:center;
+justify-content:center;
+min-height:100vh;
+}
+
+img{
+max-width:96%;
+max-height:96vh;
+object-fit:contain;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<img src="${url}">
+
+</body>
+
+</html>
+
+`);
+
+}
+
+
+/* =========================================================
+   ADMIN OPEN
+========================================================= */
 
 function openAdmin(){
 
@@ -1054,6 +1503,10 @@ document.getElementById(
 }
 
 
+/* =========================================================
+   ADMIN CLOSE
+========================================================= */
+
 function closeAdmin(){
 
 document.getElementById(
@@ -1067,20 +1520,27 @@ document.getElementById(
 }
 
 
-/* =====================================================
-   ورود مدیر
-===================================================== */
+/* =========================================================
+   LOGIN
+========================================================= */
 
 async function login(){
 
 const email =
-document.getElementById("email").value.trim();
+document.getElementById(
+"email"
+).value.trim();
 
 const password =
-document.getElementById("password").value;
+document.getElementById(
+"password"
+).value;
 
 const status =
-document.getElementById("loginStatus");
+document.getElementById(
+"loginStatus"
+);
+
 
 if(!email || !password){
 
@@ -1091,8 +1551,10 @@ return;
 
 }
 
+
 status.textContent =
 "در حال ورود...";
+
 
 try{
 
@@ -1107,18 +1569,27 @@ SUPABASE_URL +
 method:"POST",
 
 headers:{
-"apikey":SUPABASE_KEY,
-"Content-Type":"application/json"
+
+"apikey":
+SUPABASE_KEY,
+
+"Content-Type":
+"application/json"
+
 },
 
 body:JSON.stringify({
+
 email:email,
+
 password:password
+
 })
 
 }
 
 );
+
 
 if(!response.ok){
 
@@ -1128,8 +1599,10 @@ throw new Error(
 
 }
 
+
 const data =
 await response.json();
+
 
 sessionStorage.setItem(
 "mn_admin",
@@ -1140,6 +1613,7 @@ sessionStorage.setItem(
 "mn_access_token",
 data.access_token
 );
+
 
 document.getElementById(
 "loginBox"
@@ -1152,6 +1626,7 @@ document.getElementById(
 document.getElementById(
 "adminButton"
 ).style.display="block";
+
 
 status.textContent="";
 
@@ -1170,9 +1645,9 @@ error.message;
 }
 
 
-/* =====================================================
-   خروج
-===================================================== */
+/* =========================================================
+   LOGOUT
+========================================================= */
 
 function logout(){
 
@@ -1199,9 +1674,9 @@ document.getElementById(
 }
 
 
-/* =====================================================
-   بررسی ورود
-===================================================== */
+/* =========================================================
+   CHECK LOGIN
+========================================================= */
 
 function checkLogin(){
 
@@ -1230,9 +1705,9 @@ loadAdminMedia();
 }
 
 
-/* =====================================================
-   آپلود فایل
-===================================================== */
+/* =========================================================
+   UPLOAD FILE
+========================================================= */
 
 async function uploadFile(
 file,
@@ -1249,10 +1724,12 @@ return false;
 
 }
 
+
 const token =
 sessionStorage.getItem(
 "mn_access_token"
 );
+
 
 if(!token){
 
@@ -1263,8 +1740,10 @@ return false;
 
 }
 
+
 statusElement.textContent =
 "در حال آپلود...";
+
 
 try{
 
@@ -1274,13 +1753,6 @@ file.name
 .pop()
 .toLowerCase();
 
-
-/*
-فایل داخل پوشه همان موضوع ذخیره می‌شود.
-مثلاً:
-rewinding/xxxxx.jpg
-float-glass/xxxxx.jpg
-*/
 
 const fileName =
 industry +
@@ -1308,9 +1780,17 @@ fileName,
 method:"POST",
 
 headers:{
-"apikey":SUPABASE_KEY,
-"Authorization":"Bearer " + token,
-"Content-Type":file.type
+
+"apikey":
+SUPABASE_KEY,
+
+"Authorization":
+"Bearer " +
+token,
+
+"Content-Type":
+file.type
+
 },
 
 body:file
@@ -1329,10 +1809,6 @@ await upload.text()
 }
 
 
-/*
-رکورد دقیقاً با industry همین صفحه ثبت می‌شود
-*/
-
 const insert =
 await fetch(
 
@@ -1344,10 +1820,20 @@ SUPABASE_URL +
 method:"POST",
 
 headers:{
-"apikey":SUPABASE_KEY,
-"Authorization":"Bearer " + token,
-"Content-Type":"application/json",
-"Prefer":"return=minimal"
+
+"apikey":
+SUPABASE_KEY,
+
+"Authorization":
+"Bearer " +
+token,
+
+"Content-Type":
+"application/json",
+
+"Prefer":
+"return=minimal"
+
 },
 
 body:JSON.stringify({
@@ -1375,8 +1861,10 @@ await insert.text()
 
 }
 
+
 statusElement.textContent =
-"فایل با موفقیت برای همین موضوع اضافه شد.";
+"فایل با موفقیت اضافه شد.";
+
 
 await loadMedia();
 
@@ -1391,7 +1879,7 @@ catch(error){
 console.error(error);
 
 statusElement.textContent =
-"خطا در آپلود: " +
+"خطا: " +
 error.message;
 
 return false;
@@ -1401,74 +1889,94 @@ return false;
 }
 
 
-/* =====================================================
-   آپلود تصویر
-===================================================== */
+/* =========================================================
+   UPLOAD IMAGE
+========================================================= */
 
 async function uploadImage(){
 
 const input =
-document.getElementById("imageFile");
-
-const status =
-document.getElementById("imageStatus");
-
-const ok =
-await uploadFile(
-input.files[0],
-"image",
-status
+document.getElementById(
+"imageFile"
 );
 
-if(ok)
+const status =
+document.getElementById(
+"imageStatus"
+);
+
+
+const result =
+await uploadFile(
+
+input.files[0],
+
+"image",
+
+status
+
+);
+
+
+if(result)
 input.value="";
 
 }
 
 
-/* =====================================================
-   آپلود ویدئو
-===================================================== */
+/* =========================================================
+   UPLOAD VIDEO
+========================================================= */
 
 async function uploadVideo(){
 
 const input =
-document.getElementById("videoFile");
-
-const status =
-document.getElementById("videoStatus");
-
-const ok =
-await uploadFile(
-input.files[0],
-"video",
-status
+document.getElementById(
+"videoFile"
 );
 
-if(ok)
+const status =
+document.getElementById(
+"videoStatus"
+);
+
+
+const result =
+await uploadFile(
+
+input.files[0],
+
+"video",
+
+status
+
+);
+
+
+if(result)
 input.value="";
 
 }
 
 
-/* =====================================================
-   لیست مدیریت
-===================================================== */
+/* =========================================================
+   ADMIN MEDIA
+========================================================= */
 
 async function loadAdminMedia(){
 
 const box =
-document.getElementById("adminList");
+document.getElementById(
+"adminList"
+);
+
+try{
 
 const token =
 sessionStorage.getItem(
 "mn_access_token"
 );
 
-if(!token)
-return;
-
-try{
 
 const response =
 await fetch(
@@ -1482,13 +1990,20 @@ encodeURIComponent(industry) +
 {
 
 headers:{
-"apikey":SUPABASE_KEY,
-"Authorization":"Bearer " + token
+
+"apikey":
+SUPABASE_KEY,
+
+"Authorization":
+"Bearer " +
+token
+
 }
 
 }
 
 );
+
 
 if(!response.ok){
 
@@ -1498,19 +2013,20 @@ await response.text()
 
 }
 
+
 const data =
 await response.json();
 
+
 box.innerHTML="";
+
 
 if(!data.length){
 
 box.innerHTML =
-`
-<div class="empty">
-برای این موضوع هنوز عکس یا ویدئویی وجود ندارد.
-</div>
-`;
+`<div class="empty">
+هنوز فایل اضافه نشده است.
+</div>`;
 
 return;
 
@@ -1527,13 +2043,17 @@ String(
 item.media_type || ""
 ).toLowerCase();
 
+
 const isImage =
 type==="image" ||
 type==="images" ||
 type==="photo";
 
+
 const div =
-document.createElement("div");
+document.createElement(
+"div"
+);
 
 div.className =
 "admin-item";
@@ -1544,11 +2064,11 @@ if(isImage){
 div.innerHTML = `
 
 <img
-src="${url}"
+src="${escapeHTML(url)}"
 alt="">
 
 <small>
-${item.title || "تصویر"}
+${escapeHTML(item.title || "تصویر")}
 </small>
 
 <input
@@ -1572,12 +2092,13 @@ div.innerHTML = `
 
 <video controls>
 
-<source src="${url}">
+<source
+src="${escapeHTML(url)}">
 
 </video>
 
 <small>
-${item.title || "ویدئو"}
+${escapeHTML(item.title || "ویدئو")}
 </small>
 
 <input
@@ -1623,10 +2144,17 @@ input.files[0];
 if(!file)
 return;
 
+
 await replaceMedia(
+
 item,
+
 file,
-isImage ? "image" : "video"
+
+isImage ?
+"image" :
+"video"
+
 );
 
 };
@@ -1653,20 +2181,18 @@ catch(error){
 console.error(error);
 
 box.innerHTML =
-`
-<div class="empty">
-خطا در دریافت فایل‌های این موضوع.
-</div>
-`;
+`<div class="empty">
+خطا در دریافت فایل‌ها.
+</div>`;
 
 }
 
 }
 
 
-/* =====================================================
-   جایگزینی فایل
-===================================================== */
+/* =========================================================
+   REPLACE MEDIA
+========================================================= */
 
 async function replaceMedia(
 oldItem,
@@ -1680,6 +2206,7 @@ const token =
 sessionStorage.getItem(
 "mn_access_token"
 );
+
 
 const extension =
 newFile.name
@@ -1714,9 +2241,17 @@ newFileName,
 method:"POST",
 
 headers:{
-"apikey":SUPABASE_KEY,
-"Authorization":"Bearer " + token,
-"Content-Type":newFile.type
+
+"apikey":
+SUPABASE_KEY,
+
+"Authorization":
+"Bearer " +
+token,
+
+"Content-Type":
+newFile.type
+
 },
 
 body:newFile
@@ -1747,9 +2282,17 @@ encodeURIComponent(oldItem.id),
 method:"PATCH",
 
 headers:{
-"apikey":SUPABASE_KEY,
-"Authorization":"Bearer " + token,
-"Content-Type":"application/json"
+
+"apikey":
+SUPABASE_KEY,
+
+"Authorization":
+"Bearer " +
+token,
+
+"Content-Type":
+"application/json"
+
 },
 
 body:JSON.stringify({
@@ -1776,7 +2319,7 @@ await update.text()
 }
 
 
-/* حذف فایل قدیمی */
+/* حذف فایل قبلی */
 
 if(oldItem.file_path){
 
@@ -1791,9 +2334,17 @@ BUCKET,
 method:"DELETE",
 
 headers:{
-"apikey":SUPABASE_KEY,
-"Authorization":"Bearer " + token,
-"Content-Type":"application/json"
+
+"apikey":
+SUPABASE_KEY,
+
+"Authorization":
+"Bearer " +
+token,
+
+"Content-Type":
+"application/json"
+
 },
 
 body:JSON.stringify([
@@ -1804,12 +2355,14 @@ oldItem.file_path
 
 );
 
+
 }
 
 
 await loadMedia();
 
 await loadAdminMedia();
+
 
 alert(
 "فایل با موفقیت جایگزین شد."
@@ -1829,9 +2382,9 @@ error.message
 }
 
 
-/* =====================================================
-   حذف
-===================================================== */
+/* =========================================================
+   DELETE MEDIA
+========================================================= */
 
 async function deleteMedia(item){
 
@@ -1839,8 +2392,12 @@ if(
 !confirm(
 "آیا از حذف این فایل مطمئن هستید؟"
 )
-)
+){
+
 return;
+
+}
+
 
 try{
 
@@ -1850,7 +2407,7 @@ sessionStorage.getItem(
 );
 
 
-/* حذف فایل از Storage */
+/* حذف Storage */
 
 if(item.file_path){
 
@@ -1865,9 +2422,17 @@ BUCKET,
 method:"DELETE",
 
 headers:{
-"apikey":SUPABASE_KEY,
-"Authorization":"Bearer " + token,
-"Content-Type":"application/json"
+
+"apikey":
+SUPABASE_KEY,
+
+"Authorization":
+"Bearer " +
+token,
+
+"Content-Type":
+"application/json"
+
 },
 
 body:JSON.stringify([
@@ -1881,7 +2446,7 @@ item.file_path
 }
 
 
-/* حذف رکورد دیتابیس */
+/* حذف Database */
 
 const response =
 await fetch(
@@ -1895,8 +2460,14 @@ encodeURIComponent(item.id),
 method:"DELETE",
 
 headers:{
-"apikey":SUPABASE_KEY,
-"Authorization":"Bearer " + token
+
+"apikey":
+SUPABASE_KEY,
+
+"Authorization":
+"Bearer " +
+token
+
 }
 
 }
@@ -1931,9 +2502,124 @@ error.message
 }
 
 
-/* =====================================================
-   شروع
-===================================================== */
+/* =========================================================
+   SEARCH
+========================================================= */
+
+const searchInput =
+document.getElementById(
+"searchInput"
+);
+
+const searchResults =
+document.getElementById(
+"searchResults"
+);
+
+
+searchInput.addEventListener(
+"input",
+function(){
+
+const value =
+this.value.trim()
+.toLowerCase();
+
+
+if(!value){
+
+searchResults.style.display="none";
+
+return;
+
+}
+
+
+let results=[];
+
+
+Object.keys(topics)
+.forEach(key=>{
+
+const topic =
+topics[key];
+
+
+const text =
+(
+topic.title +
+" " +
+topic.english +
+" " +
+topic.intro +
+" " +
+topic.definition +
+" " +
+topic.applications
+).toLowerCase();
+
+
+if(text.includes(value)){
+
+results.push({
+
+key:key,
+
+title:topic.title
+
+});
+
+}
+
+});
+
+
+if(!results.length){
+
+searchResults.innerHTML =
+`<a href="#">
+مطلبی پیدا نشد
+</a>`;
+
+}else{
+
+searchResults.innerHTML =
+results.map(item=>`
+
+<a href="topic.html?industry=${encodeURIComponent(item.key)}">
+
+${escapeHTML(item.title)}
+
+</a>
+
+`).join("");
+
+}
+
+
+searchResults.style.display="block";
+
+});
+
+
+document.addEventListener(
+"click",
+function(event){
+
+if(
+!event.target.closest(".search-box")
+){
+
+searchResults.style.display="none";
+
+}
+
+});
+
+
+/* =========================================================
+   START
+========================================================= */
 
 loadMedia();
 
