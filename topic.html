@@ -4,13 +4,9 @@
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
-
-<title>مطالب تخصصی | Mohsen Nasri</title>
+<title>موضوع | Mohsen Nasri</title>
 
 <style>
 
@@ -25,292 +21,245 @@ html{
 }
 
 body{
-
-    font-family:
-        Tahoma,
-        Arial,
-        sans-serif;
-
+    font-family:Tahoma,Arial,sans-serif;
     background:#061019;
-
     color:#fff;
-
     line-height:2;
-
 }
 
 /* ================= HEADER ================= */
 
 header{
-
     position:fixed;
-
     top:0;
     left:0;
-
     width:100%;
-
     z-index:1000;
 
     display:flex;
-
-    justify-content:space-between;
-
     align-items:center;
+    justify-content:space-between;
 
     padding:17px 6%;
 
-    background:
-        rgba(3,10,16,.90);
+    background:rgba(3,10,16,.90);
+    backdrop-filter:blur(15px);
 
-    backdrop-filter:
-        blur(15px);
-
-    border-bottom:
-        1px solid
-        rgba(255,255,255,.08);
-
+    border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .logo{
-
     direction:ltr;
-
     font-size:23px;
-
     font-weight:bold;
-
     white-space:nowrap;
-
 }
 
 .logo span{
-
     color:#00d4ff;
-
 }
 
 nav{
-
     display:flex;
-
     gap:25px;
-
 }
 
 nav a{
-
     color:#fff;
-
     text-decoration:none;
-
     font-size:15px;
-
     transition:.3s;
-
 }
 
 nav a:hover{
-
     color:#00d4ff;
-
 }
 
 /* ================= HERO ================= */
 
-.topic-hero{
+.hero{
 
-    min-height:55vh;
+    min-height:58vh;
 
     display:flex;
-
     align-items:center;
 
-    justify-content:center;
-
-    text-align:center;
-
-    padding:
-        150px
-        7%
-        80px;
-
-    position:relative;
+    padding:140px 7% 80px;
 
     background:
-
         linear-gradient(
-            rgba(2,9,14,.86),
-            rgba(2,9,14,.95)
-        ),
+            90deg,
+            rgba(2,9,14,.96),
+            rgba(2,9,14,.72),
+            rgba(2,9,14,.35)
+        );
 
-        url("rewinding.jpg")
-        center/cover
-        no-repeat;
-
+    border-bottom:1px solid rgba(0,212,255,.10);
 }
 
-.topic-hero-content{
-
-    max-width:1000px;
-
+.hero-content{
+    width:100%;
+    max-width:1100px;
+    margin:auto;
 }
 
-.topic-hero h1{
+.hero-label{
 
-    font-size:
-        clamp(38px,6vw,72px);
+    display:inline-block;
+
+    padding:7px 16px;
+
+    margin-bottom:20px;
+
+    border-radius:30px;
+
+    background:rgba(0,212,255,.10);
+
+    border:1px solid rgba(0,212,255,.30);
+
+    color:#00d4ff;
+
+    font-size:14px;
+}
+
+.hero h1{
+
+    font-size:clamp(40px,6vw,76px);
 
     line-height:1.2;
 
     margin-bottom:20px;
-
 }
 
-.topic-hero h1 span{
-
+.hero h1 span{
     color:#00d4ff;
-
 }
 
-.topic-hero p{
+.hero p{
+
+    max-width:850px;
+
+    color:#c7d2d8;
 
     font-size:19px;
+}
 
-    color:#c7d3d9;
+/* ================= GENERAL ================= */
 
+section{
+    padding:85px 7%;
+}
+
+.dark{
+    background:#091720;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:40px;
+}
+
+.section-title h2{
+
+    font-size:36px;
+
+    margin-bottom:8px;
+}
+
+.section-title p{
+
+    color:#9eafb8;
+
+    font-size:15px;
 }
 
 /* ================= CONTENT ================= */
 
-.topic-section{
+.content-box{
 
-    padding:
-        90px
-        7%;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(0,212,255,.06),
+            rgba(13,25,34,.96)
+        );
 
-}
-
-.topic-container{
-
-    max-width:1050px;
-
-    margin:auto;
-
-}
-
-/* ================= ARTICLE ================= */
-
-.article{
-
-    background:#0b1923;
-
-    border:
-        1px solid
-        rgba(255,255,255,.08);
+    border:1px solid rgba(0,212,255,.12);
 
     border-radius:16px;
 
-    padding:45px;
+    padding:35px;
 
     box-shadow:
-        0 20px 60px
-        rgba(0,0,0,.25);
-
+        0 20px 50px rgba(0,0,0,.20);
 }
 
-.article h2{
+.content-box p{
 
-    color:#00d4ff;
-
-    font-size:30px;
+    color:#cbd5da;
 
     margin-bottom:20px;
-
 }
 
-.article h3{
-
-    color:#00d4ff;
-
-    font-size:23px;
-
-    margin-top:35px;
-
-    margin-bottom:12px;
-
+.content-box p:last-child{
+    margin-bottom:0;
 }
 
-.article p{
+/* ================= TOPIC INFO ================= */
 
-    color:#c5d0d5;
+.info-grid{
 
-    font-size:17px;
+    display:grid;
 
-    margin-bottom:20px;
+    grid-template-columns:
+        repeat(3,1fr);
 
+    gap:20px;
+
+    margin-top:30px;
 }
 
-.article ul{
+.info-card{
 
-    padding-right:25px;
+    background:#0d1b25;
 
-    color:#c5d0d5;
-
-}
-
-.article li{
-
-    margin-bottom:10px;
-
-}
-
-/* ================= IMAGE ================= */
-
-.article-image{
-
-    width:100%;
-
-    max-height:600px;
-
-    object-fit:cover;
+    border:1px solid rgba(255,255,255,.07);
 
     border-radius:14px;
 
-    margin:
-        20px
-        0
-        35px;
+    padding:25px;
 
-    border:
-        1px solid
-        rgba(255,255,255,.08);
-
+    transition:.3s;
 }
 
-/* ================= MEDIA ================= */
+.info-card:hover{
 
-.media-title{
+    transform:translateY(-5px);
 
-    text-align:center;
-
-    margin:
-        70px
-        0
-        30px;
-
+    border-color:#00d4ff;
 }
 
-.media-title h2{
+.info-card h3{
 
-    font-size:32px;
+    color:#00d4ff;
 
+    margin-bottom:10px;
+
+    font-size:18px;
 }
 
-.media-title p{
+.info-card p{
 
-    color:#8fa0aa;
+    color:#aebbc2;
 
+    font-size:14px;
 }
 
 /* ================= GALLERY ================= */
@@ -323,44 +272,69 @@ nav a:hover{
         repeat(3,1fr);
 
     gap:20px;
-
 }
 
 .gallery-item{
 
-    background:#0b1923;
-
-    border-radius:12px;
+    position:relative;
 
     overflow:hidden;
 
-    border:
-        1px solid
-        rgba(255,255,255,.08);
+    min-height:250px;
 
-    transition:.35s;
+    background:#0d1b25;
 
+    border-radius:14px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.3s;
 }
 
 .gallery-item:hover{
 
-    transform:
-        translateY(-5px);
+    transform:translateY(-5px);
 
     border-color:#00d4ff;
-
 }
 
 .gallery-item img{
 
     width:100%;
 
-    height:240px;
+    height:250px;
 
     object-fit:cover;
 
     display:block;
 
+    transition:.4s;
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.05);
+}
+
+.gallery-caption{
+
+    position:absolute;
+
+    right:0;
+    left:0;
+    bottom:0;
+
+    padding:40px 15px 13px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,.90)
+        );
+
+    color:#fff;
+
+    font-size:14px;
 }
 
 /* ================= VIDEOS ================= */
@@ -373,33 +347,30 @@ nav a:hover{
         repeat(2,1fr);
 
     gap:22px;
-
 }
 
 .video-card{
 
-    background:#0b1923;
+    background:#0d1b25;
 
-    padding:18px;
+    padding:16px;
 
     border-radius:14px;
 
-    border:
-        1px solid
-        rgba(255,255,255,.08);
-
+    border:1px solid rgba(255,255,255,.08);
 }
 
 .video-card video{
 
     width:100%;
 
-    display:block;
+    max-height:500px;
 
-    border-radius:10px;
+    display:block;
 
     background:#000;
 
+    border-radius:10px;
 }
 
 .video-title{
@@ -408,10 +379,7 @@ nav a:hover{
 
     font-weight:bold;
 
-    font-size:18px;
-
     margin-top:12px;
-
 }
 
 .video-description{
@@ -421,72 +389,79 @@ nav a:hover{
     font-size:14px;
 
     margin-top:5px;
-
 }
 
 /* ================= EMPTY ================= */
 
 .empty{
 
+    grid-column:1/-1;
+
     text-align:center;
 
-    padding:35px;
+    padding:45px 20px;
 
-    color:#8999a2;
+    background:#0d1b25;
 
-    background:#0b1923;
+    border:1px solid rgba(255,255,255,.07);
 
-    border-radius:12px;
+    border-radius:14px;
 
-    border:
-        1px solid
-        rgba(255,255,255,.07);
-
+    color:#899ba5;
 }
 
-/* ================= BUTTON ================= */
+/* ================= BUTTONS ================= */
 
-.back{
+.buttons{
 
-    text-align:center;
+    display:flex;
 
-    padding:
-        70px
-        7%;
+    justify-content:center;
 
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-top:35px;
 }
 
 .btn{
 
     display:inline-block;
 
-    padding:
-        13px
-        30px;
+    padding:12px 25px;
 
-    border-radius:7px;
-
-    background:#00d4ff;
-
-    color:#001015;
+    border-radius:8px;
 
     text-decoration:none;
 
     font-weight:bold;
 
     transition:.3s;
+}
 
+.btn-main{
+
+    background:#00d4ff;
+
+    color:#001015;
+}
+
+.btn-secondary{
+
+    background:#0d1b25;
+
+    color:#fff;
+
+    border:1px solid rgba(255,255,255,.10);
 }
 
 .btn:hover{
 
-    transform:
-        translateY(-3px);
+    transform:translateY(-3px);
 
     box-shadow:
-        0 10px 30px
-        rgba(0,212,255,.25);
-
+        0 10px 30px rgba(0,0,0,.25);
 }
 
 /* ================= FOOTER ================= */
@@ -500,69 +475,55 @@ footer{
     background:#03090e;
 
     color:#81919a;
-
 }
 
 footer strong{
-
     color:#00d4ff;
-
 }
 
 /* ================= MOBILE ================= */
 
-@media(max-width:800px){
+@media(max-width:850px){
 
     header{
-
-        padding:
-            14px
-            5%;
-
+        padding:14px 5%;
     }
 
     nav{
-
         display:none;
-
     }
 
-    .topic-section{
-
-        padding:
-            60px
-            5%;
-
+    section{
+        padding:65px 6%;
     }
 
-    .article{
+    .hero{
+        min-height:55vh;
+        padding:120px 6% 65px;
+    }
 
-        padding:25px;
+    .hero h1{
+        font-size:clamp(38px,10vw,60px);
+    }
 
+    .hero p{
+        font-size:17px;
     }
 
     .gallery{
-
         grid-template-columns:1fr;
-
     }
 
     .video-grid{
-
         grid-template-columns:1fr;
-
     }
 
-    .article h2{
-
-        font-size:25px;
-
+    .info-grid{
+        grid-template-columns:1fr;
     }
 
-    .article p{
-
-        font-size:16px;
-
+    .content-box{
+        padding:25px;
     }
 
 }
@@ -581,8 +542,7 @@ footer strong{
 
     <div class="logo">
 
-        Mohsen
-        <span>Nasri</span>
+        Mohsen <span>Nasri</span>
 
     </div>
 
@@ -593,8 +553,8 @@ footer strong{
             خانه
         </a>
 
-        <a href="rewinding.html">
-            سیم‌پیچی
+        <a href="javascript:history.back()">
+            بازگشت
         </a>
 
     </nav>
@@ -602,22 +562,31 @@ footer strong{
 </header>
 
 
-
 <!-- ================= HERO ================= -->
 
-<section class="topic-hero">
+<section class="hero">
 
-    <div
-        id="heroContent"
-        class="topic-hero-content"
-    >
+    <div class="hero-content">
+
+        <div
+            id="topicLabel"
+            class="hero-label"
+        >
+            در حال بارگذاری...
+        </div>
+
 
         <h1>
-            در حال بارگذاری...
+
+            <span id="topicTitle">
+                موضوع
+            </span>
+
         </h1>
 
-        <p>
-            لطفاً چند لحظه صبر کنید
+
+        <p id="topicSubtitle">
+            در حال دریافت اطلاعات موضوع...
         </p>
 
     </div>
@@ -625,60 +594,73 @@ footer strong{
 </section>
 
 
+<!-- ================= CONTENT ================= -->
 
-<!-- ================= ARTICLE ================= -->
+<section>
 
-<section class="topic-section">
+    <div class="container">
 
-    <div class="topic-container">
+        <div class="section-title">
 
-        <article
-            id="article"
-            class="article"
+            <h2>
+                درباره این موضوع
+            </h2>
+
+            <p>
+                اطلاعات اختصاصی این موضوع
+            </p>
+
+        </div>
+
+
+        <div
+            id="topicContent"
+            class="content-box"
         >
 
-            <div class="empty">
+            در حال دریافت اطلاعات...
 
-                در حال دریافت اطلاعات مطلب...
+        </div>
 
-            </div>
 
-        </article>
+        <div
+            id="infoGrid"
+            class="info-grid"
+        ></div>
 
     </div>
 
 </section>
 
 
+<!-- ================= TOPIC GALLERY ================= -->
 
-<!-- ================= GALLERY ================= -->
+<section
+    class="dark"
+>
 
-<section>
+    <div class="container">
 
-    <div class="topic-container">
-
-        <div class="media-title">
+        <div class="section-title">
 
             <h2>
                 تصاویر این موضوع
             </h2>
 
             <p>
-                تصاویر اختصاصی مرتبط با این مطلب
+                فقط تصاویر مربوط به همین موضوع
             </p>
 
         </div>
 
 
         <div
-            id="gallery"
+            id="topicGallery"
             class="gallery"
         >
 
             <div class="empty">
-
                 در حال دریافت تصاویر...
-
             </div>
 
         </div>
@@ -688,37 +670,32 @@ footer strong{
 </section>
 
 
+<!-- ================= TOPIC VIDEOS ================= -->
 
-<!-- ================= VIDEOS ================= -->
+<section>
 
-<section
-    style="background:#091720;"
->
+    <div class="container">
 
-    <div class="topic-container">
-
-        <div class="media-title">
+        <div class="section-title">
 
             <h2>
                 ویدئوهای این موضوع
             </h2>
 
             <p>
-                ویدئوهای مرتبط با این مطلب
+                فقط ویدئوهای مربوط به همین موضوع
             </p>
 
         </div>
 
 
         <div
-            id="videos"
+            id="topicVideos"
             class="video-grid"
         >
 
             <div class="empty">
-
                 در حال دریافت ویدئوها...
-
             </div>
 
         </div>
@@ -728,29 +705,34 @@ footer strong{
 </section>
 
 
-
 <!-- ================= BACK ================= -->
 
-<div class="back">
+<section>
 
-    <a
-        href="rewinding.html"
-        class="btn"
-    >
-        ← بازگشت به سیم‌پیچی
-    </a>
+    <div class="container">
 
-    &nbsp;
+        <div class="buttons">
 
-    <a
-        href="index.html"
-        class="btn"
-    >
-        صفحه اصلی
-    </a>
+            <a
+                href="javascript:history.back()"
+                class="btn btn-secondary"
+            >
+                ← بازگشت به مطالب
+            </a>
 
-</div>
 
+            <a
+                href="index.html"
+                class="btn btn-main"
+            >
+                صفحه اصلی
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 
 
 <!-- ================= FOOTER ================= -->
@@ -763,10 +745,9 @@ footer strong{
         Mohsen Nasri
     </strong>
 
-    — Industrial Engineering
+    — مهندسی صنعتی
 
 </footer>
-
 
 
 <!-- ================= SUPABASE ================= -->
@@ -776,9 +757,9 @@ footer strong{
 
 <script>
 
-/* ================================
+/* =========================================
    SUPABASE
-================================ */
+========================================= */
 
 const SUPABASE_URL =
     "https://eurmybgotfgnerdxrwua.supabase.co";
@@ -795,13 +776,17 @@ const supabaseClient =
     );
 
 
+/* =========================================
+   BUCKET
+========================================= */
+
 const BUCKET =
     "project-media";
 
 
-/* ================================
-   GET ID
-================================ */
+/* =========================================
+   GET TOPIC ID
+========================================= */
 
 const params =
     new URLSearchParams(
@@ -813,16 +798,14 @@ const topicId =
     params.get("id");
 
 
-/* ================================
-   PUBLIC URL
-================================ */
+/* =========================================
+   PUBLIC MEDIA URL
+========================================= */
 
 function getMediaUrl(path){
 
     if(!path){
-
         return "";
-
     }
 
 
@@ -846,47 +829,67 @@ function getMediaUrl(path){
 }
 
 
-/* ================================
+/* =========================================
+   ESCAPE HTML
+========================================= */
+
+function escapeHtml(value){
+
+    return String(value ?? "")
+
+        .replaceAll("&","&amp;")
+
+        .replaceAll("<","&lt;")
+
+        .replaceAll(">","&gt;")
+
+        .replaceAll('"',"&quot;")
+
+        .replaceAll("'","&#039;");
+
+}
+
+
+/* =========================================
    LOAD TOPIC
-================================ */
+========================================= */
 
 async function loadTopic(){
 
-    const hero =
+    const title =
         document.getElementById(
-            "heroContent"
+            "topicTitle"
         );
 
-
-    const article =
+    const label =
         document.getElementById(
-            "article"
+            "topicLabel"
+        );
+
+    const subtitle =
+        document.getElementById(
+            "topicSubtitle"
+        );
+
+    const content =
+        document.getElementById(
+            "topicContent"
         );
 
 
     if(!topicId){
 
-        hero.innerHTML = `
+        title.textContent =
+            "موضوع پیدا نشد";
 
-            <h1>
-                مطلب پیدا نشد
-            </h1>
+        label.textContent =
+            "خطا";
 
-            <p>
-                شناسه مطلب مشخص نیست.
-            </p>
+        subtitle.textContent =
+            "شناسه موضوع در آدرس صفحه وجود ندارد.";
 
-        `;
-
-        article.innerHTML = `
-
-            <div class="empty">
-
-                شناسه این مطلب وجود ندارد.
-
-            </div>
-
-        `;
+        content.innerHTML =
+            "<p>لطفاً از صفحه مطالب وارد یکی از موضوعات شوید.</p>";
 
         return;
 
@@ -899,43 +902,26 @@ async function loadTopic(){
             data,
             error
         } =
-        await supabaseClient
+            await supabaseClient
 
-            .from("industry_content")
+                .from("industry_content")
 
-            .select("*")
+                .select("*")
 
-            .eq(
-                "id",
-                topicId
-            )
+                .eq("id",topicId)
 
-            .single();
+                .maybeSingle();
 
 
         if(error){
 
             console.error(error);
 
+            title.textContent =
+                "خطا در دریافت موضوع";
 
-            hero.innerHTML = `
-
-                <h1>
-                    خطا در دریافت مطلب
-                </h1>
-
-            `;
-
-
-            article.innerHTML = `
-
-                <div class="empty">
-
-                    خطا در دریافت اطلاعات از پایگاه داده.
-
-                </div>
-
-            `;
+            content.innerHTML =
+                "<p>اطلاعات موضوع دریافت نشد.</p>";
 
             return;
 
@@ -944,521 +930,491 @@ async function loadTopic(){
 
         if(!data){
 
-            hero.innerHTML = `
+            title.textContent =
+                "موضوع پیدا نشد";
 
-                <h1>
-                    مطلب پیدا نشد
-                </h1>
-
-            `;
-
-
-            article.innerHTML = `
-
-                <div class="empty">
-
-                    این مطلب وجود ندارد.
-
-                </div>
-
-            `;
+            content.innerHTML =
+                "<p>این موضوع در پایگاه اطلاعاتی وجود ندارد.</p>";
 
             return;
 
         }
 
 
-        const title =
+        title.textContent =
             data.title ||
             "موضوع بدون عنوان";
 
 
-        const content =
+        label.textContent =
+            data.industry ||
+            "موضوع صنعتی";
+
+
+        subtitle.textContent =
+            data.subtitle ||
+            "اطلاعات تخصصی و اجرایی";
+
+
+        const text =
             data.content ||
-            "برای این موضوع هنوز محتوایی ثبت نشده است.";
+            data.description ||
+            "";
 
 
-        document.title =
-            title +
-            " | Mohsen Nasri";
+        if(text){
+
+            const paragraphs =
+                String(text)
+                    .split(/\n+/)
+                    .filter(Boolean);
 
 
-        hero.innerHTML = `
+            content.innerHTML =
+                paragraphs
+                    .map(function(p){
 
-            <h1>
+                        return "<p>" +
+                            escapeHtml(p) +
+                            "</p>";
 
-                ${escapeHtml(title)}
+                    })
+                    .join("");
 
-            </h1>
+        }
+        else{
 
-            <p>
+            content.innerHTML =
+                "<p>هنوز توضیحی برای این موضوع ثبت نشده است.</p>";
 
-                محتوای تخصصی
-                صنعت سیم‌پیچی
-
-            </p>
-
-        `;
+        }
 
 
-        article.innerHTML = `
+        /*
+         * اگر content_type و اطلاعات تکمیلی وجود داشته باشد
+         */
 
-            <h2>
+        const infoGrid =
+            document.getElementById(
+                "infoGrid"
+            );
 
-                ${escapeHtml(title)}
 
-            </h2>
+        infoGrid.innerHTML = "";
 
-            <div>
 
-                ${formatContent(content)}
+        if(data.content_type){
 
-            </div>
+            infoGrid.innerHTML += `
 
-        `;
+                <div class="info-card">
+
+                    <h3>
+                        نوع محتوا
+                    </h3>
+
+                    <p>
+                        ${escapeHtml(data.content_type)}
+                    </p>
+
+                </div>
+
+            `;
+
+        }
+
+
+        if(data.industry){
+
+            infoGrid.innerHTML += `
+
+                <div class="info-card">
+
+                    <h3>
+                        صنعت
+                    </h3>
+
+                    <p>
+                        ${escapeHtml(data.industry)}
+                    </p>
+
+                </div>
+
+            `;
+
+        }
+
+
+        if(data.sort_order !== null &&
+           data.sort_order !== undefined){
+
+            infoGrid.innerHTML += `
+
+                <div class="info-card">
+
+                    <h3>
+                        ترتیب نمایش
+                    </h3>
+
+                    <p>
+                        ${escapeHtml(data.sort_order)}
+                    </p>
+
+                </div>
+
+            `;
+
+        }
+
+
+        /*
+         * بعد از دریافت موضوع،
+         * رسانه‌های همان موضوع را دریافت می‌کنیم.
+         */
+
+        await loadTopicMedia(
+            data
+        );
 
 
     }
-
     catch(error){
 
         console.error(error);
 
+        title.textContent =
+            "خطا";
 
-        hero.innerHTML = `
-
-            <h1>
-                خطا
-            </h1>
-
-        `;
-
-
-        article.innerHTML = `
-
-            <div class="empty">
-
-                خطا در بارگذاری مطلب.
-
-            </div>
-
-        `;
+        content.innerHTML =
+            "<p>خطایی هنگام دریافت اطلاعات رخ داد.</p>";
 
     }
 
 }
 
 
-/* ================================
-   LOAD RELATED IMAGES
-================================ */
+/* =========================================
+   LOAD TOPIC MEDIA
+========================================= */
 
-async function loadImages(){
+async function loadTopicMedia(topic){
 
     const gallery =
         document.getElementById(
-            "gallery"
+            "topicGallery"
         );
 
 
-    try{
-
-        const {
-            data,
-            error
-        } =
-        await supabaseClient
-
-            .from("industry_media")
-
-            .select(
-                "id,industry,media_type,file_path"
-            )
-
-            .eq(
-                "industry",
-                "rewinding"
-            )
-
-            .eq(
-                "media_type",
-                "image"
-            )
-
-            .order(
-                "id",
-                {
-                    ascending:false
-                }
-            );
-
-
-        if(error){
-
-            console.error(error);
-
-
-            gallery.innerHTML = `
-
-                <div class="empty">
-
-                    خطا در دریافت تصاویر.
-
-                </div>
-
-            `;
-
-            return;
-
-        }
-
-
-        if(
-            !data ||
-            data.length === 0
-        ){
-
-            gallery.innerHTML = `
-
-                <div class="empty">
-
-                    هنوز تصویری برای این صنعت اضافه نشده است.
-
-                </div>
-
-            `;
-
-            return;
-
-        }
-
-
-        gallery.innerHTML = "";
-
-
-        data.forEach(function(item){
-
-            const url =
-                getMediaUrl(
-                    item.file_path
-                );
-
-
-            if(!url){
-
-                return;
-
-            }
-
-
-            const box =
-                document.createElement(
-                    "div"
-                );
-
-
-            box.className =
-                "gallery-item";
-
-
-            const img =
-                document.createElement(
-                    "img"
-                );
-
-
-            img.src =
-                url;
-
-
-            img.alt =
-                "تصویر مرتبط";
-
-
-            img.loading =
-                "lazy";
-
-
-            box.appendChild(
-                img
-            );
-
-
-            gallery.appendChild(
-                box
-            );
-
-        });
-
-
-    }
-
-    catch(error){
-
-        console.error(error);
-
-
-        gallery.innerHTML = `
-
-            <div class="empty">
-
-                خطا در بارگذاری تصاویر.
-
-            </div>
-
-        `;
-
-    }
-
-}
-
-
-/* ================================
-   LOAD VIDEOS
-================================ */
-
-async function loadVideos(){
-
-    const container =
+    const videos =
         document.getElementById(
-            "videos"
+            "topicVideos"
         );
 
 
+    gallery.innerHTML =
+        '<div class="empty">در حال دریافت تصاویر...</div>';
+
+
+    videos.innerHTML =
+        '<div class="empty">در حال دریافت ویدئوها...</div>';
+
+
     try{
+
+        /*
+         * رسانه‌های این موضوع باید در
+         * file_path مسیر مخصوص topic داشته باشند.
+         *
+         * مثال:
+         *
+         * topics/rewinding/12/image.jpg
+         *
+         * topics/rewinding/12/video.mp4
+         *
+         * در نتیجه تصاویر عمومی صنعت که مثلاً
+         * در rewinding/ ذخیره شده‌اند اینجا نمایش داده نمی‌شوند.
+         */
+
+
+        const industry =
+            topic.industry ||
+            "rewinding";
+
+
+        const topicFolder =
+            "topics/" +
+            industry +
+            "/" +
+            topic.id +
+            "/";
+
 
         const {
             data,
             error
         } =
-        await supabaseClient
+            await supabaseClient
 
-            .from("industry_media")
+                .from("industry_media")
 
-            .select(
-                "id,industry,media_type,file_path"
-            )
+                .select(
+                    "id,industry,media_type,file_path"
+                )
 
-            .eq(
-                "industry",
-                "rewinding"
-            )
+                .eq(
+                    "industry",
+                    industry
+                )
 
-            .eq(
-                "media_type",
-                "video"
-            )
+                .like(
+                    "file_path",
+                    topicFolder + "%"
+                )
 
-            .order(
-                "id",
-                {
-                    ascending:false
-                }
-            );
+                .order(
+                    "id",
+                    {
+                        ascending:false
+                    }
+                );
 
 
         if(error){
 
             console.error(error);
 
+            gallery.innerHTML =
+                '<div class="empty">خطا در دریافت تصاویر موضوع.</div>';
 
-            container.innerHTML = `
-
-                <div class="empty">
-
-                    خطا در دریافت ویدئوها.
-
-                </div>
-
-            `;
+            videos.innerHTML =
+                '<div class="empty">خطا در دریافت ویدئوهای موضوع.</div>';
 
             return;
 
         }
 
 
-        if(
-            !data ||
-            data.length === 0
-        ){
+        const media =
+            Array.isArray(data)
+                ? data
+                : [];
 
-            container.innerHTML = `
 
-                <div class="empty">
+        const images =
+            media.filter(function(item){
 
-                    هنوز ویدئویی اضافه نشده است.
+                return String(
+                    item.media_type || ""
+                ).toLowerCase()
+                ===
+                "image";
 
-                </div>
+            });
 
-            `;
 
-            return;
+        const videoItems =
+            media.filter(function(item){
+
+                return String(
+                    item.media_type || ""
+                ).toLowerCase()
+                ===
+                "video";
+
+            });
+
+
+        /* =========================
+           IMAGES
+        ========================= */
+
+        if(images.length === 0){
+
+            gallery.innerHTML =
+                '<div class="empty">هنوز تصویری برای این موضوع اضافه نشده است.</div>';
+
+        }
+        else{
+
+            gallery.innerHTML = "";
+
+
+            images.forEach(function(item){
+
+                const url =
+                    getMediaUrl(
+                        item.file_path
+                    );
+
+
+                if(!url){
+                    return;
+                }
+
+
+                const box =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                box.className =
+                    "gallery-item";
+
+
+                const img =
+                    document.createElement(
+                        "img"
+                    );
+
+
+                img.src =
+                    url;
+
+
+                img.alt =
+                    topic.title ||
+                    "تصویر موضوع";
+
+
+                img.loading =
+                    "lazy";
+
+
+                const caption =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                caption.className =
+                    "gallery-caption";
+
+
+                caption.textContent =
+                    topic.title ||
+                    "تصویر موضوع";
+
+
+                box.appendChild(img);
+
+                box.appendChild(caption);
+
+
+                gallery.appendChild(box);
+
+            });
 
         }
 
 
-        container.innerHTML = "";
+        /* =========================
+           VIDEOS
+        ========================= */
+
+        if(videoItems.length === 0){
+
+            videos.innerHTML =
+                '<div class="empty">هنوز ویدئویی برای این موضوع اضافه نشده است.</div>';
+
+        }
+        else{
+
+            videos.innerHTML = "";
 
 
-        data.forEach(function(item){
+            videoItems.forEach(function(item){
 
-            const url =
-                getMediaUrl(
-                    item.file_path
-                );
-
-
-            if(!url){
-
-                return;
-
-            }
+                const url =
+                    getMediaUrl(
+                        item.file_path
+                    );
 
 
-            const box =
-                document.createElement(
-                    "div"
-                );
+                if(!url){
+                    return;
+                }
 
 
-            box.className =
-                "video-card";
+                const box =
+                    document.createElement(
+                        "div"
+                    );
 
 
-            const video =
-                document.createElement(
-                    "video"
-                );
+                box.className =
+                    "video-card";
 
 
-            video.controls =
-                true;
+                const video =
+                    document.createElement(
+                        "video"
+                    );
 
 
-            video.preload =
-                "metadata";
+                video.controls =
+                    true;
 
 
-            video.src =
-                url;
+                video.preload =
+                    "metadata";
 
 
-            box.appendChild(
-                video
-            );
+                video.src =
+                    url;
 
 
-            container.appendChild(
-                box
-            );
+                const title =
+                    document.createElement(
+                        "div"
+                    );
 
-        });
+
+                title.className =
+                    "video-title";
+
+
+                title.textContent =
+                    topic.title ||
+                    "ویدئوی موضوع";
+
+
+                box.appendChild(video);
+
+                box.appendChild(title);
+
+
+                videos.appendChild(box);
+
+            });
+
+        }
 
 
     }
-
     catch(error){
 
         console.error(error);
 
+        gallery.innerHTML =
+            '<div class="empty">خطا در بارگذاری تصاویر.</div>';
 
-        container.innerHTML = `
-
-            <div class="empty">
-
-                خطا در بارگذاری ویدئوها.
-
-            </div>
-
-        `;
+        videos.innerHTML =
+            '<div class="empty">خطا در بارگذاری ویدئوها.</div>';
 
     }
 
 }
 
 
-/* ================================
-   FORMAT CONTENT
-================================ */
-
-function formatContent(value){
-
-    return String(value || "")
-
-        .replace(
-            /\n\n/g,
-            "</p><p>"
-        )
-
-        .replace(
-            /\n/g,
-            "<br>"
-        )
-
-        .replace(
-            /^/,
-            "<p>"
-        )
-
-        .replace(
-            /$/,
-            "</p>"
-        );
-
-}
-
-
-/* ================================
-   ESCAPE
-================================ */
-
-function escapeHtml(value){
-
-    return String(
-        value ?? ""
-    )
-
-    .replaceAll(
-        "&",
-        "&amp;"
-    )
-
-    .replaceAll(
-        "<",
-        "&lt;"
-    )
-
-    .replaceAll(
-        ">",
-        "&gt;"
-    )
-
-    .replaceAll(
-        '"',
-        "&quot;"
-    )
-
-    .replaceAll(
-        "'",
-        "&#039;"
-    );
-
-}
-
-
-/* ================================
+/* =========================================
    START
-================================ */
+========================================= */
 
 loadTopic();
-
-loadImages();
-
-loadVideos();
 
 </script>
 
 
 </body>
-
 </html>
