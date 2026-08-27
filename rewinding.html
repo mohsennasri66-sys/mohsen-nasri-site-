@@ -2,13 +2,10 @@
 <html lang="fa" dir="rtl">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<title>صنعت سیم‌پیچی | Mohsen Nasri</title>
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<title>سیم‌پیچی | Mohsen Nasri</title>
 
 <style>
 
@@ -24,7 +21,7 @@ html{
 
 body{
     font-family:Tahoma,Arial,sans-serif;
-    background:#050c12;
+    background:#061019;
     color:#fff;
     line-height:1.9;
 }
@@ -39,13 +36,13 @@ header{
     z-index:1000;
 
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    justify-content:space-between;
 
-    padding:16px 6%;
+    padding:17px 6%;
 
     background:rgba(3,10,16,.88);
-    backdrop-filter:blur(16px);
+    backdrop-filter:blur(15px);
 
     border-bottom:1px solid rgba(255,255,255,.08);
 }
@@ -58,88 +55,74 @@ header{
 }
 
 .logo span{
-    color:#00d4c7;
+    color:#00d4ff;
 }
 
 nav{
     display:flex;
-    gap:24px;
+    gap:25px;
 }
 
 nav a{
     color:#fff;
     text-decoration:none;
-    font-size:14px;
+    font-size:15px;
     transition:.3s;
 }
 
 nav a:hover{
-    color:#00d4c7;
+    color:#00d4ff;
 }
 
 /* ================= HERO ================= */
 
 .hero{
-
     min-height:72vh;
 
     display:flex;
     align-items:center;
 
-    padding:130px 7% 80px;
+    padding:140px 7% 80px;
 
     position:relative;
 
     background:
         linear-gradient(
             90deg,
-            rgba(2,8,13,.95),
-            rgba(2,8,13,.70),
-            rgba(2,8,13,.35)
+            rgba(2,9,14,.94),
+            rgba(2,9,14,.68),
+            rgba(2,9,14,.30)
         ),
         url("rewinding.jpg") center/cover no-repeat;
 }
 
 .hero-content{
     max-width:850px;
-    direction:ltr;
-    text-align:left;
 }
 
 .hero h1{
-    font-size:clamp(45px,7vw,82px);
-    line-height:1.05;
-    margin-bottom:22px;
+    font-size:clamp(44px,7vw,82px);
+    line-height:1.1;
+    margin-bottom:20px;
 }
 
 .hero h1 span{
-    color:#00d4c7;
+    color:#00d4ff;
 }
 
 .hero p{
-    color:#d1d9de;
-    font-size:19px;
+    font-size:20px;
+    color:#d2dce1;
 }
 
-/* ================= GENERAL ================= */
+/* ================= SECTION ================= */
 
 section{
     padding:90px 7%;
 }
 
 .dark{
-    background:
-        radial-gradient(
-            circle at top right,
-            rgba(0,212,199,.06),
-            transparent 35%
-        ),
-        #08131c;
-}
-
-.container{
-    max-width:1150px;
-    margin:auto;
+    background:#091720;
 }
 
 .section-title{
@@ -153,355 +136,121 @@ section{
 }
 
 .section-title p{
-    color:#8fa0aa;
+    color:#9daeb8;
 }
 
-/* ================= INDUSTRY CONTENT ================= */
+/* ================= TOPIC LIST ================= */
 
-.content-panel{
-
-    max-width:1150px;
+.topic-list{
+    max-width:1050px;
     margin:auto;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(12,28,39,.96),
-            rgba(6,16,24,.98)
-        );
-
-    border:1px solid rgba(0,212,199,.12);
-
-    border-radius:20px;
-
-    padding:28px;
-
-    box-shadow:
-        0 25px 70px rgba(0,0,0,.30);
-}
-
-.content-toolbar{
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    gap:15px;
-
-    margin-bottom:25px;
-}
-
-.content-toolbar h3{
-    font-size:23px;
-}
-
-.add-btn{
-
-    border:0;
-
-    background:
-        linear-gradient(
-            135deg,
-            #00d4c7,
-            #00a6b4
-        );
-
-    color:#001014;
-
-    padding:11px 18px;
-
-    border-radius:10px;
-
-    font-weight:bold;
-
-    cursor:pointer;
-
-    transition:.3s;
-}
-
-.add-btn:hover{
-    transform:translateY(-2px);
-    box-shadow:0 8px 25px rgba(0,212,199,.25);
-}
-
-/* ================= CONTENT BARS ================= */
-
-.content-list{
     display:flex;
     flex-direction:column;
-    gap:12px;
+
+    gap:14px;
 }
 
-.content-bar{
+.topic{
+    position:relative;
 
     display:flex;
     align-items:center;
     justify-content:space-between;
 
-    gap:20px;
+    min-height:78px;
 
-    padding:17px 20px;
+    padding:18px 25px;
 
     border-radius:12px;
 
-    background:#0b1a25;
+    text-decoration:none;
+    color:#fff;
 
-    border:1px solid rgba(255,255,255,.06);
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,188,212,.16),
+            rgba(13,25,34,.95)
+        );
 
-    border-right:4px solid #00d4c7;
+    border:1px solid rgba(0,212,255,.16);
+
+    overflow:hidden;
+
+    transition:.35s;
+}
+
+.topic::before{
+    content:"";
+
+    position:absolute;
+    right:0;
+    top:0;
+    bottom:0;
+
+    width:5px;
+
+    background:#00d4ff;
+
+    transition:.35s;
+}
+
+.topic:hover{
+    transform:translateX(-7px);
+
+    border-color:#00d4ff;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.35);
+}
+
+.topic:hover::before{
+    width:9px;
+}
+
+.topic-title{
+    position:relative;
+    z-index:2;
+
+    font-size:18px;
+    font-weight:bold;
+}
+
+.topic-arrow{
+    position:relative;
+    z-index:2;
+
+    font-size:25px;
+    color:#00d4ff;
 
     transition:.3s;
 }
 
-.content-bar:hover{
-
-    transform:translateX(-4px);
-
-    border-right-color:#fff;
-
-    background:#0f2230;
+.topic:hover .topic-arrow{
+    transform:translateX(-7px);
 }
 
-.content-info{
-    flex:1;
+/* ================= ABOUT ================= */
+
+.about{
+    max-width:1050px;
+    margin:auto;
 }
 
-.content-info h3{
-    color:#fff;
-    font-size:17px;
-    margin-bottom:3px;
+.about p{
+    color:#c4d0d5;
+    margin-bottom:18px;
 }
 
-.content-info p{
-    color:#91a4af;
-    font-size:13px;
-}
-
-.content-arrow{
-    color:#00d4c7;
-    font-size:22px;
-}
-
-/* ================= ADMIN ================= */
-
-.admin-only{
-    display:none;
-}
-
-body.admin-mode .admin-only{
-    display:block;
-}
-
-.admin-toolbar{
-    display:none;
-    margin-bottom:20px;
-}
-
-body.admin-mode .admin-toolbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.admin-badge{
-
-    background:rgba(22,163,74,.15);
-
-    color:#4ade80;
-
-    border:1px solid rgba(74,222,128,.25);
-
-    padding:7px 12px;
-
-    border-radius:8px;
-
-    font-size:12px;
-}
-
-.admin-login{
-
-    background:#111f2b;
-
-    border:1px solid #263b49;
-
-    color:#fff;
-
-    padding:10px 16px;
-
-    border-radius:9px;
-
-    text-decoration:none;
-
-    font-size:13px;
-}
-
-/* ================= MODAL ================= */
-
-.modal{
-
-    position:fixed;
-
-    inset:0;
-
-    background:rgba(0,0,0,.78);
-
-    backdrop-filter:blur(8px);
-
-    z-index:3000;
-
-    display:none;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:20px;
-}
-
-.modal.show{
-    display:flex;
-}
-
-.modal-box{
-
-    width:min(650px,100%);
-
-    max-height:90vh;
-
-    overflow:auto;
-
-    background:#0a1823;
-
-    border:1px solid #294050;
-
-    border-radius:18px;
-
-    padding:25px;
-
-    box-shadow:0 30px 100px rgba(0,0,0,.5);
-}
-
-.modal-box h2{
-    color:#00d4c7;
-    margin-bottom:20px;
-}
-
-label{
-    display:block;
-    margin:14px 0 6px;
-    color:#b8c7cf;
-    font-size:14px;
-}
-
-input,
-textarea,
-select{
-
-    width:100%;
-
-    background:#061018;
-
-    color:#fff;
-
-    border:1px solid #304452;
-
-    border-radius:9px;
-
-    padding:12px;
-
-    outline:none;
-}
-
-textarea{
-    min-height:130px;
-    resize:vertical;
-}
-
-input:focus,
-textarea:focus,
-select:focus{
-    border-color:#00d4c7;
-}
-
-.modal-actions{
-    display:flex;
-    gap:8px;
-    margin-top:20px;
-}
-
-.modal-actions button{
-
-    border:0;
-
-    border-radius:9px;
-
-    padding:11px 20px;
-
-    cursor:pointer;
-
-    font-weight:bold;
-}
-
-.save-btn{
-    background:#16a34a;
-    color:#fff;
-}
-
-.cancel-btn{
-    background:#334155;
-    color:#fff;
-}
-
-/* ================= ITEM ACTIONS ================= */
-
-.item-actions{
-    display:none;
-    gap:7px;
-}
-
-body.admin-mode .item-actions{
-    display:flex;
-}
-
-.edit-btn,
-.delete-btn{
-
-    border:0;
-
-    border-radius:7px;
-
-    padding:7px 10px;
-
-    cursor:pointer;
-
-    font-size:12px;
-}
-
-.edit-btn{
-    background:#2563eb;
-    color:#fff;
-}
-
-.delete-btn{
-    background:#dc2626;
-    color:#fff;
-}
-
-/* ================= GALLERY ================= */
-
-.gallery-toolbar{
-
-    max-width:1150px;
-    margin:0 auto 20px;
-
-    display:flex;
-    justify-content:flex-start;
+/* ================= MEDIA ================= */
+
+.media-section{
+    max-width:1100px;
+    margin:auto;
 }
 
 .gallery{
-    max-width:1150px;
-    margin:auto;
-
     display:grid;
 
     grid-template-columns:
@@ -510,246 +259,87 @@ body.admin-mode .item-actions{
     gap:18px;
 }
 
-.gallery-item{
-
-    position:relative;
-
-    overflow:hidden;
-
-    min-height:250px;
-
-    border-radius:14px;
-
-    background:#091721;
-
-    border:1px solid rgba(255,255,255,.08);
-
-    box-shadow:
-        0 15px 40px rgba(0,0,0,.25);
-}
-
-.gallery-item img{
-
+.gallery img{
     width:100%;
     height:250px;
 
     object-fit:cover;
 
-    display:block;
+    border-radius:12px;
 
-    transition:.4s;
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
 }
 
-.gallery-item:hover img{
-    transform:scale(1.06);
+.gallery img:hover{
+    transform:scale(1.03);
+
+    border-color:#00d4ff;
 }
 
-.gallery-caption{
-
-    position:absolute;
-
-    right:0;
-    left:0;
-    bottom:0;
-
-    padding:40px 15px 14px;
-
-    background:
-        linear-gradient(
-            transparent,
-            rgba(0,0,0,.9)
-        );
-
-    font-size:13px;
-}
-
-.image-delete{
-
-    position:absolute;
-
-    top:10px;
-    left:10px;
-
-    z-index:5;
-
-    background:#dc2626;
-
-    color:#fff;
-
-    border:0;
-
-    border-radius:7px;
-
-    padding:7px 10px;
-
-    cursor:pointer;
-
-    display:none;
-}
-
-body.admin-mode .image-delete{
-    display:block;
-}
-
-/* ================= DROP ZONE ================= */
-
-.drop-zone{
-
-    max-width:1150px;
-
-    margin:0 auto 25px;
+.empty{
+    text-align:center;
 
     padding:35px;
 
-    border:2px dashed #31505e;
+    border-radius:12px;
 
-    border-radius:15px;
+    background:#0d1b25;
 
+    color:#8fa0aa;
+}
+
+/* ================= BUTTON ================= */
+
+.back{
     text-align:center;
+}
 
-    background:#07131c;
+.btn{
+    display:inline-block;
+
+    padding:13px 30px;
+
+    border-radius:7px;
+
+    background:#00d4ff;
+
+    color:#001015;
+
+    text-decoration:none;
+
+    font-weight:bold;
 
     transition:.3s;
 }
 
-.drop-zone:hover,
-.drop-zone.dragover{
+.btn:hover{
+    transform:translateY(-3px);
 
-    border-color:#00d4c7;
-
-    background:#09202a;
-}
-
-.drop-zone strong{
-    display:block;
-    color:#00d4c7;
-    margin-bottom:7px;
-}
-
-.drop-zone span{
-    color:#8295a0;
-    font-size:13px;
-}
-
-.file-input{
-    margin-top:15px;
-}
-
-/* ================= VIDEOS ================= */
-
-.video-grid{
-
-    max-width:1150px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(2,1fr);
-
-    gap:20px;
-}
-
-.video-card{
-
-    background:#0b1924;
-
-    border:1px solid rgba(255,255,255,.07);
-
-    border-radius:14px;
-
-    padding:15px;
-
-    position:relative;
-}
-
-.video-card video{
-
-    width:100%;
-
-    max-height:380px;
-
-    border-radius:9px;
-
-    background:#000;
-}
-
-.video-title{
-
-    color:#00d4c7;
-
-    font-weight:bold;
-
-    margin-top:12px;
-}
-
-.video-description{
-
-    color:#9aabb4;
-
-    font-size:13px;
-
-    margin-top:5px;
-}
-
-.video-actions{
-    display:none;
-    gap:7px;
-    margin-top:12px;
-}
-
-body.admin-mode .video-actions{
-    display:flex;
-}
-
-/* ================= EMPTY ================= */
-
-.empty{
-
-    text-align:center;
-
-    padding:35px;
-
-    color:#7e909b;
-
-    background:#091721;
-
-    border:1px solid rgba(255,255,255,.06);
-
-    border-radius:12px;
-
-    grid-column:1/-1;
+    box-shadow:
+        0 10px 25px rgba(0,212,255,.2);
 }
 
 /* ================= FOOTER ================= */
 
 footer{
-
     text-align:center;
 
     padding:30px;
 
-    background:#03080d;
+    background:#03090e;
 
-    color:#788994;
+    color:#81919a;
 }
 
 footer strong{
-    color:#00d4c7;
+    color:#00d4ff;
 }
 
 /* ================= MOBILE ================= */
 
-@media(max-width:900px){
-
-    .gallery{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-}
-
-@media(max-width:700px){
+@media(max-width:800px){
 
     header{
         padding:14px 5%;
@@ -761,67 +351,39 @@ footer strong{
 
     .hero{
         min-height:65vh;
-        padding:115px 6% 60px;
+        padding:120px 6% 70px;
     }
 
     .hero h1{
-        font-size:clamp(40px,12vw,62px);
+        font-size:clamp(40px,11vw,62px);
     }
 
     section{
-        padding:65px 5%;
+        padding:70px 6%;
     }
 
-    .gallery,
-    .video-grid{
+    .topic{
+        min-height:70px;
+        padding:16px 18px;
+    }
+
+    .topic-title{
+        font-size:16px;
+    }
+
+    .gallery{
         grid-template-columns:1fr;
     }
 
-    .content-bar{
-        align-items:flex-start;
+    .gallery img{
+        height:230px;
     }
 
-    .content-toolbar{
-        flex-direction:column;
-        align-items:stretch;
-    }
-
-}
-
-/* ================= ADMIN LOGIN BUTTON ================= */
-
-#adminLoginButton{
-    position:fixed;
-    bottom:20px;
-    left:20px;
-    z-index:1500;
-
-    background:#111d27;
-
-    color:#9eabb3;
-
-    border:1px solid #263b49;
-
-    padding:9px 13px;
-
-    border-radius:8px;
-
-    text-decoration:none;
-
-    font-size:12px;
-
-    opacity:.75;
-}
-
-#adminLoginButton:hover{
-    opacity:1;
-    color:#00d4c7;
 }
 
 </style>
 
 </head>
-
 
 <body>
 
@@ -838,10 +400,6 @@ footer strong{
 
         <a href="index.html">
             خانه
-        </a>
-
-        <a href="#about">
-            معرفی
         </a>
 
         <a href="#topics">
@@ -880,7 +438,8 @@ footer strong{
         </h1>
 
         <p>
-            تجهیزات و سیستم‌های صنعتی سیم‌پیچی و بازپیچی.
+            تجهیزات، ماشین‌آلات و سیستم‌های صنعتی
+            سیم‌پیچی و بازپیچی
         </p>
 
     </div>
@@ -888,46 +447,36 @@ footer strong{
 </section>
 
 
-<main>
-
-
 <!-- ================= ABOUT ================= -->
 
-<section id="about">
+<section>
 
     <div class="section-title">
 
         <h2>
-            سیم‌پیچی و برق صنعتی
+            معرفی صنعت سیم‌پیچی
         </h2>
 
         <p>
-            معرفی حوزه تخصصی، تجهیزات و تجربیات اجرایی
+            اطلاعات تخصصی و تجربیات اجرایی
         </p>
 
     </div>
 
 
-    <div class="container">
+    <div class="about">
 
-        <div class="content-panel">
+        <p>
+            این صفحه برای معرفی تجربیات، تجهیزات،
+            ماشین‌آلات، پروژه‌ها و مستندات فنی مرتبط
+            با صنعت سیم‌پیچی ایجاد شده است.
+        </p>
 
-            <p style="color:#c5d0d6">
-
-                این صفحه برای معرفی تجربه، تجهیزات،
-                پروژه‌ها و مستندات فنی مرتبط با صنعت
-                سیم‌پیچی و برق صنعتی طراحی شده است.
-
-            </p>
-
-            <p style="color:#9eabb3;margin-top:15px">
-
-                مطالب، پروژه‌ها، تصاویر و ویدئوهای این
-                بخش به‌صورت مستقل قابل مدیریت هستند.
-
-            </p>
-
-        </div>
+        <p>
+            مطالب تخصصی این صنعت در بخش‌های جداگانه
+            قرار می‌گیرند تا هر موضوع دارای صفحه،
+            تصاویر و ویدئوهای اختصاصی خود باشد.
+        </p>
 
     </div>
 
@@ -944,63 +493,23 @@ footer strong{
     <div class="section-title">
 
         <h2>
-            مطالب و موضوعات تخصصی
+            مطالب و موضوعات
         </h2>
 
         <p>
-            مطالب تخصصی صنعت سیم‌پیچی
+            برای مشاهده اطلاعات کامل هر موضوع انتخاب کنید.
         </p>
 
     </div>
 
 
-    <div class="container">
+    <div
+        id="topicList"
+        class="topic-list"
+    >
 
-        <div class="admin-toolbar">
-
-            <span class="admin-badge">
-                حالت مدیریت فعال است
-            </span>
-
-            <a
-                href="admin.html"
-                class="admin-login"
-            >
-                پنل مدیریت
-            </a>
-
-        </div>
-
-
-        <div class="content-panel">
-
-            <div class="content-toolbar">
-
-                <h3>
-                    موضوعات این صنعت
-                </h3>
-
-                <button
-                    class="add-btn admin-only"
-                    onclick="openContentModal()"
-                >
-                    ＋ افزودن مطلب
-                </button>
-
-            </div>
-
-
-            <div
-                id="contentList"
-                class="content-list"
-            >
-
-                <div class="empty">
-                    در حال دریافت مطالب...
-                </div>
-
-            </div>
-
+        <div class="empty">
+            در حال دریافت مطالب...
         </div>
 
     </div>
@@ -1010,7 +519,9 @@ footer strong{
 
 <!-- ================= GALLERY ================= -->
 
-<section id="gallery">
+<section
+    id="gallery"
+>
 
     <div class="section-title">
 
@@ -1019,48 +530,19 @@ footer strong{
         </h2>
 
         <p>
-            تصاویر اختصاصی صنعت سیم‌پیچی
+            تصاویر صنعت سیم‌پیچی
         </p>
 
     </div>
 
 
     <div
-        id="dropZone"
-        class="drop-zone admin-only"
-    >
-
-        <strong>
-            ＋ افزودن تصویر
-        </strong>
-
-        <span>
-            تصویر را اینجا بکشید و رها کنید
-            یا فایل را انتخاب کنید
-        </span>
-
-        <input
-            class="file-input"
-            type="file"
-            id="imageFile"
-            accept="image/jpeg,image/png,image/webp,image/gif"
-        >
-
-        <div
-            id="uploadStatus"
-            style="margin-top:12px;color:#8fa0aa"
-        ></div>
-
-    </div>
-
-
-    <div
         id="galleryContainer"
-        class="gallery"
+        class="media-section gallery"
     >
 
         <div class="empty">
-            در حال بارگذاری تصاویر...
+            در حال دریافت تصاویر...
         </div>
 
     </div>
@@ -1082,38 +564,19 @@ footer strong{
         </h2>
 
         <p>
-            ویدئوهای صنعتی و پروژه‌ای
+            ویدئوهای مرتبط با صنعت سیم‌پیچی
         </p>
 
     </div>
 
 
-    <div class="container">
+    <div
+        id="videoContainer"
+        class="media-section"
+    >
 
-        <div
-            class="content-toolbar"
-            style="margin-bottom:25px"
-        >
-
-            <button
-                class="add-btn admin-only"
-                onclick="openVideoModal()"
-            >
-                ＋ افزودن ویدئو
-            </button>
-
-        </div>
-
-
-        <div
-            id="videoContainer"
-            class="video-grid"
-        >
-
-            <div class="empty">
-                در حال بارگذاری ویدئوها...
-            </div>
-
+        <div class="empty">
+            در حال دریافت ویدئوها...
         </div>
 
     </div>
@@ -1123,20 +586,16 @@ footer strong{
 
 <!-- ================= BACK ================= -->
 
-<section style="text-align:center">
+<section class="back">
 
     <a
         href="index.html"
-        class="add-btn"
-        style="display:inline-block;text-decoration:none"
+        class="btn"
     >
         بازگشت به صفحه اصلی
     </a>
 
 </section>
-
-
-</main>
 
 
 <!-- ================= FOOTER ================= -->
@@ -1154,252 +613,35 @@ footer strong{
 </footer>
 
 
-<!-- ================= ADMIN LOGIN ================= -->
+<!-- ================= SUPABASE ================= -->
 
-<a
-    href="admin.html"
-    id="adminLoginButton"
->
-    ورود مدیر
-</a>
-
-
-<!-- ================= CONTENT MODAL ================= -->
-
-<div
-    id="contentModal"
-    class="modal"
->
-
-    <div class="modal-box">
-
-        <h2>
-            افزودن / ویرایش مطلب
-        </h2>
-
-        <input
-            type="hidden"
-            id="contentId"
-        >
-
-        <label>
-            نوع مطلب
-        </label>
-
-        <select id="contentType">
-
-            <option value="intro">
-                معرفی
-            </option>
-
-            <option value="section">
-                موضوع تخصصی
-            </option>
-
-            <option value="project">
-                پروژه
-            </option>
-
-        </select>
-
-
-        <label>
-            عنوان
-        </label>
-
-        <input
-            id="contentTitle"
-            placeholder="مثلاً سیم‌پیچی الکتروموتور"
-        >
-
-
-        <label>
-            زیرعنوان
-        </label>
-
-        <input
-            id="contentSubtitle"
-            placeholder="توضیح کوتاه"
-        >
-
-
-        <label>
-            متن
-        </label>
-
-        <textarea
-            id="contentText"
-            placeholder="متن کامل مطلب را اینجا وارد کنید..."
-        ></textarea>
-
-
-        <label>
-            ترتیب نمایش
-        </label>
-
-        <input
-            type="number"
-            id="sortOrder"
-            value="0"
-        >
-
-
-        <div class="modal-actions">
-
-            <button
-                class="save-btn"
-                onclick="saveContent()"
-            >
-                ذخیره
-            </button>
-
-            <button
-                class="cancel-btn"
-                onclick="closeContentModal()"
-            >
-                انصراف
-            </button>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- ================= VIDEO MODAL ================= -->
-
-<div
-    id="videoModal"
-    class="modal"
->
-
-    <div class="modal-box">
-
-        <h2>
-            افزودن / ویرایش ویدئو
-        </h2>
-
-        <input
-            type="hidden"
-            id="videoId"
-        >
-
-
-        <label>
-            عنوان ویدئو
-        </label>
-
-        <input
-            id="videoTitle"
-            placeholder="عنوان ویدئو"
-        >
-
-
-        <label>
-            لینک ویدئو
-        </label>
-
-        <input
-            id="videoUrl"
-            type="url"
-            placeholder="https://..."
-        >
-
-
-        <label>
-            توضیحات
-        </label>
-
-        <textarea
-            id="videoDescription"
-            placeholder="توضیحات ویدئو..."
-        ></textarea>
-
-
-        <div class="modal-actions">
-
-            <button
-                class="save-btn"
-                onclick="saveVideo()"
-            >
-                ذخیره ویدئو
-            </button>
-
-            <button
-                class="cancel-btn"
-                onclick="closeVideoModal()"
-            >
-                انصراف
-            </button>
-
-        </div>
-
-    </div>
-
-</div>
-
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script>
 
-/* =====================================================
-   SUPABASE
-===================================================== */
-
 const SUPABASE_URL =
-"https://eurmybgotfgnerdxrwua.supabase.co";
+    "https://eurmybgotfgnerdxrwua.supabase.co";
 
 const SUPABASE_ANON_KEY =
-"sb_publishable_X3LYjYSbJU7YJ0ezzn6YfA_ZHsbd1K3";
+    "sb_publishable_X3LYjYSbJU7YJ0ezzn6YfA_ZHsbd1K3";
 
 const supabaseClient =
-window.supabase.createClient(
-    SUPABASE_URL,
-    SUPABASE_ANON_KEY
-);
+    window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_ANON_KEY
+    );
 
-
-/* =====================================================
-   SETTINGS
-===================================================== */
 
 const INDUSTRY =
-"rewinding";
+    "rewinding";
 
 const BUCKET =
-"project-media";
+    "project-media";
 
 
-/* =====================================================
-   SECURITY / SESSION
-===================================================== */
-
-async function checkAdmin(){
-
-    const {
-        data
-    } =
-    await supabaseClient.auth.getSession();
-
-    if(data && data.session){
-
-        document.body.classList.add(
-            "admin-mode"
-        );
-
-        document.getElementById(
-            "adminLoginButton"
-        ).textContent =
-            "مدیریت فعال";
-
-    }
-
-}
-
-
-/* =====================================================
-   MEDIA URL
-===================================================== */
+/* ================================
+   PUBLIC URL
+================================ */
 
 function getMediaUrl(path){
 
@@ -1411,9 +653,7 @@ function getMediaUrl(path){
         path.startsWith("http://") ||
         path.startsWith("https://")
     ){
-
         return path;
-
     }
 
     return supabaseClient
@@ -1422,13 +662,379 @@ function getMediaUrl(path){
         .getPublicUrl(path)
         .data
         .publicUrl;
+}
+
+
+/* ================================
+   LOAD TOPICS
+================================ */
+
+async function loadTopics(){
+
+    const container =
+        document.getElementById("topicList");
+
+    container.innerHTML =
+        '<div class="empty">در حال دریافت مطالب...</div>';
+
+
+    try{
+
+        const {
+            data,
+            error
+        } =
+        await supabaseClient
+            .from("industry_content")
+            .select("*")
+            .eq("industry",INDUSTRY)
+            .neq("content_type","video")
+            .order(
+                "sort_order",
+                {
+                    ascending:true
+                }
+            )
+            .order(
+                "id",
+                {
+                    ascending:true
+                }
+            );
+
+
+        if(error){
+
+            console.error(error);
+
+            container.innerHTML =
+                '<div class="empty">خطا در دریافت مطالب.</div>';
+
+            return;
+        }
+
+
+        if(!data || data.length === 0){
+
+            container.innerHTML =
+                '<div class="empty">هنوز مطلبی برای این صنعت ثبت نشده است.</div>';
+
+            return;
+        }
+
+
+        container.innerHTML = "";
+
+
+        data.forEach(function(item){
+
+            const link =
+                document.createElement("a");
+
+            link.className =
+                "topic";
+
+            link.href =
+                "topic.html?id=" +
+                encodeURIComponent(item.id);
+
+
+            const title =
+                item.title ||
+                "موضوع بدون عنوان";
+
+
+            link.innerHTML = `
+
+                <div class="topic-title">
+                    ${escapeHtml(title)}
+                </div>
+
+                <div class="topic-arrow">
+                    ←
+                </div>
+
+            `;
+
+
+            container.appendChild(link);
+
+        });
+
+
+    }catch(error){
+
+        console.error(error);
+
+        container.innerHTML =
+            '<div class="empty">خطا در بارگذاری مطالب.</div>';
+
+    }
 
 }
 
 
-/* =====================================================
+/* ================================
+   LOAD GALLERY
+================================ */
+
+async function loadGallery(){
+
+    const container =
+        document.getElementById(
+            "galleryContainer"
+        );
+
+
+    try{
+
+        const {
+            data,
+            error
+        } =
+        await supabaseClient
+            .from("industry_media")
+            .select(
+                "id,industry,media_type,file_path"
+            )
+            .eq(
+                "industry",
+                INDUSTRY
+            )
+            .eq(
+                "media_type",
+                "image"
+            )
+            .order(
+                "id",
+                {
+                    ascending:false
+                }
+            );
+
+
+        if(error){
+
+            console.error(error);
+
+            container.innerHTML =
+                '<div class="empty">خطا در دریافت تصاویر.</div>';
+
+            return;
+        }
+
+
+        if(!data || data.length === 0){
+
+            container.innerHTML =
+                '<div class="empty">هنوز تصویری اضافه نشده است.</div>';
+
+            return;
+        }
+
+
+        container.innerHTML = "";
+
+
+        data.forEach(function(item){
+
+            const url =
+                getMediaUrl(
+                    item.file_path
+                );
+
+
+            if(!url){
+                return;
+            }
+
+
+            const img =
+                document.createElement("img");
+
+
+            img.src =
+                url;
+
+            img.alt =
+                "تصویر صنعت سیم‌پیچی";
+
+            img.loading =
+                "lazy";
+
+
+            container.appendChild(img);
+
+        });
+
+
+    }catch(error){
+
+        console.error(error);
+
+        container.innerHTML =
+            '<div class="empty">خطا در بارگذاری گالری.</div>';
+
+    }
+
+}
+
+
+/* ================================
+   LOAD VIDEOS
+================================ */
+
+async function loadVideos(){
+
+    const container =
+        document.getElementById(
+            "videoContainer"
+        );
+
+
+    try{
+
+        const {
+            data,
+            error
+        } =
+        await supabaseClient
+            .from("industry_content")
+            .select("*")
+            .eq(
+                "industry",
+                INDUSTRY
+            )
+            .eq(
+                "content_type",
+                "video"
+            )
+            .order(
+                "id",
+                {
+                    ascending:false
+                }
+            );
+
+
+        if(error){
+
+            console.error(error);
+
+            container.innerHTML =
+                '<div class="empty">خطا در دریافت ویدئوها.</div>';
+
+            return;
+        }
+
+
+        if(!data || data.length === 0){
+
+            container.innerHTML =
+                '<div class="empty">هنوز ویدئویی اضافه نشده است.</div>';
+
+            return;
+        }
+
+
+        container.innerHTML = "";
+
+
+        data.forEach(function(item){
+
+            const box =
+                document.createElement("div");
+
+
+            box.style.background =
+                "#0d1b25";
+
+            box.style.padding =
+                "20px";
+
+            box.style.borderRadius =
+                "12px";
+
+            box.style.border =
+                "1px solid rgba(255,255,255,.08)";
+
+
+            const title =
+                document.createElement("h3");
+
+
+            title.textContent =
+                item.title || "ویدئو";
+
+
+            title.style.color =
+                "#00d4ff";
+
+
+            const description =
+                document.createElement("p");
+
+
+            description.textContent =
+                item.content || "";
+
+
+            description.style.color =
+                "#aeb9c0";
+
+
+            description.style.margin =
+                "10px 0";
+
+
+            const link =
+                document.createElement("a");
+
+
+            link.href =
+                item.subtitle || "";
+
+            link.target =
+                "_blank";
+
+            link.rel =
+                "noopener noreferrer";
+
+            link.textContent =
+                "مشاهده ویدئو";
+
+
+            link.style.color =
+                "#00d4ff";
+
+
+            box.appendChild(title);
+
+            box.appendChild(description);
+
+            box.appendChild(link);
+
+
+            container.appendChild(box);
+
+        });
+
+
+    }catch(error){
+
+        console.error(error);
+
+        container.innerHTML =
+            '<div class="empty">خطا در بارگذاری ویدئوها.</div>';
+
+    }
+
+}
+
+
+/* ================================
    ESCAPE
-===================================================== */
+================================ */
 
 function escapeHtml(value){
 
@@ -1442,1196 +1048,17 @@ function escapeHtml(value){
 }
 
 
-/* =====================================================
-   CONTENT
-===================================================== */
-
-async function loadContent(){
-
-    const list =
-        document.getElementById(
-            "contentList"
-        );
-
-    list.innerHTML =
-        '<div class="empty">در حال دریافت مطالب...</div>';
-
-
-    const {
-        data,
-        error
-    } =
-    await supabaseClient
-        .from("industry_content")
-        .select("*")
-        .eq("industry",INDUSTRY)
-        .neq("content_type","video")
-        .eq("is_visible",true)
-        .order("sort_order",{ascending:true})
-        .order("id",{ascending:true});
-
-
-    if(error){
-
-        list.innerHTML =
-            '<div class="empty">خطا در دریافت مطالب</div>';
-
-        console.error(error);
-
-        return;
-
-    }
-
-
-    if(!data || data.length === 0){
-
-        list.innerHTML =
-            '<div class="empty">هنوز مطلبی برای این صنعت ثبت نشده است.</div>';
-
-        return;
-
-    }
-
-
-    list.innerHTML = "";
-
-
-    data.forEach(function(item){
-
-        const bar =
-            document.createElement("div");
-
-        bar.className =
-            "content-bar";
-
-
-        const info =
-            document.createElement("div");
-
-        info.className =
-            "content-info";
-
-
-        info.innerHTML = `
-
-            <h3>
-                ${escapeHtml(item.title || "بدون عنوان")}
-            </h3>
-
-            <p>
-                ${escapeHtml(item.subtitle || item.content || "")}
-            </p>
-
-        `;
-
-
-        const arrow =
-            document.createElement("div");
-
-        arrow.className =
-            "content-arrow";
-
-        arrow.textContent =
-            "‹";
-
-
-        const actions =
-            document.createElement("div");
-
-        actions.className =
-            "item-actions";
-
-
-        const edit =
-            document.createElement("button");
-
-        edit.className =
-            "edit-btn";
-
-        edit.textContent =
-            "ویرایش";
-
-        edit.onclick =
-            function(){
-
-                editContent(item);
-
-            };
-
-
-        const del =
-            document.createElement("button");
-
-        del.className =
-            "delete-btn";
-
-        del.textContent =
-            "حذف";
-
-        del.onclick =
-            function(){
-
-                deleteContent(item.id);
-
-            };
-
-
-        actions.appendChild(edit);
-        actions.appendChild(del);
-
-
-        bar.appendChild(info);
-
-        if(document.body.classList.contains("admin-mode")){
-
-            bar.appendChild(actions);
-
-        }else{
-
-            bar.appendChild(arrow);
-
-        }
-
-
-        list.appendChild(bar);
-
-    });
-
-}
-
-
-/* =====================================================
-   CONTENT MODAL
-===================================================== */
-
-function openContentModal(){
-
-    document.getElementById(
-        "contentModal"
-    ).classList.add("show");
-
-}
-
-
-function closeContentModal(){
-
-    document.getElementById(
-        "contentModal"
-    ).classList.remove("show");
-
-    clearContentForm();
-
-}
-
-
-function clearContentForm(){
-
-    document.getElementById(
-        "contentId"
-    ).value = "";
-
-    document.getElementById(
-        "contentTitle"
-    ).value = "";
-
-    document.getElementById(
-        "contentSubtitle"
-    ).value = "";
-
-    document.getElementById(
-        "contentText"
-    ).value = "";
-
-    document.getElementById(
-        "sortOrder"
-    ).value = 0;
-
-}
-
-
-function editContent(item){
-
-    document.getElementById(
-        "contentId"
-    ).value =
-        item.id;
-
-    document.getElementById(
-        "contentType"
-    ).value =
-        item.content_type || "section";
-
-    document.getElementById(
-        "contentTitle"
-    ).value =
-        item.title || "";
-
-    document.getElementById(
-        "contentSubtitle"
-    ).value =
-        item.subtitle || "";
-
-    document.getElementById(
-        "contentText"
-    ).value =
-        item.content || "";
-
-    document.getElementById(
-        "sortOrder"
-    ).value =
-        item.sort_order || 0;
-
-
-    openContentModal();
-
-}
-
-
-async function saveContent(){
-
-    const id =
-        document.getElementById(
-            "contentId"
-        ).value;
-
-    const payload = {
-
-        industry:INDUSTRY,
-
-        content_type:
-            document.getElementById(
-                "contentType"
-            ).value,
-
-        title:
-            document.getElementById(
-                "contentTitle"
-            ).value.trim(),
-
-        subtitle:
-            document.getElementById(
-                "contentSubtitle"
-            ).value.trim(),
-
-        content:
-            document.getElementById(
-                "contentText"
-            ).value.trim(),
-
-        sort_order:
-            Number(
-                document.getElementById(
-                    "sortOrder"
-                ).value
-            ) || 0,
-
-        is_visible:true,
-
-        updated_at:
-            new Date().toISOString()
-
-    };
-
-
-    if(!payload.title && !payload.content){
-
-        alert(
-            "عنوان یا متن مطلب را وارد کنید."
-        );
-
-        return;
-
-    }
-
-
-    let result;
-
-
-    if(id){
-
-        result =
-            await supabaseClient
-                .from("industry_content")
-                .update(payload)
-                .eq("id",id);
-
-    }else{
-
-        result =
-            await supabaseClient
-                .from("industry_content")
-                .insert(payload);
-
-    }
-
-
-    if(result.error){
-
-        alert(
-            "خطا: " +
-            result.error.message
-        );
-
-        return;
-
-    }
-
-
-    closeContentModal();
-
-    await loadContent();
-
-}
-
-
-async function deleteContent(id){
-
-    if(!confirm(
-        "این مطلب حذف شود؟"
-    )){
-
-        return;
-
-    }
-
-
-    const {
-        error
-    } =
-    await supabaseClient
-        .from("industry_content")
-        .delete()
-        .eq("id",id);
-
-
-    if(error){
-
-        alert(
-            "خطا در حذف: " +
-            error.message
-        );
-
-        return;
-
-    }
-
-
-    await loadContent();
-
-}
-
-
-/* =====================================================
-   GALLERY
-===================================================== */
-
-async function loadGallery(){
-
-    const gallery =
-        document.getElementById(
-            "galleryContainer"
-        );
-
-
-    gallery.innerHTML =
-        '<div class="empty">در حال بارگذاری تصاویر...</div>';
-
-
-    const {
-        data,
-        error
-    } =
-    await supabaseClient
-        .from("industry_media")
-        .select("*")
-        .eq("industry",INDUSTRY)
-        .eq("media_type","image")
-        .order("id",{ascending:false});
-
-
-    if(error){
-
-        gallery.innerHTML =
-            '<div class="empty">خطا در دریافت تصاویر.</div>';
-
-        console.error(error);
-
-        return;
-
-    }
-
-
-    if(!data || data.length === 0){
-
-        gallery.innerHTML =
-            '<div class="empty">هنوز تصویری اضافه نشده است.</div>';
-
-        return;
-
-    }
-
-
-    gallery.innerHTML = "";
-
-
-    data.forEach(function(item){
-
-        if(!item.file_path){
-            return;
-        }
-
-
-        const card =
-            document.createElement("div");
-
-        card.className =
-            "gallery-item";
-
-
-        const img =
-            document.createElement("img");
-
-        img.src =
-            getMediaUrl(item.file_path);
-
-        img.alt =
-            "تصویر صنعت سیم‌پیچی";
-
-
-        const caption =
-            document.createElement("div");
-
-        caption.className =
-            "gallery-caption";
-
-        caption.textContent =
-            "سیم‌پیچی و برق صنعتی";
-
-
-        const deleteBtn =
-            document.createElement("button");
-
-        deleteBtn.className =
-            "image-delete";
-
-        deleteBtn.textContent =
-            "حذف تصویر";
-
-        deleteBtn.onclick =
-            function(){
-
-                deleteImage(
-                    item.id,
-                    item.file_path
-                );
-
-            };
-
-
-        card.appendChild(img);
-        card.appendChild(caption);
-        card.appendChild(deleteBtn);
-
-        gallery.appendChild(card);
-
-    });
-
-}
-
-
-/* =====================================================
-   IMAGE UPLOAD
-===================================================== */
-
-async function uploadImage(file){
-
-    if(!file){
-        return;
-    }
-
-
-    if(file.size >
-        10 * 1024 * 1024){
-
-        alert(
-            "حجم تصویر بیشتر از 10MB است."
-        );
-
-        return;
-
-    }
-
-
-    const status =
-        document.getElementById(
-            "uploadStatus"
-        );
-
-
-    status.textContent =
-        "در حال آپلود تصویر...";
-
-
-    let extension =
-        "jpg";
-
-
-    if(file.type === "image/png"){
-        extension = "png";
-    }
-
-    if(file.type === "image/webp"){
-        extension = "webp";
-    }
-
-    if(file.type === "image/gif"){
-        extension = "gif";
-    }
-
-
-    const fileName =
-        "image-" +
-        Date.now() +
-        "-" +
-        Math.random()
-            .toString(36)
-            .substring(2,8) +
-        "." +
-        extension;
-
-
-    const filePath =
-        INDUSTRY +
-        "/" +
-        fileName;
-
-
-    const {
-        error:uploadError
-    } =
-    await supabaseClient
-        .storage
-        .from(BUCKET)
-        .upload(
-            filePath,
-            file,
-            {
-                cacheControl:"3600",
-                upsert:false,
-                contentType:file.type
-            }
-        );
-
-
-    if(uploadError){
-
-        status.textContent =
-            "خطا در آپلود.";
-
-        alert(
-            uploadError.message
-        );
-
-        return;
-
-    }
-
-
-    const {
-        error:dbError
-    } =
-    await supabaseClient
-        .from("industry_media")
-        .insert({
-
-            industry:INDUSTRY,
-
-            media_type:"image",
-
-            file_path:filePath
-
-        });
-
-
-    if(dbError){
-
-        await supabaseClient
-            .storage
-            .from(BUCKET)
-            .remove([filePath]);
-
-
-        status.textContent =
-            "خطا در ثبت تصویر.";
-
-        alert(
-            dbError.message
-        );
-
-        return;
-
-    }
-
-
-    status.textContent =
-        "تصویر با موفقیت اضافه شد.";
-
-
-    document.getElementById(
-        "imageFile"
-    ).value = "";
-
-
-    await loadGallery();
-
-}
-
-
-/* =====================================================
-   DELETE IMAGE
-===================================================== */
-
-async function deleteImage(
-    id,
-    path
-){
-
-    if(!confirm(
-        "این تصویر حذف شود؟"
-    )){
-
-        return;
-
-    }
-
-
-    if(path){
-
-        const {
-            error
-        } =
-        await supabaseClient
-            .storage
-            .from(BUCKET)
-            .remove([path]);
-
-
-        if(error){
-
-            alert(
-                "خطا در حذف فایل: " +
-                error.message
-            );
-
-            return;
-
-        }
-
-    }
-
-
-    const {
-        error
-    } =
-    await supabaseClient
-        .from("industry_media")
-        .delete()
-        .eq("id",id);
-
-
-    if(error){
-
-        alert(
-            "خطا در حذف رکورد: " +
-            error.message
-        );
-
-        return;
-
-    }
-
-
-    await loadGallery();
-
-}
-
-
-/* =====================================================
-   VIDEO
-===================================================== */
-
-async function loadVideos(){
-
-    const container =
-        document.getElementById(
-            "videoContainer"
-        );
-
-
-    container.innerHTML =
-        '<div class="empty">در حال بارگذاری ویدئوها...</div>';
-
-
-    const {
-        data,
-        error
-    } =
-    await supabaseClient
-        .from("industry_content")
-        .select("*")
-        .eq("industry",INDUSTRY)
-        .eq("content_type","video")
-        .eq("is_visible",true)
-        .order("id",{ascending:false});
-
-
-    if(error){
-
-        container.innerHTML =
-            '<div class="empty">خطا در دریافت ویدئوها.</div>';
-
-        console.error(error);
-
-        return;
-
-    }
-
-
-    if(!data || data.length === 0){
-
-        container.innerHTML =
-            '<div class="empty">هنوز ویدئویی اضافه نشده است.</div>';
-
-        return;
-
-    }
-
-
-    container.innerHTML = "";
-
-
-    data.forEach(function(item){
-
-        const card =
-            document.createElement("div");
-
-        card.className =
-            "video-card";
-
-
-        const title =
-            document.createElement("div");
-
-        title.className =
-            "video-title";
-
-        title.textContent =
-            item.title || "ویدئو";
-
-
-        const description =
-            document.createElement("div");
-
-        description.className =
-            "video-description";
-
-        description.textContent =
-            item.content || "";
-
-
-        const actions =
-            document.createElement("div");
-
-        actions.className =
-            "video-actions";
-
-
-        const edit =
-            document.createElement("button");
-
-        edit.className =
-            "edit-btn";
-
-        edit.textContent =
-            "ویرایش";
-
-        edit.onclick =
-            function(){
-
-                editVideo(item);
-
-            };
-
-
-        const del =
-            document.createElement("button");
-
-        del.className =
-            "delete-btn";
-
-        del.textContent =
-            "حذف";
-
-        del.onclick =
-            function(){
-
-                deleteContent(item.id);
-
-            };
-
-
-        actions.appendChild(edit);
-        actions.appendChild(del);
-
-
-        /*
-         * لینک ویدئو
-         * اگر لینک مستقیم فایل باشد،
-         * به صورت video نمایش داده می‌شود.
-         */
-
-        const url =
-            item.subtitle || "";
-
-
-        if(
-            url.endsWith(".mp4") ||
-            url.endsWith(".webm") ||
-            url.endsWith(".ogg")
-        ){
-
-            const video =
-                document.createElement("video");
-
-            video.controls = true;
-
-            video.src = url;
-
-            video.preload =
-                "metadata";
-
-            card.appendChild(video);
-
-        }
-        else{
-
-            const link =
-                document.createElement("a");
-
-            link.href = url;
-
-            link.target = "_blank";
-
-            link.rel = "noopener";
-
-            link.textContent =
-                "مشاهده ویدئو";
-
-            link.style.color =
-                "#00d4c7";
-
-            link.style.display =
-                "inline-block";
-
-            link.style.marginTop =
-                "10px";
-
-            card.appendChild(link);
-
-        }
-
-
-        card.appendChild(title);
-
-        card.appendChild(description);
-
-        card.appendChild(actions);
-
-        container.appendChild(card);
-
-    });
-
-}
-
-
-/* =====================================================
-   VIDEO MODAL
-===================================================== */
-
-function openVideoModal(){
-
-    document.getElementById(
-        "videoModal"
-    ).classList.add("show");
-
-}
-
-
-function closeVideoModal(){
-
-    document.getElementById(
-        "videoModal"
-    ).classList.remove("show");
-
-    document.getElementById(
-        "videoId"
-    ).value = "";
-
-    document.getElementById(
-        "videoTitle"
-    ).value = "";
-
-    document.getElementById(
-        "videoUrl"
-    ).value = "";
-
-    document.getElementById(
-        "videoDescription"
-    ).value = "";
-
-}
-
-
-function editVideo(item){
-
-    document.getElementById(
-        "videoId"
-    ).value =
-        item.id;
-
-    document.getElementById(
-        "videoTitle"
-    ).value =
-        item.title || "";
-
-    document.getElementById(
-        "videoUrl"
-    ).value =
-        item.subtitle || "";
-
-    document.getElementById(
-        "videoDescription"
-    ).value =
-        item.content || "";
-
-
-    openVideoModal();
-
-}
-
-
-async function saveVideo(){
-
-    const id =
-        document.getElementById(
-            "videoId"
-        ).value;
-
-
-    const title =
-        document.getElementById(
-            "videoTitle"
-        ).value.trim();
-
-
-    const url =
-        document.getElementById(
-            "videoUrl"
-        ).value.trim();
-
-
-    const description =
-        document.getElementById(
-            "videoDescription"
-        ).value.trim();
-
-
-    if(!url){
-
-        alert(
-            "لینک ویدئو را وارد کنید."
-        );
-
-        return;
-
-    }
-
-
-    const payload = {
-
-        industry:INDUSTRY,
-
-        content_type:"video",
-
-        title:title,
-
-        subtitle:url,
-
-        content:description,
-
-        sort_order:0,
-
-        is_visible:true,
-
-        updated_at:
-            new Date().toISOString()
-
-    };
-
-
-    let result;
-
-
-    if(id){
-
-        result =
-            await supabaseClient
-                .from("industry_content")
-                .update(payload)
-                .eq("id",id);
-
-    }
-    else{
-
-        result =
-            await supabaseClient
-                .from("industry_content")
-                .insert(payload);
-
-    }
-
-
-    if(result.error){
-
-        alert(
-            "خطا: " +
-            result.error.message
-        );
-
-        return;
-
-    }
-
-
-    closeVideoModal();
-
-    await loadVideos();
-
-}
-
-
-/* =====================================================
-   DRAG & DROP
-===================================================== */
-
-const dropZone =
-    document.getElementById(
-        "dropZone"
-    );
-
-
-const imageFile =
-    document.getElementById(
-        "imageFile"
-    );
-
-
-if(dropZone){
-
-    dropZone.addEventListener(
-        "dragover",
-        function(event){
-
-            event.preventDefault();
-
-            dropZone.classList.add(
-                "dragover"
-            );
-
-        }
-    );
-
-
-    dropZone.addEventListener(
-        "dragleave",
-        function(){
-
-            dropZone.classList.remove(
-                "dragover"
-            );
-
-        }
-    );
-
-
-    dropZone.addEventListener(
-        "drop",
-        function(event){
-
-            event.preventDefault();
-
-            dropZone.classList.remove(
-                "dragover"
-            );
-
-
-            const file =
-                event.dataTransfer.files[0];
-
-
-            if(file){
-
-                uploadImage(file);
-
-            }
-
-        }
-    );
-
-}
-
-
-if(imageFile){
-
-    imageFile.addEventListener(
-        "change",
-        function(){
-
-            if(this.files[0]){
-
-                uploadImage(
-                    this.files[0]
-                );
-
-            }
-
-        }
-    );
-
-}
-
-
-/* =====================================================
+/* ================================
    START
-===================================================== */
+================================ */
 
-async function start(){
+loadTopics();
 
-    await checkAdmin();
+loadGallery();
 
-    await loadContent();
-
-    await loadGallery();
-
-    await loadVideos();
-
-}
-
-
-start();
+loadVideos();
 
 </script>
-
 
 </body>
 </html>
