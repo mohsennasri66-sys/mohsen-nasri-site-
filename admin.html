@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,210 +10,425 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <style>
-*{box-sizing:border-box}
+
+*{
+box-sizing:border-box;
+}
 
 body{
-    margin:0;
-    font-family:Tahoma,Arial,sans-serif;
-    background:#06101a;
-    color:#fff;
+margin:0;
+font-family:Tahoma,Arial,sans-serif;
+background:#06101a;
+color:#fff;
+line-height:1.9;
 }
 
-button,input,textarea,select{
-    font-family:inherit;
-}
-
-header{
-    background:#020911;
-    border-bottom:1px solid #263746;
-    padding:18px 5%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-header h1{
-    margin:0;
-    font-size:21px;
-}
-
-header span{
-    color:#38bdf8;
-}
-
-.container{
-    width:min(1200px,94%);
-    margin:30px auto;
-}
-
-.card{
-    background:#0b1824;
-    border:1px solid #263746;
-    border-radius:16px;
-    padding:25px;
-    margin-bottom:25px;
-}
-
-h2{
-    margin-top:0;
-    color:#38bdf8;
-}
-
-label{
-    display:block;
-    margin:15px 0 7px;
-    color:#b8c6cd;
-}
-
-input,textarea,select{
-    width:100%;
-    background:#071017;
-    border:1px solid #344858;
-    color:#fff;
-    padding:13px;
-    border-radius:8px;
-    outline:none;
-}
-
-input:focus,textarea:focus,select:focus{
-    border-color:#38bdf8;
-}
-
-textarea{
-    min-height:150px;
-    resize:vertical;
+button,
+input,
+textarea,
+select{
+font-family:inherit;
 }
 
 button{
-    border:0;
-    border-radius:8px;
-    padding:12px 22px;
-    cursor:pointer;
-    margin:8px 4px;
-    font-weight:bold;
+cursor:pointer;
+}
+
+header{
+position:sticky;
+top:0;
+z-index:1000;
+background:#020911;
+border-bottom:1px solid #263746;
+padding:16px 5%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:15px;
+}
+
+header h1{
+margin:0;
+font-size:21px;
+}
+
+header h1 span{
+color:#38bdf8;
+}
+
+.container{
+width:min(1200px,94%);
+margin:30px auto;
+}
+
+.card{
+background:#0b1824;
+border:1px solid #263746;
+border-radius:16px;
+padding:25px;
+margin-bottom:25px;
+}
+
+h2{
+margin-top:0;
+color:#38bdf8;
+font-size:22px;
+}
+
+h3{
+margin-top:0;
+}
+
+label{
+display:block;
+margin:15px 0 7px;
+color:#b8c6cd;
+}
+
+input,
+textarea,
+select{
+width:100%;
+background:#071017;
+border:1px solid #344858;
+color:#fff;
+padding:13px;
+border-radius:8px;
+outline:none;
+font-size:14px;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+border-color:#38bdf8;
+}
+
+textarea{
+min-height:150px;
+resize:vertical;
+}
+
+button{
+border:0;
+border-radius:8px;
+padding:11px 20px;
+margin:6px 3px;
+font-weight:bold;
+font-size:13px;
 }
 
 .primary{
-    background:#0ea5e9;
-    color:#fff;
+background:#0ea5e9;
+color:#fff;
 }
 
 .success{
-    background:#16a34a;
-    color:#fff;
+background:#16a34a;
+color:#fff;
 }
 
 .danger{
-    background:#dc2626;
-    color:#fff;
+background:#dc2626;
+color:#fff;
 }
 
 .secondary{
-    background:#334155;
-    color:#fff;
+background:#334155;
+color:#fff;
+}
+
+.warning{
+background:#d97706;
+color:#fff;
+}
+
+button:hover{
+filter:brightness(1.12);
+}
+
+button:disabled{
+opacity:.5;
+cursor:not-allowed;
 }
 
 .hidden{
-    display:none!important;
+display:none!important;
 }
 
 .status{
-    padding:12px;
-    border-radius:8px;
-    margin:15px 0;
-    background:#111f2c;
+padding:12px 15px;
+border-radius:8px;
+margin:15px 0;
+background:#111f2c;
+color:#c8d5dd;
+}
+
+.status.success-status{
+background:#082b19;
+color:#86efac;
+}
+
+.status.error-status{
+background:#351116;
+color:#fca5a5;
 }
 
 .grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:18px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
 }
 
 .content-item{
-    background:#071017;
-    border:1px solid #263746;
-    border-radius:12px;
-    padding:18px;
+background:#071017;
+border:1px solid #263746;
+border-radius:12px;
+padding:18px;
+}
+
+.content-item:hover{
+border-color:#38bdf8;
+}
+
+.content-type{
+display:inline-block;
+padding:4px 9px;
+border-radius:20px;
+background:#0c2a38;
+color:#38bdf8;
+font-size:11px;
+margin-bottom:10px;
 }
 
 .content-item h3{
-    color:#38bdf8;
-    margin-top:0;
+color:#fff;
+font-size:18px;
 }
 
 .content-item p{
-    color:#c7d2da;
-    white-space:pre-wrap;
+color:#c7d2da;
+white-space:pre-wrap;
+word-break:break-word;
+}
+
+.small-info{
+font-size:12px;
+color:#8195a4;
+}
+
+.actions{
+display:flex;
+flex-wrap:wrap;
+gap:5px;
+margin-top:15px;
 }
 
 .media-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
 }
 
 .media-card{
-    background:#071017;
-    border:1px solid #263746;
-    border-radius:12px;
-    padding:10px;
+background:#071017;
+border:1px solid #263746;
+border-radius:12px;
+padding:10px;
+overflow:hidden;
 }
 
 .media-card img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
-    border-radius:8px;
-    display:block;
-    background:#020911;
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:8px;
+display:block;
+background:#020911;
 }
 
 .media-info{
-    padding:10px 4px;
-    color:#8ea2b2;
-    font-size:12px;
-    word-break:break-all;
-}
-
-.file-info{
-    margin-top:10px;
-    padding:10px;
-    background:#071017;
-    border-radius:8px;
-    color:#8ea2b2;
-    font-size:13px;
+padding:10px 4px;
+color:#8ea2b2;
+font-size:12px;
+word-break:break-all;
 }
 
 .preview{
-    max-width:350px;
-    max-height:220px;
-    display:none;
-    margin-top:15px;
-    border-radius:10px;
-    border:2px solid #38bdf8;
+width:100%;
+max-width:400px;
+max-height:250px;
+object-fit:contain;
+display:none;
+margin-top:15px;
+border-radius:10px;
+border:2px solid #38bdf8;
+background:#020911;
+}
+
+.drop-zone{
+border:2px dashed #385466;
+border-radius:14px;
+padding:35px 20px;
+text-align:center;
+background:#07131e;
+transition:.2s;
+cursor:pointer;
+}
+
+.drop-zone:hover,
+.drop-zone.dragover{
+border-color:#38bdf8;
+background:#09202d;
+}
+
+.drop-zone strong{
+display:block;
+font-size:17px;
+color:#38bdf8;
+margin-bottom:8px;
+}
+
+.drop-zone span{
+color:#8ea2b2;
+font-size:13px;
+}
+
+.drop-zone input{
+display:none;
+}
+
+.file-info{
+margin-top:12px;
+padding:12px;
+background:#071017;
+border-radius:8px;
+color:#8ea2b2;
+font-size:13px;
+word-break:break-word;
+}
+
+.toolbar{
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+justify-content:space-between;
+gap:10px;
+margin-bottom:18px;
+}
+
+.toolbar-title{
+color:#b8c6cd;
+font-size:13px;
+}
+
+.empty{
+padding:30px;
+text-align:center;
+background:#071017;
+border:1px dashed #263746;
+border-radius:12px;
+color:#8195a4;
 }
 
 .logout{
-    background:#dc2626;
-    color:#fff;
+background:#dc2626;
+color:#fff;
 }
 
-@media(max-width:800px){
-    .grid{
-        grid-template-columns:1fr;
-    }
-
-    .media-grid{
-        grid-template-columns:1fr 1fr;
-    }
+.login-logo{
+text-align:center;
+font-size:30px;
+font-weight:bold;
+margin-bottom:15px;
 }
 
-@media(max-width:500px){
-    .media-grid{
-        grid-template-columns:1fr;
-    }
+.login-logo span{
+color:#38bdf8;
 }
+
+.divider{
+height:1px;
+background:#263746;
+margin:25px 0;
+}
+
+.loading{
+padding:25px;
+text-align:center;
+color:#8195a4;
+}
+
+.video-url{
+color:#38bdf8;
+word-break:break-all;
+font-size:13px;
+}
+
+.notice{
+padding:15px;
+background:rgba(56,189,248,.06);
+border-right:3px solid #38bdf8;
+border-radius:7px;
+color:#b8cbd5;
+font-size:13px;
+margin-bottom:20px;
+}
+
+.top-actions{
+display:flex;
+gap:7px;
+flex-wrap:wrap;
+}
+
+@media(max-width:900px){
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.media-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:600px){
+
+header{
+padding:13px 4%;
+}
+
+header h1{
+font-size:16px;
+}
+
+.container{
+width:92%;
+}
+
+.card{
+padding:18px;
+}
+
+.media-grid{
+grid-template-columns:1fr;
+}
+
+.media-card img{
+height:220px;
+}
+
+button{
+width:auto;
+}
+
+.actions button{
+flex:1;
+}
+
+}
+
 </style>
 </head>
 
@@ -225,12 +441,24 @@ button{
 <span>Mohsen Nasri</span>
 </h1>
 
+<div class="top-actions">
+
 <button
-    class="logout hidden"
-    id="logoutBtn"
+class="secondary"
+onclick="refreshAll()"
+id="refreshBtn"
+>
+↻ بروزرسانی
+</button>
+
+<button
+class="logout hidden"
+id="logoutBtn"
 >
 خروج
 </button>
+
+</div>
 
 </header>
 
@@ -238,67 +466,83 @@ button{
 <div class="container">
 
 
-<!-- LOGIN -->
+<!-- ================= LOGIN ================= -->
 
 <section
-    class="card"
-    id="loginBox"
+class="card"
+id="loginBox"
 >
 
-<h2>ورود مدیر</h2>
+<div class="login-logo">
+Mohsen <span>Nasri</span>
+</div>
+
+<h2>
+ورود مدیر
+</h2>
 
 <p>
-برای مدیریت محتوای صنایع وارد شوید.
+برای مدیریت محتوای سایت وارد شوید.
 </p>
 
-<label>ایمیل</label>
+<label>
+ایمیل
+</label>
 
 <input
-    type="email"
-    id="email"
-    placeholder="ایمیل مدیر"
+type="email"
+id="email"
+placeholder="ایمیل مدیر"
+autocomplete="username"
 >
 
-<label>رمز عبور</label>
+<label>
+رمز عبور
+</label>
 
 <input
-    type="password"
-    id="password"
-    placeholder="رمز عبور"
+type="password"
+id="password"
+placeholder="رمز عبور"
+autocomplete="current-password"
 >
 
 <button
-    class="primary"
-    onclick="login()"
+class="primary"
+onclick="login()"
 >
 ورود به پنل
 </button>
 
 <div
-    id="loginStatus"
-    class="status"
-></div>
+id="loginStatus"
+class="status"
+>
+ایمیل و رمز عبور را وارد کنید.
+</div>
 
 </section>
 
 
-<!-- ADMIN -->
+<!-- ================= ADMIN ================= -->
 
 <section
-    id="adminPanel"
-    class="hidden"
+id="adminPanel"
+class="hidden"
 >
 
 
-<!-- INDUSTRY -->
+<!-- ================= INDUSTRY ================= -->
 
 <div class="card">
 
-<h2>انتخاب صنعت</h2>
+<h2>
+انتخاب صنعت
+</h2>
 
 <select
-    id="industrySelect"
-    onchange="loadIndustry()"
+id="industrySelect"
+onchange="loadIndustry()"
 >
 
 <option value="rewinding">
@@ -324,204 +568,353 @@ button{
 </select>
 
 <div
-    id="mainStatus"
-    class="status"
+id="mainStatus"
+class="status"
 >
-یک صنعت را انتخاب کنید.
+صنعت را انتخاب کنید.
 </div>
 
 </div>
 
 
-<!-- TEXT -->
+<!-- ================= TEXT ================= -->
 
 <div class="card">
 
-<h2>افزودن / ویرایش متن</h2>
+<h2>
+✏️ افزودن / ویرایش محتوا
+</h2>
+
+<div class="notice">
+از همین فرم می‌توانی معرفی صنعت، بخش‌های فنی و پروژه‌ها را اضافه یا ویرایش کنی.
+</div>
 
 <input
-    type="hidden"
-    id="editId"
+type="hidden"
+id="editId"
 >
 
-<label>نوع محتوا</label>
+<label>
+نوع محتوا
+</label>
 
 <select id="contentType">
 
-<option value="intro">معرفی</option>
-<option value="section">بخش جدید</option>
-<option value="project">پروژه</option>
+<option value="intro">
+معرفی
+</option>
+
+<option value="section">
+بخش فنی
+</option>
+
+<option value="project">
+پروژه
+</option>
 
 </select>
 
-<label>عنوان</label>
+<label>
+عنوان
+</label>
 
 <input
-    type="text"
-    id="contentTitle"
-    placeholder="عنوان"
+type="text"
+id="contentTitle"
+placeholder="مثلاً معرفی سیستم..."
 >
 
-<label>زیرعنوان</label>
+<label>
+زیرعنوان
+</label>
 
 <input
-    type="text"
-    id="contentSubtitle"
-    placeholder="اختیاری"
+type="text"
+id="contentSubtitle"
+placeholder="اختیاری"
 >
 
-<label>متن</label>
+<label>
+متن
+</label>
 
 <textarea
-    id="contentText"
-    placeholder="متن مورد نظر..."
+id="contentText"
+placeholder="متن کامل را اینجا وارد کنید..."
 ></textarea>
 
-<label>ترتیب نمایش</label>
+<label>
+ترتیب نمایش
+</label>
 
 <input
-    type="number"
-    id="sortOrder"
-    value="0"
+type="number"
+id="sortOrder"
+value="0"
 >
 
+<div class="actions">
+
 <button
-    class="success"
-    onclick="saveContent()"
+class="success"
+onclick="saveContent()"
 >
-ذخیره محتوا
+💾 ذخیره
 </button>
 
 <button
-    class="secondary"
-    onclick="clearForm()"
+class="secondary"
+onclick="clearForm()"
 >
 پاک کردن فرم
 </button>
 
 </div>
 
-
-<!-- CONTENT LIST -->
-
-<div class="card">
-
-<h2>محتوای این صنعت</h2>
-
 <div
-    id="contentList"
-    class="grid"
-></div>
+id="contentStatus"
+class="status"
+>
+آماده ثبت محتوا
+</div>
 
 </div>
 
 
-<!-- IMAGE -->
+<!-- ================= CONTENT LIST ================= -->
 
 <div class="card">
 
-<h2>افزودن تصویر</h2>
+<div class="toolbar">
 
-<label>انتخاب تصویر</label>
+<h2 style="margin:0">
+📚 محتوای این صنعت
+</h2>
 
-<input
-    type="file"
-    id="imageFile"
-    accept="image/jpeg,image/png,image/webp,image/gif"
-    onchange="previewImage()"
+<span
+class="toolbar-title"
+id="contentCount"
+>
+0 مورد
+</span>
+
+</div>
+
+<div
+id="contentList"
+class="grid"
+>
+<div class="loading">
+در حال دریافت محتوا...
+</div>
+</div>
+
+</div>
+
+
+<!-- ================= IMAGE UPLOAD ================= -->
+
+<div class="card">
+
+<h2>
+🖼️ افزودن تصویر
+</h2>
+
+<div class="notice">
+عکس را می‌توانی مستقیماً داخل کادر زیر <strong>Drag & Drop</strong> کنی یا روی کادر کلیک کنی و عکس را انتخاب کنی.
+</div>
+
+<div
+class="drop-zone"
+id="dropZone"
 >
 
+<strong>
+📷 عکس را اینجا بکش و رها کن
+</strong>
+
+<span>
+یا برای انتخاب فایل کلیک کن
+</span>
+
+<input
+type="file"
+id="imageFile"
+accept="image/jpeg,image/png,image/webp,image/gif"
+>
+
+</div>
+
 <img
-    id="imagePreview"
-    class="preview"
-    alt="پیش‌نمایش تصویر"
+id="imagePreview"
+class="preview"
+alt="پیش نمایش"
 >
 
 <div
-    id="fileInfo"
-    class="file-info"
+id="fileInfo"
+class="file-info"
 >
 هنوز تصویری انتخاب نشده است.
 </div>
 
+<div class="actions">
+
 <button
-    class="primary"
-    id="uploadButton"
-    onclick="uploadImage()"
+class="primary"
+id="uploadButton"
+onclick="uploadImage()"
 >
-آپلود تصویر
+⬆️ آپلود تصویر
 </button>
 
+<button
+class="secondary"
+onclick="clearImageForm()"
+>
+پاک کردن
+</button>
+
+</div>
+
 <div
-    id="uploadStatus"
-    class="status"
-></div>
+id="uploadStatus"
+class="status"
+>
+آماده آپلود
+</div>
 
 </div>
 
 
-<!-- GALLERY -->
+<!-- ================= GALLERY ================= -->
 
 <div class="card">
 
-<h2>گالری تصاویر این صنعت</h2>
+<div class="toolbar">
+
+<h2 style="margin:0">
+🖼️ گالری تصاویر
+</h2>
+
+<span
+class="toolbar-title"
+id="galleryCount"
+>
+0 تصویر
+</span>
+
+</div>
 
 <div
-    id="gallery"
-    class="media-grid"
-></div>
+id="gallery"
+class="media-grid"
+>
+<div class="loading">
+در حال دریافت تصاویر...
+</div>
+</div>
 
 </div>
 
 
-<!-- VIDEO -->
+<!-- ================= VIDEO ================= -->
 
 <div class="card">
 
-<h2>افزودن ویدئو</h2>
-
-<label>عنوان ویدئو</label>
-
-<input
-    type="text"
-    id="videoTitle"
-    placeholder="عنوان ویدئو"
->
-
-<label>لینک ویدئو</label>
+<h2>
+🎬 افزودن / ویرایش ویدئو
+</h2>
 
 <input
-    type="url"
-    id="videoUrl"
-    placeholder="https://..."
+type="hidden"
+id="videoEditId"
 >
 
-<label>توضیحات</label>
+<label>
+عنوان ویدئو
+</label>
+
+<input
+type="text"
+id="videoTitle"
+placeholder="عنوان ویدئو"
+>
+
+<label>
+لینک ویدئو
+</label>
+
+<input
+type="url"
+id="videoUrl"
+placeholder="https://..."
+>
+
+<label>
+توضیحات
+</label>
 
 <textarea
-    id="videoDescription"
+id="videoDescription"
+placeholder="توضیحات ویدئو..."
 ></textarea>
 
+<div class="actions">
+
 <button
-    class="primary"
-    onclick="saveVideo()"
+class="primary"
+onclick="saveVideo()"
 >
-ذخیره ویدئو
+💾 ذخیره ویدئو
+</button>
+
+<button
+class="secondary"
+onclick="clearVideoForm()"
+>
+پاک کردن
 </button>
 
 </div>
 
+<div
+id="videoStatus"
+class="status"
+>
+آماده ثبت ویدئو
+</div>
 
-<!-- VIDEOS -->
+</div>
+
+
+<!-- ================= VIDEO LIST ================= -->
 
 <div class="card">
 
-<h2>ویدئوهای این صنعت</h2>
+<div class="toolbar">
+
+<h2 style="margin:0">
+🎬 ویدئوهای این صنعت
+</h2>
+
+<span
+class="toolbar-title"
+id="videoCount"
+>
+0 ویدئو
+</span>
+
+</div>
 
 <div
-    id="videoList"
-    class="grid"
-></div>
+id="videoList"
+class="grid"
+>
+<div class="loading">
+در حال دریافت ویدئوها...
+</div>
+</div>
 
 </div>
 
@@ -545,8 +938,8 @@ const SUPABASE_KEY =
 
 const supabaseClient =
 supabase.createClient(
-    SUPABASE_URL,
-    SUPABASE_KEY
+SUPABASE_URL,
+SUPABASE_KEY
 );
 
 
@@ -556,42 +949,53 @@ supabase.createClient(
 
 async function login(){
 
-    const email =
-        document.getElementById("email").value.trim();
+const email =
+document.getElementById("email").value.trim();
 
-    const password =
-        document.getElementById("password").value;
+const password =
+document.getElementById("password").value;
 
-    const status =
-        document.getElementById("loginStatus");
+const status =
+document.getElementById("loginStatus");
 
-    if(!email || !password){
+if(!email || !password){
 
-        status.textContent =
-        "ایمیل و رمز عبور را وارد کنید.";
+status.className="status error-status";
 
-        return;
-    }
+status.textContent =
+"ایمیل و رمز عبور را وارد کنید.";
 
-    status.textContent =
-    "در حال ورود...";
+return;
+}
 
-    const {data,error} =
-    await supabaseClient.auth.signInWithPassword({
-        email:email,
-        password:password
-    });
+status.className="status";
 
-    if(error){
+status.textContent =
+"در حال ورود...";
 
-        status.textContent =
-        "خطا در ورود: " +
-        error.message;
+const {
+data,
+error
+} =
+await supabaseClient.auth.signInWithPassword({
 
-        return;
-    }
+email:email,
+password:password
 
-    showAdmin();
+});
+
+if(error){
+
+status.className="status error-status";
+
+status.textContent =
+"خطا در ورود: " +
+error.message;
+
+return;
+}
+
+showAdmin();
 
 }
 
@@ -602,55 +1006,66 @@ async function login(){
 
 async function checkSession(){
 
-    const {data,error} =
-    await supabaseClient.auth.getSession();
+const {
+data,
+error
+} =
+await supabaseClient.auth.getSession();
 
-    if(error){
+if(error){
 
-        console.error(error);
+console.error(error);
 
-        return;
-    }
+return;
+}
 
-    if(data.session){
+if(data.session){
 
-        showAdmin();
-
-    }
+showAdmin();
 
 }
 
+}
+
+
+/* =====================================================
+   SHOW ADMIN
+===================================================== */
 
 function showAdmin(){
 
-    document
-    .getElementById("loginBox")
-    .classList.add("hidden");
+document
+.getElementById("loginBox")
+.classList.add("hidden");
 
-    document
-    .getElementById("adminPanel")
-    .classList.remove("hidden");
+document
+.getElementById("adminPanel")
+.classList.remove("hidden");
 
-    document
-    .getElementById("logoutBtn")
-    .classList.remove("hidden");
+document
+.getElementById("logoutBtn")
+.classList.remove("hidden");
 
-    loadIndustry();
+loadIndustry();
 
 }
 
+
+/* =====================================================
+   LOGOUT
+===================================================== */
 
 document
 .getElementById("logoutBtn")
 .addEventListener(
-    "click",
-    async function(){
+"click",
+async function(){
 
-        await supabaseClient.auth.signOut();
+await supabaseClient.auth.signOut();
 
-        location.reload();
+location.reload();
 
-    }
+}
 );
 
 
@@ -660,9 +1075,9 @@ document
 
 function currentIndustry(){
 
-    return document
-    .getElementById("industrySelect")
-    .value;
+return document
+.getElementById("industrySelect")
+.value;
 
 }
 
@@ -673,23 +1088,64 @@ function currentIndustry(){
 
 async function loadIndustry(){
 
-    const status =
-        document.getElementById("mainStatus");
+const status =
+document.getElementById("mainStatus");
 
-    status.textContent =
-        "در حال دریافت اطلاعات صنعت...";
+status.className="status";
 
-    clearForm();
+status.textContent =
+"در حال دریافت اطلاعات صنعت...";
 
-    await loadContent();
+clearForm();
 
-    await loadGallery();
+clearVideoForm();
 
-    await loadVideos();
+await Promise.all([
 
-    status.textContent =
-        "صنعت انتخاب‌شده: " +
-        currentIndustry();
+loadContent(),
+
+loadGallery(),
+
+loadVideos()
+
+]);
+
+status.className =
+"status success-status";
+
+status.textContent =
+"صنعت انتخاب‌شده: " +
+getIndustryName(currentIndustry());
+
+}
+
+
+/* =====================================================
+   INDUSTRY NAME
+===================================================== */
+
+function getIndustryName(value){
+
+const names={
+
+"rewinding":
+"سیم‌پیچی و برق صنعتی",
+
+"float-glass":
+"شیشه فلوت و تخت",
+
+"cable":
+"صنعت کابل‌سازی",
+
+"steel":
+"صنعت فولاد",
+
+"container-glass":
+"شیشه بطری"
+
+};
+
+return names[value] || value;
 
 }
 
@@ -700,106 +1156,114 @@ async function loadIndustry(){
 
 async function saveContent(){
 
-    const id =
-        document.getElementById("editId").value;
+const id =
+document.getElementById("editId").value;
 
-    const industry =
-        currentIndustry();
+const industry =
+currentIndustry();
 
-    const contentType =
-        document.getElementById("contentType").value;
+const contentType =
+document.getElementById("contentType").value;
 
-    const title =
-        document.getElementById("contentTitle")
-        .value
-        .trim();
+const title =
+document
+.getElementById("contentTitle")
+.value
+.trim();
 
-    const subtitle =
-        document.getElementById("contentSubtitle")
-        .value
-        .trim();
+const subtitle =
+document
+.getElementById("contentSubtitle")
+.value
+.trim();
 
-    const content =
-        document.getElementById("contentText")
-        .value
-        .trim();
+const content =
+document
+.getElementById("contentText")
+.value
+.trim();
 
-    const sortOrder =
-        Number(
-            document.getElementById("sortOrder").value
-        ) || 0;
+const sortOrder =
+Number(
+document.getElementById("sortOrder").value
+) || 0;
 
+const status =
+document.getElementById("contentStatus");
 
-    if(!title && !content){
+if(!title && !content){
 
-        alert(
-            "عنوان یا متن را وارد کنید."
-        );
+status.className="status error-status";
 
-        return;
-    }
+status.textContent =
+"عنوان یا متن را وارد کنید.";
 
+return;
+}
 
-    const payload = {
+status.className="status";
 
-        industry:industry,
+status.textContent =
+"در حال ذخیره...";
 
-        content_type:contentType,
+const payload={
 
-        title:title,
+industry:industry,
 
-        subtitle:subtitle,
+content_type:contentType,
 
-        content:content,
+title:title,
 
-        sort_order:sortOrder,
+subtitle:subtitle,
 
-        is_visible:true,
+content:content,
 
-        updated_at:new Date().toISOString()
+sort_order:sortOrder,
 
-    };
+is_visible:true,
 
+updated_at:new Date().toISOString()
 
-    let result;
+};
 
+let result;
 
-    if(id){
+if(id){
 
-        result =
-        await supabaseClient
-        .from("industry_content")
-        .update(payload)
-        .eq("id",id);
+result =
+await supabaseClient
+.from("industry_content")
+.update(payload)
+.eq("id",id);
 
-    }else{
+}else{
 
-        result =
-        await supabaseClient
-        .from("industry_content")
-        .insert(payload);
+result =
+await supabaseClient
+.from("industry_content")
+.insert(payload);
 
-    }
+}
 
+if(result.error){
 
-    if(result.error){
+status.className="status error-status";
 
-        alert(
-            "خطا در ذخیره:\n" +
-            result.error.message
-        );
+status.textContent =
+"خطا: " +
+result.error.message;
 
-        return;
-    }
+return;
+}
 
+status.className="status success-status";
 
-    alert(
-        "محتوا با موفقیت ذخیره شد."
-    );
+status.textContent =
+"✅ محتوا با موفقیت ذخیره شد.";
 
-    clearForm();
+clearForm();
 
-    await loadContent();
+await loadContent();
 
 }
 
@@ -810,100 +1274,156 @@ async function saveContent(){
 
 async function loadContent(){
 
-    const industry =
-        currentIndustry();
+const industry =
+currentIndustry();
 
-    const list =
-        document.getElementById("contentList");
+const list =
+document.getElementById("contentList");
 
-    list.innerHTML =
-        "در حال دریافت محتوا...";
+const count =
+document.getElementById("contentCount");
+
+list.innerHTML =
+'<div class="loading">در حال دریافت محتوا...</div>';
+
+const {
+data,
+error
+} =
+await supabaseClient
+.from("industry_content")
+.select("*")
+.eq("industry",industry)
+.order(
+"sort_order",
+{
+ascending:true
+}
+)
+.order(
+"id",
+{
+ascending:true
+}
+);
+
+if(error){
+
+list.innerHTML =
+'<div class="empty">❌ خطا: ' +
+escapeHtml(error.message) +
+'</div>';
+
+count.textContent="خطا";
+
+return;
+}
+
+const visibleData =
+(data || []).filter(
+item => item.content_type !== "video"
+);
+
+count.textContent =
+visibleData.length +
+" مورد";
+
+if(!visibleData.length){
+
+list.innerHTML =
+'<div class="empty">هنوز محتوایی برای این صنعت ثبت نشده است.</div>';
+
+return;
+}
+
+list.innerHTML="";
+
+visibleData.forEach(function(item){
+
+const div =
+document.createElement("div");
+
+div.className =
+"content-item";
+
+const typeName =
+getContentTypeName(
+item.content_type
+);
+
+div.innerHTML=`
+
+<div class="content-type">
+${escapeHtml(typeName)}
+</div>
+
+<h3>
+${escapeHtml(item.title || "بدون عنوان")}
+</h3>
+
+${
+item.subtitle
+?
+`<div class="small-info">
+${escapeHtml(item.subtitle)}
+</div>`
+:
+""
+}
+
+<p>
+${escapeHtml(item.content || "")}
+</p>
+
+<div class="small-info">
+ترتیب نمایش: ${item.sort_order ?? 0}
+</div>
+
+<div class="actions">
+
+<button
+class="primary"
+onclick="editContent(${item.id})"
+>
+✏️ ویرایش
+</button>
+
+<button
+class="danger"
+onclick="deleteContent(${item.id})"
+>
+🗑 حذف
+</button>
+
+</div>
+`;
+
+list.appendChild(div);
+
+});
+
+}
 
 
-    const {data,error} =
-        await supabaseClient
-        .from("industry_content")
-        .select("*")
-        .eq("industry",industry)
-        .order(
-            "sort_order",
-            {
-                ascending:true
-            }
-        )
-        .order(
-            "id",
-            {
-                ascending:true
-            }
-        );
+/* =====================================================
+   CONTENT TYPE NAME
+===================================================== */
 
+function getContentTypeName(type){
 
-    if(error){
+const names={
 
-        list.innerHTML =
-            "خطا: " +
-            escapeHtml(error.message);
+intro:"معرفی",
 
-        return;
-    }
+section:"بخش فنی",
 
+project:"پروژه",
 
-    if(!data || data.length === 0){
+video:"ویدئو"
 
-        list.innerHTML =
-            "<p>هنوز محتوایی ثبت نشده است.</p>";
+};
 
-        return;
-    }
-
-
-    list.innerHTML = "";
-
-
-    data.forEach(function(item){
-
-        const div =
-            document.createElement("div");
-
-        div.className =
-            "content-item";
-
-
-        div.innerHTML = `
-
-            <div class="small">
-                ${escapeHtml(item.content_type || "")}
-            </div>
-
-            <h3>
-                ${escapeHtml(item.title || "")}
-            </h3>
-
-            <p>
-                ${escapeHtml(item.content || "")}
-            </p>
-
-            <button
-                class="primary"
-                onclick="editContent(${item.id})"
-            >
-                ویرایش
-            </button>
-
-            <button
-                class="danger"
-                onclick="deleteContent(${item.id})"
-            >
-                حذف
-            </button>
-
-        `;
-
-
-        list.appendChild(div);
-
-    });
+return names[type] || type || "محتوا";
 
 }
 
@@ -914,45 +1434,66 @@ async function loadContent(){
 
 async function editContent(id){
 
-    const {data,error} =
-        await supabaseClient
-        .from("industry_content")
-        .select("*")
-        .eq("id",id)
-        .single();
+const {
+data,
+error
+} =
+await supabaseClient
+.from("industry_content")
+.select("*")
+.eq("id",id)
+.single();
 
+if(error){
 
-    if(error){
+alert(error.message);
 
-        alert(error.message);
+return;
+}
 
-        return;
-    }
+document
+.getElementById("editId")
+.value=data.id;
 
+document
+.getElementById("contentType")
+.value=data.content_type || "section";
 
-    document.getElementById("editId").value =
-        data.id;
+document
+.getElementById("contentTitle")
+.value=data.title || "";
 
-    document.getElementById("contentType").value =
-        data.content_type || "section";
+document
+.getElementById("contentSubtitle")
+.value=data.subtitle || "";
 
-    document.getElementById("contentTitle").value =
-        data.title || "";
+document
+.getElementById("contentText")
+.value=data.content || "";
 
-    document.getElementById("contentSubtitle").value =
-        data.subtitle || "";
+document
+.getElementById("sortOrder")
+.value=data.sort_order || 0;
 
-    document.getElementById("contentText").value =
-        data.content || "";
+document
+.getElementById("contentStatus")
+.textContent =
+"در حال ویرایش: " +
+(data.title || "محتوا");
 
-    document.getElementById("sortOrder").value =
-        data.sort_order || 0;
+window.scrollTo({
 
+top:
+document
+.getElementById("contentTitle")
+.getBoundingClientRect()
+.top +
+window.scrollY -
+150,
 
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
+behavior:"smooth"
+
+});
 
 }
 
@@ -963,148 +1504,247 @@ async function editContent(id){
 
 async function deleteContent(id){
 
-    if(!confirm(
-        "این محتوا حذف شود؟"
-    )){
+if(!confirm(
+"این محتوا حذف شود؟"
+)){
 
-        return;
-    }
+return;
+}
 
+const {
+error
+} =
+await supabaseClient
+.from("industry_content")
+.delete()
+.eq("id",id);
 
-    const {error} =
-        await supabaseClient
-        .from("industry_content")
-        .delete()
-        .eq("id",id);
+if(error){
 
+alert(
+"خطا در حذف:\n" +
+error.message
+);
 
-    if(error){
+return;
+}
 
-        alert(error.message);
-
-        return;
-    }
-
-
-    await loadContent();
+await loadContent();
 
 }
 
 
 /* =====================================================
-   CLEAR FORM
+   CLEAR CONTENT FORM
 ===================================================== */
 
 function clearForm(){
 
-    document.getElementById("editId").value =
-        "";
+document
+.getElementById("editId")
+.value="";
 
-    document.getElementById("contentTitle").value =
-        "";
+document
+.getElementById("contentType")
+.value="intro";
 
-    document.getElementById("contentSubtitle").value =
-        "";
+document
+.getElementById("contentTitle")
+.value="";
 
-    document.getElementById("contentText").value =
-        "";
+document
+.getElementById("contentSubtitle")
+.value="";
 
-    document.getElementById("sortOrder").value =
-        0;
+document
+.getElementById("contentText")
+.value="";
+
+document
+.getElementById("sortOrder")
+.value=0;
 
 }
 
 
 /* =====================================================
-   IMAGE PREVIEW
+   IMAGE DRAG & DROP
 ===================================================== */
 
-function previewImage(){
+const dropZone =
+document.getElementById("dropZone");
 
-    const file =
-        document
-        .getElementById("imageFile")
-        .files[0];
+const imageFile =
+document.getElementById("imageFile");
 
-    const preview =
-        document
-        .getElementById("imagePreview");
+dropZone.addEventListener(
+"click",
+function(){
 
-    const info =
-        document
-        .getElementById("fileInfo");
+imageFile.click();
+
+}
+);
+
+imageFile.addEventListener(
+"change",
+function(){
+
+handleImageFile(
+this.files[0]
+);
+
+}
+);
+
+dropZone.addEventListener(
+"dragover",
+function(event){
+
+event.preventDefault();
+
+dropZone.classList.add(
+"dragover"
+);
+
+}
+);
+
+dropZone.addEventListener(
+"dragleave",
+function(){
+
+dropZone.classList.remove(
+"dragover"
+);
+
+}
+);
+
+dropZone.addEventListener(
+"drop",
+function(event){
+
+event.preventDefault();
+
+dropZone.classList.remove(
+"dragover"
+);
+
+const file =
+event.dataTransfer.files[0];
+
+handleImageFile(file);
+
+}
+);
 
 
-    if(!file){
+/* =====================================================
+   HANDLE IMAGE
+===================================================== */
 
-        preview.style.display =
-            "none";
+function handleImageFile(file){
 
-        info.textContent =
-            "هنوز تصویری انتخاب نشده است.";
+const preview =
+document.getElementById("imagePreview");
 
-        return;
-    }
+const info =
+document.getElementById("fileInfo");
 
+if(!file){
 
-    info.textContent =
-        "نام فایل: " +
-        file.name +
-        " | حجم: " +
-        formatBytes(file.size);
+return;
+}
 
+const allowedTypes=[
 
-    const reader =
-        new FileReader();
+"image/jpeg",
+"image/png",
+"image/webp",
+"image/gif"
 
+];
 
-    reader.onload =
-        function(event){
+if(!allowedTypes.includes(file.type)){
 
-            preview.src =
-                event.target.result;
+info.textContent =
+"❌ فقط JPG، PNG، WEBP و GIF مجاز است.";
 
-            preview.style.display =
-                "block";
+preview.style.display="none";
 
-        };
+return;
+}
 
+if(file.size > 10 * 1024 * 1024){
 
-    reader.readAsDataURL(file);
+info.textContent =
+"❌ حجم تصویر نباید بیشتر از 10MB باشد.";
+
+preview.style.display="none";
+
+return;
+}
+
+info.textContent =
+"📷 " +
+file.name +
+" | " +
+formatBytes(file.size);
+
+const reader =
+new FileReader();
+
+reader.onload =
+function(event){
+
+preview.src =
+event.target.result;
+
+preview.style.display =
+"block";
+
+};
+
+reader.readAsDataURL(file);
 
 }
 
 
+/* =====================================================
+   FORMAT BYTES
+===================================================== */
+
 function formatBytes(bytes){
 
-    if(bytes === 0){
+if(bytes === 0){
 
-        return "0 Bytes";
+return "0 Bytes";
 
-    }
+}
 
+const units=[
 
-    const units = [
-        "Bytes",
-        "KB",
-        "MB",
-        "GB"
-    ];
+"Bytes",
+"KB",
+"MB",
+"GB"
 
+];
 
-    const i =
-        Math.floor(
-            Math.log(bytes) /
-            Math.log(1024)
-        );
+const i =
+Math.floor(
+Math.log(bytes) /
+Math.log(1024)
+);
 
-
-    return (
-        bytes /
-        Math.pow(1024,i)
-    ).toFixed(2)
-    + " "
-    + units[i];
+return (
+bytes /
+Math.pow(1024,i)
+).toFixed(2)
++
+" " +
+units[i];
 
 }
 
@@ -1115,293 +1755,194 @@ function formatBytes(bytes){
 
 async function uploadImage(){
 
-    const file =
-        document
-        .getElementById("imageFile")
-        .files[0];
+const file =
+document
+.getElementById("imageFile")
+.files[0];
 
-    const status =
-        document
-        .getElementById("uploadStatus");
+const status =
+document
+.getElementById("uploadStatus");
 
-    const button =
-        document
-        .getElementById("uploadButton");
+const button =
+document
+.getElementById("uploadButton");
 
+const industry =
+currentIndustry();
 
-    if(!file){
+if(!file){
 
-        status.textContent =
-            "ابتدا یک تصویر انتخاب کنید.";
+status.className =
+"status error-status";
 
-        return;
-    }
+status.textContent =
+"ابتدا یک تصویر انتخاب کنید.";
 
+return;
+}
 
-    const industry =
-        currentIndustry();
+button.disabled=true;
 
+button.textContent =
+"در حال آپلود...";
 
-    if(!industry){
+status.className="status";
 
-        status.textContent =
-            "صنعت انتخاب نشده است.";
+status.textContent =
+"در حال آپلود تصویر...";
 
-        return;
-    }
+try{
 
+let extension="jpg";
 
-    /* فرمت */
+if(file.type === "image/png"){
 
-    const allowedTypes = [
-        "image/jpeg",
-        "image/png",
-        "image/webp",
-        "image/gif"
-    ];
+extension="png";
 
+}
 
-    if(!allowedTypes.includes(file.type)){
+else if(file.type === "image/webp"){
 
-        status.textContent =
-            "❌ فرمت تصویر مجاز نیست.";
+extension="webp";
 
-        return;
-    }
+}
 
+else if(file.type === "image/gif"){
 
-    /* حجم */
+extension="gif";
 
-    if(file.size > 10 * 1024 * 1024){
+}
 
-        status.textContent =
-            "❌ حجم تصویر بیشتر از 10MB است.";
+const fileName =
+"image-" +
+Date.now() +
+"-" +
+Math.random()
+.toString(36)
+.substring(2,8) +
+"." +
+extension;
 
-        return;
-    }
+const filePath =
+industry +
+"/" +
+fileName;
 
+const {
+error:uploadError
+} =
+await supabaseClient
+.storage
+.from("project-media")
+.upload(
+filePath,
+file,
+{
 
-    /* جلوگیری از چند کلیک */
+cacheControl:"3600",
 
-    button.disabled =
-        true;
+upsert:false,
 
-    button.textContent =
-        "در حال آپلود...";
+contentType:file.type
 
+}
+);
 
-    try{
+if(uploadError){
 
+throw new Error(
+"خطا در Storage: " +
+uploadError.message
+);
 
-        /* ==============================
-           تعیین پسوند
-        ============================== */
+}
 
-        let extension =
-            "jpg";
+status.textContent =
+"تصویر آپلود شد. در حال ثبت اطلاعات...";
 
+const {
+error:dbError
+} =
+await supabaseClient
+.from("industry_media")
+.insert({
 
-        if(file.type === "image/png"){
+industry:industry,
 
-            extension =
-                "png";
+media_type:"image",
 
-        }else if(
-            file.type === "image/webp"
-        ){
+file_path:filePath
 
-            extension =
-                "webp";
+});
 
-        }else if(
-            file.type === "image/gif"
-        ){
+if(dbError){
 
-            extension =
-                "gif";
+await supabaseClient
+.storage
+.from("project-media")
+.remove([filePath]);
 
-        }
+throw new Error(
+"خطا در ثبت دیتابیس: " +
+dbError.message
+);
 
+}
 
-        /* ==============================
-           نام یکتا
-        ============================== */
+status.className =
+"status success-status";
 
-        const fileName =
-            "image-" +
-            Date.now() +
-            "-" +
-            Math.random()
-            .toString(36)
-            .substring(2,8) +
-            "." +
-            extension;
+status.textContent =
+"✅ تصویر با موفقیت اضافه شد.";
 
+clearImageForm();
 
-        /* ==============================
-           مسیر نهایی
-        ============================== */
+await loadGallery();
 
-        const filePath =
-            industry +
-            "/" +
-            fileName;
+}catch(error){
 
+console.error(error);
 
-        status.textContent =
-            "در حال آپلود تصویر به Storage...";
+status.className =
+"status error-status";
 
+status.textContent =
+"❌ " +
+error.message;
 
-        /* ==============================
-           UPLOAD
-        ============================== */
+}
 
-        const {
-            error:uploadError
-        } =
-            await supabaseClient
-            .storage
-            .from("project-media")
-            .upload(
-                filePath,
-                file,
-                {
-                    cacheControl:"3600",
-                    upsert:false,
-                    contentType:file.type
-                }
-            );
+button.disabled=false;
 
+button.textContent =
+"⬆️ آپلود تصویر";
 
-        if(uploadError){
+}
 
-            throw new Error(
-                "خطا در Storage: " +
-                uploadError.message
-            );
 
-        }
+/* =====================================================
+   CLEAR IMAGE FORM
+===================================================== */
 
+function clearImageForm(){
 
-        status.textContent =
-            "تصویر آپلود شد. در حال ثبت اطلاعات...";
+document
+.getElementById("imageFile")
+.value="";
 
+document
+.getElementById("imagePreview")
+.style.display="none";
 
-        /* ==============================
-           ثبت دیتابیس
-        ============================== */
+document
+.getElementById("imagePreview")
+.src="";
 
-        const {
-            error:dbError
-        } =
-            await supabaseClient
-            .from("industry_media")
-            .insert({
-
-                industry:industry,
-
-                media_type:"image",
-
-                file_path:filePath
-
-            });
-
-
-        if(dbError){
-
-            /* حذف فایل در صورت خطای دیتابیس */
-
-            await supabaseClient
-            .storage
-            .from("project-media")
-            .remove([
-                filePath
-            ]);
-
-
-            throw new Error(
-                "خطا در ثبت دیتابیس: " +
-                dbError.message
-            );
-
-        }
-
-
-        /* ==============================
-           URL
-        ============================== */
-
-        const publicUrl =
-            supabaseClient
-            .storage
-            .from("project-media")
-            .getPublicUrl(
-                filePath
-            )
-            .data
-            .publicUrl;
-
-
-        console.log(
-            "IMAGE PATH:",
-            filePath
-        );
-
-
-        console.log(
-            "IMAGE URL:",
-            publicUrl
-        );
-
-
-        /* ==============================
-           موفقیت
-        ============================== */
-
-        status.innerHTML =
-            "✅ تصویر با موفقیت آپلود شد.";
-
-
-        document
-        .getElementById("imageFile")
-        .value = "";
-
-
-        document
-        .getElementById("imagePreview")
-        .style.display =
-            "none";
-
-
-        document
-        .getElementById("fileInfo")
-        .textContent =
-            "تصویر با موفقیت ثبت شد.";
-
-
-        await loadGallery();
-
-
-    }catch(error){
-
-        console.error(
-            "IMAGE ERROR:",
-            error
-        );
-
-
-        status.textContent =
-            "❌ " +
-            error.message;
-
-    }
-
-
-    button.disabled =
-        false;
-
-    button.textContent =
-        "آپلود تصویر";
+document
+.getElementById("fileInfo")
+.textContent =
+"هنوز تصویری انتخاب نشده است.";
 
 }
 
@@ -1412,169 +1953,156 @@ async function uploadImage(){
 
 async function loadGallery(){
 
-    const industry =
-        currentIndustry();
+const industry =
+currentIndustry();
 
-    const gallery =
-        document.getElementById("gallery");
+const gallery =
+document.getElementById("gallery");
 
+const count =
+document.getElementById("galleryCount");
 
-    gallery.innerHTML =
-        "در حال دریافت تصاویر...";
+gallery.innerHTML =
+'<div class="loading">در حال دریافت تصاویر...</div>';
 
+const {
+data,
+error
+} =
+await supabaseClient
+.from("industry_media")
+.select("*")
+.eq("industry",industry)
+.eq("media_type","image")
+.order(
+"id",
+{
+ascending:false
+}
+);
 
-    const {
-        data,
-        error
-    } =
-        await supabaseClient
-        .from("industry_media")
-        .select("*")
-        .eq("industry",industry)
-        .eq("media_type","image")
-        .order(
-            "id",
-            {
-                ascending:false
-            }
-        );
+if(error){
 
+gallery.innerHTML =
+'<div class="empty">❌ خطا: ' +
+escapeHtml(error.message) +
+'</div>';
 
-    if(error){
+count.textContent="خطا";
 
-        gallery.innerHTML =
-            "❌ خطا: " +
-            escapeHtml(error.message);
+return;
+}
 
-        return;
-    }
+count.textContent =
+(data || []).length +
+" تصویر";
 
+if(!data || !data.length){
 
-    if(!data || data.length === 0){
+gallery.innerHTML =
+'<div class="empty">هنوز تصویری برای این صنعت ثبت نشده است.</div>';
 
-        gallery.innerHTML =
-            "<p>هنوز تصویری ثبت نشده است.</p>";
+return;
+}
 
-        return;
-    }
+gallery.innerHTML="";
 
+data.forEach(function(item){
 
-    gallery.innerHTML =
-        "";
+const card =
+document.createElement("div");
 
+card.className =
+"media-card";
 
-    data.forEach(function(item){
+if(!item.file_path){
 
-        const card =
-            document.createElement("div");
+card.innerHTML=`
 
-        card.className =
-            "media-card";
+<div class="media-info">
+❌ مسیر تصویر خالی است.
+</div>
 
+<button
+class="danger"
+onclick="deleteImage(${item.id}, '')"
+>
+🗑 حذف رکورد
+</button>
 
-        if(!item.file_path){
+`;
 
-            card.innerHTML = `
+gallery.appendChild(card);
 
-                <div class="media-info">
-                    ❌ مسیر تصویر خالی است.
-                </div>
+return;
+}
 
-                <button
-                    class="danger"
-                    onclick="deleteImage(
-                        ${item.id},
-                        ''
-                    )"
-                >
-                    حذف رکورد
-                </button>
+const imageUrl =
+supabaseClient
+.storage
+.from("project-media")
+.getPublicUrl(
+item.file_path
+)
+.data
+.publicUrl;
 
-            `;
+card.innerHTML=`
 
+<img
+src="${escapeAttribute(imageUrl)}"
+alt="تصویر صنعت"
+loading="lazy"
+>
 
-            gallery.appendChild(card);
+<div class="media-info">
+${escapeHtml(item.file_path)}
+</div>
 
-            return;
-        }
+<button
+class="danger"
+onclick="deleteImage(
+${item.id},
+'${escapeJsString(item.file_path)}'
+)"
+>
+🗑 حذف تصویر
+</button>
 
+`;
 
-        const imageUrl =
-            supabaseClient
-            .storage
-            .from("project-media")
-            .getPublicUrl(
-                item.file_path
-            )
-            .data
-            .publicUrl;
+gallery.appendChild(card);
 
+const img =
+card.querySelector("img");
 
-        card.innerHTML = `
+img.addEventListener(
+"error",
+function(){
 
-            <img
-                src="${escapeAttribute(imageUrl)}"
-                alt="تصویر صنعت"
-                loading="lazy"
-            >
+img.style.display="none";
 
-            <div class="media-info">
-                ${escapeHtml(item.file_path)}
-            </div>
+const errorText =
+document.createElement("div");
 
-            <button
-                class="danger"
-                onclick="deleteImage(
-                    ${item.id},
-                    '${escapeAttribute(item.file_path)}'
-                )"
-            >
-                حذف تصویر
-            </button>
+errorText.className =
+"media-info";
 
-        `;
+errorText.style.color =
+"#ef4444";
 
+errorText.textContent =
+"❌ فایل در Storage قابل نمایش نیست.";
 
-        gallery.appendChild(card);
+card.insertBefore(
+errorText,
+card.firstChild
+);
 
+}
+);
 
-        const img =
-            card.querySelector("img");
-
-
-        img.addEventListener(
-            "error",
-            function(){
-
-                img.style.display =
-                    "none";
-
-
-                const errorText =
-                    document.createElement("div");
-
-
-                errorText.className =
-                    "media-info";
-
-
-                errorText.style.color =
-                    "#ef4444";
-
-
-                errorText.textContent =
-                    "❌ فایل در Storage قابل نمایش نیست.";
-
-
-                card.insertBefore(
-                    errorText,
-                    card.firstChild
-                );
-
-            }
-        );
-
-    });
+});
 
 }
 
@@ -1584,65 +2112,58 @@ async function loadGallery(){
 ===================================================== */
 
 async function deleteImage(
-    id,
-    path
+id,
+path
 ){
 
-    if(!confirm(
-        "این تصویر حذف شود؟"
-    )){
+if(!confirm(
+"این تصویر از سایت و Storage حذف شود؟"
+)){
 
-        return;
-    }
+return;
+}
 
+if(path){
 
-    if(path){
+const {
+error:storageError
+} =
+await supabaseClient
+.storage
+.from("project-media")
+.remove([path]);
 
-        const {
-            error:storageError
-        } =
-            await supabaseClient
-            .storage
-            .from("project-media")
-            .remove([
-                path
-            ]);
+if(storageError){
 
+alert(
+"خطا در حذف فایل:\n" +
+storageError.message
+);
 
-        if(storageError){
+return;
+}
 
-            alert(
-                "خطا در حذف فایل: " +
-                storageError.message
-            );
+}
 
-            return;
-        }
+const {
+error
+} =
+await supabaseClient
+.from("industry_media")
+.delete()
+.eq("id",id);
 
-    }
+if(error){
 
+alert(
+"خطا در حذف رکورد:\n" +
+error.message
+);
 
-    const {
-        error
-    } =
-        await supabaseClient
-        .from("industry_media")
-        .delete()
-        .eq("id",id);
+return;
+}
 
-
-    if(error){
-
-        alert(
-            "خطا در حذف رکورد: " +
-            error.message
-        );
-
-        return;
-    }
-
-
-    await loadGallery();
+await loadGallery();
 
 }
 
@@ -1653,95 +2174,112 @@ async function deleteImage(
 
 async function saveVideo(){
 
-    const industry =
-        currentIndustry();
+const industry =
+currentIndustry();
 
-    const title =
-        document
-        .getElementById("videoTitle")
-        .value
-        .trim();
+const id =
+document
+.getElementById("videoEditId")
+.value;
 
-    const url =
-        document
-        .getElementById("videoUrl")
-        .value
-        .trim();
+const title =
+document
+.getElementById("videoTitle")
+.value
+.trim();
 
-    const description =
-        document
-        .getElementById("videoDescription")
-        .value
-        .trim();
+const url =
+document
+.getElementById("videoUrl")
+.value
+.trim();
 
+const description =
+document
+.getElementById("videoDescription")
+.value
+.trim();
 
-    if(!url){
+const status =
+document
+.getElementById("videoStatus");
 
-        alert(
-            "لینک ویدئو را وارد کنید."
-        );
+if(!url){
 
-        return;
-    }
+status.className =
+"status error-status";
 
+status.textContent =
+"لینک ویدئو را وارد کنید.";
 
-    const {
-        error
-    } =
-        await supabaseClient
-        .from("industry_content")
-        .insert({
+return;
+}
 
-            industry:industry,
+status.className="status";
 
-            content_type:"video",
+status.textContent =
+"در حال ذخیره ویدئو...";
 
-            title:title,
+const payload={
 
-            content:description,
+industry:industry,
 
-            subtitle:url,
+content_type:"video",
 
-            sort_order:0,
+title:title,
 
-            is_visible:true
+content:description,
 
-        });
+subtitle:url,
 
+sort_order:0,
 
-    if(error){
+is_visible:true,
 
-        alert(
-            "خطا در ذخیره ویدئو:\n" +
-            error.message
-        );
+updated_at:new Date().toISOString()
 
-        return;
-    }
+};
 
+let result;
 
-    alert(
-        "ویدئو اضافه شد."
-    );
+if(id){
 
+result =
+await supabaseClient
+.from("industry_content")
+.update(payload)
+.eq("id",id);
 
-    document
-    .getElementById("videoTitle")
-    .value =
-        "";
+}else{
 
-    document
-    .getElementById("videoUrl")
-    .value =
-        "";
+result =
+await supabaseClient
+.from("industry_content")
+.insert(payload);
 
-    document
-    .getElementById("videoDescription")
-    .value =
-        "";
+}
 
+if(result.error){
 
-    await loadVideos();
+status.className =
+"status error-status";
+
+status.textContent =
+"❌ " +
+result.error.message;
+
+return;
+}
+
+status.className =
+"status success-status";
+
+status.textContent =
+"✅ ویدئو با موفقیت ذخیره شد.";
+
+clearVideoForm();
+
+await loadVideos();
 
 }
 
@@ -1752,129 +2290,321 @@ async function saveVideo(){
 
 async function loadVideos(){
 
-    const industry =
-        currentIndustry();
+const industry =
+currentIndustry();
 
-    const list =
-        document.getElementById("videoList");
+const list =
+document.getElementById("videoList");
 
+const count =
+document.getElementById("videoCount");
 
-    list.innerHTML =
-        "در حال دریافت ویدئوها...";
+list.innerHTML =
+'<div class="loading">در حال دریافت ویدئوها...</div>';
 
+const {
+data,
+error
+} =
+await supabaseClient
+.from("industry_content")
+.select("*")
+.eq("industry",industry)
+.eq("content_type","video")
+.order(
+"id",
+{
+ascending:false
+}
+);
 
-    const {
-        data,
-        error
-    } =
-        await supabaseClient
-        .from("industry_content")
-        .select("*")
-        .eq("industry",industry)
-        .eq("content_type","video")
-        .order(
-            "id",
-            {
-                ascending:false
-            }
-        );
+if(error){
 
+list.innerHTML =
+'<div class="empty">❌ خطا: ' +
+escapeHtml(error.message) +
+'</div>';
 
-    if(error){
+count.textContent="خطا";
 
-        list.innerHTML =
-            "خطا: " +
-            escapeHtml(error.message);
+return;
+}
 
-        return;
-    }
+count.textContent =
+(data || []).length +
+" ویدئو";
 
+if(!data || !data.length){
 
-    if(!data || data.length === 0){
+list.innerHTML =
+'<div class="empty">هنوز ویدئویی ثبت نشده است.</div>';
 
-        list.innerHTML =
-            "<p>هنوز ویدئویی ثبت نشده است.</p>";
+return;
+}
 
-        return;
-    }
+list.innerHTML="";
 
+data.forEach(function(item){
 
-    list.innerHTML =
-        "";
+const div =
+document.createElement("div");
 
+div.className =
+"content-item";
 
-    data.forEach(function(item){
+div.innerHTML=`
 
-        const div =
-            document.createElement("div");
+<div class="content-type">
+ویدئو
+</div>
 
-        div.className =
-            "content-item";
+<h3>
+${escapeHtml(item.title || "ویدئوی صنعتی")}
+</h3>
 
+<p>
+${escapeHtml(item.content || "")}
+</p>
 
-        div.innerHTML = `
+<div class="video-url">
+${escapeHtml(item.subtitle || "")}
+</div>
 
-            <h3>
-                ${escapeHtml(
-                    item.title || "ویدئو"
-                )}
-            </h3>
+<div class="actions">
 
-            <p>
-                ${escapeHtml(
-                    item.content || ""
-                )}
-            </p>
+<button
+class="primary"
+onclick="editVideo(${item.id})"
+>
+✏️ ویرایش
+</button>
 
-            <a
-                href="${escapeAttribute(
-                    item.subtitle || ""
-                )}"
-                target="_blank"
-                rel="noopener"
-                style="color:#38bdf8"
-            >
-                مشاهده ویدئو
-            </a>
+<button
+class="danger"
+onclick="deleteVideo(${item.id})"
+>
+🗑 حذف
+</button>
 
-            <br>
+${
+item.subtitle
+?
+`
+<a
+href="${escapeAttribute(item.subtitle)}"
+target="_blank"
+rel="noopener"
+>
+<button class="secondary">
+🔗 مشاهده
+</button>
+</a>
+`
+:
+""
+}
 
-            <button
-                class="danger"
-                onclick="deleteContent(${item.id})"
-            >
-                حذف
-            </button>
+</div>
 
-        `;
+`;
 
+list.appendChild(div);
 
-        list.appendChild(div);
-
-    });
+});
 
 }
 
 
 /* =====================================================
-   SECURITY
+   EDIT VIDEO
 ===================================================== */
 
-function escapeHtml(value){
+async function editVideo(id){
 
-    return String(value ?? "")
-    .replaceAll("&","&amp;")
-    .replaceAll("<","&lt;")
-    .replaceAll(">","&gt;")
-    .replaceAll('"',"&quot;")
-    .replaceAll("'","&#039;");
+const {
+data,
+error
+} =
+await supabaseClient
+.from("industry_content")
+.select("*")
+.eq("id",id)
+.single();
+
+if(error){
+
+alert(error.message);
+
+return;
+}
+
+document
+.getElementById("videoEditId")
+.value=data.id;
+
+document
+.getElementById("videoTitle")
+.value=data.title || "";
+
+document
+.getElementById("videoUrl")
+.value=data.subtitle || "";
+
+document
+.getElementById("videoDescription")
+.value=data.content || "";
+
+document
+.getElementById("videoStatus")
+.textContent =
+"در حال ویرایش: " +
+(data.title || "ویدئو");
+
+window.scrollTo({
+
+top:
+document
+.getElementById("videoTitle")
+.getBoundingClientRect()
+.top +
+window.scrollY -
+150,
+
+behavior:"smooth"
+
+});
 
 }
 
 
+/* =====================================================
+   DELETE VIDEO
+===================================================== */
+
+async function deleteVideo(id){
+
+if(!confirm(
+"این ویدئو حذف شود؟"
+)){
+
+return;
+}
+
+const {
+error
+} =
+await supabaseClient
+.from("industry_content")
+.delete()
+.eq("id",id);
+
+if(error){
+
+alert(
+"خطا در حذف ویدئو:\n" +
+error.message
+);
+
+return;
+}
+
+await loadVideos();
+
+}
+
+
+/* =====================================================
+   CLEAR VIDEO FORM
+===================================================== */
+
+function clearVideoForm(){
+
+document
+.getElementById("videoEditId")
+.value="";
+
+document
+.getElementById("videoTitle")
+.value="";
+
+document
+.getElementById("videoUrl")
+.value="";
+
+document
+.getElementById("videoDescription")
+.value="";
+
+document
+.getElementById("videoStatus")
+.className="status";
+
+document
+.getElementById("videoStatus")
+.textContent =
+"آماده ثبت ویدئو";
+
+}
+
+
+/* =====================================================
+   REFRESH
+===================================================== */
+
+async function refreshAll(){
+
+const button =
+document.getElementById("refreshBtn");
+
+button.disabled=true;
+
+button.textContent =
+"در حال بروزرسانی...";
+
+try{
+
+await loadIndustry();
+
+}finally{
+
+button.disabled=false;
+
+button.textContent =
+"↻ بروزرسانی";
+
+}
+
+}
+
+
+/* =====================================================
+   SECURITY HELPERS
+===================================================== */
+
+function escapeHtml(value){
+
+return String(value ?? "")
+.replaceAll("&","&amp;")
+.replaceAll("<","&lt;")
+.replaceAll(">","&gt;")
+.replaceAll('"',"&quot;")
+.replaceAll("'","&#039;");
+
+}
+
 function escapeAttribute(value){
 
-    return escapeHtml(value);
+return escapeHtml(value);
+
+}
+
+function escapeJsString(value){
+
+return String(value ?? "")
+.replaceAll("\\","\\\\")
+.replaceAll("'","\\'")
+.replaceAll("\n","\\n")
+.replaceAll("\r","\\r");
 
 }
 
