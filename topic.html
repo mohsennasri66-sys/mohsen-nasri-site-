@@ -2,19 +2,18 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Mohsen Nasri | Industrial Engineering</title>
 
 <meta name="description"
-content="دانش فنی، پروژه‌ها، تجربیات و مستندات مهندسی صنعتی و مکانیک محسن نصری.">
+content="دانش فنی، تجربیات و مستندات مهندسی صنعتی و مکانیک محسن نصری.">
 
 <style>
 :root{
 --bg:#050b12;
 --bg2:#081521;
 --panel:#0c1925;
---panel2:#0f202f;
 --text:#f5f8fb;
 --muted:#aebdca;
 --cyan:#13c6d8;
@@ -23,7 +22,11 @@ content="دانش فنی، پروژه‌ها، تجربیات و مستندات 
 --shadow:0 20px 60px rgba(0,0,0,.35);
 }
 
-*{margin:0;padding:0;box-sizing:border-box}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
 html{
 scroll-behavior:smooth;
@@ -40,8 +43,14 @@ color:var(--text);
 line-height:2;
 }
 
-a{color:inherit;text-decoration:none}
-img{max-width:100%}
+a{
+color:inherit;
+text-decoration:none;
+}
+
+img{
+max-width:100%;
+}
 
 .container{
 width:min(1180px,92%);
@@ -49,6 +58,7 @@ margin:auto;
 }
 
 /* HEADER */
+
 header{
 position:fixed;
 top:0;
@@ -56,7 +66,7 @@ left:0;
 right:0;
 z-index:1000;
 height:78px;
-background:rgba(3,9,15,.90);
+background:rgba(3,9,15,.88);
 backdrop-filter:blur(18px);
 border-bottom:1px solid var(--border);
 }
@@ -77,7 +87,9 @@ direction:ltr;
 white-space:nowrap;
 }
 
-.brand span{color:var(--cyan)}
+.brand span{
+color:var(--cyan);
+}
 
 .menu{
 display:flex;
@@ -91,7 +103,9 @@ color:#dce7ee;
 transition:.25s;
 }
 
-.menu a:hover{color:var(--cyan)}
+.menu a:hover{
+color:var(--cyan);
+}
 
 .contact-link{
 border:1px solid rgba(19,198,216,.5);
@@ -109,6 +123,7 @@ cursor:pointer;
 }
 
 /* HERO */
+
 .hero{
 min-height:720px;
 padding-top:78px;
@@ -125,6 +140,7 @@ rgba(2,8,14,.55) 68%,
 rgba(2,8,14,.18) 100%
 ),
 var(--hero-image) center/cover no-repeat;
+direction:ltr;
 }
 
 .hero:after{
@@ -144,7 +160,9 @@ width:min(1180px,92%);
 margin:auto;
 }
 
-.hero-inner{max-width:760px}
+.hero-inner{
+max-width:760px;
+}
 
 .kicker{
 display:inline-block;
@@ -161,7 +179,9 @@ margin-bottom:22px;
 font-family:Arial,Tahoma,sans-serif;
 }
 
-.hero h1 span{color:var(--cyan)}
+.hero h1 span{
+color:var(--cyan);
+}
 
 .hero p{
 font-size:19px;
@@ -195,24 +215,41 @@ color:#031015;
 }
 
 .btn-primary:hover{
+background:#27d7e6;
 transform:translateY(-2px);
 }
 
 .btn-outline{
 border:1px solid rgba(255,255,255,.25);
+color:#fff;
 background:rgba(255,255,255,.04);
 }
 
-/* SECTIONS */
-section{padding:90px 0}
-.section-dark{background:rgba(7,18,28,.72)}
+.btn-outline:hover{
+border-color:var(--cyan);
+color:var(--cyan);
+}
+
+/* GENERAL */
+
+main{
+direction:rtl;
+}
+
+section{
+padding:90px 0;
+}
+
+.section-dark{
+background:rgba(7,18,28,.72);
+}
 
 .section-title{
 text-align:center;
 margin-bottom:48px;
 }
 
-.eyebrow{
+.section-title .eyebrow{
 color:var(--cyan);
 font-size:13px;
 font-weight:bold;
@@ -230,7 +267,8 @@ color:var(--muted);
 font-size:15px;
 }
 
-/* INTRO */
+/* ABOUT */
+
 .intro{
 display:grid;
 grid-template-columns:1.3fr .7fr;
@@ -240,18 +278,21 @@ gap:28px;
 .article-card,
 .info-card,
 .toc,
-.project-card,
-.resource-card,
-.specialty,
-.gallery-card,
-.video-card{
-background:linear-gradient(145deg,rgba(13,28,41,.96),rgba(8,20,30,.96));
+.media-card,
+.resource-card{
+background:linear-gradient(
+145deg,
+rgba(13,28,41,.96),
+rgba(8,20,30,.96)
+);
 border:1px solid var(--border);
 border-radius:14px;
 box-shadow:var(--shadow);
 }
 
-.article-card{padding:35px}
+.article-card{
+padding:35px;
+}
 
 .article-card p{
 color:#c4d0d8;
@@ -271,7 +312,9 @@ padding:14px 0;
 border-bottom:1px solid rgba(255,255,255,.07);
 }
 
-.info-row:last-child{border:0}
+.info-row:last-child{
+border-bottom:0;
+}
 
 .info-row small{
 display:block;
@@ -285,7 +328,10 @@ color:#eaf2f7;
 }
 
 /* TOC */
-.toc-wrap{padding:70px 0 20px}
+
+.toc-wrap{
+padding:70px 0 20px;
+}
 
 .toc{
 padding:28px;
@@ -300,22 +346,34 @@ justify-content:space-between;
 margin-bottom:20px;
 }
 
-.toc-title h2{font-size:23px}
-.toc-title span{color:var(--cyan);font-size:13px}
+.toc-title h2{
+font-size:23px;
+}
+
+.toc-title span{
+color:var(--cyan);
+font-size:13px;
+}
 
 .toc ol{
+margin:0;
 padding-right:24px;
 columns:2;
+column-gap:45px;
 }
 
 .toc li{
 margin:7px 0;
 color:#b9c8d2;
+break-inside:avoid;
 }
 
-.toc a:hover{color:var(--cyan)}
+.toc a:hover{
+color:var(--cyan);
+}
 
-/* ARTICLE */
+/* TECHNICAL */
+
 .article{
 max-width:950px;
 margin:auto;
@@ -338,6 +396,16 @@ margin:32px 0 10px;
 color:#c2ced6;
 font-size:16px;
 margin-bottom:18px;
+}
+
+.article ul{
+padding-right:25px;
+margin:10px 0 22px;
+}
+
+.article li{
+color:#b9c7d0;
+margin:7px 0;
 }
 
 .note{
@@ -368,93 +436,12 @@ background:#0e2635;
 color:var(--cyan);
 }
 
-.tech-table td{color:#c2ced6}
-
-/* SPECIALTIES */
-.specialties{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
+.tech-table td{
+color:#c2ced6;
 }
 
-.specialty{
-padding:27px;
-transition:.25s;
-box-shadow:none;
-}
+/* GALLERY */
 
-.specialty:hover{
-transform:translateY(-5px);
-border-color:rgba(19,198,216,.55);
-}
-
-.number{
-color:var(--cyan);
-font-family:Arial,sans-serif;
-font-weight:bold;
-margin-bottom:10px;
-}
-
-.specialty h3{
-font-size:19px;
-margin-bottom:8px;
-}
-
-.specialty p{
-color:#aebcc6;
-font-size:14px;
-}
-
-/* PROJECTS */
-.projects{
-display:grid;
-gap:18px;
-max-width:1000px;
-margin:auto;
-}
-
-.project-card{
-padding:30px;
-}
-
-.project-head{
-display:flex;
-justify-content:space-between;
-gap:20px;
-align-items:flex-start;
-margin-bottom:12px;
-}
-
-.project-head h3{font-size:21px}
-
-.project-number{
-color:var(--gold);
-font-family:Arial,sans-serif;
-font-weight:bold;
-}
-
-.project-card p{
-color:#b9c6cf;
-font-size:14px;
-}
-
-.project-tags{
-display:flex;
-flex-wrap:wrap;
-gap:8px;
-margin-top:16px;
-}
-
-.tag{
-background:rgba(19,198,216,.08);
-border:1px solid rgba(19,198,216,.18);
-padding:4px 10px;
-border-radius:20px;
-font-size:11px;
-color:#9fdce4;
-}
-
-/* MEDIA */
 .media-status{
 text-align:center;
 color:#82929d;
@@ -469,8 +456,10 @@ gap:18px;
 }
 
 .gallery-card{
+background:var(--panel);
+border:1px solid var(--border);
+border-radius:12px;
 overflow:hidden;
-box-shadow:none;
 }
 
 .gallery-card img{
@@ -482,13 +471,17 @@ cursor:pointer;
 transition:.35s;
 }
 
-.gallery-card:hover img{transform:scale(1.04)}
+.gallery-card:hover img{
+transform:scale(1.04);
+}
 
 .gallery-title{
 padding:12px 15px;
 font-size:13px;
 color:#c4d0d7;
 }
+
+/* VIDEOS */
 
 .videos{
 display:grid;
@@ -497,9 +490,10 @@ gap:20px;
 }
 
 .video-card{
+background:var(--panel);
+border:1px solid var(--border);
+border-radius:12px;
 padding:12px;
-overflow:hidden;
-box-shadow:none;
 }
 
 .video-card video{
@@ -515,7 +509,8 @@ font-size:13px;
 color:#c3d0d7;
 }
 
-/* RESOURCES */
+/* DOCUMENTS */
+
 .resources{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -525,7 +520,6 @@ gap:20px;
 .resource-card{
 padding:25px;
 transition:.25s;
-box-shadow:none;
 }
 
 .resource-card:hover{
@@ -549,6 +543,7 @@ color:#aebcc6;
 }
 
 /* RELATED */
+
 .related{
 display:grid;
 grid-template-columns:repeat(5,1fr);
@@ -571,13 +566,18 @@ object-fit:cover;
 transition:.4s;
 }
 
-.related a:hover img{transform:scale(1.08)}
+.related a:hover img{
+transform:scale(1.08);
+}
 
 .related a:after{
 content:"";
 position:absolute;
 inset:0;
-background:linear-gradient(transparent 35%,rgba(0,0,0,.88));
+background:linear-gradient(
+transparent 35%,
+rgba(0,0,0,.88)
+);
 }
 
 .related strong{
@@ -591,14 +591,21 @@ font-size:14px;
 }
 
 /* CONTACT */
+
 .contact-box{
 max-width:900px;
 margin:auto;
 padding:45px;
 text-align:center;
-background:linear-gradient(145deg,rgba(11,35,48,.95),rgba(7,18,28,.95));
+background:
+linear-gradient(
+145deg,
+rgba(11,35,48,.95),
+rgba(7,18,28,.95)
+);
 border:1px solid rgba(19,198,216,.20);
 border-radius:16px;
+box-shadow:var(--shadow);
 }
 
 .contact-box h2{
@@ -612,6 +619,7 @@ margin-bottom:24px;
 }
 
 /* FOOTER */
+
 footer{
 background:#03070c;
 border-top:1px solid var(--border);
@@ -621,9 +629,12 @@ color:#7e8e99;
 font-size:12px;
 }
 
-footer strong{color:var(--cyan)}
+footer strong{
+color:var(--cyan);
+}
 
 /* LIGHTBOX */
+
 .lightbox{
 position:fixed;
 inset:0;
@@ -635,7 +646,9 @@ padding:30px;
 background:rgba(0,0,0,.92);
 }
 
-.lightbox.active{display:flex}
+.lightbox.active{
+display:flex;
+}
 
 .lightbox img{
 max-width:94vw;
@@ -654,6 +667,7 @@ cursor:pointer;
 }
 
 /* BACK TOP */
+
 .back-top{
 position:fixed;
 bottom:22px;
@@ -668,7 +682,6 @@ justify-content:center;
 background:var(--cyan);
 color:#001015;
 font-weight:bold;
-box-shadow:0 10px 30px rgba(0,0,0,.35);
 opacity:0;
 pointer-events:none;
 transition:.25s;
@@ -680,21 +693,29 @@ pointer-events:auto;
 }
 
 /* MOBILE */
+
 @media(max-width:1000px){
 
-.intro{grid-template-columns:1fr}
+.intro{
+grid-template-columns:1fr;
+}
 
-.specialties{grid-template-columns:repeat(2,1fr)}
+.resources{
+grid-template-columns:repeat(2,1fr);
+}
 
-.resources{grid-template-columns:repeat(2,1fr)}
-
-.related{grid-template-columns:repeat(3,1fr)}
+.related{
+grid-template-columns:repeat(3,1fr);
+}
 
 }
 
 @media(max-width:760px){
 
-header,.nav{height:70px}
+header,
+.nav{
+height:70px;
+}
 
 .menu{
 display:none;
@@ -709,53 +730,69 @@ flex-direction:column;
 align-items:stretch;
 }
 
-.menu.active{display:flex}
+.menu.active{
+display:flex;
+}
 
-.mobile-menu{display:block}
+.mobile-menu{
+display:block;
+}
 
 .hero{
 min-height:650px;
 padding-top:70px;
-background:
-linear-gradient(90deg,rgba(2,8,14,.95),rgba(2,8,14,.70)),
-var(--hero-image) center/cover no-repeat;
 }
 
-.hero h1{font-size:clamp(42px,12vw,60px)}
-.hero p{font-size:16px}
+.hero h1{
+font-size:clamp(42px,12vw,60px);
+}
 
-section{padding:70px 0}
+.hero p{
+font-size:16px;
+}
 
-.section-title h2{font-size:30px}
+section{
+padding:70px 0;
+}
 
-.toc ol{columns:1}
+.section-title h2{
+font-size:30px;
+}
 
-.article h2{font-size:26px}
+.toc ol{
+columns:1;
+}
 
-.specialties,
+.article h2{
+font-size:26px;
+}
+
 .gallery,
 .videos,
 .resources{
 grid-template-columns:1fr;
 }
 
-.related{grid-template-columns:repeat(2,1fr)}
+.related{
+grid-template-columns:repeat(2,1fr);
+}
 
-.related a{height:150px}
-
-.contact-box{padding:30px 20px}
+.contact-box{
+padding:30px 20px;
+}
 
 }
 
 @media(max-width:480px){
 
-.container,.hero-content{width:90%}
+.container,
+.hero-content{
+width:90%;
+}
 
 .article-card,
 .info-card,
-.project-card,
-.resource-card,
-.specialty{
+.resource-card{
 padding:22px;
 }
 
@@ -764,9 +801,13 @@ flex-direction:column;
 align-items:flex-start;
 }
 
-.btn{width:100%}
+.btn{
+width:100%;
+}
 
-.related{grid-template-columns:1fr}
+.related{
+grid-template-columns:1fr;
+}
 
 }
 </style>
@@ -784,18 +825,22 @@ Mohsen <span>Nasri</span>
 <button class="mobile-menu" id="mobileMenu">☰</button>
 
 <nav class="menu" id="menu">
+
 <a href="index.html">خانه</a>
 <a href="index.html#industries">صنایع</a>
 <a href="#about">معرفی</a>
 <a href="#knowledge">دانش فنی</a>
-<a href="#projects">پروژه‌ها</a>
 <a href="#gallery">گالری</a>
 <a href="#videos">ویدئوها</a>
+<a href="#documents">مستندات</a>
 <a href="#contact" class="contact-link">تماس</a>
-</nav>
 
+</nav>
 </div>
 </header>
+
+
+<!-- HERO -->
 
 <section class="hero" id="top">
 
@@ -813,34 +858,62 @@ INDUSTRIAL ENGINEERING
 </h1>
 
 <p id="heroDescription">
-دانش فنی، تجهیزات، پروژه‌ها و تجربیات مهندسی صنعتی.
+دانش فنی، تجهیزات و تجربیات مهندسی صنعتی.
 </p>
 
 <div class="hero-buttons">
-<a href="#toc" class="btn btn-primary">فهرست مطالب</a>
-<a href="#projects" class="btn btn-outline">مشاهده پروژه‌ها</a>
+
+<a href="#toc" class="btn btn-primary">
+فهرست مطالب
+</a>
+
+<a href="#gallery" class="btn btn-outline">
+مشاهده گالری
+</a>
+
 </div>
 
 </div>
 </div>
 </section>
 
+
 <main>
+
+<!-- ABOUT -->
 
 <section id="about">
 
 <div class="container">
 
 <div class="section-title">
-<div class="eyebrow">01 / INTRODUCTION</div>
-<h2 id="aboutTitle">معرفی صنعت</h2>
-<p id="aboutSubtitle">نگاهی مهندسی به تجهیزات، فرآیندها و تجربیات صنعتی</p>
+
+<div class="eyebrow">
+01 / INTRODUCTION
+</div>
+
+<h2 id="aboutTitle">
+معرفی صنعت
+</h2>
+
+<p id="aboutSubtitle">
+نگاهی مهندسی به تجهیزات، فرآیندها و تجربیات صنعتی
+</p>
+
 </div>
 
 <div class="intro">
 
 <article class="article-card" id="introContent">
-<p>در حال دریافت اطلاعات صنعت...</p>
+
+<p>
+این بخش برای معرفی تخصصی صنعت، فرآیندهای تولید، تجهیزات اصلی و تجربه‌های مهندسی مرتبط با این حوزه طراحی شده است.
+</p>
+
+<p>
+محتوای این صفحه از طریق پنل مدیریت قابل توسعه و ویرایش است.
+</p>
+
 </article>
 
 <div class="info-card">
@@ -852,7 +925,7 @@ INDUSTRIAL ENGINEERING
 
 <div class="info-row">
 <small>CONTENT</small>
-<strong>Technical Knowledge & Projects</strong>
+<strong>Technical Knowledge</strong>
 </div>
 
 <div class="info-row">
@@ -866,9 +939,13 @@ INDUSTRIAL ENGINEERING
 </div>
 
 </div>
+
 </div>
 </div>
 </section>
+
+
+<!-- TOC -->
 
 <section class="toc-wrap" id="toc">
 
@@ -877,43 +954,138 @@ INDUSTRIAL ENGINEERING
 <div class="toc">
 
 <div class="toc-title">
+
 <h2>فهرست مطالب</h2>
+
 <span>Technical Contents</span>
+
 </div>
 
 <ol>
-<li><a href="#about">معرفی صنعت</a></li>
-<li><a href="#knowledge">دانش فنی و فرآیندها</a></li>
-<li><a href="#specialties">حوزه‌های تخصصی</a></li>
-<li><a href="#projects">پروژه‌ها و تجربیات</a></li>
-<li><a href="#gallery">گالری تصاویر</a></li>
-<li><a href="#videos">ویدئوها</a></li>
-<li><a href="#documents">مستندات و منابع</a></li>
-<li><a href="#related">صنایع مرتبط</a></li>
-<li><a href="#contact">ارتباط و همکاری</a></li>
+
+<li>
+<a href="#about">معرفی صنعت</a>
+</li>
+
+<li>
+<a href="#knowledge">دانش فنی و فرآیندها</a>
+</li>
+
+<li>
+<a href="#gallery">گالری تصاویر</a>
+</li>
+
+<li>
+<a href="#videos">ویدئوها</a>
+</li>
+
+<li>
+<a href="#documents">مستندات و منابع</a>
+</li>
+
+<li>
+<a href="#related">صنایع مرتبط</a>
+</li>
+
+<li>
+<a href="#contact">ارتباط و همکاری</a>
+</li>
+
 </ol>
 
 </div>
 </div>
 </section>
 
+
+<!-- KNOWLEDGE -->
+
 <section id="knowledge" class="section-dark">
 
 <div class="container">
 
 <div class="section-title">
-<div class="eyebrow">02 / TECHNICAL KNOWLEDGE</div>
-<h2>دانش فنی و فرآیندها</h2>
-<p>محتوای مهندسی و ساختار فنی موضوع</p>
+
+<div class="eyebrow">
+02 / TECHNICAL KNOWLEDGE
+</div>
+
+<h2>
+دانش فنی و فرآیندها
+</h2>
+
+<p>
+محتوای مهندسی و ساختار فنی موضوع
+</p>
+
 </div>
 
 <article class="article">
 
 <div id="technicalContent">
 
-<div class="loading">
-در حال دریافت دانش فنی...
+<h2>
+ساختار و عملکرد سیستم
+</h2>
+
+<p>
+در این بخش ساختار تجهیزات، فرآیندهای اصلی، ارتباط میان سیستم‌های مکانیکی، الکتریکی و کنترلی و نکات مهندسی مرتبط با صنعت بررسی می‌شود.
+</p>
+
+<h3>
+تجهیزات اصلی
+</h3>
+
+<p>
+تجهیزات هر خط تولید بر اساس نوع فرآیند، ظرفیت، الزامات کیفی و شرایط بهره‌برداری انتخاب و تنظیم می‌شوند.
+</p>
+
+<div class="note">
+محتوای تخصصی این قسمت از طریق پنل مدیریت قابل توسعه و ویرایش است.
 </div>
+
+<h3>
+نگاه مهندسی به فرآیند
+</h3>
+
+<p>
+تحلیل یک فرآیند صنعتی باید با درنظرگرفتن تعامل میان مکانیک، برق، کنترل، پنوماتیک، انتقال قدرت و شرایط عملیاتی انجام شود.
+</p>
+
+<table class="tech-table">
+
+<thead>
+<tr>
+<th>پارامتر</th>
+<th>اهمیت مهندسی</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>تجهیزات مکانیکی</td>
+<td>انتقال حرکت، نیرو و فرآیند تولید</td>
+</tr>
+
+<tr>
+<td>سیستم کنترل</td>
+<td>تنظیم توالی و هماهنگی عملیات</td>
+</tr>
+
+<tr>
+<td>پنوماتیک</td>
+<td>تأمین و کنترل عملگرهای هوایی</td>
+</tr>
+
+<tr>
+<td>سیستم انتقال</td>
+<td>انتقال محصول و هماهنگی بین ایستگاه‌ها</td>
+</tr>
+
+</tbody>
+
+</table>
 
 </div>
 
@@ -922,87 +1094,27 @@ INDUSTRIAL ENGINEERING
 </div>
 </section>
 
-<section id="specialties">
 
-<div class="container">
-
-<div class="section-title">
-<div class="eyebrow">03 / SPECIALTIES</div>
-<h2>حوزه‌های تخصصی</h2>
-<p>زمینه‌های اصلی دانش و تجربه مهندسی</p>
-</div>
-
-<div class="specialties">
-
-<div class="specialty">
-<div class="number">01</div>
-<h3>ماشین‌آلات صنعتی</h3>
-<p>تحلیل، نصب، تنظیم و شناخت عملکرد ماشین‌آلات و تجهیزات خطوط تولید.</p>
-</div>
-
-<div class="specialty">
-<div class="number">02</div>
-<h3>مکانیک و انتقال قدرت</h3>
-<p>بررسی مکانیزم‌ها، گیربکس‌ها، موتورها، کوپلینگ‌ها، شفت‌ها و سیستم‌های انتقال حرکت.</p>
-</div>
-
-<div class="specialty">
-<div class="number">03</div>
-<h3>کنترل و اتوماسیون</h3>
-<p>شناخت ارتباط سیستم‌های مکانیکی با PLC، سروو، سنسورها و HMI.</p>
-</div>
-
-<div class="specialty">
-<div class="number">04</div>
-<h3>نگهداری صنعتی</h3>
-<p>تحلیل خرابی، برنامه‌ریزی نگهداری و افزایش قابلیت اطمینان تجهیزات.</p>
-</div>
-
-<div class="specialty">
-<div class="number">05</div>
-<h3>پروژه‌های صنعتی</h3>
-<p>تجربه اجرایی در پروژه‌های نصب، راه‌اندازی، اصلاح و بهینه‌سازی تجهیزات.</p>
-</div>
-
-<div class="specialty">
-<div class="number">06</div>
-<h3>مستندات فنی</h3>
-<p>تدوین دستورالعمل‌ها، گزارش‌های مهندسی و مستندات تخصصی.</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<section id="projects" class="section-dark">
-
-<div class="container">
-
-<div class="section-title">
-<div class="eyebrow">04 / PROJECTS</div>
-<h2>پروژه‌ها و تجربیات</h2>
-<p>پروژه‌های صنعتی و تجربیات اجرایی مرتبط با این حوزه</p>
-</div>
-
-<div class="projects" id="projectsContainer">
-
-<div class="loading">
-در حال دریافت پروژه‌ها...
-</div>
-
-</div>
-
-</div>
-</section>
+<!-- GALLERY -->
 
 <section id="gallery">
 
 <div class="container">
 
 <div class="section-title">
-<div class="eyebrow">05 / GALLERY</div>
-<h2>گالری تصاویر</h2>
-<p>تصاویر پروژه‌ها، تجهیزات و فعالیت‌های صنعتی</p>
+
+<div class="eyebrow">
+03 / GALLERY
+</div>
+
+<h2>
+گالری تصاویر
+</h2>
+
+<p>
+تصاویر پروژه‌ها، تجهیزات و فعالیت‌های صنعتی
+</p>
+
 </div>
 
 <div class="media-status" id="galleryStatus">
@@ -1014,14 +1126,27 @@ INDUSTRIAL ENGINEERING
 </div>
 </section>
 
+
+<!-- VIDEOS -->
+
 <section id="videos" class="section-dark">
 
 <div class="container">
 
 <div class="section-title">
-<div class="eyebrow">06 / VIDEOS</div>
-<h2>ویدئوها</h2>
-<p>ویدئوهای مرتبط با پروژه‌ها و تجهیزات</p>
+
+<div class="eyebrow">
+04 / VIDEOS
+</div>
+
+<h2>
+ویدئوها
+</h2>
+
+<p>
+ویدئوهای مرتبط با پروژه‌ها و تجهیزات
+</p>
+
 </div>
 
 <div class="media-status" id="videoStatus">
@@ -1033,80 +1158,129 @@ INDUSTRIAL ENGINEERING
 </div>
 </section>
 
+
+<!-- DOCUMENTS -->
+
 <section id="documents">
 
 <div class="container">
 
 <div class="section-title">
-<div class="eyebrow">07 / DOCUMENTS & RESOURCES</div>
-<h2>مستندات و منابع</h2>
-<p>مرجع اطلاعات و مستندات فنی مرتبط</p>
+
+<div class="eyebrow">
+05 / DOCUMENTS & RESOURCES
+</div>
+
+<h2>
+مستندات و منابع
+</h2>
+
+<p>
+مرجع اطلاعات و مستندات فنی مرتبط
+</p>
+
 </div>
 
 <div class="resources">
 
 <div class="resource-card">
+
 <div class="resource-icon">📘</div>
+
 <h3>مستندات فنی</h3>
-<p>دستورالعمل‌ها، گزارش‌ها، مدارک و مستندات تخصصی مرتبط با تجهیزات و پروژه‌ها.</p>
+
+<p>
+دستورالعمل‌ها، گزارش‌ها، مدارک و مستندات تخصصی مرتبط با تجهیزات و پروژه‌ها.
+</p>
+
 </div>
 
 <div class="resource-card">
+
 <div class="resource-icon">⚙️</div>
+
 <h3>دانش مهندسی</h3>
-<p>مطالب فنی و تجربیات کاربردی در زمینه ماشین‌آلات و فرآیندهای صنعتی.</p>
+
+<p>
+مطالب فنی و تجربیات کاربردی در زمینه ماشین‌آلات و فرآیندهای صنعتی.
+</p>
+
 </div>
 
 <div class="resource-card">
+
 <div class="resource-icon">📊</div>
-<h3>اطلاعات پروژه</h3>
-<p>اطلاعات پروژه‌ها، تجهیزات مورد استفاده و نتایج فعالیت‌های مهندسی.</p>
+
+<h3>اطلاعات صنعتی</h3>
+
+<p>
+اطلاعات و مستندات مرتبط با فعالیت‌های مهندسی.
+</p>
+
 </div>
 
 </div>
+
 </div>
 </section>
+
+
+<!-- RELATED -->
 
 <section id="related" class="section-dark">
 
 <div class="container">
 
 <div class="section-title">
-<div class="eyebrow">08 / RELATED INDUSTRIES</div>
-<h2>صنایع مرتبط</h2>
-<p>برای مشاهده سایر حوزه‌های تخصصی وارد صنعت موردنظر شوید.</p>
+
+<div class="eyebrow">
+06 / RELATED INDUSTRIES
+</div>
+
+<h2>
+صنایع مرتبط
+</h2>
+
+<p>
+برای مشاهده سایر حوزه‌های تخصصی وارد صنعت موردنظر شوید.
+</p>
+
 </div>
 
 <div class="related">
 
-<a href="topic.html?industry=rewinding">
+<a href="rewinding.html">
 <img src="rewinding.jpg" alt="سیم پیچی">
 <strong>سیم‌پیچی</strong>
 </a>
 
-<a href="topic.html?industry=float-glass">
+<a href="float-glass.html">
 <img src="float-glass.jpg" alt="شیشه فلوت">
 <strong>شیشه فلوت و تخت</strong>
 </a>
 
-<a href="topic.html?industry=cable">
+<a href="cable.html">
 <img src="cable.jpg" alt="کابل سازی">
 <strong>کابل‌سازی</strong>
 </a>
 
-<a href="topic.html?industry=steel">
+<a href="steel.html">
 <img src="steel.jpg" alt="فولاد">
 <strong>فولاد</strong>
 </a>
 
-<a href="topic.html?industry=container-glass">
+<a href="container-glass.html">
 <img src="container-glass.jpg" alt="شیشه بطری">
 <strong>شیشه بطری</strong>
 </a>
 
 </div>
+
 </div>
 </section>
+
+
+<!-- CONTACT -->
 
 <section id="contact">
 
@@ -1114,21 +1288,31 @@ INDUSTRIAL ENGINEERING
 
 <div class="contact-box">
 
-<h2>برای پروژه بعدی خود آماده‌اید؟</h2>
+<h2>
+برای پروژه بعدی خود آماده‌اید؟
+</h2>
 
 <p>
 برای همکاری، پروژه‌های صنعتی، مشاوره فنی و ارتباط حرفه‌ای با Mohsen Nasri در تماس باشید.
 </p>
 
-<a class="btn btn-primary" href="tel:09193890454">
+<a
+class="btn btn-primary"
+href="tel:09193890454">
+
 تماس با من
+
 </a>
 
 </div>
+
 </div>
 </section>
 
 </main>
+
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -1148,21 +1332,28 @@ Industrial Engineering • Mechanical Engineering • Industrial Projects
 
 </footer>
 
+
+<!-- LIGHTBOX -->
+
 <div class="lightbox" id="lightbox">
 
-<div class="lightbox-close" id="lightboxClose">×</div>
+<div class="lightbox-close" id="lightboxClose">
+×
+</div>
 
 <img id="lightboxImage" src="" alt="">
 
 </div>
 
-<a href="#top" class="back-top" id="backTop">↑</a>
+
+<a href="#top" class="back-top" id="backTop">
+↑
+</a>
+
 
 <script>
 
-/* =========================================================
-   SUPABASE
-   ========================================================= */
+/* ================= SUPABASE ================= */
 
 const SUPABASE_URL =
 "https://eurmybgotfgnerdxrwua.supabase.co";
@@ -1171,9 +1362,7 @@ const SUPABASE_ANON_KEY =
 "sb_publishable_X3LYjYSbJU7YJ0ezzn6YfA_ZHsbd1K3";
 
 
-/* =========================================================
-   TOPICS
-   ========================================================= */
+/* ================= TOPICS ================= */
 
 const topics={
 
@@ -1182,6 +1371,7 @@ title:"سیم‌پیچی و برق صنعتی",
 english:"Electrical & Rewinding",
 image:"rewinding.jpg",
 description:"تجهیزات، ماشین‌آلات و سیستم‌های صنعتی سیم‌پیچی، بازپیچی و برق صنعتی.",
+intro:"این بخش به معرفی دانش فنی، تجهیزات، پروژه‌ها و تجربیات مرتبط با صنعت سیم‌پیچی و برق صنعتی اختصاص دارد.",
 field:"Electrical & Rewinding"
 },
 
@@ -1190,6 +1380,7 @@ title:"شیشه فلوت و تخت",
 english:"Float & Flat Glass",
 image:"float-glass.jpg",
 description:"فرآیند تولید، تجهیزات و سیستم‌های مکانیکی و صنعتی صنعت شیشه فلوت و تخت.",
+intro:"این بخش به بررسی فرآیند تولید شیشه فلوت و تخت، تجهیزات خط تولید و تجربیات مهندسی مرتبط اختصاص دارد.",
 field:"Float & Flat Glass"
 },
 
@@ -1198,6 +1389,7 @@ title:"صنعت کابل‌سازی",
 english:"Cable Manufacturing",
 image:"cable.jpg",
 description:"ماشین‌آلات، تجهیزات و فرآیندهای تولید و کنترل در صنعت کابل‌سازی.",
+intro:"این بخش برای معرفی فرآیندهای تولید کابل، ماشین‌آلات، تجهیزات و تجربیات مهندسی طراحی شده است.",
 field:"Cable Manufacturing"
 },
 
@@ -1206,6 +1398,7 @@ title:"صنعت فولاد",
 english:"Steel Industry",
 image:"steel.jpg",
 description:"ماشین‌آلات، تجهیزات، خطوط تولید و سیستم‌های صنعتی صنعت فولاد.",
+intro:"این بخش به معرفی تجهیزات، ماشین‌آلات، فرآیندهای صنعتی و تجربیات مرتبط با صنعت فولاد اختصاص دارد.",
 field:"Steel Industry"
 },
 
@@ -1214,63 +1407,70 @@ title:"شیشه بطری",
 english:"Container Glass",
 image:"container-glass.jpg",
 description:"ماشین‌آلات، تجهیزات و فرآیندهای تولید ظروف شیشه‌ای و شیشه بطری.",
+intro:"این بخش به معرفی فرآیند تولید ظروف شیشه‌ای، ماشین‌آلات، تجهیزات و تجربیات مهندسی مرتبط اختصاص دارد.",
 field:"Container Glass"
 }
 
 };
 
 
-/* =========================================================
-   CURRENT INDUSTRY
-   ========================================================= */
+/* ================= CURRENT INDUSTRY ================= */
 
-const params=new URLSearchParams(location.search);
+const params =
+new URLSearchParams(window.location.search);
 
-const industry=params.get("industry") || "rewinding";
+const industry =
+params.get("industry") || "rewinding";
 
-const topic=topics[industry] || topics.rewinding;
+const topic =
+topics[industry] || topics.rewinding;
 
 
-/* =========================================================
-   PAGE DATA
-   ========================================================= */
+/* ================= PAGE DATA ================= */
 
-document.title=topic.title+" | Mohsen Nasri";
+document.title =
+topic.title + " | Mohsen Nasri";
 
 document.documentElement.style.setProperty(
 "--hero-image",
-"url('"+topic.image+"')"
+"url('" + topic.image + "')"
 );
 
-document.getElementById("heroKicker").textContent=
+document.getElementById("heroKicker").textContent =
 topic.english.toUpperCase();
 
-document.getElementById("heroTitle").innerHTML=
-escapeHTML(topic.title)+
-"<br><span>"+
-escapeHTML(topic.english)+
+document.getElementById("heroTitle").innerHTML =
+topic.title +
+"<br><span>" +
+topic.english +
 "</span>";
 
-document.getElementById("heroDescription").textContent=
+document.getElementById("heroDescription").textContent =
 topic.description;
 
-document.getElementById("aboutTitle").textContent=
-"معرفی "+topic.title;
+document.getElementById("aboutTitle").textContent =
+topic.title;
 
-document.getElementById("aboutSubtitle").textContent=
+document.getElementById("aboutSubtitle").textContent =
 topic.description;
 
-document.getElementById("fieldName").textContent=
+document.getElementById("fieldName").textContent =
 topic.field;
 
+document.getElementById("introContent").innerHTML =
+"<p>" +
+escapeHTML(topic.intro) +
+"</p>" +
+"<p>هدف این صفحه ارائه یک مرجع منظم برای دانش فنی، تجربیات، تصاویر، ویدئوها و مستندات مرتبط با این حوزه صنعتی است.</p>";
 
-/* =========================================================
-   HELPERS
-   ========================================================= */
+
+/* ================= HELPERS ================= */
 
 function escapeHTML(value){
 
-if(value===null || value===undefined)return "";
+if(value===null || value===undefined){
+return "";
+}
 
 return String(value)
 .replace(/&/g,"&amp;")
@@ -1284,41 +1484,43 @@ return String(value)
 
 function fileURL(path){
 
-if(!path)return "";
+if(!path){
+return "";
+}
 
 if(/^https?:\/\//i.test(path)){
 return path;
 }
 
-return SUPABASE_URL+
-"/storage/v1/object/public/project-media/"+
-String(path).replace(/^\/+/,"");
+return (
+SUPABASE_URL +
+"/storage/v1/object/public/project-media/" +
+path
+);
 
 }
 
 
+/* ================= API ================= */
+
 async function api(path){
 
-const response=await fetch(
-SUPABASE_URL+path,
+const response =
+await fetch(
+SUPABASE_URL + path,
 {
-method:"GET",
 headers:{
 apikey:SUPABASE_ANON_KEY,
-Authorization:"Bearer "+SUPABASE_ANON_KEY,
-Accept:"application/json"
+Authorization:
+"Bearer " + SUPABASE_ANON_KEY
 }
 }
 );
 
 if(!response.ok){
-
-const text=await response.text();
-
 throw new Error(
-"Supabase HTTP "+response.status+" "+text
+"Supabase HTTP " + response.status
 );
-
 }
 
 return response.json();
@@ -1326,305 +1528,157 @@ return response.json();
 }
 
 
-/* =========================================================
-   LOAD CONTENT
-   ========================================================= */
+/* ================= LOAD CONTENT ================= */
 
 async function loadContent(){
 
 try{
 
-const rows=await api(
-"/rest/v1/industry_content"+
-"?industry=eq."+
-encodeURIComponent(industry)+
-"&order=created_at.asc"
+const rows =
+await api(
+"/rest/v1/industry_content" +
+"?industry=eq." +
+encodeURIComponent(industry) +
+"&order=sort_order.asc"
 );
 
-const technical=document.getElementById(
-"technicalContent"
-);
-
-const projects=document.getElementById(
-"projectsContainer"
-);
-
-
-/* EMPTY */
-
-if(!Array.isArray(rows)||rows.length===0){
-
-technical.innerHTML=`
-
-<div class="note">
-محتوای فنی این صنعت هنوز در پنل مدیریت ثبت نشده است.
-</div>
-
-<h2>دانش فنی و فرآیندهای ${escapeHTML(topic.title)}</h2>
-
-<p>
-در این بخش دانش فنی، تجهیزات، فرآیندهای تولید، سیستم‌های مکانیکی، الکتریکی و کنترلی مرتبط با این صنعت نمایش داده خواهد شد.
-</p>
-
-`;
-
-projects.innerHTML=`
-
-<div class="project-card">
-
-<div class="project-head">
-<h3>پروژه‌های ${escapeHTML(topic.title)}</h3>
-<span class="project-number">PROJECT</span>
-</div>
-
-<p>
-هنوز پروژه‌ای برای این صنعت در پنل مدیریت ثبت نشده است.
-</p>
-
-</div>
-
-`;
-
+if(!Array.isArray(rows) || !rows.length){
 return;
-
 }
 
-
-let technicalHTML="";
-
-const projectRows=[];
-
+let technical="";
 
 rows.forEach(row=>{
 
-const type=String(
-row.content_type||
-row.type||
-row.section||
+const type =
+String(
+row.content_type ||
+row.type ||
+row.section ||
 ""
 ).toLowerCase();
 
-const title=
-row.title||
-row.heading||
-"موضوع فنی";
-
-const content=
-row.content||
-row.text||
-row.description||
+const title =
+row.title ||
+row.heading ||
 "";
 
+const content =
+row.content ||
+row.text ||
+row.description ||
+"";
 
-const isProject=
-type.includes("project")||
-type.includes("پروژه")||
-title.includes("پروژه");
+/*
+پروژه‌ها و حوزه‌های تخصصی
+عمداً در این نسخه نمایش داده نمی‌شوند.
+*/
 
+if(
+type.includes("project") ||
+type.includes("special")
+){
+return;
+}
 
-if(isProject){
+if(
+type==="video" ||
+type.includes("video")
+){
+return;
+}
 
-projectRows.push({
-title,
-content
-});
+if(content){
 
-}else if(content){
+technical +=
+"<h3>" +
+escapeHTML(title || "موضوع فنی") +
+"</h3>";
 
-technicalHTML+=`
-
-<h3>${escapeHTML(title)}</h3>
-
-<p>${escapeHTML(content)}</p>
-
-`;
+technical +=
+"<p>" +
+escapeHTML(content) +
+"</p>";
 
 }
 
 });
 
+if(technical){
 
-if(technicalHTML){
-
-technical.innerHTML=technicalHTML;
-
-}else{
-
-technical.innerHTML=`
-
-<h2>دانش فنی ${escapeHTML(topic.title)}</h2>
-
-<p>
-محتوای تخصصی این بخش از طریق پنل مدیریت قابل توسعه است.
-</p>
-
-`;
-
-}
-
-
-if(projectRows.length){
-
-projects.innerHTML=projectRows.map(
-(item,index)=>`
-
-<div class="project-card">
-
-<div class="project-head">
-
-<h3>
-${escapeHTML(item.title)}
-</h3>
-
-<span class="project-number">
-${String(index+1).padStart(2,"0")}
-</span>
-
-</div>
-
-<p>
-${escapeHTML(item.content)}
-</p>
-
-<div class="project-tags">
-
-<span class="tag">
-${escapeHTML(topic.english)}
-</span>
-
-<span class="tag">
-Engineering Project
-</span>
-
-</div>
-
-</div>
-
-`
-).join("");
-
-}else{
-
-projects.innerHTML=`
-
-<div class="project-card">
-
-<div class="project-head">
-
-<h3>
-پروژه‌های ${escapeHTML(topic.title)}
-</h3>
-
-<span class="project-number">
-PROJECT
-</span>
-
-</div>
-
-<p>
-هنوز پروژه‌ای برای این صنعت ثبت نشده است.
-</p>
-
-</div>
-
-`;
+document.getElementById(
+"technicalContent"
+).innerHTML =
+technical;
 
 }
 
 }catch(error){
 
-console.error(error);
-
-document.getElementById(
-"technicalContent"
-).innerHTML=`
-
-<div class="note">
-محتوای ثابت صفحه نمایش داده شد. اتصال پایگاه داده در حال بررسی است.
-</div>
-
-<h2>
-دانش فنی ${escapeHTML(topic.title)}
-</h2>
-
-<p>
-این بخش برای نمایش دانش فنی، فرآیندها، تجهیزات و تجربیات مهندسی این صنعت طراحی شده است.
-</p>
-
-`;
-
-document.getElementById(
-"projectsContainer"
-).innerHTML=`
-
-<div class="project-card">
-
-<div class="project-head">
-<h3>پروژه‌های ${escapeHTML(topic.title)}</h3>
-<span class="project-number">PROJECT</span>
-</div>
-
-<p>
-اطلاعات پروژه‌ها پس از ثبت در پنل مدیریت در این قسمت نمایش داده می‌شود.
-</p>
-
-</div>
-
-`;
+console.error(
+"industry_content error:",
+error
+);
 
 }
 
 }
 
 
-/* =========================================================
-   LOAD MEDIA
-   ========================================================= */
+/* ================= LOAD MEDIA ================= */
 
 async function loadMedia(){
 
-const gallery=document.getElementById(
+const gallery =
+document.getElementById(
 "galleryContainer"
 );
 
-const videos=document.getElementById(
+const videos =
+document.getElementById(
 "videosContainer"
 );
 
-const galleryStatus=document.getElementById(
+const galleryStatus =
+document.getElementById(
 "galleryStatus"
 );
 
-const videoStatus=document.getElementById(
+const videoStatus =
+document.getElementById(
 "videoStatus"
 );
 
-
 try{
 
-const rows=await api(
-"/rest/v1/industry_media"+
-"?industry=eq."+
-encodeURIComponent(industry)+
+const rows =
+await api(
+"/rest/v1/industry_media" +
+"?industry=eq." +
+encodeURIComponent(industry) +
 "&order=created_at.desc"
 );
 
-
-const images=rows.filter(row=>
+const images =
+rows.filter(row=>
 String(
-row.media_type||
-row.type||
+row.media_type ||
+row.type ||
 ""
-).toLowerCase().includes("image")
+)
+.toLowerCase()
+.includes("image")
 );
 
-
-const videoRows=rows.filter(row=>
+const videoRows =
+rows.filter(row=>
 String(
-row.media_type||
-row.type||
+row.media_type ||
+row.type ||
 ""
-).toLowerCase().includes("video")
+)
+.toLowerCase()
+.includes("video")
 );
 
 
@@ -1632,19 +1686,18 @@ row.type||
 
 if(images.length){
 
-gallery.innerHTML=images.map(row=>{
+gallery.innerHTML =
+images.map(row=>{
 
-const src=
-row.public_url||
-row.url||
+const src =
+row.public_url ||
+row.url ||
 fileURL(row.file_path);
 
-const title=
-row.title||
-row.caption||
+const title =
+row.title ||
+row.caption ||
 topic.title;
-
-if(!src)return "";
 
 return `
 
@@ -1655,7 +1708,6 @@ src="${escapeHTML(src)}"
 alt="${escapeHTML(title)}"
 loading="lazy"
 onclick="openLightbox(this.src)"
-onerror="this.parentElement.style.display='none'"
 >
 
 <div class="gallery-title">
@@ -1668,14 +1720,13 @@ ${escapeHTML(title)}
 
 }).join("");
 
-galleryStatus.textContent=
-images.length+" تصویر ثبت شده";
+galleryStatus.textContent =
+images.length +
+" تصویر ثبت شده";
 
 }else{
 
-gallery.innerHTML="";
-
-galleryStatus.textContent=
+galleryStatus.textContent =
 "هنوز تصویری برای این صنعت ثبت نشده است.";
 
 }
@@ -1685,19 +1736,18 @@ galleryStatus.textContent=
 
 if(videoRows.length){
 
-videos.innerHTML=videoRows.map(row=>{
+videos.innerHTML =
+videoRows.map(row=>{
 
-const src=
-row.public_url||
-row.url||
+const src =
+row.public_url ||
+row.url ||
 fileURL(row.file_path);
 
-const title=
-row.title||
-row.caption||
+const title =
+row.title ||
+row.caption ||
 "ویدئوی صنعتی";
-
-if(!src)return "";
 
 return `
 
@@ -1728,107 +1778,120 @@ ${escapeHTML(title)}
 
 }).join("");
 
-videoStatus.textContent=
-videoRows.length+" ویدئو ثبت شده";
+videoStatus.textContent =
+videoRows.length +
+" ویدئو ثبت شده";
 
 }else{
 
-videos.innerHTML="";
-
-videoStatus.textContent=
+videoStatus.textContent =
 "هنوز ویدئویی برای این صنعت ثبت نشده است.";
 
 }
 
 }catch(error){
 
-console.error("MEDIA ERROR:",error);
+console.error(
+"industry_media error:",
+error
+);
 
-galleryStatus.textContent=
-"هنوز تصویری برای این صنعت ثبت نشده است.";
+galleryStatus.textContent =
+"خطا در دریافت تصاویر.";
 
-videoStatus.textContent=
-"هنوز ویدئویی برای این صنعت ثبت نشده است.";
+videoStatus.textContent =
+"خطا در دریافت ویدئوها.";
 
 }
 
 }
 
 
-/* =========================================================
-   LIGHTBOX
-   ========================================================= */
+/* ================= LIGHTBOX ================= */
 
 function openLightbox(src){
 
-const box=document.getElementById("lightbox");
+document.getElementById(
+"lightboxImage"
+).src=src;
 
-const image=document.getElementById("lightboxImage");
-
-image.src=src;
-
-box.classList.add("active");
+document.getElementById(
+"lightbox"
+).classList.add("active");
 
 }
 
 
 document.getElementById(
 "lightboxClose"
-).addEventListener("click",()=>{
+).addEventListener(
+"click",
+function(){
 
 document.getElementById(
 "lightbox"
 ).classList.remove("active");
 
-});
+}
+);
 
 
 document.getElementById(
 "lightbox"
-).addEventListener("click",function(e){
+).addEventListener(
+"click",
+function(e){
 
 if(e.target===this){
 this.classList.remove("active");
 }
 
-});
+}
+);
 
 
-/* =========================================================
-   MOBILE MENU
-   ========================================================= */
+/* ================= MOBILE MENU ================= */
 
 document.getElementById(
 "mobileMenu"
-).addEventListener("click",()=>{
+).addEventListener(
+"click",
+function(){
 
 document.getElementById(
 "menu"
 ).classList.toggle("active");
 
-});
+}
+);
 
 
-document.querySelectorAll("#menu a").forEach(link=>{
+document.querySelectorAll(
+"#menu a"
+).forEach(link=>{
 
-link.addEventListener("click",()=>{
+link.addEventListener(
+"click",
+function(){
 
 document.getElementById(
 "menu"
 ).classList.remove("active");
 
-});
+}
+);
 
 });
 
 
-/* =========================================================
-   BACK TOP
-   ========================================================= */
+/* ================= BACK TOP ================= */
 
-const backTop=document.getElementById("backTop");
+const backTop =
+document.getElementById("backTop");
 
-window.addEventListener("scroll",()=>{
+window.addEventListener(
+"scroll",
+function(){
 
 if(window.scrollY>500){
 
@@ -1840,15 +1903,13 @@ backTop.classList.remove("show");
 
 }
 
-});
+}
+);
 
 
-/* =========================================================
-   START
-   ========================================================= */
+/* ================= START ================= */
 
 loadContent();
-
 loadMedia();
 
 </script>
