@@ -14,16 +14,21 @@ content="دانش فنی، پروژه‌ها، تجربیات و مستندات 
 --bg:#050b12;
 --bg2:#081521;
 --panel:#0c1925;
+--panel2:#0f202f;
 --text:#f5f8fb;
 --muted:#aebdca;
 --cyan:#13c6d8;
 --gold:#e5ad36;
 --border:rgba(255,255,255,.10);
---shadow:0 20px 60px rgba(0,0,0,.35)
+--shadow:0 20px 60px rgba(0,0,0,.35);
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:85px}
+
+html{
+scroll-behavior:smooth;
+scroll-padding-top:90px;
+}
 
 body{
 font-family:Tahoma,Arial,sans-serif;
@@ -32,22 +37,28 @@ radial-gradient(circle at 10% 10%,rgba(19,198,216,.07),transparent 28%),
 radial-gradient(circle at 90% 40%,rgba(229,173,54,.05),transparent 28%),
 var(--bg);
 color:var(--text);
-line-height:2
+line-height:2;
 }
 
 a{color:inherit;text-decoration:none}
 img{max-width:100%}
-.container{width:min(1180px,92%);margin:auto}
+
+.container{
+width:min(1180px,92%);
+margin:auto;
+}
 
 /* HEADER */
 header{
 position:fixed;
-top:0;left:0;right:0;
+top:0;
+left:0;
+right:0;
 z-index:1000;
 height:78px;
-background:rgba(3,9,15,.88);
+background:rgba(3,9,15,.90);
 backdrop-filter:blur(18px);
-border-bottom:1px solid var(--border)
+border-bottom:1px solid var(--border);
 }
 
 .nav{
@@ -55,7 +66,7 @@ height:78px;
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:20px
+gap:20px;
 }
 
 .brand{
@@ -63,7 +74,7 @@ font-family:Arial,sans-serif;
 font-size:21px;
 font-weight:900;
 direction:ltr;
-white-space:nowrap
+white-space:nowrap;
 }
 
 .brand span{color:var(--cyan)}
@@ -72,25 +83,29 @@ white-space:nowrap
 display:flex;
 align-items:center;
 gap:22px;
-font-size:13px
+font-size:13px;
 }
 
-.menu a{color:#dce7ee;transition:.25s}
+.menu a{
+color:#dce7ee;
+transition:.25s;
+}
+
 .menu a:hover{color:var(--cyan)}
 
 .contact-link{
 border:1px solid rgba(19,198,216,.5);
 padding:6px 14px;
-border-radius:7px
+border-radius:7px;
 }
 
 .mobile-menu{
 display:none;
 background:none;
 border:0;
-color:white;
+color:#fff;
 font-size:25px;
-cursor:pointer
+cursor:pointer;
 }
 
 /* HERO */
@@ -102,28 +117,31 @@ display:flex;
 align-items:center;
 overflow:hidden;
 background:
-linear-gradient(90deg,
+linear-gradient(
+90deg,
 rgba(2,8,14,.97) 0%,
 rgba(2,8,14,.88) 35%,
 rgba(2,8,14,.55) 68%,
-rgba(2,8,14,.18) 100%),
+rgba(2,8,14,.18) 100%
+),
 var(--hero-image) center/cover no-repeat;
-direction:ltr
 }
 
 .hero:after{
 content:"";
 position:absolute;
-left:0;right:0;bottom:0;
+left:0;
+right:0;
+bottom:0;
 height:180px;
-background:linear-gradient(transparent,var(--bg))
+background:linear-gradient(transparent,var(--bg));
 }
 
 .hero-content{
 position:relative;
 z-index:2;
 width:min(1180px,92%);
-margin:auto
+margin:auto;
 }
 
 .hero-inner{max-width:760px}
@@ -134,14 +152,13 @@ color:var(--gold);
 font-size:14px;
 font-weight:bold;
 margin-bottom:15px;
-letter-spacing:.5px
 }
 
 .hero h1{
 font-size:clamp(44px,7vw,82px);
 line-height:1.08;
 margin-bottom:22px;
-font-family:Arial,Tahoma,sans-serif
+font-family:Arial,Tahoma,sans-serif;
 }
 
 .hero h1 span{color:var(--cyan)}
@@ -151,13 +168,13 @@ font-size:19px;
 color:#d3dde4;
 max-width:720px;
 line-height:2;
-margin-bottom:28px
+margin-bottom:28px;
 }
 
 .hero-buttons{
 display:flex;
 gap:12px;
-flex-wrap:wrap
+flex-wrap:wrap;
 }
 
 .btn{
@@ -169,59 +186,57 @@ border-radius:7px;
 font-weight:bold;
 font-size:14px;
 transition:.25s;
-cursor:pointer
+cursor:pointer;
 }
 
 .btn-primary{
 background:var(--cyan);
-color:#031015
+color:#031015;
 }
 
 .btn-primary:hover{
-background:#27d7e6;
-transform:translateY(-2px)
+transform:translateY(-2px);
 }
 
 .btn-outline{
 border:1px solid rgba(255,255,255,.25);
-color:#fff;
-background:rgba(255,255,255,.04)
+background:rgba(255,255,255,.04);
 }
 
-.btn-outline:hover{
-border-color:var(--cyan);
-color:var(--cyan)
-}
-
-/* GENERAL */
-main{direction:rtl}
+/* SECTIONS */
 section{padding:90px 0}
 .section-dark{background:rgba(7,18,28,.72)}
 
 .section-title{
 text-align:center;
-margin-bottom:48px
+margin-bottom:48px;
 }
 
 .eyebrow{
 color:var(--cyan);
 font-size:13px;
 font-weight:bold;
-margin-bottom:5px
+margin-bottom:5px;
 }
 
 .section-title h2{
 font-size:37px;
 line-height:1.4;
-margin-bottom:8px
+margin-bottom:8px;
 }
 
 .section-title p{
 color:var(--muted);
-font-size:15px
+font-size:15px;
 }
 
-/* CARDS */
+/* INTRO */
+.intro{
+display:grid;
+grid-template-columns:1.3fr .7fr;
+gap:28px;
+}
+
 .article-card,
 .info-card,
 .toc,
@@ -233,14 +248,7 @@ font-size:15px
 background:linear-gradient(145deg,rgba(13,28,41,.96),rgba(8,20,30,.96));
 border:1px solid var(--border);
 border-radius:14px;
-box-shadow:var(--shadow)
-}
-
-/* ABOUT */
-.intro{
-display:grid;
-grid-template-columns:1.3fr .7fr;
-gap:28px
+box-shadow:var(--shadow);
 }
 
 .article-card{padding:35px}
@@ -248,32 +256,32 @@ gap:28px
 .article-card p{
 color:#c4d0d8;
 margin-bottom:18px;
-font-size:15px
+font-size:15px;
 }
 
 .info-card{
 padding:30px;
 display:flex;
 flex-direction:column;
-justify-content:center
+justify-content:center;
 }
 
 .info-row{
 padding:14px 0;
-border-bottom:1px solid rgba(255,255,255,.07)
+border-bottom:1px solid rgba(255,255,255,.07);
 }
 
-.info-row:last-child{border-bottom:0}
+.info-row:last-child{border:0}
 
 .info-row small{
 display:block;
 color:#8294a2;
-font-size:11px
+font-size:11px;
 }
 
 .info-row strong{
 font-size:15px;
-color:#eaf2f7
+color:#eaf2f7;
 }
 
 /* TOC */
@@ -282,14 +290,14 @@ color:#eaf2f7
 .toc{
 padding:28px;
 max-width:900px;
-margin:auto
+margin:auto;
 }
 
 .toc-title{
 display:flex;
 align-items:center;
 justify-content:space-between;
-margin-bottom:20px
+margin-bottom:20px;
 }
 
 .toc-title h2{font-size:23px}
@@ -297,47 +305,39 @@ margin-bottom:20px
 
 .toc ol{
 padding-right:24px;
-columns:2
+columns:2;
 }
 
 .toc li{
 margin:7px 0;
 color:#b9c8d2;
-break-inside:avoid
 }
 
 .toc a:hover{color:var(--cyan)}
 
 /* ARTICLE */
-.article{max-width:950px;margin:auto}
+.article{
+max-width:950px;
+margin:auto;
+}
 
 .article h2{
 font-size:31px;
 margin:48px 0 16px;
 padding-right:15px;
-border-right:3px solid var(--cyan)
+border-right:3px solid var(--cyan);
 }
 
 .article h3{
 font-size:21px;
 color:var(--cyan);
-margin:32px 0 10px
+margin:32px 0 10px;
 }
 
 .article p{
 color:#c2ced6;
 font-size:16px;
-margin-bottom:18px
-}
-
-.article ul{
-padding-right:25px;
-margin:10px 0 22px
-}
-
-.article li{
-color:#b9c7d0;
-margin:7px 0
+margin-bottom:18px;
 }
 
 .note{
@@ -346,26 +346,26 @@ padding:20px 24px;
 border-right:4px solid var(--gold);
 background:rgba(229,173,54,.06);
 border-radius:8px;
-color:#d8e1e7
+color:#d8e1e7;
 }
 
 .tech-table{
 width:100%;
 border-collapse:collapse;
 margin:25px 0;
-background:#091723
+background:#091723;
 }
 
 .tech-table th,
 .tech-table td{
 padding:13px 15px;
 border:1px solid rgba(255,255,255,.08);
-text-align:right
+text-align:right;
 }
 
 .tech-table th{
 background:#0e2635;
-color:var(--cyan)
+color:var(--cyan);
 }
 
 .tech-table td{color:#c2ced6}
@@ -374,37 +374,35 @@ color:var(--cyan)
 .specialties{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:20px
+gap:20px;
 }
 
 .specialty{
 padding:27px;
 transition:.25s;
-box-shadow:none
+box-shadow:none;
 }
 
 .specialty:hover{
 transform:translateY(-5px);
 border-color:rgba(19,198,216,.55);
-box-shadow:0 15px 40px rgba(0,0,0,.25)
 }
 
 .number{
-font-family:Arial,sans-serif;
 color:var(--cyan);
-font-size:13px;
+font-family:Arial,sans-serif;
 font-weight:bold;
-margin-bottom:10px
+margin-bottom:10px;
 }
 
 .specialty h3{
 font-size:19px;
-margin-bottom:8px
+margin-bottom:8px;
 }
 
 .specialty p{
 color:#aebcc6;
-font-size:14px
+font-size:14px;
 }
 
 /* PROJECTS */
@@ -412,11 +410,11 @@ font-size:14px
 display:grid;
 gap:18px;
 max-width:1000px;
-margin:auto
+margin:auto;
 }
 
 .project-card{
-padding:30px
+padding:30px;
 }
 
 .project-head{
@@ -424,26 +422,27 @@ display:flex;
 justify-content:space-between;
 gap:20px;
 align-items:flex-start;
-margin-bottom:12px
+margin-bottom:12px;
 }
 
 .project-head h3{font-size:21px}
+
 .project-number{
 color:var(--gold);
 font-family:Arial,sans-serif;
-font-weight:bold
+font-weight:bold;
 }
 
 .project-card p{
 color:#b9c6cf;
-font-size:14px
+font-size:14px;
 }
 
 .project-tags{
 display:flex;
 flex-wrap:wrap;
 gap:8px;
-margin-top:16px
+margin-top:16px;
 }
 
 .tag{
@@ -452,7 +451,7 @@ border:1px solid rgba(19,198,216,.18);
 padding:4px 10px;
 border-radius:20px;
 font-size:11px;
-color:#9fdce4
+color:#9fdce4;
 }
 
 /* MEDIA */
@@ -460,18 +459,18 @@ color:#9fdce4
 text-align:center;
 color:#82929d;
 margin-bottom:25px;
-font-size:13px
+font-size:13px;
 }
 
 .gallery{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:18px
+gap:18px;
 }
 
 .gallery-card{
 overflow:hidden;
-box-shadow:none
+box-shadow:none;
 }
 
 .gallery-card img{
@@ -480,7 +479,7 @@ width:100%;
 height:240px;
 object-fit:cover;
 cursor:pointer;
-transition:.35s
+transition:.35s;
 }
 
 .gallery-card:hover img{transform:scale(1.04)}
@@ -488,72 +487,72 @@ transition:.35s
 .gallery-title{
 padding:12px 15px;
 font-size:13px;
-color:#c4d0d7
+color:#c4d0d7;
 }
 
 .videos{
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:20px
+gap:20px;
 }
 
 .video-card{
 padding:12px;
 overflow:hidden;
-box-shadow:none
+box-shadow:none;
 }
 
 .video-card video{
 width:100%;
 display:block;
 border-radius:8px;
-background:#000
+background:#000;
 }
 
 .video-title{
 padding:10px 5px 3px;
 font-size:13px;
-color:#c3d0d7
+color:#c3d0d7;
 }
 
 /* RESOURCES */
 .resources{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:20px
+gap:20px;
 }
 
 .resource-card{
 padding:25px;
 transition:.25s;
-box-shadow:none
+box-shadow:none;
 }
 
 .resource-card:hover{
 border-color:rgba(19,198,216,.5);
-transform:translateY(-4px)
+transform:translateY(-4px);
 }
 
 .resource-icon{
 font-size:27px;
-margin-bottom:10px
+margin-bottom:10px;
 }
 
 .resource-card h3{
 font-size:17px;
-margin-bottom:7px
+margin-bottom:7px;
 }
 
 .resource-card p{
 font-size:13px;
-color:#aebcc6
+color:#aebcc6;
 }
 
 /* RELATED */
 .related{
 display:grid;
 grid-template-columns:repeat(5,1fr);
-gap:14px
+gap:14px;
 }
 
 .related a{
@@ -562,14 +561,14 @@ height:170px;
 border-radius:12px;
 overflow:hidden;
 border:1px solid var(--border);
-background:#101820
+background:#101820;
 }
 
 .related img{
 width:100%;
 height:100%;
 object-fit:cover;
-transition:.4s
+transition:.4s;
 }
 
 .related a:hover img{transform:scale(1.08)}
@@ -578,7 +577,7 @@ transition:.4s
 content:"";
 position:absolute;
 inset:0;
-background:linear-gradient(transparent 35%,rgba(0,0,0,.88))
+background:linear-gradient(transparent 35%,rgba(0,0,0,.88));
 }
 
 .related strong{
@@ -588,7 +587,7 @@ bottom:15px;
 right:10px;
 left:10px;
 text-align:center;
-font-size:14px
+font-size:14px;
 }
 
 /* CONTACT */
@@ -600,17 +599,16 @@ text-align:center;
 background:linear-gradient(145deg,rgba(11,35,48,.95),rgba(7,18,28,.95));
 border:1px solid rgba(19,198,216,.20);
 border-radius:16px;
-box-shadow:var(--shadow)
 }
 
 .contact-box h2{
 font-size:31px;
-margin-bottom:10px
+margin-bottom:10px;
 }
 
 .contact-box p{
 color:#b7c5ce;
-margin-bottom:24px
+margin-bottom:24px;
 }
 
 /* FOOTER */
@@ -620,20 +618,10 @@ border-top:1px solid var(--border);
 padding:38px 0;
 text-align:center;
 color:#7e8e99;
-font-size:12px
+font-size:12px;
 }
 
 footer strong{color:var(--cyan)}
-
-/* LOADING */
-.loading{
-padding:35px;
-text-align:center;
-color:#81929e;
-background:var(--panel);
-border:1px solid var(--border);
-border-radius:12px
-}
 
 /* LIGHTBOX */
 .lightbox{
@@ -644,7 +632,7 @@ display:none;
 align-items:center;
 justify-content:center;
 padding:30px;
-background:rgba(0,0,0,.92)
+background:rgba(0,0,0,.92);
 }
 
 .lightbox.active{display:flex}
@@ -653,7 +641,7 @@ background:rgba(0,0,0,.92)
 max-width:94vw;
 max-height:90vh;
 object-fit:contain;
-border-radius:8px
+border-radius:8px;
 }
 
 .lightbox-close{
@@ -661,11 +649,11 @@ position:absolute;
 top:20px;
 left:25px;
 font-size:35px;
-color:white;
-cursor:pointer
+color:#fff;
+cursor:pointer;
 }
 
-/* TOP */
+/* BACK TOP */
 .back-top{
 position:fixed;
 bottom:22px;
@@ -683,20 +671,25 @@ font-weight:bold;
 box-shadow:0 10px 30px rgba(0,0,0,.35);
 opacity:0;
 pointer-events:none;
-transition:.25s
+transition:.25s;
 }
 
 .back-top.show{
 opacity:1;
-pointer-events:auto
+pointer-events:auto;
 }
 
 /* MOBILE */
 @media(max-width:1000px){
+
 .intro{grid-template-columns:1fr}
+
 .specialties{grid-template-columns:repeat(2,1fr)}
+
 .resources{grid-template-columns:repeat(2,1fr)}
+
 .related{grid-template-columns:repeat(3,1fr)}
+
 }
 
 @media(max-width:760px){
@@ -713,10 +706,11 @@ padding:15px 6%;
 background:#06111a;
 border-bottom:1px solid var(--border);
 flex-direction:column;
-align-items:stretch
+align-items:stretch;
 }
 
 .menu.active{display:flex}
+
 .mobile-menu{display:block}
 
 .hero{
@@ -724,29 +718,33 @@ min-height:650px;
 padding-top:70px;
 background:
 linear-gradient(90deg,rgba(2,8,14,.95),rgba(2,8,14,.70)),
-var(--hero-image) center/cover no-repeat
+var(--hero-image) center/cover no-repeat;
 }
 
 .hero h1{font-size:clamp(42px,12vw,60px)}
 .hero p{font-size:16px}
 
 section{padding:70px 0}
+
 .section-title h2{font-size:30px}
 
 .toc ol{columns:1}
+
 .article h2{font-size:26px}
 
 .specialties,
 .gallery,
 .videos,
 .resources{
-grid-template-columns:1fr
+grid-template-columns:1fr;
 }
 
 .related{grid-template-columns:repeat(2,1fr)}
+
 .related a{height:150px}
 
 .contact-box{padding:30px 20px}
+
 }
 
 @media(max-width:480px){
@@ -758,16 +756,18 @@ grid-template-columns:1fr
 .project-card,
 .resource-card,
 .specialty{
-padding:22px
+padding:22px;
 }
 
 .hero-buttons{
 flex-direction:column;
-align-items:flex-start
+align-items:flex-start;
 }
 
 .btn{width:100%}
+
 .related{grid-template-columns:1fr}
+
 }
 </style>
 </head>
@@ -798,7 +798,9 @@ Mohsen <span>Nasri</span>
 </header>
 
 <section class="hero" id="top">
+
 <div class="hero-content">
+
 <div class="hero-inner">
 
 <div class="kicker" id="heroKicker">
@@ -826,6 +828,7 @@ INDUSTRIAL ENGINEERING
 <main>
 
 <section id="about">
+
 <div class="container">
 
 <div class="section-title">
@@ -868,7 +871,9 @@ INDUSTRIAL ENGINEERING
 </section>
 
 <section class="toc-wrap" id="toc">
+
 <div class="container">
+
 <div class="toc">
 
 <div class="toc-title">
@@ -893,6 +898,7 @@ INDUSTRIAL ENGINEERING
 </section>
 
 <section id="knowledge" class="section-dark">
+
 <div class="container">
 
 <div class="section-title">
@@ -902,6 +908,7 @@ INDUSTRIAL ENGINEERING
 </div>
 
 <article class="article">
+
 <div id="technicalContent">
 
 <div class="loading">
@@ -909,12 +916,14 @@ INDUSTRIAL ENGINEERING
 </div>
 
 </div>
+
 </article>
 
 </div>
 </section>
 
 <section id="specialties">
+
 <div class="container">
 
 <div class="section-title">
@@ -966,6 +975,7 @@ INDUSTRIAL ENGINEERING
 </section>
 
 <section id="projects" class="section-dark">
+
 <div class="container">
 
 <div class="section-title">
@@ -975,13 +985,18 @@ INDUSTRIAL ENGINEERING
 </div>
 
 <div class="projects" id="projectsContainer">
-<div class="loading">در حال دریافت پروژه‌ها...</div>
+
+<div class="loading">
+در حال دریافت پروژه‌ها...
+</div>
+
 </div>
 
 </div>
 </section>
 
 <section id="gallery">
+
 <div class="container">
 
 <div class="section-title">
@@ -1000,6 +1015,7 @@ INDUSTRIAL ENGINEERING
 </section>
 
 <section id="videos" class="section-dark">
+
 <div class="container">
 
 <div class="section-title">
@@ -1018,6 +1034,7 @@ INDUSTRIAL ENGINEERING
 </section>
 
 <section id="documents">
+
 <div class="container">
 
 <div class="section-title">
@@ -1051,6 +1068,7 @@ INDUSTRIAL ENGINEERING
 </section>
 
 <section id="related" class="section-dark">
+
 <div class="container">
 
 <div class="section-title">
@@ -1091,11 +1109,16 @@ INDUSTRIAL ENGINEERING
 </section>
 
 <section id="contact">
+
 <div class="container">
 
 <div class="contact-box">
+
 <h2>برای پروژه بعدی خود آماده‌اید؟</h2>
-<p>برای همکاری، پروژه‌های صنعتی، مشاوره فنی و ارتباط حرفه‌ای با Mohsen Nasri در تماس باشید.</p>
+
+<p>
+برای همکاری، پروژه‌های صنعتی، مشاوره فنی و ارتباط حرفه‌ای با Mohsen Nasri در تماس باشید.
+</p>
 
 <a class="btn btn-primary" href="tel:09193890454">
 تماس با من
@@ -1108,18 +1131,29 @@ INDUSTRIAL ENGINEERING
 </main>
 
 <footer>
+
 <div class="container">
+
 <strong>Mohsen Nasri</strong>
+
 <br>
+
 Industrial Engineering • Mechanical Engineering • Industrial Projects
+
 <br>
+
 © 2026 Mohsen Nasri. All Rights Reserved.
+
 </div>
+
 </footer>
 
 <div class="lightbox" id="lightbox">
+
 <div class="lightbox-close" id="lightboxClose">×</div>
+
 <img id="lightboxImage" src="" alt="">
+
 </div>
 
 <a href="#top" class="back-top" id="backTop">↑</a>
@@ -1141,14 +1175,13 @@ const SUPABASE_ANON_KEY =
    TOPICS
    ========================================================= */
 
-const topics = {
+const topics={
 
 rewinding:{
 title:"سیم‌پیچی و برق صنعتی",
 english:"Electrical & Rewinding",
 image:"rewinding.jpg",
 description:"تجهیزات، ماشین‌آلات و سیستم‌های صنعتی سیم‌پیچی، بازپیچی و برق صنعتی.",
-intro:"این بخش به معرفی دانش فنی، تجهیزات، پروژه‌ها و تجربیات مرتبط با صنعت سیم‌پیچی و برق صنعتی اختصاص دارد.",
 field:"Electrical & Rewinding"
 },
 
@@ -1157,7 +1190,6 @@ title:"شیشه فلوت و تخت",
 english:"Float & Flat Glass",
 image:"float-glass.jpg",
 description:"فرآیند تولید، تجهیزات و سیستم‌های مکانیکی و صنعتی صنعت شیشه فلوت و تخت.",
-intro:"این بخش به بررسی فرآیند تولید شیشه فلوت و تخت، تجهیزات خط تولید و تجربیات مهندسی مرتبط اختصاص دارد.",
 field:"Float & Flat Glass"
 },
 
@@ -1166,7 +1198,6 @@ title:"صنعت کابل‌سازی",
 english:"Cable Manufacturing",
 image:"cable.jpg",
 description:"ماشین‌آلات، تجهیزات و فرآیندهای تولید و کنترل در صنعت کابل‌سازی.",
-intro:"این بخش برای معرفی فرآیندهای تولید کابل، ماشین‌آلات، تجهیزات و تجربیات مهندسی طراحی شده است.",
 field:"Cable Manufacturing"
 },
 
@@ -1175,7 +1206,6 @@ title:"صنعت فولاد",
 english:"Steel Industry",
 image:"steel.jpg",
 description:"ماشین‌آلات، تجهیزات، خطوط تولید و سیستم‌های صنعتی صنعت فولاد.",
-intro:"این بخش به معرفی تجهیزات، ماشین‌آلات، فرآیندهای صنعتی و تجربیات مرتبط با صنعت فولاد اختصاص دارد.",
 field:"Steel Industry"
 },
 
@@ -1184,7 +1214,6 @@ title:"شیشه بطری",
 english:"Container Glass",
 image:"container-glass.jpg",
 description:"ماشین‌آلات، تجهیزات و فرآیندهای تولید ظروف شیشه‌ای و شیشه بطری.",
-intro:"این بخش به معرفی فرآیند تولید ظروف شیشه‌ای، ماشین‌آلات، تجهیزات و تجربیات مهندسی مرتبط اختصاص دارد.",
 field:"Container Glass"
 }
 
@@ -1195,53 +1224,44 @@ field:"Container Glass"
    CURRENT INDUSTRY
    ========================================================= */
 
-const params = new URLSearchParams(window.location.search);
+const params=new URLSearchParams(location.search);
 
-const industry =
-params.get("industry") || "rewinding";
+const industry=params.get("industry") || "rewinding";
 
-const topic =
-topics[industry] || topics.rewinding;
+const topic=topics[industry] || topics.rewinding;
 
 
 /* =========================================================
    PAGE DATA
    ========================================================= */
 
-document.title =
-topic.title + " | Mohsen Nasri";
+document.title=topic.title+" | Mohsen Nasri";
 
 document.documentElement.style.setProperty(
 "--hero-image",
-"url('" + topic.image + "')"
+"url('"+topic.image+"')"
 );
 
-document.getElementById("heroKicker").textContent =
+document.getElementById("heroKicker").textContent=
 topic.english.toUpperCase();
 
-document.getElementById("heroTitle").innerHTML =
-escapeHTML(topic.title) +
-"<br><span>" +
-escapeHTML(topic.english) +
+document.getElementById("heroTitle").innerHTML=
+escapeHTML(topic.title)+
+"<br><span>"+
+escapeHTML(topic.english)+
 "</span>";
 
-document.getElementById("heroDescription").textContent =
+document.getElementById("heroDescription").textContent=
 topic.description;
 
-document.getElementById("aboutTitle").textContent =
-"معرفی " + topic.title;
+document.getElementById("aboutTitle").textContent=
+"معرفی "+topic.title;
 
-document.getElementById("aboutSubtitle").textContent =
+document.getElementById("aboutSubtitle").textContent=
 topic.description;
 
-document.getElementById("fieldName").textContent =
+document.getElementById("fieldName").textContent=
 topic.field;
-
-document.getElementById("introContent").innerHTML =
-"<p>" +
-escapeHTML(topic.intro) +
-"</p>" +
-"<p>هدف این صفحه ارائه یک مرجع منظم برای دانش فنی، پروژه‌ها، تجربیات، تصاویر، ویدئوها و مستندات مرتبط با این حوزه صنعتی است.</p>";
 
 
 /* =========================================================
@@ -1250,9 +1270,7 @@ escapeHTML(topic.intro) +
 
 function escapeHTML(value){
 
-if(value===null || value===undefined){
-return "";
-}
+if(value===null || value===undefined)return "";
 
 return String(value)
 .replace(/&/g,"&amp;")
@@ -1266,16 +1284,14 @@ return String(value)
 
 function fileURL(path){
 
-if(!path){
-return "";
-}
+if(!path)return "";
 
 if(/^https?:\/\//i.test(path)){
 return path;
 }
 
-return SUPABASE_URL +
-"/storage/v1/object/public/project-media/" +
+return SUPABASE_URL+
+"/storage/v1/object/public/project-media/"+
 String(path).replace(/^\/+/,"");
 
 }
@@ -1283,35 +1299,29 @@ String(path).replace(/^\/+/,"");
 
 async function api(path){
 
-const response =
-await fetch(
-SUPABASE_URL + path,
+const response=await fetch(
+SUPABASE_URL+path,
 {
 method:"GET",
 headers:{
-"apikey":SUPABASE_ANON_KEY,
-"Authorization":"Bearer " + SUPABASE_ANON_KEY,
-"Content-Type":"application/json",
-"Accept":"application/json"
+apikey:SUPABASE_ANON_KEY,
+Authorization:"Bearer "+SUPABASE_ANON_KEY,
+Accept:"application/json"
 }
 }
 );
 
 if(!response.ok){
 
-const text =
-await response.text();
+const text=await response.text();
 
 throw new Error(
-"Supabase HTTP " +
-response.status +
-" " +
-text
+"Supabase HTTP "+response.status+" "+text
 );
 
 }
 
-return await response.json();
+return response.json();
 
 }
 
@@ -1322,41 +1332,44 @@ return await response.json();
 
 async function loadContent(){
 
-const technical =
-document.getElementById("technicalContent");
-
-const projects =
-document.getElementById("projectsContainer");
-
 try{
 
-const rows =
-await api(
-"/rest/v1/industry_content" +
-"?industry=eq." +
-encodeURIComponent(industry) +
+const rows=await api(
+"/rest/v1/industry_content"+
+"?industry=eq."+
+encodeURIComponent(industry)+
 "&order=created_at.asc"
 );
 
-if(!Array.isArray(rows) || rows.length===0){
+const technical=document.getElementById(
+"technicalContent"
+);
 
-technical.innerHTML = `
-<div class="article">
+const projects=document.getElementById(
+"projectsContainer"
+);
 
-<h2>دانش فنی ${escapeHTML(topic.title)}</h2>
 
-<p>
-محتوای فنی این صنعت هنوز در پنل مدیریت ثبت نشده است.
-</p>
+/* EMPTY */
+
+if(!Array.isArray(rows)||rows.length===0){
+
+technical.innerHTML=`
 
 <div class="note">
-برای اضافه‌کردن مطالب، از پنل مدیریت سایت استفاده کنید.
+محتوای فنی این صنعت هنوز در پنل مدیریت ثبت نشده است.
 </div>
 
-</div>
+<h2>دانش فنی و فرآیندهای ${escapeHTML(topic.title)}</h2>
+
+<p>
+در این بخش دانش فنی، تجهیزات، فرآیندهای تولید، سیستم‌های مکانیکی، الکتریکی و کنترلی مرتبط با این صنعت نمایش داده خواهد شد.
+</p>
+
 `;
 
-projects.innerHTML = `
+projects.innerHTML=`
+
 <div class="project-card">
 
 <div class="project-head">
@@ -1365,58 +1378,65 @@ projects.innerHTML = `
 </div>
 
 <p>
-هنوز پروژه‌ای برای این صنعت ثبت نشده است.
+هنوز پروژه‌ای برای این صنعت در پنل مدیریت ثبت نشده است.
 </p>
 
 </div>
+
 `;
 
 return;
+
 }
 
 
-let technicalHTML = "";
-let projectRows = [];
+let technicalHTML="";
+
+const projectRows=[];
 
 
-rows.forEach((row,index)=>{
+rows.forEach(row=>{
 
-const type =
-String(
-row.content_type ||
-row.type ||
-row.section ||
+const type=String(
+row.content_type||
+row.type||
+row.section||
 ""
 ).toLowerCase();
 
-const title =
-row.title ||
-row.heading ||
+const title=
+row.title||
+row.heading||
 "موضوع فنی";
 
-const content =
-row.content ||
-row.text ||
-row.description ||
+const content=
+row.content||
+row.text||
+row.description||
 "";
 
-const isProject =
-type.includes("project") ||
-type.includes("پروژه") ||
-type === "projects";
+
+const isProject=
+type.includes("project")||
+type.includes("پروژه")||
+title.includes("پروژه");
+
 
 if(isProject){
 
 projectRows.push({
-title:title,
-content:content
+title,
+content
 });
 
 }else if(content){
 
-technicalHTML += `
-<h2>${escapeHTML(title)}</h2>
+technicalHTML+=`
+
+<h3>${escapeHTML(title)}</h3>
+
 <p>${escapeHTML(content)}</p>
+
 `;
 
 }
@@ -1426,16 +1446,18 @@ technicalHTML += `
 
 if(technicalHTML){
 
-technical.innerHTML =
-technicalHTML;
+technical.innerHTML=technicalHTML;
 
 }else{
 
-technical.innerHTML = `
-<h2>دانش فنی</h2>
+technical.innerHTML=`
+
+<h2>دانش فنی ${escapeHTML(topic.title)}</h2>
+
 <p>
-مطالب فنی این صنعت در حال تکمیل است.
+محتوای تخصصی این بخش از طریق پنل مدیریت قابل توسعه است.
 </p>
+
 `;
 
 }
@@ -1443,15 +1465,15 @@ technical.innerHTML = `
 
 if(projectRows.length){
 
-projects.innerHTML =
-projectRows.map((project,index)=>`
+projects.innerHTML=projectRows.map(
+(item,index)=>`
 
 <div class="project-card">
 
 <div class="project-head">
 
 <h3>
-${escapeHTML(project.title)}
+${escapeHTML(item.title)}
 </h3>
 
 <span class="project-number">
@@ -1461,7 +1483,7 @@ ${String(index+1).padStart(2,"0")}
 </div>
 
 <p>
-${escapeHTML(project.content)}
+${escapeHTML(item.content)}
 </p>
 
 <div class="project-tags">
@@ -1478,11 +1500,63 @@ Engineering Project
 
 </div>
 
-`).join("");
+`
+).join("");
 
 }else{
 
-projects.innerHTML = `
+projects.innerHTML=`
+
+<div class="project-card">
+
+<div class="project-head">
+
+<h3>
+پروژه‌های ${escapeHTML(topic.title)}
+</h3>
+
+<span class="project-number">
+PROJECT
+</span>
+
+</div>
+
+<p>
+هنوز پروژه‌ای برای این صنعت ثبت نشده است.
+</p>
+
+</div>
+
+`;
+
+}
+
+}catch(error){
+
+console.error(error);
+
+document.getElementById(
+"technicalContent"
+).innerHTML=`
+
+<div class="note">
+محتوای ثابت صفحه نمایش داده شد. اتصال پایگاه داده در حال بررسی است.
+</div>
+
+<h2>
+دانش فنی ${escapeHTML(topic.title)}
+</h2>
+
+<p>
+این بخش برای نمایش دانش فنی، فرآیندها، تجهیزات و تجربیات مهندسی این صنعت طراحی شده است.
+</p>
+
+`;
+
+document.getElementById(
+"projectsContainer"
+).innerHTML=`
+
 <div class="project-card">
 
 <div class="project-head">
@@ -1491,28 +1565,11 @@ projects.innerHTML = `
 </div>
 
 <p>
-هنوز پروژه‌ای برای این صنعت ثبت نشده است.
+اطلاعات پروژه‌ها پس از ثبت در پنل مدیریت در این قسمت نمایش داده می‌شود.
 </p>
 
 </div>
-`;
 
-}
-
-}catch(error){
-
-console.error("industry_content:",error);
-
-technical.innerHTML = `
-<div class="error">
-خطا در دریافت محتوای فنی از پایگاه داده.
-</div>
-`;
-
-projects.innerHTML = `
-<div class="error">
-خطا در دریافت پروژه‌ها.
-</div>
 `;
 
 }
@@ -1526,81 +1583,71 @@ projects.innerHTML = `
 
 async function loadMedia(){
 
-const gallery =
-document.getElementById("galleryContainer");
+const gallery=document.getElementById(
+"galleryContainer"
+);
 
-const videos =
-document.getElementById("videosContainer");
+const videos=document.getElementById(
+"videosContainer"
+);
 
-const galleryStatus =
-document.getElementById("galleryStatus");
+const galleryStatus=document.getElementById(
+"galleryStatus"
+);
 
-const videoStatus =
-document.getElementById("videoStatus");
+const videoStatus=document.getElementById(
+"videoStatus"
+);
+
 
 try{
 
-const rows =
-await api(
-"/rest/v1/industry_media" +
-"?industry=eq." +
-encodeURIComponent(industry) +
+const rows=await api(
+"/rest/v1/industry_media"+
+"?industry=eq."+
+encodeURIComponent(industry)+
 "&order=created_at.desc"
 );
 
 
-const images =
-rows.filter(row=>{
-
-const type =
+const images=rows.filter(row=>
 String(
-row.media_type ||
-row.type ||
+row.media_type||
+row.type||
 ""
-).toLowerCase();
-
-return type.includes("image");
-
-});
+).toLowerCase().includes("image")
+);
 
 
-const videoRows =
-rows.filter(row=>{
-
-const type =
+const videoRows=rows.filter(row=>
 String(
-row.media_type ||
-row.type ||
+row.media_type||
+row.type||
 ""
-).toLowerCase();
-
-return type.includes("video");
-
-});
+).toLowerCase().includes("video")
+);
 
 
 /* IMAGES */
 
 if(images.length){
 
-gallery.innerHTML =
-images.map(row=>{
+gallery.innerHTML=images.map(row=>{
 
-const src =
-row.public_url ||
-row.url ||
+const src=
+row.public_url||
+row.url||
 fileURL(row.file_path);
 
-const title =
-row.title ||
-row.caption ||
+const title=
+row.title||
+row.caption||
 topic.title;
 
-if(!src){
-return "";
-}
+if(!src)return "";
 
 return `
+
 <div class="gallery-card">
 
 <img
@@ -1616,16 +1663,19 @@ ${escapeHTML(title)}
 </div>
 
 </div>
+
 `;
 
 }).join("");
 
-galleryStatus.textContent =
-images.length + " تصویر ثبت شده";
+galleryStatus.textContent=
+images.length+" تصویر ثبت شده";
 
 }else{
 
-galleryStatus.textContent =
+gallery.innerHTML="";
+
+galleryStatus.textContent=
 "هنوز تصویری برای این صنعت ثبت نشده است.";
 
 }
@@ -1635,24 +1685,22 @@ galleryStatus.textContent =
 
 if(videoRows.length){
 
-videos.innerHTML =
-videoRows.map(row=>{
+videos.innerHTML=videoRows.map(row=>{
 
-const src =
-row.public_url ||
-row.url ||
+const src=
+row.public_url||
+row.url||
 fileURL(row.file_path);
 
-const title =
-row.title ||
-row.caption ||
+const title=
+row.title||
+row.caption||
 "ویدئوی صنعتی";
 
-if(!src){
-return "";
-}
+if(!src)return "";
 
 return `
+
 <div class="video-card">
 
 <video
@@ -1675,29 +1723,32 @@ ${escapeHTML(title)}
 </div>
 
 </div>
+
 `;
 
 }).join("");
 
-videoStatus.textContent =
-videoRows.length + " ویدئو ثبت شده";
+videoStatus.textContent=
+videoRows.length+" ویدئو ثبت شده";
 
 }else{
 
-videoStatus.textContent =
+videos.innerHTML="";
+
+videoStatus.textContent=
 "هنوز ویدئویی برای این صنعت ثبت نشده است.";
 
 }
 
 }catch(error){
 
-console.error("industry_media:",error);
+console.error("MEDIA ERROR:",error);
 
-galleryStatus.innerHTML =
-"<span style='color:#ff9b9b'>خطا در دریافت تصاویر.</span>";
+galleryStatus.textContent=
+"هنوز تصویری برای این صنعت ثبت نشده است.";
 
-videoStatus.innerHTML =
-"<span style='color:#ff9b9b'>خطا در دریافت ویدئوها.</span>";
+videoStatus.textContent=
+"هنوز ویدئویی برای این صنعت ثبت نشده است.";
 
 }
 
@@ -1710,32 +1761,33 @@ videoStatus.innerHTML =
 
 function openLightbox(src){
 
-const box =
-document.getElementById("lightbox");
+const box=document.getElementById("lightbox");
 
-const image =
-document.getElementById("lightboxImage");
+const image=document.getElementById("lightboxImage");
 
-image.src = src;
+image.src=src;
 
 box.classList.add("active");
 
 }
 
 
-document.getElementById("lightboxClose")
-.addEventListener("click",()=>{
+document.getElementById(
+"lightboxClose"
+).addEventListener("click",()=>{
 
-document.getElementById("lightbox")
-.classList.remove("active");
+document.getElementById(
+"lightbox"
+).classList.remove("active");
 
 });
 
 
-document.getElementById("lightbox")
-.addEventListener("click",function(event){
+document.getElementById(
+"lightbox"
+).addEventListener("click",function(e){
 
-if(event.target===this){
+if(e.target===this){
 this.classList.remove("active");
 }
 
@@ -1746,22 +1798,24 @@ this.classList.remove("active");
    MOBILE MENU
    ========================================================= */
 
-document.getElementById("mobileMenu")
-.addEventListener("click",()=>{
+document.getElementById(
+"mobileMenu"
+).addEventListener("click",()=>{
 
-document.getElementById("menu")
-.classList.toggle("active");
+document.getElementById(
+"menu"
+).classList.toggle("active");
 
 });
 
 
-document.querySelectorAll("#menu a")
-.forEach(link=>{
+document.querySelectorAll("#menu a").forEach(link=>{
 
 link.addEventListener("click",()=>{
 
-document.getElementById("menu")
-.classList.remove("active");
+document.getElementById(
+"menu"
+).classList.remove("active");
 
 });
 
@@ -1769,18 +1823,21 @@ document.getElementById("menu")
 
 
 /* =========================================================
-   BACK TO TOP
+   BACK TOP
    ========================================================= */
 
-const backTop =
-document.getElementById("backTop");
+const backTop=document.getElementById("backTop");
 
 window.addEventListener("scroll",()=>{
 
 if(window.scrollY>500){
+
 backTop.classList.add("show");
+
 }else{
+
 backTop.classList.remove("show");
+
 }
 
 });
@@ -1791,6 +1848,7 @@ backTop.classList.remove("show");
    ========================================================= */
 
 loadContent();
+
 loadMedia();
 
 </script>
