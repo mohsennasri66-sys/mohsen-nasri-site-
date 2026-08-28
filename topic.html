@@ -1,51 +1,34 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <title>Mohsen Nasri | Industrial Engineering</title>
 
-<meta name="description"
-content="دانش فنی، پروژه‌ها، تجربیات و مستندات مهندسی صنعتی و مکانیک محسن نصری.">
-
 <style>
-
 :root{
 --bg:#050b12;
---bg2:#081521;
 --panel:#0c1925;
---panel2:#0f202f;
 --text:#f5f8fb;
 --muted:#aebdca;
 --cyan:#13c6d8;
---cyan2:#0aa7bb;
 --gold:#e5ad36;
 --border:rgba(255,255,255,.10);
---shadow:0 20px 60px rgba(0,0,0,.35);
 }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box}
 
 html{
 scroll-behavior:smooth;
-scroll-padding-top:90px;
+scroll-padding-top:80px;
 }
 
 body{
 font-family:Tahoma,Arial,sans-serif;
-background:
-radial-gradient(circle at 10% 10%,rgba(19,198,216,.07),transparent 28%),
-radial-gradient(circle at 90% 40%,rgba(229,173,54,.05),transparent 28%),
-var(--bg);
+background:var(--bg);
 color:var(--text);
 line-height:2;
-direction:rtl;
 }
 
 a{
@@ -53,16 +36,12 @@ color:inherit;
 text-decoration:none;
 }
 
-img{
-max-width:100%;
-}
-
 .container{
 width:min(1180px,92%);
 margin:auto;
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
 
 header{
 position:fixed;
@@ -71,9 +50,8 @@ left:0;
 right:0;
 z-index:1000;
 height:78px;
-background:rgba(3,9,15,.88);
-backdrop-filter:blur(18px);
--webkit-backdrop-filter:blur(18px);
+background:rgba(3,9,15,.9);
+backdrop-filter:blur(15px);
 border-bottom:1px solid var(--border);
 }
 
@@ -82,16 +60,13 @@ height:78px;
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:20px;
 }
 
 .brand{
-font-family:Arial,sans-serif;
+font-family:Arial;
 font-size:21px;
 font-weight:900;
 direction:ltr;
-letter-spacing:.5px;
-white-space:nowrap;
 }
 
 .brand span{
@@ -100,21 +75,20 @@ color:var(--cyan);
 
 .menu{
 display:flex;
+gap:22px;
 align-items:center;
-gap:20px;
 font-size:13px;
 }
 
 .menu a{
 color:#dce7ee;
-transition:.25s;
 }
 
 .menu a:hover{
 color:var(--cyan);
 }
 
-.menu .contact-link{
+.contact-link{
 border:1px solid rgba(19,198,216,.5);
 padding:6px 14px;
 border-radius:7px;
@@ -124,72 +98,53 @@ border-radius:7px;
 display:none;
 background:none;
 border:0;
-color:#fff;
-font-size:25px;
-cursor:pointer;
+color:white;
+font-size:26px;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 
 .hero{
-min-height:760px;
+min-height:720px;
 padding-top:78px;
-position:relative;
 display:flex;
 align-items:center;
+position:relative;
 overflow:hidden;
 
 background:
 linear-gradient(
 90deg,
-rgba(2,8,14,.97) 0%,
-rgba(2,8,14,.88) 35%,
-rgba(2,8,14,.55) 68%,
-rgba(2,8,14,.18) 100%
+rgba(2,8,14,.97),
+rgba(2,8,14,.78),
+rgba(2,8,14,.35)
 ),
 var(--hero-image) center/cover no-repeat;
-
-direction:ltr;
-}
-
-.hero:after{
-content:"";
-position:absolute;
-left:0;
-right:0;
-bottom:0;
-height:190px;
-background:linear-gradient(transparent,var(--bg));
-pointer-events:none;
 }
 
 .hero-content{
-position:relative;
-z-index:2;
 width:min(1180px,92%);
 margin:auto;
+position:relative;
+z-index:2;
 }
 
 .hero-inner{
-max-width:800px;
-direction:rtl;
+max-width:760px;
 }
 
 .kicker{
-display:inline-block;
 color:var(--gold);
 font-size:14px;
 font-weight:bold;
 margin-bottom:15px;
-letter-spacing:.7px;
 }
 
 .hero h1{
+font-family:Arial,Tahoma;
 font-size:clamp(44px,7vw,82px);
-line-height:1.08;
+line-height:1.1;
 margin-bottom:22px;
-font-family:Arial,Tahoma,sans-serif;
-font-weight:900;
 }
 
 .hero h1 span{
@@ -197,27 +152,9 @@ color:var(--cyan);
 }
 
 .hero p{
-font-size:19px;
+font-size:18px;
 color:#d3dde4;
-max-width:720px;
-line-height:2;
-margin-bottom:20px;
-}
-
-.hero-meta{
-display:flex;
-gap:10px;
-flex-wrap:wrap;
 margin-bottom:28px;
-}
-
-.hero-meta span{
-font-size:11px;
-color:#c0cdd5;
-padding:4px 11px;
-border-radius:20px;
-background:rgba(255,255,255,.05);
-border:1px solid rgba(255,255,255,.10);
 }
 
 .hero-buttons{
@@ -228,14 +165,12 @@ flex-wrap:wrap;
 
 .btn{
 display:inline-flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 padding:11px 23px;
 border-radius:7px;
 font-weight:bold;
 font-size:14px;
-transition:.25s;
-cursor:pointer;
 }
 
 .btn-primary{
@@ -243,103 +178,76 @@ background:var(--cyan);
 color:#031015;
 }
 
-.btn-primary:hover{
-background:#27d7e6;
-transform:translateY(-2px);
-}
-
 .btn-outline{
-border:1px solid rgba(255,255,255,.25);
-color:#fff;
-background:rgba(255,255,255,.04);
+border:1px solid rgba(255,255,255,.3);
+background:rgba(255,255,255,.05);
 }
 
-.btn-outline:hover{
-border-color:var(--cyan);
-color:var(--cyan);
-}
-
-/* ================= MAIN ================= */
-
-main{
-direction:rtl;
-}
+/* GENERAL */
 
 section{
-padding:90px 0;
+padding:85px 0;
 }
 
 .section-dark{
-background:rgba(7,18,28,.72);
+background:#07121c;
 }
 
 .section-title{
 text-align:center;
-margin-bottom:48px;
+margin-bottom:45px;
 }
 
-.section-title .eyebrow{
+.eyebrow{
 color:var(--cyan);
 font-size:13px;
 font-weight:bold;
-margin-bottom:5px;
 }
 
 .section-title h2{
-font-size:37px;
-line-height:1.4;
-margin-bottom:8px;
+font-size:36px;
+margin:5px 0;
 }
 
 .section-title p{
 color:var(--muted);
-font-size:15px;
+font-size:14px;
 }
 
-/* ================= INTRO ================= */
+/* INTRO */
 
 .intro{
 display:grid;
 grid-template-columns:1.3fr .7fr;
-gap:28px;
-align-items:stretch;
+gap:25px;
 }
 
 .article-card,
 .info-card,
 .toc,
 .project-card,
-.media-card,
+.specialty,
+.gallery-card,
+.video-card,
 .resource-card{
-background:linear-gradient(
-145deg,
-rgba(13,28,41,.96),
-rgba(8,20,30,.96)
-);
+background:linear-gradient(145deg,#0d1c29,#08141f);
 border:1px solid var(--border);
 border-radius:14px;
-box-shadow:var(--shadow);
+box-shadow:0 15px 50px rgba(0,0,0,.25);
 }
 
 .article-card{
-padding:35px;
+padding:32px;
 }
 
 .article-card p{
 color:#c4d0d8;
-margin-bottom:18px;
 font-size:15px;
-}
-
-.article-card p:last-child{
-margin-bottom:0;
+margin-bottom:18px;
 }
 
 .info-card{
-padding:30px;
-display:flex;
-flex-direction:column;
-justify-content:center;
+padding:28px;
 }
 
 .info-row{
@@ -348,72 +256,57 @@ border-bottom:1px solid rgba(255,255,255,.07);
 }
 
 .info-row:last-child{
-border-bottom:0;
+border:0;
 }
 
 .info-row small{
 display:block;
 color:#8294a2;
 font-size:11px;
-margin-bottom:2px;
 }
 
 .info-row strong{
 font-size:15px;
-color:#eaf2f7;
 }
 
-/* ================= TOC ================= */
+/* TOC */
 
 .toc-wrap{
-padding:70px 0 20px;
+padding:55px 0 20px;
 }
 
 .toc{
-padding:28px;
 max-width:900px;
 margin:auto;
+padding:28px;
 }
 
 .toc-title{
 display:flex;
-align-items:center;
 justify-content:space-between;
-gap:15px;
-margin-bottom:20px;
-}
-
-.toc-title h2{
-font-size:23px;
+margin-bottom:18px;
 }
 
 .toc-title span{
 color:var(--cyan);
-font-size:13px;
+font-size:12px;
 }
 
 .toc ol{
-margin:0;
-padding-right:24px;
 columns:2;
-column-gap:45px;
+padding-right:25px;
 }
 
 .toc li{
-margin:7px 0;
 color:#b9c8d2;
-break-inside:avoid;
+margin:7px 0;
 }
 
-.toc a{
-transition:.2s;
-}
-
-.toc a:hover{
+.toc li:hover{
 color:var(--cyan);
 }
 
-/* ================= TECHNICAL ================= */
+/* ARTICLE */
 
 .article{
 max-width:950px;
@@ -421,16 +314,16 @@ margin:auto;
 }
 
 .article h2{
-font-size:31px;
-margin:48px 0 16px;
-padding-right:15px;
+font-size:30px;
+margin:45px 0 15px;
 border-right:3px solid var(--cyan);
+padding-right:14px;
 }
 
 .article h3{
 font-size:21px;
 color:var(--cyan);
-margin:32px 0 10px;
+margin:30px 0 10px;
 }
 
 .article p{
@@ -439,39 +332,24 @@ font-size:16px;
 margin-bottom:18px;
 }
 
-.article ul{
-padding-right:25px;
-margin:10px 0 22px;
-}
-
-.article li{
-color:#b9c7d0;
-margin:7px 0;
-}
-
 .note{
-margin:28px 0;
-padding:20px 24px;
+padding:20px;
+margin:25px 0;
 border-right:4px solid var(--gold);
 background:rgba(229,173,54,.06);
 border-radius:8px;
-color:#d8e1e7;
 }
 
 .tech-table{
 width:100%;
 border-collapse:collapse;
 margin:25px 0;
-background:#091723;
-border-radius:10px;
-overflow:hidden;
 }
 
 .tech-table th,
 .tech-table td{
-padding:13px 15px;
 border:1px solid rgba(255,255,255,.08);
-text-align:right;
+padding:12px;
 }
 
 .tech-table th{
@@ -483,7 +361,7 @@ color:var(--cyan);
 color:#c2ced6;
 }
 
-/* ================= SPECIALTIES ================= */
+/* SPECIALTIES */
 
 .specialties{
 display:grid;
@@ -492,30 +370,24 @@ gap:20px;
 }
 
 .specialty{
-padding:27px;
-background:var(--panel);
-border:1px solid var(--border);
-border-radius:12px;
+padding:25px;
 transition:.25s;
 }
 
 .specialty:hover{
 transform:translateY(-5px);
-border-color:rgba(19,198,216,.55);
-box-shadow:0 15px 40px rgba(0,0,0,.25);
+border-color:rgba(19,198,216,.5);
 }
 
 .number{
-font-family:Arial,sans-serif;
 color:var(--cyan);
-font-size:13px;
+font-family:Arial;
 font-weight:bold;
-margin-bottom:10px;
 }
 
 .specialty h3{
-font-size:19px;
-margin-bottom:8px;
+font-size:18px;
+margin:7px 0;
 }
 
 .specialty p{
@@ -523,7 +395,7 @@ color:#aebcc6;
 font-size:14px;
 }
 
-/* ================= PROJECTS ================= */
+/* PROJECTS */
 
 .projects{
 display:grid;
@@ -533,26 +405,22 @@ margin:auto;
 }
 
 .project-card{
-padding:30px;
+padding:28px;
 }
 
 .project-head{
 display:flex;
 justify-content:space-between;
-gap:20px;
-align-items:flex-start;
-margin-bottom:12px;
+margin-bottom:10px;
 }
 
 .project-head h3{
-font-size:21px;
+font-size:20px;
 }
 
 .project-number{
 color:var(--gold);
-font-family:Arial,sans-serif;
-font-weight:bold;
-font-size:13px;
+font-family:Arial;
 }
 
 .project-card p{
@@ -562,21 +430,21 @@ font-size:14px;
 
 .project-tags{
 display:flex;
-flex-wrap:wrap;
 gap:8px;
-margin-top:16px;
+flex-wrap:wrap;
+margin-top:15px;
 }
 
 .tag{
-background:rgba(19,198,216,.08);
-border:1px solid rgba(19,198,216,.18);
-padding:4px 10px;
+padding:3px 10px;
 border-radius:20px;
 font-size:11px;
 color:#9fdce4;
+background:rgba(19,198,216,.08);
+border:1px solid rgba(19,198,216,.18);
 }
 
-/* ================= MEDIA ================= */
+/* MEDIA */
 
 .media-status{
 text-align:center;
@@ -592,29 +460,20 @@ gap:18px;
 }
 
 .gallery-card{
-background:var(--panel);
-border:1px solid var(--border);
-border-radius:12px;
 overflow:hidden;
 }
 
 .gallery-card img{
-display:block;
 width:100%;
 height:240px;
+display:block;
 object-fit:cover;
 cursor:pointer;
-transition:.35s;
-}
-
-.gallery-card:hover img{
-transform:scale(1.04);
 }
 
 .gallery-title{
-padding:12px 15px;
+padding:12px;
 font-size:13px;
-color:#c4d0d7;
 }
 
 .videos{
@@ -624,27 +483,22 @@ gap:20px;
 }
 
 .video-card{
-background:var(--panel);
-border:1px solid var(--border);
-border-radius:12px;
 padding:12px;
-overflow:hidden;
 }
 
 .video-card video{
 width:100%;
 display:block;
-border-radius:8px;
 background:#000;
+border-radius:8px;
 }
 
 .video-title{
-padding:10px 5px 3px;
+padding:10px 5px;
 font-size:13px;
-color:#c3d0d7;
 }
 
-/* ================= DOCUMENTS ================= */
+/* RESOURCES */
 
 .resources{
 display:grid;
@@ -654,30 +508,22 @@ gap:20px;
 
 .resource-card{
 padding:25px;
-transition:.25s;
-}
-
-.resource-card:hover{
-border-color:rgba(19,198,216,.5);
-transform:translateY(-4px);
 }
 
 .resource-icon{
 font-size:27px;
-margin-bottom:10px;
 }
 
 .resource-card h3{
 font-size:17px;
-margin-bottom:7px;
 }
 
 .resource-card p{
-font-size:13px;
 color:#aebcc6;
+font-size:13px;
 }
 
-/* ================= RELATED ================= */
+/* RELATED */
 
 .related{
 display:grid;
@@ -686,81 +532,63 @@ gap:14px;
 }
 
 .related a{
-position:relative;
 height:170px;
-border-radius:12px;
+position:relative;
 overflow:hidden;
+border-radius:12px;
 border:1px solid var(--border);
-background:#101820;
 }
 
 .related img{
 width:100%;
 height:100%;
 object-fit:cover;
-transition:.4s;
-}
-
-.related a:hover img{
-transform:scale(1.08);
 }
 
 .related a:after{
 content:"";
 position:absolute;
 inset:0;
-background:linear-gradient(
-transparent 35%,
-rgba(0,0,0,.88)
-);
+background:linear-gradient(transparent 35%,rgba(0,0,0,.9));
 }
 
 .related strong{
 position:absolute;
 z-index:2;
-bottom:15px;
-right:10px;
-left:10px;
+bottom:12px;
+left:5px;
+right:5px;
 text-align:center;
-font-size:14px;
+font-size:13px;
 }
 
-/* ================= CONTACT ================= */
+/* CONTACT */
 
 .contact-box{
 max-width:900px;
 margin:auto;
 padding:45px;
 text-align:center;
-
-background:
-linear-gradient(
-145deg,
-rgba(11,35,48,.95),
-rgba(7,18,28,.95)
-);
-
-border:1px solid rgba(19,198,216,.20);
+background:linear-gradient(145deg,#0b2330,#07121c);
+border:1px solid rgba(19,198,216,.2);
 border-radius:16px;
-box-shadow:var(--shadow);
 }
 
 .contact-box h2{
-font-size:31px;
-margin-bottom:10px;
+font-size:30px;
 }
 
 .contact-box p{
 color:#b7c5ce;
-margin-bottom:24px;
+margin:10px 0 22px;
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 
 footer{
 background:#03070c;
 border-top:1px solid var(--border);
-padding:38px 0;
+padding:35px 0;
 text-align:center;
 color:#7e8e99;
 font-size:12px;
@@ -770,27 +598,7 @@ footer strong{
 color:var(--cyan);
 }
 
-/* ================= LOADING / ERROR ================= */
-
-.loading{
-padding:35px;
-text-align:center;
-color:#81929e;
-background:var(--panel);
-border:1px solid var(--border);
-border-radius:12px;
-}
-
-.error{
-padding:25px;
-text-align:center;
-color:#ffb1b1;
-background:#281417;
-border:1px solid rgba(255,100,100,.2);
-border-radius:12px;
-}
-
-/* ================= LIGHTBOX ================= */
+/* LIGHTBOX */
 
 .lightbox{
 position:fixed;
@@ -799,8 +607,8 @@ z-index:2000;
 display:none;
 align-items:center;
 justify-content:center;
-padding:30px;
-background:rgba(0,0,0,.92);
+background:rgba(0,0,0,.94);
+padding:20px;
 }
 
 .lightbox.active{
@@ -810,27 +618,22 @@ display:flex;
 .lightbox img{
 max-width:94vw;
 max-height:90vh;
-object-fit:contain;
-border-radius:8px;
-box-shadow:0 30px 100px #000;
 }
 
 .lightbox-close{
 position:absolute;
-top:20px;
+top:15px;
 left:25px;
-font-size:35px;
-color:#fff;
+font-size:38px;
 cursor:pointer;
 }
 
-/* ================= BACK TOP ================= */
+/* TOP */
 
 .back-top{
 position:fixed;
-bottom:22px;
-left:22px;
-z-index:900;
+bottom:20px;
+left:20px;
 width:42px;
 height:42px;
 border-radius:50%;
@@ -840,10 +643,9 @@ justify-content:center;
 background:var(--cyan);
 color:#001015;
 font-weight:bold;
-box-shadow:0 10px 30px rgba(0,0,0,.35);
 opacity:0;
 pointer-events:none;
-transition:.25s;
+z-index:900;
 }
 
 .back-top.show{
@@ -851,7 +653,7 @@ opacity:1;
 pointer-events:auto;
 }
 
-/* ================= MOBILE ================= */
+/* MOBILE */
 
 @media(max-width:1000px){
 
@@ -880,6 +682,10 @@ header,
 height:70px;
 }
 
+.mobile-menu{
+display:block;
+}
+
 .menu{
 display:none;
 position:absolute;
@@ -888,34 +694,20 @@ right:0;
 left:0;
 padding:15px 6%;
 background:#06111a;
-border-bottom:1px solid var(--border);
 flex-direction:column;
-align-items:stretch;
 }
 
 .menu.active{
 display:flex;
 }
 
-.mobile-menu{
-display:block;
-}
-
 .hero{
-min-height:680px;
+min-height:650px;
 padding-top:70px;
-
-background:
-linear-gradient(
-90deg,
-rgba(2,8,14,.95),
-rgba(2,8,14,.70)
-),
-var(--hero-image) center/cover no-repeat;
 }
 
 .hero h1{
-font-size:clamp(42px,12vw,60px);
+font-size:clamp(40px,12vw,60px);
 }
 
 .hero p{
@@ -923,19 +715,11 @@ font-size:16px;
 }
 
 section{
-padding:70px 0;
-}
-
-.section-title h2{
-font-size:30px;
+padding:65px 0;
 }
 
 .toc ol{
 columns:1;
-}
-
-.article h2{
-font-size:26px;
 }
 
 .specialties,
@@ -949,34 +733,12 @@ grid-template-columns:1fr;
 grid-template-columns:repeat(2,1fr);
 }
 
-.related a{
-height:150px;
-}
-
-.contact-box{
-padding:30px 20px;
-}
-
 }
 
 @media(max-width:480px){
 
-.container,
-.hero-content{
-width:90%;
-}
-
-.article-card,
-.info-card,
-.project-card,
-.resource-card,
-.specialty{
-padding:22px;
-}
-
 .hero-buttons{
 flex-direction:column;
-align-items:stretch;
 }
 
 .btn{
@@ -988,78 +750,32 @@ grid-template-columns:1fr;
 }
 
 }
-
-/* ================= PRINT ================= */
-
-@media print{
-
-header,
-.back-top,
-.hero-buttons,
-.lightbox{
-display:none!important;
-}
-
-body{
-background:#fff;
-color:#000;
-}
-
-section{
-padding:30px 0;
-}
-
-.article p,
-.article li{
-color:#222;
-}
-
-}
-
 </style>
 </head>
 
 <body>
 
 <header>
-
 <div class="container nav">
 
 <a class="brand" href="index.html">
 Mohsen <span>Nasri</span>
 </a>
 
-<button
-class="mobile-menu"
-id="mobileMenu"
-aria-label="باز کردن منو">
-☰
-</button>
+<button class="mobile-menu" id="mobileMenu">☰</button>
 
 <nav class="menu" id="menu">
-
 <a href="index.html">خانه</a>
-
 <a href="index.html#industries">صنایع</a>
-
 <a href="#about">معرفی</a>
-
 <a href="#knowledge">دانش فنی</a>
-
 <a href="#projects">پروژه‌ها</a>
-
 <a href="#gallery">گالری</a>
-
 <a href="#videos">ویدئوها</a>
-
-<a href="#documents">مستندات</a>
-
 <a href="#contact" class="contact-link">تماس</a>
-
 </nav>
 
 </div>
-
 </header>
 
 
@@ -1082,120 +798,58 @@ INDUSTRIAL ENGINEERING
 دانش فنی، تجهیزات، پروژه‌ها و تجربیات مهندسی صنعتی.
 </p>
 
-<div class="hero-meta">
-
-<span>Mohsen Nasri</span>
-
-<span>Mechanical Engineering</span>
-
-<span id="heroField">Industrial Engineering</span>
-
-</div>
-
 <div class="hero-buttons">
-
-<a href="#toc" class="btn btn-primary">
-فهرست مطالب
-</a>
-
-<a href="#projects" class="btn btn-outline">
-مشاهده پروژه‌ها
-</a>
-
+<a href="#toc" class="btn btn-primary">فهرست مطالب</a>
+<a href="#projects" class="btn btn-outline">مشاهده پروژه‌ها</a>
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
 <main>
-
 
 <section id="about">
 
 <div class="container">
 
 <div class="section-title">
-
-<div class="eyebrow">
-01 / INTRODUCTION
-</div>
-
-<h2 id="aboutTitle">
-معرفی صنعت
-</h2>
-
-<p id="aboutSubtitle">
-نگاهی مهندسی به تجهیزات، فرآیندها و تجربیات صنعتی
-</p>
-
+<div class="eyebrow">01 / INTRODUCTION</div>
+<h2 id="aboutTitle">معرفی صنعت</h2>
+<p id="aboutSubtitle">نگاهی مهندسی به تجهیزات، فرآیندها و تجربیات صنعتی</p>
 </div>
 
 <div class="intro">
 
-<article class="article-card" id="introContent">
-
-<p>
-این بخش برای معرفی تخصصی صنعت، فرآیندهای تولید، تجهیزات اصلی و تجربه‌های مهندسی مرتبط با این حوزه طراحی شده است.
-</p>
-
-<p>
-محتوای این صفحه به‌صورت موضوعی سازمان‌دهی شده تا اطلاعات فنی، پروژه‌ها، تصاویر، ویدئوها و مستندات در یک ساختار منظم در اختیار مخاطب قرار گیرد.
-</p>
-
-</article>
+<article class="article-card" id="introContent"></article>
 
 <div class="info-card">
 
 <div class="info-row">
-
 <small>FIELD</small>
-
-<strong id="fieldName">
-Industrial Engineering
-</strong>
-
+<strong id="fieldName">Industrial Engineering</strong>
 </div>
 
 <div class="info-row">
-
 <small>CONTENT</small>
-
-<strong>
-Technical Knowledge &amp; Projects
-</strong>
-
+<strong>Technical Knowledge & Projects</strong>
 </div>
 
 <div class="info-row">
-
 <small>MEDIA</small>
-
-<strong>
-Images &amp; Videos
-</strong>
-
+<strong>Images & Videos</strong>
 </div>
 
 <div class="info-row">
-
 <small>AUTHOR</small>
-
-<strong>
-Mohsen Nasri
-</strong>
-
+<strong>Mohsen Nasri</strong>
 </div>
 
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
@@ -1206,39 +860,24 @@ Mohsen Nasri
 <div class="toc">
 
 <div class="toc-title">
-
 <h2>فهرست مطالب</h2>
-
 <span>Technical Contents</span>
-
 </div>
 
 <ol>
-
 <li><a href="#about">معرفی صنعت</a></li>
-
 <li><a href="#knowledge">دانش فنی و فرآیندها</a></li>
-
 <li><a href="#specialties">حوزه‌های تخصصی</a></li>
-
 <li><a href="#projects">پروژه‌ها و تجربیات</a></li>
-
 <li><a href="#gallery">گالری تصاویر</a></li>
-
 <li><a href="#videos">ویدئوها</a></li>
-
 <li><a href="#documents">مستندات و منابع</a></li>
-
 <li><a href="#related">صنایع مرتبط</a></li>
-
 <li><a href="#contact">ارتباط و همکاری</a></li>
-
 </ol>
 
 </div>
-
 </div>
-
 </section>
 
 
@@ -1247,15 +886,9 @@ Mohsen Nasri
 <div class="container">
 
 <div class="section-title">
-
-<div class="eyebrow">
-02 / TECHNICAL KNOWLEDGE
-</div>
-
+<div class="eyebrow">02 / TECHNICAL KNOWLEDGE</div>
 <h2>دانش فنی و فرآیندها</h2>
-
 <p>محتوای مهندسی و ساختار فنی موضوع</p>
-
 </div>
 
 <article class="article">
@@ -1265,13 +898,13 @@ Mohsen Nasri
 <h2>ساختار و عملکرد سیستم</h2>
 
 <p>
-در این بخش، ساختار تجهیزات، فرآیندهای اصلی، ارتباط میان سیستم‌های مکانیکی، الکتریکی و کنترلی و نکات مهندسی مرتبط با صنعت بررسی می‌شود.
+در این بخش ساختار تجهیزات، فرآیندهای اصلی، ارتباط میان سیستم‌های مکانیکی، الکتریکی و کنترلی و نکات مهندسی مرتبط با صنعت بررسی می‌شود.
 </p>
 
 <h3>تجهیزات اصلی</h3>
 
 <p>
-تجهیزات هر خط تولید بر اساس نوع فرآیند، ظرفیت، الزامات کیفی و شرایط بهره‌برداری انتخاب و تنظیم می‌شوند. شناخت عملکرد هر تجهیز برای تحلیل صحیح فرآیند و عیب‌یابی مهندسی اهمیت اساسی دارد.
+تجهیزات هر خط تولید بر اساس نوع فرآیند، ظرفیت، الزامات کیفی و شرایط بهره‌برداری انتخاب و تنظیم می‌شوند.
 </p>
 
 <div class="note">
@@ -1280,70 +913,11 @@ Mohsen Nasri
 قابل توسعه و ویرایش است.
 </div>
 
-<h3>نگاه مهندسی به فرآیند</h3>
-
-<p>
-تحلیل یک فرآیند صنعتی باید با درنظرگرفتن تعامل میان مکانیک، برق، کنترل، پنوماتیک، انتقال قدرت، شرایط عملیاتی و الزامات ایمنی انجام شود.
-</p>
-
-<table class="tech-table">
-
-<thead>
-
-<tr>
-
-<th>پارامتر</th>
-
-<th>اهمیت مهندسی</th>
-
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-
-<td>تجهیزات مکانیکی</td>
-
-<td>انتقال حرکت، نیرو و فرآیند تولید</td>
-
-</tr>
-
-<tr>
-
-<td>سیستم کنترل</td>
-
-<td>تنظیم توالی و هماهنگی عملیات</td>
-
-</tr>
-
-<tr>
-
-<td>پنوماتیک</td>
-
-<td>تأمین و کنترل عملگرهای هوایی</td>
-
-</tr>
-
-<tr>
-
-<td>سیستم انتقال</td>
-
-<td>انتقال محصول و هماهنگی بین ایستگاه‌ها</td>
-
-</tr>
-
-</tbody>
-
-</table>
-
 </div>
 
 </article>
 
 </div>
-
 </section>
 
 
@@ -1352,95 +926,51 @@ Mohsen Nasri
 <div class="container">
 
 <div class="section-title">
-
-<div class="eyebrow">
-03 / SPECIALTIES
-</div>
-
+<div class="eyebrow">03 / SPECIALTIES</div>
 <h2>حوزه‌های تخصصی</h2>
-
 <p>زمینه‌های اصلی دانش و تجربه مهندسی</p>
-
 </div>
 
 <div class="specialties">
 
 <div class="specialty">
-
 <div class="number">01</div>
-
 <h3>ماشین‌آلات صنعتی</h3>
-
-<p>
-تحلیل، نصب، تنظیم و شناخت عملکرد ماشین‌آلات و تجهیزات خطوط تولید.
-</p>
-
+<p>تحلیل، نصب، تنظیم و شناخت عملکرد ماشین‌آلات و تجهیزات خطوط تولید.</p>
 </div>
 
 <div class="specialty">
-
 <div class="number">02</div>
-
 <h3>مکانیک و انتقال قدرت</h3>
-
-<p>
-بررسی مکانیزم‌ها، گیربکس‌ها، موتورها، کوپلینگ‌ها، شفت‌ها و سیستم‌های انتقال حرکت.
-</p>
-
+<p>بررسی مکانیزم‌ها، گیربکس‌ها، موتورها، کوپلینگ‌ها، شفت‌ها و سیستم‌های انتقال حرکت.</p>
 </div>
 
 <div class="specialty">
-
 <div class="number">03</div>
-
 <h3>کنترل و اتوماسیون</h3>
-
-<p>
-شناخت ارتباط سیستم‌های مکانیکی با PLC، سروو، سنسورها و HMI.
-</p>
-
+<p>شناخت ارتباط سیستم‌های مکانیکی با PLC، سروو، سنسورها و HMI.</p>
 </div>
 
 <div class="specialty">
-
 <div class="number">04</div>
-
 <h3>نگهداری صنعتی</h3>
-
-<p>
-تحلیل خرابی، برنامه‌ریزی نگهداری و افزایش قابلیت اطمینان تجهیزات.
-</p>
-
+<p>تحلیل خرابی، برنامه‌ریزی نگهداری و افزایش قابلیت اطمینان تجهیزات.</p>
 </div>
 
 <div class="specialty">
-
 <div class="number">05</div>
-
 <h3>پروژه‌های صنعتی</h3>
-
-<p>
-تجربه اجرایی در پروژه‌های نصب، راه‌اندازی، اصلاح و بهینه‌سازی تجهیزات.
-</p>
-
+<p>تجربه اجرایی در پروژه‌های نصب، راه‌اندازی، اصلاح و بهینه‌سازی تجهیزات.</p>
 </div>
 
 <div class="specialty">
-
 <div class="number">06</div>
-
 <h3>مستندات فنی</h3>
-
-<p>
-تدوین دستورالعمل‌ها، گزارش‌های مهندسی، مستندات تعمیرات و دانش فنی.
-</p>
-
+<p>تدوین دستورالعمل‌ها، گزارش‌های مهندسی و مستندات تخصصی.</p>
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
@@ -1449,53 +979,14 @@ Mohsen Nasri
 <div class="container">
 
 <div class="section-title">
-
-<div class="eyebrow">
-04 / PROJECTS
-</div>
-
+<div class="eyebrow">04 / PROJECTS</div>
 <h2>پروژه‌ها و تجربیات</h2>
-
-<p>
-پروژه‌های صنعتی و تجربیات اجرایی مرتبط با این حوزه
-</p>
-
+<p>پروژه‌های صنعتی و تجربیات اجرایی</p>
 </div>
 
-<div class="projects" id="projectsContainer">
-
-<div class="project-card">
-
-<div class="project-head">
-
-<h3>پروژه‌های مهندسی</h3>
-
-<span class="project-number">
-PROJECT
-</span>
+<div class="projects" id="projectsContainer"></div>
 
 </div>
-
-<p>
-پروژه‌ها و تجربیات تخصصی این صنعت پس از ثبت در پنل مدیریت در این قسمت نمایش داده خواهند شد.
-</p>
-
-<div class="project-tags">
-
-<span class="tag">Mechanical</span>
-
-<span class="tag">Industrial</span>
-
-<span class="tag">Engineering</span>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </section>
 
 
@@ -1504,17 +995,9 @@ PROJECT
 <div class="container">
 
 <div class="section-title">
-
-<div class="eyebrow">
-05 / GALLERY
-</div>
-
+<div class="eyebrow">05 / GALLERY</div>
 <h2>گالری تصاویر</h2>
-
-<p>
-تصاویر پروژه‌ها، تجهیزات و فعالیت‌های صنعتی
-</p>
-
+<p>تصاویر پروژه‌ها، تجهیزات و فعالیت‌های صنعتی</p>
 </div>
 
 <div class="media-status" id="galleryStatus">
@@ -1524,7 +1007,6 @@ PROJECT
 <div class="gallery" id="galleryContainer"></div>
 
 </div>
-
 </section>
 
 
@@ -1533,17 +1015,9 @@ PROJECT
 <div class="container">
 
 <div class="section-title">
-
-<div class="eyebrow">
-06 / VIDEOS
-</div>
-
+<div class="eyebrow">06 / VIDEOS</div>
 <h2>ویدئوها</h2>
-
-<p>
-ویدئوهای مرتبط با پروژه‌ها و تجهیزات
-</p>
-
+<p>ویدئوهای مرتبط با پروژه‌ها و تجهیزات</p>
 </div>
 
 <div class="media-status" id="videoStatus">
@@ -1553,7 +1027,6 @@ PROJECT
 <div class="videos" id="videosContainer"></div>
 
 </div>
-
 </section>
 
 
@@ -1562,61 +1035,33 @@ PROJECT
 <div class="container">
 
 <div class="section-title">
-
-<div class="eyebrow">
-07 / DOCUMENTS &amp; RESOURCES
-</div>
-
+<div class="eyebrow">07 / DOCUMENTS & RESOURCES</div>
 <h2>مستندات و منابع</h2>
-
-<p>
-مرجع اطلاعات و مستندات فنی مرتبط
-</p>
-
+<p>مرجع اطلاعات و مستندات فنی مرتبط</p>
 </div>
 
 <div class="resources">
 
 <div class="resource-card">
-
 <div class="resource-icon">📘</div>
-
 <h3>مستندات فنی</h3>
-
-<p>
-دستورالعمل‌ها، گزارش‌ها، مدارک و مستندات تخصصی مرتبط با تجهیزات و پروژه‌ها.
-</p>
-
+<p>دستورالعمل‌ها، گزارش‌ها و مدارک تخصصی مرتبط با تجهیزات و پروژه‌ها.</p>
 </div>
 
 <div class="resource-card">
-
 <div class="resource-icon">⚙️</div>
-
 <h3>دانش مهندسی</h3>
-
-<p>
-مطالب فنی و تجربیات کاربردی در زمینه ماشین‌آلات و فرآیندهای صنعتی.
-</p>
-
+<p>مطالب فنی و تجربیات کاربردی در زمینه ماشین‌آلات و فرآیندهای صنعتی.</p>
 </div>
 
 <div class="resource-card">
-
 <div class="resource-icon">📊</div>
-
 <h3>اطلاعات پروژه</h3>
-
-<p>
-اطلاعات پروژه‌ها، تجهیزات مورد استفاده و نتایج فعالیت‌های مهندسی.
-</p>
-
+<p>اطلاعات پروژه‌ها، تجهیزات مورد استفاده و نتایج فعالیت‌های مهندسی.</p>
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
@@ -1625,65 +1070,40 @@ PROJECT
 <div class="container">
 
 <div class="section-title">
-
-<div class="eyebrow">
-08 / RELATED INDUSTRIES
-</div>
-
+<div class="eyebrow">08 / RELATED INDUSTRIES</div>
 <h2>صنایع مرتبط</h2>
-
-<p>
-برای مشاهده سایر حوزه‌های تخصصی وارد صنعت موردنظر شوید.
-</p>
-
+<p>برای مشاهده سایر حوزه‌های تخصصی وارد صنعت موردنظر شوید.</p>
 </div>
 
 <div class="related">
 
 <a href="topic.html?industry=rewinding">
-
 <img src="rewinding.jpg" alt="سیم پیچی">
-
 <strong>سیم‌پیچی</strong>
-
 </a>
 
 <a href="topic.html?industry=float-glass">
-
 <img src="float-glass.jpg" alt="شیشه فلوت">
-
 <strong>شیشه فلوت و تخت</strong>
-
 </a>
 
 <a href="topic.html?industry=cable">
-
 <img src="cable.jpg" alt="کابل سازی">
-
 <strong>کابل‌سازی</strong>
-
 </a>
 
 <a href="topic.html?industry=steel">
-
 <img src="steel.jpg" alt="فولاد">
-
 <strong>فولاد</strong>
-
 </a>
 
 <a href="topic.html?industry=container-glass">
-
 <img src="container-glass.jpg" alt="شیشه بطری">
-
 <strong>شیشه بطری</strong>
-
 </a>
 
 </div>
-
 </div>
-
 </section>
 
 
@@ -1699,89 +1119,55 @@ PROJECT
 برای همکاری، پروژه‌های صنعتی، مشاوره فنی و ارتباط حرفه‌ای با Mohsen Nasri در تماس باشید.
 </p>
 
-<a
-class="btn btn-primary"
-href="tel:09193890454">
-
+<a class="btn btn-primary" href="tel:09193890454">
 تماس با من
-
 </a>
 
 </div>
 
 </div>
-
 </section>
 
 </main>
 
 
 <footer>
-
 <div class="container">
-
 <strong>Mohsen Nasri</strong>
-
 <br>
-
 Industrial Engineering • Mechanical Engineering • Industrial Projects
-
 <br>
-
 © 2026 Mohsen Nasri. All Rights Reserved.
-
 </div>
-
 </footer>
 
 
 <div class="lightbox" id="lightbox">
-
-<div
-class="lightbox-close"
-id="lightboxClose">
-×
+<div class="lightbox-close" id="lightboxClose">×</div>
+<img id="lightboxImage" src="" alt="">
 </div>
 
-<img
-id="lightboxImage"
-src=""
-alt="">
-
-</div>
-
-
-<a
-href="#top"
-class="back-top"
-id="backTop">
-↑
-</a>
+<a href="#top" class="back-top" id="backTop">↑</a>
 
 
 <script>
 
-/* =========================================================
-   SUPABASE CONFIGURATION
-   ========================================================= */
+/* =====================================================
+   SUPABASE
+===================================================== */
 
 const SUPABASE_URL =
 "https://eurmybgotfgnerdxrwua.supabase.co";
 
-/*
-   کلید عمومی Supabase خودت را اینجا قرار بده.
-   مقدار sb_publishable که قبلاً فرستادی را کپی کن.
-*/
-
 const SUPABASE_ANON_KEY =
-"PASTE_YOUR_SB_PUBLISHABLE_KEY_HERE";
+"sb_publishable_X3LYjYSbJU7YJ0ezzn6YfA_ZHsbd1K3";
 
 
-/* =========================================================
-   TOPIC DATA
-   ========================================================= */
+/* =====================================================
+   TOPICS
+===================================================== */
 
-const topics = {
+const topics={
 
 rewinding:{
 title:"سیم‌پیچی و برق صنعتی",
@@ -1831,82 +1217,60 @@ field:"Container Glass"
 };
 
 
-/* =========================================================
-   CURRENT INDUSTRY
-   ========================================================= */
+/* =====================================================
+   CURRENT TOPIC
+===================================================== */
 
-const params =
-new URLSearchParams(window.location.search);
+const params=new URLSearchParams(location.search);
 
-const industry =
-params.get("industry") || "rewinding";
+const industry=params.get("industry") || "rewinding";
 
-const topic =
-topics[industry] || topics.rewinding;
+const topic=topics[industry] || topics.rewinding;
 
 
-/* =========================================================
+/* =====================================================
    PAGE DATA
-   ========================================================= */
+===================================================== */
 
-document.title =
-topic.title + " | Mohsen Nasri";
+document.title=topic.title+" | Mohsen Nasri";
 
 document.documentElement.style.setProperty(
 "--hero-image",
-"url('" + topic.image + "')"
+"url('"+topic.image+"')"
 );
 
-document.getElementById("heroKicker").textContent =
+document.getElementById("heroKicker").textContent=
 topic.english.toUpperCase();
 
-document.getElementById("heroTitle").innerHTML =
-escapeHTML(topic.title) +
-"<br><span>" +
-escapeHTML(topic.english) +
-"</span>";
+document.getElementById("heroTitle").innerHTML=
+topic.title+"<br><span>"+topic.english+"</span>";
 
-document.getElementById("heroDescription").textContent =
+document.getElementById("heroDescription").textContent=
 topic.description;
 
-document.getElementById("heroField").textContent =
-topic.field;
+document.getElementById("aboutTitle").textContent=
+topic.title;
 
-document.getElementById("aboutTitle").textContent =
-"معرفی " + topic.title;
-
-document.getElementById("aboutSubtitle").textContent =
+document.getElementById("aboutSubtitle").textContent=
 topic.description;
 
-document.getElementById("fieldName").textContent =
+document.getElementById("fieldName").textContent=
 topic.field;
 
-document.getElementById("introContent").innerHTML =
-
-"<p>" +
-escapeHTML(topic.intro) +
-"</p>" +
-
-"<p>" +
-"هدف این صفحه ارائه یک مرجع منظم برای دانش فنی، پروژه‌ها، تجربیات، تصاویر، ویدئوها و مستندات مرتبط با این حوزه صنعتی است." +
-"</p>";
+document.getElementById("introContent").innerHTML=
+"<p>"+escapeHTML(topic.intro)+"</p>"+
+"<p>این صفحه یک مرجع تخصصی برای دانش فنی، پروژه‌ها، تجربیات، تصاویر، ویدئوها و مستندات مرتبط با این حوزه صنعتی است.</p>";
 
 
-/* =========================================================
+/* =====================================================
    HELPERS
-   ========================================================= */
+===================================================== */
 
 function escapeHTML(value){
 
-if(
-value === null ||
-value === undefined
-){
-return "";
-}
+if(value===null || value===undefined) return "";
 
 return String(value)
-
 .replace(/&/g,"&amp;")
 .replace(/</g,"&lt;")
 .replace(/>/g,"&gt;")
@@ -1916,100 +1280,38 @@ return String(value)
 }
 
 
-/* =========================================================
-   SUPABASE CHECK
-   ========================================================= */
-
-function checkSupabaseConfig(){
-
-if(
-!SUPABASE_URL ||
-!SUPABASE_ANON_KEY ||
-SUPABASE_ANON_KEY ===
-"PASTE_YOUR_SB_PUBLISHABLE_KEY_HERE"
-){
-
-throw new Error(
-"کلید Supabase در topic.html وارد نشده است."
-);
-
-}
-
-}
-
-
-/* =========================================================
-   SUPABASE FILE URL
-   ========================================================= */
-
 function fileURL(path){
 
-if(!path){
-return "";
-}
+if(!path) return "";
 
-if(/^https?:\/\//i.test(path)){
+if(/^https?:\/\//i.test(path))
 return path;
-}
 
-return (
-
-SUPABASE_URL +
-"/storage/v1/object/public/project-media/" +
-path
-
-);
+return SUPABASE_URL+
+"/storage/v1/object/public/project-media/"+
+path;
 
 }
 
-
-/* =========================================================
-   SUPABASE API
-   ========================================================= */
 
 async function api(path){
 
-checkSupabaseConfig();
-
-const response =
-await fetch(
-
-SUPABASE_URL + path,
-
+const response=await fetch(
+SUPABASE_URL+path,
 {
-
 method:"GET",
-
 headers:{
-
-apikey:
-SUPABASE_ANON_KEY,
-
-Authorization:
-"Bearer " +
-SUPABASE_ANON_KEY,
-
-"Content-Type":
-"application/json",
-
-Prefer:
-"return=representation"
-
+"apikey":SUPABASE_ANON_KEY,
+"Authorization":"Bearer "+SUPABASE_ANON_KEY,
+"Content-Type":"application/json"
 }
-
-});
-
+}
+);
 
 if(!response.ok){
 
-const errorText =
-await response.text();
-
 throw new Error(
-"Supabase HTTP " +
-response.status +
-" " +
-errorText
+"Supabase HTTP "+response.status
 );
 
 }
@@ -2019,66 +1321,45 @@ return response.json();
 }
 
 
-/* =========================================================
-   LOAD INDUSTRY CONTENT
-   ========================================================= */
+/* =====================================================
+   LOAD CONTENT
+===================================================== */
 
 async function loadContent(){
 
 try{
 
-const rows =
-await api(
-
-"/rest/v1/industry_content" +
-
-"?industry=eq." +
-
-encodeURIComponent(industry) +
-
+const rows=await api(
+"/rest/v1/industry_content"+
+"?industry=eq."+
+encodeURIComponent(industry)+
 "&order=created_at.asc"
-
 );
 
+let technical="";
+let projects=[];
 
-if(
-!Array.isArray(rows) ||
-!rows.length
-){
-return;
-}
+if(Array.isArray(rows)){
 
+rows.forEach(row=>{
 
-let technical = "";
-
-let projects = [];
-
-
-rows.forEach(row => {
-
-const type =
-String(
-
+const type=String(
 row.content_type ||
 row.type ||
 row.section ||
 ""
-
 ).toLowerCase();
 
-
-const title =
+const title=
 row.title ||
 row.heading ||
 "";
 
-
-const content =
+const content=
 row.content ||
 row.text ||
 row.description ||
 "";
-
 
 if(
 type.includes("project") ||
@@ -2086,90 +1367,63 @@ type.includes("پروژه")
 ){
 
 projects.push({
-
-title:
-title ||
-"پروژه مهندسی",
-
-content:
-content
-
+title:title || "پروژه مهندسی",
+content:content
 });
 
-}
+}else if(content){
 
-else{
-
-if(content){
-
-technical +=
-
-"<h3>" +
-
-escapeHTML(
-title ||
-"موضوع فنی"
-) +
-
+technical+=
+"<h3>"+
+escapeHTML(title || "موضوع فنی")+
 "</h3>";
 
-technical +=
-
-"<p>" +
-
-escapeHTML(content) +
-
+technical+=
+"<p>"+
+escapeHTML(content)+
 "</p>";
 
 }
 
-}
-
 });
 
+}
 
-/* ================= TECHNICAL ================= */
+
+/* TECHNICAL */
 
 if(technical){
 
 document.getElementById(
 "technicalContent"
-).innerHTML =
-
-technical;
+).innerHTML=technical;
 
 }
 
 
-/* ================= PROJECTS ================= */
+/* PROJECTS */
+
+const projectBox=
+document.getElementById("projectsContainer");
 
 if(projects.length){
 
-document.getElementById(
-"projectsContainer"
-).innerHTML =
-
-projects.map(
-
-(project,index) => `
+projectBox.innerHTML=
+projects.map((p,i)=>`
 
 <div class="project-card">
 
 <div class="project-head">
 
-<h3>
-${escapeHTML(project.title)}
-</h3>
+<h3>${escapeHTML(p.title)}</h3>
 
 <span class="project-number">
-${String(index+1).padStart(2,"0")}
+${String(i+1).padStart(2,"0")}
 </span>
 
 </div>
 
-<p>
-${escapeHTML(project.content)}
-</p>
+<p>${escapeHTML(p.content)}</p>
 
 <div class="project-tags">
 
@@ -2185,171 +1439,113 @@ Engineering Project
 
 </div>
 
-`
+`).join("");
 
-).join("");
+}else{
+
+projectBox.innerHTML=`
+
+<div class="project-card">
+
+<div class="project-head">
+<h3>پروژه‌های مهندسی</h3>
+<span class="project-number">PROJECT</span>
+</div>
+
+<p>
+پروژه‌ها و تجربیات تخصصی این صنعت پس از ثبت در پنل مدیریت در این قسمت نمایش داده خواهند شد.
+</p>
+
+</div>
+
+`;
+
+}
+
+}catch(error){
+
+console.error(error);
 
 }
 
 }
 
-catch(error){
 
-console.error(
-"industry_content error:",
-error
-);
-
-}
-
-}
-
-
-/* =========================================================
+/* =====================================================
    LOAD MEDIA
-   ========================================================= */
+===================================================== */
 
 async function loadMedia(){
 
-const gallery =
-document.getElementById(
-"galleryContainer"
-);
+const gallery=
+document.getElementById("galleryContainer");
 
-const videos =
-document.getElementById(
-"videosContainer"
-);
+const videos=
+document.getElementById("videosContainer");
 
-const galleryStatus =
-document.getElementById(
-"galleryStatus"
-);
+const galleryStatus=
+document.getElementById("galleryStatus");
 
-const videoStatus =
-document.getElementById(
-"videoStatus"
-);
-
+const videoStatus=
+document.getElementById("videoStatus");
 
 try{
 
-const rows =
-await api(
-
-"/rest/v1/industry_media" +
-
-"?industry=eq." +
-
-encodeURIComponent(industry) +
-
+const rows=await api(
+"/rest/v1/industry_media"+
+"?industry=eq."+
+encodeURIComponent(industry)+
 "&order=created_at.desc"
-
 );
 
-
-if(!Array.isArray(rows)){
-
-throw new Error(
-"Invalid media response"
-);
-
-}
-
-
-/* ================= IMAGE FILTER ================= */
-
-const images =
-rows.filter(
-
-row =>
-
+const images=rows.filter(row=>
 String(
-
 row.media_type ||
 row.type ||
 ""
-
-)
-
-.toLowerCase()
-
-.includes("image")
-
+).toLowerCase().includes("image")
 );
 
-
-/* ================= VIDEO FILTER ================= */
-
-const videoRows =
-rows.filter(
-
-row =>
-
+const videoRows=rows.filter(row=>
 String(
-
 row.media_type ||
 row.type ||
 ""
-
-)
-
-.toLowerCase()
-
-.includes("video")
-
+).toLowerCase().includes("video")
 );
 
 
-/* ================= IMAGES ================= */
+/* IMAGES */
 
 if(images.length){
 
-gallery.innerHTML =
+gallery.innerHTML=
+images.map(row=>{
 
-images.map(row => {
-
-const src =
-
+const src=
 row.public_url ||
 row.url ||
 fileURL(row.file_path);
 
-
-const title =
-
+const title=
 row.title ||
 row.caption ||
 topic.title;
-
-
-if(!src){
-return "";
-}
-
 
 return `
 
 <div class="gallery-card">
 
 <img
-
 src="${escapeHTML(src)}"
-
 alt="${escapeHTML(title)}"
-
 loading="lazy"
-
 onclick="openLightbox(this.src)"
-
 onerror="this.parentElement.style.display='none'"
-
 >
 
 <div class="gallery-title">
-
 ${escapeHTML(title)}
-
 </div>
 
 </div>
@@ -2358,68 +1554,47 @@ ${escapeHTML(title)}
 
 }).join("");
 
+galleryStatus.textContent=
+images.length+" تصویر ثبت شده است.";
 
-galleryStatus.textContent =
-images.length +
-" تصویر ثبت شده";
+}else{
 
-}
-
-else{
-
-galleryStatus.textContent =
+galleryStatus.textContent=
 "هنوز تصویری برای این صنعت ثبت نشده است.";
 
 }
 
 
-/* ================= VIDEOS ================= */
+/* VIDEOS */
 
 if(videoRows.length){
 
-videos.innerHTML =
+videos.innerHTML=
+videoRows.map(row=>{
 
-videoRows.map(row => {
-
-const src =
-
+const src=
 row.public_url ||
 row.url ||
 fileURL(row.file_path);
 
-
-const title =
-
+const title=
 row.title ||
 row.caption ||
 "ویدئوی صنعتی";
-
-
-if(!src){
-return "";
-}
-
 
 return `
 
 <div class="video-card">
 
 <video
-
 controls
-
 preload="metadata"
-
 playsinline
-
 >
 
 <source
-
 src="${escapeHTML(src)}"
-
 type="video/mp4"
-
 >
 
 مرورگر شما از پخش ویدئو پشتیبانی نمی‌کند.
@@ -2427,9 +1602,7 @@ type="video/mp4"
 </video>
 
 <div class="video-title">
-
 ${escapeHTML(title)}
-
 </div>
 
 </div>
@@ -2438,196 +1611,124 @@ ${escapeHTML(title)}
 
 }).join("");
 
+videoStatus.textContent=
+videoRows.length+" ویدئو ثبت شده است.";
 
-videoStatus.textContent =
-videoRows.length +
-" ویدئو ثبت شده";
+}else{
 
-}
-
-else{
-
-videoStatus.textContent =
+videoStatus.textContent=
 "هنوز ویدئویی برای این صنعت ثبت نشده است.";
 
 }
 
-}
+}catch(error){
 
-catch(error){
+console.error(error);
 
-console.error(
-"industry_media error:",
-error
-);
+galleryStatus.textContent=
+"خطا در دریافت تصاویر.";
 
-
-galleryStatus.innerHTML =
-
-"<span style='color:#ff9b9b'>" +
-"خطا در دریافت تصاویر." +
-"</span>";
-
-
-videoStatus.innerHTML =
-
-"<span style='color:#ff9b9b'>" +
-"خطا در دریافت ویدئوها." +
-"</span>";
+videoStatus.textContent=
+"خطا در دریافت ویدئوها.";
 
 }
 
 }
 
 
-/* =========================================================
+/* =====================================================
    LIGHTBOX
-   ========================================================= */
+===================================================== */
 
 function openLightbox(src){
 
-const box =
-document.getElementById("lightbox");
+document.getElementById(
+"lightboxImage"
+).src=src;
 
-const image =
-document.getElementById("lightboxImage");
-
-image.src = src;
-
-box.classList.add("active");
-
-document.body.style.overflow =
-"hidden";
+document.getElementById(
+"lightbox"
+).classList.add("active");
 
 }
 
 
 document.getElementById(
 "lightboxClose"
-).addEventListener(
-"click",
-function(){
+).onclick=function(){
 
 document.getElementById(
 "lightbox"
 ).classList.remove("active");
 
-document.body.style.overflow = "";
-
-}
-);
+};
 
 
 document.getElementById(
 "lightbox"
-).addEventListener(
-"click",
-function(event){
+).onclick=function(e){
 
-if(event.target === this){
-
+if(e.target===this)
 this.classList.remove("active");
 
-document.body.style.overflow = "";
-
-}
-
-}
-);
+};
 
 
-/* =========================================================
-   ESC CLOSE
-   ========================================================= */
-
-document.addEventListener(
-"keydown",
-function(event){
-
-if(event.key === "Escape"){
-
-document.getElementById(
-"lightbox"
-).classList.remove("active");
-
-document.body.style.overflow = "";
-
-}
-
-}
-);
-
-
-/* =========================================================
+/* =====================================================
    MOBILE MENU
-   ========================================================= */
+===================================================== */
 
 document.getElementById(
 "mobileMenu"
-).addEventListener(
-"click",
-function(){
+).onclick=function(){
 
 document.getElementById(
 "menu"
 ).classList.toggle("active");
 
-}
-);
+};
 
 
 document.querySelectorAll(
 "#menu a"
-).forEach(link => {
+).forEach(link=>{
 
-link.addEventListener(
-"click",
-function(){
+link.onclick=function(){
 
 document.getElementById(
 "menu"
 ).classList.remove("active");
 
-}
-);
+};
 
 });
 
 
-/* =========================================================
-   BACK TO TOP
-   ========================================================= */
+/* =====================================================
+   BACK TOP
+===================================================== */
 
-const backTop =
+const backTop=
 document.getElementById("backTop");
-
 
 window.addEventListener(
 "scroll",
-function(){
+()=>{
 
-if(window.scrollY > 500){
-
+if(window.scrollY>500)
 backTop.classList.add("show");
-
-}
-
-else{
-
+else
 backTop.classList.remove("show");
-
-}
 
 }
 );
 
 
-/* =========================================================
+/* =====================================================
    START
-   ========================================================= */
+===================================================== */
 
 loadContent();
-
 loadMedia();
 
 </script>
